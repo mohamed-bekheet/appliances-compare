@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مقارنة الأجهزة الكهربائية</title>
+<style>
+:root {
+  --orange: #e8560a;
+  --orange-light: #fff3e0;
+  --dark: #1a1a2e;
+  --gray: #f4f6f9;
+  --border: #e0e0e0;
+  --text: #2d2d2d;
+  --muted: #777;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; background: var(--gray); color: var(--text); font-size: 14px; }
+
+/* ── Header ── */
+header {
+  background: linear-gradient(135deg, var(--dark) 0%, #2d1b69 100%);
+  color: #fff; padding: 18px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  flex-wrap: wrap;
+}
+header h1 { font-size: 1.25rem; }
+header p  { font-size: 0.78rem; opacity: .75; margin-top: 2px; }
+.header-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+.hbadge { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+  color: #fff; border-radius: 20px; padding: 3px 10px; font-size: .72rem; white-space: nowrap; }
+
+/* ── Tabs ── */
+.tabs { background: var(--dark); display: flex; gap: 2px; padding: 0 24px; overflow-x: auto; }
+.tab { color: rgba(255,255,255,.55); padding: 10px 16px; cursor: pointer; font-size: .82rem;
+  border-bottom: 3px solid transparent; white-space: nowrap; transition: .2s; }
+.tab:hover { color: #fff; }
+.tab.active { color: #fff; border-color: var(--orange); }
+
+/* ── Controls bar ── */
+.controls {
+  background: #fff; padding: 12px 20px; display: flex; gap: 10px; flex-wrap: wrap;
+  position: sticky; top: 0; z-index: 20;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1); border-bottom: 2px solid var(--orange);
+}
+.ctrl { display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 130px; }
+.ctrl label { font-size: .7rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
+.ctrl select, .ctrl input {
+  padding: 7px 10px; border: 1.5px solid var(--border); border-radius: 8px;
+  font-size: .82rem; font-family: inherit; background: #fafafa;
+}
+.ctrl select:focus, .ctrl input:focus { border-color: var(--orange); outline: none; background: #fff; }
+.ctrl-row { display: flex; gap: 6px; align-items: flex-end; }
+.btn {
+  padding: 7px 14px; border: none; border-radius: 8px; cursor: pointer;
+  font-size: .78rem; font-weight: 600; white-space: nowrap;
+}
+.btn-orange { background: var(--orange); color: #fff; }
+.btn-gray   { background: var(--border); color: var(--text); }
+
+/* ── Stats bar ── */
+.stats {
+  background: var(--orange-light); padding: 8px 20px;
+  display: flex; gap: 20px; flex-wrap: wrap; align-items: center;
+  border-bottom: 1px solid #ffd180; font-size: .78rem;
+}
+.stat-item { display: flex; gap: 5px; align-items: center; }
+.stat-val  { color: var(--orange); font-weight: 700; font-size: .9rem; }
+.stat-lbl  { color: var(--muted); }
+
+/* ── View toggle ── */
+.view-toggle { margin-right: auto; display: flex; gap: 4px; }
+.vbtn { padding: 4px 10px; border: 1.5px solid var(--border); border-radius: 6px;
+  background: #fff; cursor: pointer; font-size: .75rem; }
+.vbtn.active { background: var(--orange); color: #fff; border-color: var(--orange); }
+
+/* ── Main content ── */
+main { padding: 16px 20px; }
+
+/* ── TABLE VIEW ── */
+.table-wrap { overflow-x: auto; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+table { width: 100%; border-collapse: collapse; background: #fff; min-width: 1000px; }
+thead { background: var(--dark); color: #fff; }
+thead th {
+  padding: 10px 12px; font-size: .75rem; font-weight: 600;
+  white-space: nowrap; cursor: pointer; user-select: none;
+}
+thead th:hover { background: #2a2a4a; }
+thead th .sort-arrow { margin-right: 4px; opacity: .5; }
+thead th.sorted .sort-arrow { opacity: 1; }
+tbody tr { border-bottom: 1px solid #f0f0f0; transition: background .15s; }
+tbody tr:hover { background: #fff8f3; }
+tbody td { padding: 9px 12px; font-size: .81rem; vertical-align: middle; }
+tbody tr.best-deal td:first-child { border-right: 3px solid #ffc107; }
+
+/* ── CARD VIEW ── */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.card {
+  background: #fff; border-radius: 12px; padding: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.07); border: 1.5px solid transparent;
+  transition: .2s; position: relative; overflow: hidden;
+}
+.card:hover { border-color: var(--orange); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+.card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+.card-brand { font-weight: 700; font-size: .9rem; }
+.card-cat { font-size: .7rem; color: var(--muted); margin-top: 2px; }
+.card-name { font-size: .82rem; color: var(--text); margin-bottom: 10px; line-height: 1.4; }
+.card-specs { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 10px; }
+.card-price { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+.card-price-after  { font-size: 1.1rem; font-weight: 700; color: var(--orange); }
+.card-price-before { font-size: .78rem; text-decoration: line-through; color: var(--muted); }
+.card-tech { font-size: .72rem; color: #555; line-height: 1.5; border-top: 1px solid #f0f0f0; padding-top: 8px; }
+.best-corner {
+  position: absolute; top: 10px; left: 10px;
+  background: #ffc107; color: #333; font-size: .65rem; font-weight: 700;
+  padding: 2px 6px; border-radius: 4px;
+}
+
+/* ── Shared elements ── */
+.brand-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 20px;
+  font-size: .7rem; font-weight: 700; color: #fff;
+}
+.disc-badge {
+  background: var(--orange); color: #fff; border-radius: 20px;
+  padding: 2px 8px; font-size: .72rem; font-weight: 700; white-space: nowrap;
+}
+.price-after  { color: var(--orange); font-weight: 700; }
+.price-before { color: var(--muted); text-decoration: line-through; font-size: .75rem; display: block; }
+.tag {
+  display: inline-block; padding: 2px 6px; border-radius: 4px;
+  font-size: .68rem; background: #e3f2fd; color: #1565c0;
+}
+.tag.green  { background: #e8f5e9; color: #2e7d32; }
+.tag.orange { background: var(--orange-light); color: #e65100; }
+.tag.purple { background: #f3e5f5; color: #6a1b9a; }
+
+/* ── Empty state ── */
+.empty { text-align: center; padding: 60px 20px; color: var(--muted); }
+.empty svg { margin-bottom: 12px; opacity: .3; }
+
+/* ── Comparison panel ── */
+.compare-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  background: var(--dark); color: #fff; padding: 10px 20px;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  transform: translateY(100%); transition: .3s;
+  box-shadow: 0 -4px 20px rgba(0,0,0,.3);
+}
+.compare-bar.visible { transform: translateY(0); }
+.compare-items { display: flex; gap: 8px; flex: 1; flex-wrap: wrap; }
+.compare-chip {
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+  border-radius: 20px; padding: 4px 10px; font-size: .75rem;
+  display: flex; align-items: center; gap: 6px;
+}
+.compare-chip button { background: none; border: none; color: #fff; cursor: pointer; font-size: .9rem; line-height: 1; }
+
+/* ── Compare table modal ── */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,.6);
+  z-index: 200; display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: .2s;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal {
+  background: #fff; border-radius: 16px; padding: 24px;
+  max-width: 95vw; max-height: 90vh; overflow: auto;
+  min-width: 320px;
+}
+.modal h2 { font-size: 1rem; margin-bottom: 16px; color: var(--dark); }
+.modal-close { float: left; background: var(--border); border: none; border-radius: 6px;
+  padding: 4px 10px; cursor: pointer; font-size: .8rem; }
+.cmp-table { border-collapse: collapse; width: 100%; }
+.cmp-table th { background: var(--dark); color: #fff; padding: 8px 14px; font-size: .78rem; white-space: nowrap; }
+.cmp-table td { padding: 8px 14px; border-bottom: 1px solid #f0f0f0; font-size: .8rem; }
+.cmp-table tr:nth-child(even) td { background: #fafafa; }
+.cmp-winner { background: #fff3e0 !important; font-weight: 700; }
+
+/* brand colors */
+.b-Zanussi   { background: #0066cc; }
+.b-Midea     { background: #e53935; }
+.b-Unionaire { background: #2e7d32; }
+.b-Kiriazi   { background: #00695c; }
+.b-Fresh     { background: #c62828; }
+.b-Kenwood   { background: #1565c0; }
+.b-Premier   { background: #4527a0; }
+.b-Purity    { background: #6a1b9a; }
+.b-Indesit   { background: #37474f; }
+.b-Ariston   { background: #bf360c; }
+.b-Gorenje   { background: #558b2f; }
+.b-LG        { background: #6a1b9a; }
+.b-Beko      { background: #0d47a1; }
+.b-Miele     { background: #212121; }
+.b-Samsung   { background: #1565c0; }
+.b-Haier     { background: #c62828; }
+.b-Toshiba   { background: #37474f; }
+.b-WhitePoint { background: #2e7d32; }
+.b-Armadillo { background: #795548; }
+
+@media (max-width: 600px) {
+  header { padding: 12px 16px; }
+  .controls, main { padding: 10px 12px; }
+  .cards { grid-template-columns: 1fr 1fr; gap: 10px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>🏠 مقارنة الأجهزة الكهربائية</h1>
+    <p id="headerMeta">جاري التحميل...</p>
+  </div>
+  <div class="header-badges" id="headerBadges"></div>
+</header>
+
+<div class="tabs" id="tabs">
+  <div class="tab active" data-cat="">الكل</div>
+  <div class="tab" data-cat="بوتاجاز">🔥 بوتاجازات</div>
+  <div class="tab" data-cat="شفاط">💨 شفاطات</div>
+  <div class="tab" data-cat="مسطح غاز">🍳 مسطح غاز</div>
+  <div class="tab" data-cat="مسطح كهرباء">⚡ مسطح كهرباء</div>
+  <div class="tab" data-cat="فرن">🫙 أفران</div>
+  <div class="tab" data-cat="مايكروويف">📡 مايكروويف</div>
+  <div class="tab" data-cat="غسالة">🫧 غسالات</div>
+  <div class="tab" data-cat="باكدج">📦 باكدجات</div>
+</div>
+
+<div class="controls">
+  <div class="ctrl">
+    <label>🔍 بحث</label>
+    <input type="text" id="searchInput" placeholder="اكتب ماركة أو مواصفة...">
+  </div>
+  <div class="ctrl">
+    <label>🏷️ الماركة</label>
+    <select id="brandFilter"><option value="">كل الماركات</option></select>
+  </div>
+  <div class="ctrl">
+    <label>🏪 المحل</label>
+    <select id="shopFilter"><option value="">كل المحلات</option></select>
+  </div>
+  <div class="ctrl">
+    <label>💰 السعر (ج)</label>
+    <div class="ctrl-row">
+      <input type="number" id="priceMin" placeholder="من" style="width:80px">
+      <input type="number" id="priceMax" placeholder="إلى" style="width:80px">
+    </div>
+  </div>
+  <div class="ctrl">
+    <label>↕️ ترتيب</label>
+    <select id="sortBy">
+      <option value="">افتراضي</option>
+      <option value="price_asc">السعر: الأقل أولاً</option>
+      <option value="price_desc">السعر: الأعلى أولاً</option>
+      <option value="disc_desc">أعلى خصم</option>
+      <option value="brand">الماركة</option>
+      <option value="saving_desc">أعلى توفير (جنيه)</option>
+    </select>
+  </div>
+  <div class="ctrl" style="justify-content:flex-end">
+    <label>العرض</label>
+    <div class="ctrl-row">
+      <div class="view-toggle">
+        <button class="vbtn active" id="btnTable" onclick="setView('table')">📋 جدول</button>
+        <button class="vbtn" id="btnCards" onclick="setView('cards')">🗂 بطاقات</button>
+      </div>
+      <button class="btn btn-gray" onclick="resetFilters()">مسح</button>
+    </div>
+  </div>
+</div>
+
+<div class="stats" id="statsBar">
+  <div class="stat-item"><span class="stat-lbl">المنتجات:</span><span class="stat-val" id="sTotal">-</span></div>
+  <div class="stat-item"><span class="stat-lbl">أقل سعر:</span><span class="stat-val" id="sMin">-</span> ج</div>
+  <div class="stat-item"><span class="stat-lbl">أعلى سعر:</span><span class="stat-val" id="sMax">-</span> ج</div>
+  <div class="stat-item"><span class="stat-lbl">متوسط خصم:</span><span class="stat-val" id="sAvgDisc">-</span>%</div>
+  <div class="stat-item"><span class="stat-lbl">إجمالي توفير ممكن:</span><span class="stat-val" id="sTotalSaving">-</span> ج</div>
+</div>
+
+<main id="mainArea"></main>
+
+<!-- Compare bar -->
+<div class="compare-bar" id="compareBar">
+  <strong style="white-space:nowrap; font-size:.82rem">⚖️ مقارنة:</strong>
+  <div class="compare-items" id="compareChips"></div>
+  <button class="btn btn-orange" onclick="openCompareModal()">قارن الآن</button>
+  <button class="btn btn-gray" onclick="clearCompare()">مسح</button>
+</div>
+
+<!-- Compare modal -->
+<div class="modal-overlay" id="compareModal" onclick="if(event.target===this)closeCompareModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeCompareModal()">✕ إغلاق</button>
+    <h2>⚖️ مقارنة تفصيلية</h2>
+    <div id="compareTableWrap"></div>
+  </div>
+</div>
+
+<script>
+// ─── State ───────────────────────────────────────────────
+let ALL = [];
+let filtered = [];
+let view = 'table';
+let sortCol = '';
+let sortDir = 1;
+let compareIds = new Set();
+let activeTab = '';
+
+// ─── Load data ───────────────────────────────────────────
+fetch('data.json')
+  .then(r => r.json())
+  .then(json => {
+    ALL = json.products;
+    document.getElementById('headerMeta').textContent =
+      `${json.meta.last_updated} · ${json.meta.note}`;
+    populateFilters();
+    applyFilters();
+  })
+  .catch(() => {
+    document.getElementById('mainArea').innerHTML =
+      '<div class="empty">⚠️ تعذر تحميل data.json — تأكد إن الملف موجود في نفس المجلد</div>';
+  });
+
+// ─── Filters ─────────────────────────────────────────────
+function populateFilters() {
+  const brands = [...new Set(ALL.map(d => d.brand))].sort();
+  const shops  = [...new Set(ALL.map(d => d.shop))].sort();
+  const bSel   = document.getElementById('brandFilter');
+  const sSel   = document.getElementById('shopFilter');
+  brands.forEach(b => { const o=document.createElement('option'); o.value=b; o.textContent=b; bSel.appendChild(o); });
+  shops.forEach(s  => { const o=document.createElement('option'); o.value=s; o.textContent=s; sSel.appendChild(o); });
+
+  // header badges
+  const cats = [...new Set(ALL.map(d => d.category))];
+  const hb = document.getElementById('headerBadges');
+  cats.forEach(c => {
+    const span = document.createElement('span');
+    span.className = 'hbadge';
+    span.textContent = c + ' (' + ALL.filter(d=>d.category===c).length + ')';
+    hb.appendChild(span);
+  });
+}
+
+function applyFilters() {
+  const q     = document.getElementById('searchInput').value.toLowerCase().trim();
+  const brand = document.getElementById('brandFilter').value;
+  const shop  = document.getElementById('shopFilter').value;
+  const pMin  = parseFloat(document.getElementById('priceMin').value) || 0;
+  const pMax  = parseFloat(document.getElementById('priceMax').value) || Infinity;
+  const sort  = document.getElementById('sortBy').value;
+
+  filtered = ALL.filter(d =>
+    (!activeTab || d.category === activeTab) &&
+    (!brand  || d.brand === brand) &&
+    (!shop   || d.shop  === shop)  &&
+    (d.price_after >= pMin && (pMax === Infinity || d.price_after <= pMax)) &&
+    (!q || [d.name, d.brand, d.category,
+            (d.features||[]).join(' '),
+            d.shop, JSON.stringify(d)].join(' ').toLowerCase().includes(q))
+  );
+
+  if (sort === 'price_asc')     filtered.sort((a,b) => a.price_after - b.price_after);
+  else if (sort === 'price_desc')   filtered.sort((a,b) => b.price_after - a.price_after);
+  else if (sort === 'disc_desc')    filtered.sort((a,b) => b.discount_pct - a.discount_pct);
+  else if (sort === 'brand')        filtered.sort((a,b) => a.brand.localeCompare(b.brand));
+  else if (sort === 'saving_desc')  filtered.sort((a,b) => (b.price_before-b.price_after)-(a.price_before-a.price_after));
+  else if (sortCol) {
+    filtered.sort((a,b) => {
+      const av = a[sortCol] ?? '', bv = b[sortCol] ?? '';
+      return sortDir * (typeof av==='number' ? av-bv : String(av).localeCompare(String(bv)));
+    });
+  }
+
+  updateStats();
+  render();
+}
+
+function resetFilters() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('brandFilter').value = '';
+  document.getElementById('shopFilter').value  = '';
+  document.getElementById('priceMin').value    = '';
+  document.getElementById('priceMax').value    = '';
+  document.getElementById('sortBy').value      = '';
+  applyFilters();
+}
+
+// ─── Stats ───────────────────────────────────────────────
+function updateStats() {
+  const valid = filtered.filter(d => d.price_after > 0);
+  document.getElementById('sTotal').textContent    = filtered.length;
+  document.getElementById('sMin').textContent      = valid.length ? Math.min(...valid.map(d=>d.price_after)).toLocaleString() : '-';
+  document.getElementById('sMax').textContent      = valid.length ? Math.max(...valid.map(d=>d.price_after)).toLocaleString() : '-';
+  document.getElementById('sAvgDisc').textContent  = valid.length ? Math.round(valid.reduce((s,d)=>s+d.discount_pct,0)/valid.length) : '-';
+  const saving = valid.reduce((s,d)=>s+(d.price_before-d.price_after),0);
+  document.getElementById('sTotalSaving').textContent = saving.toLocaleString();
+}
+
+// ─── Render ──────────────────────────────────────────────
+function render() {
+  const area = document.getElementById('mainArea');
+  if (!filtered.length) {
+    area.innerHTML = '<div class="empty"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><br>لا توجد نتائج مطابقة</div>';
+    return;
+  }
+  area.innerHTML = view === 'table' ? renderTable() : renderCards();
+}
+
+function brandClass(brand) { return 'b-' + brand.replace(/\s+/g,''); }
+
+function featureTags(features) {
+  return (features||[]).slice(0,4).map(f => `<span class="tag">${f}</span>`).join(' ');
+}
+
+function techSummary(d) {
+  const parts = [];
+  if (d.capacity_kg)       parts.push(`${d.capacity_kg} كجم`);
+  if (d.spin_rpm)          parts.push(`${d.spin_rpm} RPM`);
+  if (d.energy_class)      parts.push(`طاقة ${d.energy_class}`);
+  if (d.oven_capacity_liters) parts.push(`فرن ${d.oven_capacity_liters}ل`);
+  if (d.capacity_liters)   parts.push(`${d.capacity_liters} لتر`);
+  if (d.width_cm)          parts.push(`${d.width_cm} سم`);
+  if (d.burners)           parts.push(`${d.burners} شعلة`);
+  if (d.speeds)            parts.push(`${d.speeds} سرعات`);
+  if (d.power_w)           parts.push(`${d.power_w}W`);
+  if (d.noise_db)          parts.push(`${d.noise_db}dB`);
+  if (d.programs)          parts.push(`${d.programs} برنامج`);
+  return parts.join(' · ');
+}
+
+function saving(d) { return d.price_before > 0 ? (d.price_before - d.price_after).toLocaleString() + ' ج' : '-'; }
+
+// Find best-value per category (highest discount %)
+const bestByCategory = () => {
+  const best = {};
+  filtered.forEach(d => {
+    if (!best[d.category] || d.discount_pct > best[d.category].discount_pct)
+      best[d.category] = d;
+  });
+  return best;
+};
+
+function renderTable() {
+  const best = bestByCategory();
+  const cols = [
+    {k:'',      label:'#'},
+    {k:'brand', label:'الماركة ▾'},
+    {k:'name',  label:'الجهاز'},
+    {k:'category', label:'الفئة'},
+    {k:'',      label:'مواصفات تقنية'},
+    {k:'',      label:'مميزات'},
+    {k:'price_before', label:'قبل'},
+    {k:'price_after',  label:'بعد'},
+    {k:'discount_pct', label:'خصم'},
+    {k:'',      label:'توفير'},
+    {k:'shop',  label:'المحل'},
+    {k:'',      label:'قارن'},
+  ];
+
+  const thead = `<thead><tr>${cols.map((c,i) =>
+    `<th class="${sortCol===c.k&&c.k?'sorted':''}" onclick="${c.k?`sortBy('${c.k}')`:''}" style="${c.k?'cursor:pointer':''}">
+      ${c.k?`<span class="sort-arrow">${sortCol===c.k?(sortDir>0?'↑':'↓'):'↕'}</span>`:''}${c.label}</th>`
+  ).join('')}</tr></thead>`;
+
+  const rows = filtered.map((d, i) => {
+    const isBest = best[d.category] === d;
+    const inCmp  = compareIds.has(d.id);
+    return `<tr class="${isBest?'best-deal':''}">
+      <td>${i+1}${isBest?' ⭐':''}</td>
+      <td><span class="brand-badge ${brandClass(d.brand)}">${d.brand}</span></td>
+      <td style="max-width:220px;line-height:1.4">${d.name}</td>
+      <td><span class="tag">${d.category}</span></td>
+      <td style="font-size:.72rem;color:#555;max-width:200px">${techSummary(d)}</td>
+      <td style="max-width:180px">${featureTags(d.features)}</td>
+      <td>${d.price_before>0?`<span class="price-before">${d.price_before.toLocaleString()}</span>`:'-'}</td>
+      <td><span class="price-after">${d.price_after>0?d.price_after.toLocaleString()+' ج':'-'}</span></td>
+      <td>${d.discount_pct>0?`<span class="disc-badge">${d.discount_pct}%</span>`:'-'}</td>
+      <td style="color:#2e7d32;font-weight:600">${saving(d)}</td>
+      <td>${d.shop}</td>
+      <td><input type="checkbox" ${inCmp?'checked':''} onchange="toggleCompare(${d.id})" title="أضف للمقارنة"></td>
+    </tr>`;
+  }).join('');
+
+  return `<div class="table-wrap"><table>${thead}<tbody>${rows}</tbody></table></div>`;
+}
+
+function renderCards() {
+  const best = bestByCategory();
+  return `<div class="cards">${filtered.map(d => {
+    const isBest = best[d.category] === d;
+    const inCmp  = compareIds.has(d.id);
+    return `<div class="card">
+      ${isBest ? '<div class="best-corner">⭐ أفضل خصم</div>' : ''}
+      <div class="card-top">
+        <div>
+          <div class="card-brand"><span class="brand-badge ${brandClass(d.brand)}">${d.brand}</span></div>
+          <div class="card-cat">${d.category}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px">
+          ${d.discount_pct>0?`<span class="disc-badge">${d.discount_pct}%</span>`:''}
+          <label style="font-size:.7rem;color:var(--muted);cursor:pointer">
+            <input type="checkbox" ${inCmp?'checked':''} onchange="toggleCompare(${d.id})"> قارن
+          </label>
+        </div>
+      </div>
+      <div class="card-name">${d.name}</div>
+      <div class="card-price">
+        <span class="card-price-after">${d.price_after>0?d.price_after.toLocaleString()+' ج':'-'}</span>
+        ${d.price_before>0?`<span class="card-price-before">${d.price_before.toLocaleString()}</span>`:''}
+      </div>
+      <div class="card-specs">${featureTags(d.features)}</div>
+      <div class="card-tech">${techSummary(d)}</div>
+    </div>`;
+  }).join('')}</div>`;
+}
+
+// ─── Sort ────────────────────────────────────────────────
+function sortBy(col) {
+  if (sortCol === col) sortDir *= -1; else { sortCol = col; sortDir = 1; }
+  applyFilters();
+}
+
+// ─── View toggle ─────────────────────────────────────────
+function setView(v) {
+  view = v;
+  document.getElementById('btnTable').classList.toggle('active', v==='table');
+  document.getElementById('btnCards').classList.toggle('active', v==='cards');
+  render();
+}
+
+// ─── Tabs ────────────────────────────────────────────────
+document.getElementById('tabs').addEventListener('click', e => {
+  const t = e.target.closest('.tab');
+  if (!t) return;
+  document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+  t.classList.add('active');
+  activeTab = t.dataset.cat;
+  applyFilters();
+});
+
+// ─── Compare ─────────────────────────────────────────────
+function toggleCompare(id) {
+  if (compareIds.has(id)) compareIds.delete(id);
+  else {
+    if (compareIds.size >= 4) { alert('يمكنك مقارنة 4 منتجات كحد أقصى'); return; }
+    compareIds.add(id);
+  }
+  updateCompareBar();
+}
+
+function updateCompareBar() {
+  const bar   = document.getElementById('compareBar');
+  const chips = document.getElementById('compareChips');
+  if (compareIds.size === 0) { bar.classList.remove('visible'); return; }
+  bar.classList.add('visible');
+  chips.innerHTML = [...compareIds].map(id => {
+    const d = ALL.find(x => x.id === id);
+    return `<div class="compare-chip">${d.brand} - ${d.category}
+      <button onclick="toggleCompare(${id}); render()">✕</button></div>`;
+  }).join('');
+}
+
+function clearCompare() {
+  compareIds.clear();
+  updateCompareBar();
+  render();
+}
+
+function openCompareModal() {
+  if (compareIds.size < 2) { alert('اختار منتجين على الأقل للمقارنة'); return; }
+  const items = [...compareIds].map(id => ALL.find(x => x.id === id));
+
+  const rows = [
+    ['الماركة',          d => d.brand],
+    ['الفئة',            d => d.category],
+    ['السعر بعد الخصم', d => d.price_after>0 ? d.price_after.toLocaleString()+' ج' : '-'],
+    ['السعر قبل الخصم', d => d.price_before>0 ? d.price_before.toLocaleString()+' ج' : '-'],
+    ['الخصم',            d => d.discount_pct+'%'],
+    ['التوفير',          d => saving(d)],
+    ['السعة / الكجم',   d => d.capacity_kg ? d.capacity_kg+' كجم' : (d.capacity_liters ? d.capacity_liters+' لتر' : (d.oven_capacity_liters ? d.oven_capacity_liters+' لتر' : '-'))],
+    ['السرعة',           d => d.spin_rpm ? d.spin_rpm+' RPM' : '-'],
+    ['فئة الطاقة',       d => d.energy_class || '-'],
+    ['عدد البرامج',      d => d.programs || '-'],
+    ['الضوضاء',          d => d.noise_db ? d.noise_db+' dB' : '-'],
+    ['الطاقة',           d => d.power_w ? d.power_w+' W' : '-'],
+    ['العرض',            d => d.width_cm ? d.width_cm+' سم' : '-'],
+    ['عدد الشعلات',      d => d.burners || '-'],
+    ['عدد السرعات',      d => d.speeds || '-'],
+    ['المميزات',         d => (d.features||[]).join(' • ')],
+    ['المحل',            d => d.shop],
+  ];
+
+  // find best price
+  const bestPrice = Math.min(...items.filter(d=>d.price_after>0).map(d=>d.price_after));
+  const bestDisc  = Math.max(...items.map(d=>d.discount_pct));
+
+  const thead = `<tr><th>البيان</th>${items.map(d=>`<th>${d.brand}<br><span style="font-weight:400;font-size:.7rem">${d.name.slice(0,30)}...</span></th>`).join('')}</tr>`;
+  const tbody = rows.map(([label, fn]) => {
+    const vals = items.map(fn);
+    return `<tr><td style="font-weight:600;color:var(--dark)">${label}</td>${items.map((d,i) => {
+      const v = vals[i];
+      const best = (label==='السعر بعد الخصم' && d.price_after===bestPrice && d.price_after>0)
+                || (label==='الخصم' && d.discount_pct===bestDisc);
+      return `<td class="${best?'cmp-winner':''}">${v}</td>`;
+    }).join('')}</tr>`;
+  }).join('');
+
+  document.getElementById('compareTableWrap').innerHTML =
+    `<div style="overflow-x:auto"><table class="cmp-table"><thead>${thead}</thead><tbody>${tbody}</tbody></table></div>`;
+  document.getElementById('compareModal').classList.add('open');
+}
+
+function closeCompareModal() {
+  document.getElementById('compareModal').classList.remove('open');
+}
+
+// ─── Event listeners ─────────────────────────────────────
+['searchInput','brandFilter','shopFilter','priceMin','priceMax','sortBy']
+  .forEach(id => document.getElementById(id).addEventListener('input', applyFilters));
+</script>
+</body>
+</html>
