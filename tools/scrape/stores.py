@@ -9,6 +9,10 @@ WANT = re.compile(r"wash|laundry|refrig|fridge|freez|cook|oven|microw|hood|hob|d
                   r"range|stove", re.I)
 
 
+def _enough(items, ctx):
+    return bool(ctx.get("limit")) and len(items) >= ctx["limit"]
+
+
 def _cap(items, ctx):
     return items[: ctx["limit"]] if ctx.get("limit") else items
 
@@ -179,6 +183,8 @@ def jumia(f, ctx):
         last = 1
         page = 1
         while page <= min(last, 40):
+            if _enough(out, ctx):
+                return _cap(out, ctx)
             h = f.get(f"{B}/ar/{c}/" + (f"?page={page}" if page > 1 else ""))
             if not h:
                 break
@@ -208,6 +214,8 @@ def woo(f, ctx, base, cats, shop, source, per_page=100):
     out, seen = [], set()
     for c in cats:
         for page in range(1, 60):
+            if _enough(out, ctx):
+                return _cap(out, ctx)
             q = f"?category={c}&page={page}" + (f"&per_page={per_page}" if per_page else "")
             j = f.get(f"{base}/wp-json/wc/store/v1/products{q}", as_json=True)
             if not j:
@@ -256,6 +264,8 @@ def raneen(f, ctx):
     cats = [f"{B}large-appliances/{c}" for c in RANEEN_CATS] + [f"{B}kitchen-appliances/microwaves-ovens"]
     for c in cats:
         for page in range(1, 80):
+            if _enough(out, ctx):
+                return _cap(out, ctx)
             h = f.get(c + (f"?p={page}" if page > 1 else ""))
             if not h:
                 break
@@ -286,6 +296,8 @@ def azmy(f, ctx):
     B, out, seen = "https://azmyco.com/ar/products/", [], set()
     for c in AZMY_CATS:
         for start in range(0, 2000, 12):
+            if _enough(out, ctx):
+                return _cap(out, ctx)
             h = f.get(f"{B}{c}/" + (f"?start={start}" if start else ""))
             if not h:
                 break
