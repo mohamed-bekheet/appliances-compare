@@ -67,6 +67,7 @@ Shop names already in use (reuse exactly): `B.TECH`, `Carrefour`, `Jumia`, `Rane
 - Washers get a quality score (motor type, capacity, rpm, inverter, steam, drum, warranty, brand
   reputation, rating) and a value score = quality ÷ price. Other categories rank by price and savings.
 - A scraped listing not seen for 21+ days is ignored for "cheapest".
+- Smart search box: parses sentences like "غسالة LG 8 كيلو انفرتر تحت 20 الف" (category, brand, shop, features, kg/liters/cm, burners, rpm, price ranges, "ارخص") into filters, shows what it understood, and "ثبّتها كفلاتر" turns them into real filter controls. With no results it suggests which filter to drop. Features are normalised to canonical names (`FEAT_CANON` in index.html). Tables render 150 rows then "اعرض أكتر".
 - Filters: multi-select brand / shop / features (features = must have all) / motor, ranges for price, capacity (kg, liters or cm width by category) and discount, "in stock only". Filter state lives in the URL hash, so a filtered view can be shared.
 
 ## Scraper (automatic)

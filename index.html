@@ -54,6 +54,13 @@ header p  { font-size: 0.78rem; opacity: .75; margin-top: 2px; }
 .ctrl-row.range { flex-wrap: nowrap !important; }
 .ctrl-row.range input { flex: 1 1 0; width: 0; min-width: 0; }
 .ms { position: relative; }
+.qhint { font-size: .7rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 3px; margin-top: 3px; align-items: center; }
+.qhint span { background: #e8f5e9; color: #2e7d32; border-radius: 10px; padding: 1px 7px; }
+.qhint a { color: var(--orange); cursor: pointer; font-weight: 600; }
+.more-wrap { text-align: center; margin: 14px 0 24px; }
+.relax { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; align-items: center; font-size: .85rem; }
+.relax button { border: 1px solid var(--orange); background: #fff; color: var(--orange); border-radius: 16px; padding: 5px 12px; cursor: pointer; font-family: inherit; font-size: .8rem; }
+.relax button:hover { background: var(--orange); color: #fff; }
 .ms-btn { width: 100%; text-align: right; padding: 7px 26px 7px 10px; border: 1.5px solid var(--border); border-radius: 8px;
   font: inherit; font-size: .82rem; background: #fafafa; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   position: relative; }
@@ -305,14 +312,16 @@ tr.best-value td { background: #e8f5e9 !important; }
 </div>
 
 <div class="controls">
-  <div class="ctrl">
-    <label>🔍 بحث</label>
-    <input type="text" id="searchInput" placeholder="اكتب ماركة أو مواصفة...">
+  <div class="ctrl" style="min-width:260px;flex:2">
+    <label>🔍 بحث ذكي</label>
+    <input type="search" id="searchInput" placeholder="مثلاً: غسالة LG 8 كيلو انفرتر تحت 20 الف" autocomplete="off">
+    <div class="qhint" id="qHint"></div>
   </div>
   <div class="ctrl"><label>🏷️ الماركة</label><div class="ms" data-key="brand"></div></div>
   <div class="ctrl"><label>🏪 المحل</label><div class="ms" data-key="shop"></div></div>
   <div class="ctrl"><label>✨ المميزات</label><div class="ms" data-key="feat"></div></div>
   <div class="ctrl" id="ctrlMotor"><label>🔧 الموتور</label><div class="ms" data-key="motor"></div></div>
+  <div class="ctrl" id="ctrlSpec"><label id="specLbl">🔩 المواصفة</label><div class="ms" data-key="spec"></div></div>
   <div class="ctrl">
     <label>⚖️ <span id="capLbl">السعة</span> (<span id="capUnitLbl">كجم</span>)</label>
     <div class="ctrl-row range">
@@ -336,7 +345,7 @@ tr.best-value td { background: #e8f5e9 !important; }
     </div>
     <label class="merge-lbl" style="margin-top:4px"><input type="checkbox" id="stockOnly"> متاح بس</label>
   </div>
-  <div class="ctrl">
+  <div class="ctrl" style="max-width:230px">
     <label>↕️ ترتيب</label>
     <select id="sortBy">
       <option value="">افتراضي</option>
@@ -418,6 +427,7 @@ fetch('data.json')
     buildGroups();
     document.getElementById('headerMeta').textContent =
       `${json.meta.last_updated} · ${json.meta.note}`;
+    buildSmartIndex();
     populateFilters();
     loadHash();
     applyFilters();
@@ -704,15 +714,141 @@ function capUnit() {
 const FACETS = {
   brand: { all: 'كل الماركات', vals: d => [d.brand] },
   shop:  { all: 'كل المحلات',  vals: d => [d.shop] },
-  feat:  { all: 'أي مميزات',   vals: d => d.features || [], and: true },
+  feat:  { all: 'أي مميزات',   vals: d => d._f || [], and: true },
+  spec:  { all: 'الكل', vals: d => specOf(d), label: v => specLabel(v) },
   motor: { all: 'الكل',        vals: d => [d.motor_class || 'unknown'], label: v => MOTOR_LABEL[v] || v },
 };
+
+// ─── Smart search: "غسالة LG 8 كيلو انفرتر تحت 20 الف" → real filters ─────────
+const normAr = s => String(s || '').toLowerCase()
+  .replace(/[ً-ْـ]/g, '').replace(/[أإآ]/g, 'ا').replace(/ة/g, 'ه').replace(/ى/g, 'ي')
+  .replace(/[٠-٩]/g, c => '٠١٢٣٤٥٦٧٨٩'.indexOf(c)).replace(/[،,]/g, ' ');
+const alnum = s => String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+// canonical feature names used by the filter (raw store wording varies a lot)
+const FEAT_CANON = [
+  ['انفرتر', /انفرتر|inverter/i], ['بخار', /بخار|steam/i], ['نوفروست', /نو ?فروست|no ?frost/i], ['ديفروست', /^ديفروست|^defrost/i],
+  ['Wi-Fi', /wi-?fi|واي ?فاي|thinq/i], ['Front Load', /front ?load|تحميل أمامي|تحميل امامي/i], ['Top Load', /top ?load|تحميل علوي/i],
+  ['نصف أوتوماتيك', /نصف|half|twin ?tub/i], ['غسالة مجفف', /غسالة مجفف|washer ?dryer|مع مجفف/i], ['بلت إن', /بلت ?إن|built[ -]?in/i],
+  ['أمان كامل', /(أ|ا)مان (كامل|تام)|full safety/i], ['مروحة', /مروحة|turbo|\bfan\b/i], ['فريزر علوي', /فريزر علوي|top freezer/i],
+  ['فريزر سفلي', /فريزر سفلي|bottom freezer/i], ['سايد باي سايد', /سايد باي سايد|side.?by.?side/i], ['ميني بار', /ميني ?بار|mini ?bar/i],
+  ['باب واحد', /باب واحد|one door/i], ['شاشة ديجيتال', /ديجيتال|digital/i], ['إشعال ذاتي', /(إ|ا)شعال ذاتي/i],
+  ['حماية من الفيضان', /فيضان|aqua ?stop/i], ['قفل أطفال', /أطفال|اطفال|child lock/i], ['يدوي', /^يدوي$|manual/i],
+];
+function canonFeats(list) {
+  const out = new Set();
+  (list || []).forEach(f => { for (const [c, rx] of FEAT_CANON) if (rx.test(f)) out.add(c); });
+  return [...out];
+}
+const Q_CATS = [  // order matters (غسالة اطباق before غسالة)
+  ['غسالة أطباق', /غساله? ?(ال)?اطباق|غسالات ?(ال)?اطباق|dish ?washer/],
+  ['ديب فريزر', /ديب ?فريزر|ديب|deep ?freezer|chest freezer/], ['ثلاجة', /ثلاجه|ثلاجات|تلاجه|تلاجات|fridge|refrigerator/],
+  ['مجفف', /مجفف(?!ه)|نشافه|dryer/], ['غسالة', /غساله|غسالات|washer|washing/], ['بوتاجاز', /بوتاجاز|بوتجاز|cooker|stove/],
+  ['مسطح غاز', /مسطح|hob/], ['شفاط', /شفاط|hood/], ['مايكروويف', /ميكرو ?ويف|مايكرو ?ويف|micro ?wave/], ['فرن', /فرن|oven/],
+  ['سخان', /سخان|heater/],
+];
+const Q_FEATS = [
+  ['انفرتر', /انفرتر|inverter/], ['بخار', /بخار|steam/], ['نوفروست', /نو ?فروست|no ?frost/], ['ديفروست', /ديفروست|defrost/],
+  ['Wi-Fi', /واي ?فاي|wi-?fi|سمارت|smart/], ['Front Load', /فرونت|امامي|front/], ['Top Load', /توب ?لود|علوي|top ?load/],
+  ['نصف أوتوماتيك', /نص(ف)? ?اوتوماتيك|half/], ['بلت إن', /بلت ?ان|built ?in/], ['أمان كامل', /امان|safety/],
+  ['مروحة', /مروحه|fan/], ['سايد باي سايد', /سايد ?باي ?سايد|side ?by ?side/], ['ميني بار', /ميني ?بار|mini ?bar/],
+];
+const BRAND_AR = { 'ال جي':'LG','الجي':'LG','سامسونج':'Samsung','توشيبا':'Toshiba','زانوسي':'Zanussi','شارب':'Sharp','فريش':'Fresh',
+  'بيكو':'Beko','هاير':'Haier','بوش':'Bosch','اريستون':'Ariston','يونيون اير':'Unionaire','يونيون':'Unionaire','كريازي':'Kiriazi',
+  'وايت بوينت':'White Point','وايت ويل':'White Whale','تورنيدو':'Tornado','تورنادو':'Tornado','ميديا':'Midea','هوفر':'Hoover',
+  'جورينيه':'Gorenje','كاندي':'Candy','الاسكا':'Alaska','هايسنس':'Hisense','هيتاشي':'Hitachi','اندست':'Indesit','ويرلبول':'Whirlpool',
+  'باناسونيك':'Panasonic','جليم جاز':'Glem Gas','لاجرمانيا':'La Germania','بيورتي':'Purity','تكنو جاز':'Techno Gas','اوليمبك':'Olympic Electric' };
+const SHOP_AR = { 'بي تك':'B.TECH','بيتك':'B.TECH','btech':'B.TECH','كارفور':'Carrefour','جوميا':'Jumia','رنين':'Raneen','وازن':'Wazen',
+  'ايهاب':'Ehab Center','برتي':'Berty Center','عزمي':'Azmy','الرياده':'Al Reyada','العربي':'El Araby' };
+let BRAND_IDX = [], SHOP_IDX = [];
+const rxEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+function buildSmartIndex() {
+  const brands = [...new Set(ALL.map(d => d.brand))], shops = [...new Set(ALL.map(d => d.shop))];
+  BRAND_IDX = [...brands.map(b => [normAr(b), b]), ...Object.entries(BRAND_AR).map(([k, v]) => [normAr(k), v])]
+    .filter(([k, v]) => k.length >= 2 && brands.includes(v)).sort((a, b) => b[0].length - a[0].length)
+    .map(([k, v]) => [new RegExp('(^|\\s)' + rxEsc(k) + '(?=\\s)'), v]);
+  SHOP_IDX = [...shops.map(s => [normAr(s), s]), ...Object.entries(SHOP_AR).map(([k, v]) => [normAr(k), v])]
+    .filter(([k, v]) => k.length >= 3 && shops.includes(v)).sort((a, b) => b[0].length - a[0].length)
+    .map(([k, v]) => [new RegExp('(^|\\s)' + rxEsc(k) + '(?=\\s)'), v]);
+  for (const d of ALL) {   // precomputed once: search text, model key, canonical features
+    d._q = normAr([d.name, d.brand, d.model, d.category, (d.features || []).join(' '), d.shop, d.seller, d.made_in].join(' '));
+    d._m = alnum(d.model);
+    d._f = canonFeats(d.features);
+  }
+}
+const _pq = new Map();
+function parseQuery(raw) {
+  if (_pq.has(raw)) return _pq.get(raw);
+  let t = ' ' + normAr(raw) + ' ';
+  const P = { cats: [], brands: [], shops: [], feats: [], understood: [] };
+  const take = (rx, fn) => { t = t.replace(rx, (...m) => { fn(m); return ' '; }); };
+  const mult = u => u ? 1000 : 1;
+  take(/(?:بين|من)\s*(\d+(?:\.\d+)?)\s*(الف|k)?\s*(?:و|ل|الي|الى|-|to)\s*(\d+(?:\.\d+)?)\s*(الف|k)?/, m => {
+    const u = m[4] || m[2]; P.pMin = +m[1] * mult(m[2] || u); P.pMax = +m[3] * mult(u); });
+  take(/(?:تحت|اقل من|ارخص من|لحد|حتي|under|below|max|<)\s*(\d+(?:\.\d+)?)\s*(الف|k)?/, m => P.pMax = +m[1] * mult(m[2]));
+  take(/(?:فوق|اكتر من|اكثر من|over|above|>)\s*(\d+(?:\.\d+)?)\s*(الف|k)?/, m => P.pMin = +m[1] * mult(m[2]));
+  take(/(\d+(?:\.\d+)?)\s*(?:كيلو|كجم|كج|kg)(?=\s)/, m => P.cap = ['kg', +m[1]]);
+  take(/(\d{2,4})\s*(?:لتر|ليتر|l|lt|liters?)(?=\s)/, m => P.cap = ['l', +m[1]]);
+  take(/(\d{2,3})\s*(?:سم|سنتي|cm)(?=\s)/, m => P.cap = ['cm', +m[1]]);
+  take(/(\d{1,2})\s*(?:قدم|feet|ft)(?=\s)/, m => P.feet = +m[1]);
+  take(/(\d)\s*(?:شعلات|شعله|عيون|عين|burners?)(?=\s)/, m => P.burners = +m[1]);
+  take(/(\d{3,4})\s*(?:لفه|rpm|دوره)(?=\s)/, m => P.rpm = +m[1]);
+  take(/(\d+(?:\.\d+)?)\s*(?:الف|k)(?=\s)/, m => { if (P.pMax == null) P.pMax = +m[1] * 1000; });
+  take(/الارخص|ارخص|cheapest|رخيص/, () => P.sort = 'price_asc');
+  take(/افضل|احسن|best/, () => P.sort = 'value_desc');
+  for (const [c, rx] of Q_CATS) take(rx, () => P.cats.includes(c) || P.cats.push(c));
+  for (const [f, rx] of Q_FEATS) take(rx, () => P.feats.includes(f) || P.feats.push(f));
+  for (const [rx, v] of SHOP_IDX) take(rx, () => P.shops.includes(v) || P.shops.push(v));
+  for (const [rx, v] of BRAND_IDX) take(rx, () => P.brands.includes(v) || P.brands.push(v));
+  take(/(?:^|\s)(\d{4,6})(?=\s)/, m => { if (P.pMax == null) P.pMax = +m[1]; });   // bare big number = budget
+  P.words = t.split(/\s+/).filter(w => w && !/^(في|من|ب|و|عايز|عاوز|محتاج|اريد|لون|سعر|موديل|جهاز|بس|a|the|with|for)$/.test(w));
+  const U = P.understood, fmt = n => n.toLocaleString();
+  P.cats.forEach(c => U.push(c)); P.brands.forEach(b => U.push(b)); P.shops.forEach(s => U.push('🏪 ' + s)); P.feats.forEach(f => U.push(f));
+  if (P.cap) U.push(`${P.cap[1]} ${({kg:'كجم', l:'لتر', cm:'سم'})[P.cap[0]]}`);
+  if (P.feet) U.push(`${P.feet} قدم`); if (P.burners) U.push(`${P.burners} شعلات`); if (P.rpm) U.push(`${P.rpm} لفة`);
+  if (P.pMin != null || P.pMax != null) U.push(`💰 ${P.pMin != null ? fmt(P.pMin) : '0'} – ${P.pMax != null ? fmt(P.pMax) : '∞'}`);
+  if (P.sort) U.push(P.sort === 'price_asc' ? '↕ الأرخص الأول' : '↕ أفضل قيمة');
+  if (P.words.length) U.push('🔤 ' + P.words.join(' '));
+  if (_pq.size > 200) _pq.clear();
+  _pq.set(raw, P);
+  return P;
+}
+function matchParsed(d, P) {
+  if (!P) return true;
+  if (P.cats.length && !P.cats.includes(d.category)) return false;
+  if (P.brands.length && !P.brands.includes(d.brand)) return false;
+  if (P.shops.length && !P.shops.includes(d.shop)) return false;
+  if (P.feats.length && !P.feats.every(f => d._f.includes(f))) return false;
+  const p = d.price_after || 0;
+  if (P.pMin != null && p < P.pMin) return false;
+  if (P.pMax != null && (!p || p > P.pMax)) return false;
+  if (P.cap) {
+    const v = P.cap[0] === 'kg' ? d.capacity_kg : P.cap[0] === 'l' ? (d.capacity_liters || d.oven_capacity_liters) : d.width_cm;
+    const tol = P.cap[0] === 'kg' ? 0.01 : P.cap[0] === 'l' ? 0.06 * P.cap[1] : 1;   // liters ±6%: "400 لتر" ≈ 376–424
+    if (!v || Math.abs(v - P.cap[1]) > tol) return false;
+  }
+  if (P.feet && d.capacity_feet !== P.feet) return false;
+  if (P.burners && d.burners !== P.burners) return false;
+  if (P.rpm && d.spin_rpm !== P.rpm) return false;
+  for (const w of P.words) {
+    const a = alnum(w);
+    if (!(d._q.includes(w) || (a.length >= 4 && /\d/.test(a) && d._m.includes(a)))) return false;
+  }
+  return true;
+}
+function specOf(d) {
+  if (d.category === 'غسالة' && d.spin_rpm) return [String(d.spin_rpm)];
+  if (['بوتاجاز','مسطح غاز','مسطح كهرباء'].includes(d.category) && d.burners) return ['b' + d.burners];
+  if (['ثلاجة','ديب فريزر'].includes(d.category) && d.capacity_feet) return ['f' + d.capacity_feet];
+  return [];
+}
+function specLabel(v) { return v[0] === 'b' ? `${v.slice(1)} شعلات` : v[0] === 'f' ? `${v.slice(1)} قدم` : `${v} لفة`; }
 const SEL = Object.fromEntries(Object.keys(FACETS).map(k => [k, new Set()]));
 const num = id => { const v = document.getElementById(id).value; return v === '' ? null : parseFloat(v); };
 
 function readFilters() {
   return {
-    q: document.getElementById('searchInput').value.toLowerCase().trim(),
+    q: document.getElementById('searchInput').value.trim(),
+    P: document.getElementById('searchInput').value.trim() ? parseQuery(document.getElementById('searchInput').value) : null,
     pMin: num('priceMin'), pMax: num('priceMax'), cMin: num('capMin'), cMax: num('capMax'),
     dMin: num('discMin'), dMax: num('discMax'), stock: document.getElementById('stockOnly').checked,
   };
@@ -726,18 +862,19 @@ function passes(d, F, skip) {
     if (FACETS[k].and ? ![...SEL[k]].every(x => v.includes(x)) : !v.some(x => SEL[k].has(x))) return false;
   }
   const p = d.price_after || 0;
+  if (skip !== 'price') {
   if (F.pMin != null && p < F.pMin) return false;
   if (F.pMax != null && (p > F.pMax || !p)) return false;
-  if (F.cMin != null || F.cMax != null) {
+  }
+  if (skip !== 'cap' && (F.cMin != null || F.cMax != null)) {
     const c = capOf(d);
     if (!c || (F.cMin != null && c < F.cMin) || (F.cMax != null && c > F.cMax)) return false;
   }
   const disc = d.discount_pct || 0;
-  if (F.dMin != null && disc < F.dMin) return false;
-  if (F.dMax != null && disc > F.dMax) return false;
-  if (F.stock && !avail(d)) return false;
-  if (F.q && !d._q) d._q = [d.name, d.brand, d.model, d.category, (d.features||[]).join(' '), d.shop, JSON.stringify(d)].join(' ').toLowerCase();
-  if (F.q && !F.q.split(/\s+/).every(w => d._q.includes(w))) return false;
+  if (skip !== 'disc' && F.dMin != null && disc < F.dMin) return false;
+  if (skip !== 'disc' && F.dMax != null && disc > F.dMax) return false;
+  if (skip !== 'stock' && F.stock && !avail(d)) return false;
+  if (skip !== 'q' && !matchParsed(d, F.P)) return false;
   return true;
 }
 
@@ -798,6 +935,11 @@ function refreshRangeHints() {
   document.getElementById('capUnitLbl').textContent = capUnit();
   document.getElementById('capLbl').textContent = WIDTH_CATS.includes(activeTab) ? 'العرض' : 'السعة';
   document.getElementById('ctrlMotor').style.display = (!activeTab || activeTab === 'غسالة' || activeTab === 'مجفف') ? '' : 'none';
+  const specL = activeTab === 'غسالة' ? '🔩 سرعة العصر' : ['بوتاجاز','مسطح غاز','مسطح كهرباء'].includes(activeTab) ? '🔥 الشعلات'
+              : ['ثلاجة','ديب فريزر'].includes(activeTab) ? '📏 بالقدم' : null;
+  document.getElementById('ctrlSpec').style.display = specL ? '' : 'none';
+  if (specL) document.getElementById('specLbl').textContent = specL;
+  if (!specL) SEL.spec.clear();
   const pool = ALL.filter(d => !activeTab || d.category === activeTab);
   const caps = pool.map(capOf).filter(Boolean), prices = pool.map(d => d.price_after).filter(Boolean);
   const mm = a => a.length ? [Math.min(...a), Math.max(...a)] : null;
@@ -835,9 +977,17 @@ function populateFilters() {
   });
 }
 
-function applyFilters() {
-  const F = readFilters();
-  const sort = document.getElementById('sortBy').value;
+let SHOW = 150;                      // rows rendered at once ("اعرض أكتر" adds more)
+let LASTF = null;
+function applyFilters(keepShow) {
+  if (keepShow !== true) SHOW = 150;
+  const F = readFilters(); LASTF = F;
+  const sort = document.getElementById('sortBy').value || (F.P && F.P.sort) || '';
+  const hint = document.getElementById('qHint');
+  hint.innerHTML = F.P && F.P.understood.length
+    ? '<b style="color:var(--muted)">فهمت:</b> ' + F.P.understood.map(u => `<span>${esc(u)}</span>`).join('') +
+      ((F.P.cats.length || F.P.brands.length || F.P.feats.length || F.P.shops.length || F.P.pMin != null || F.P.pMax != null || F.P.cap) ? ' <a onclick="promoteQuery()" title="حوّل الكلام لفلاتر ثابتة">ثبّتها كفلاتر ⤵</a>' : '')
+    : '';
   filtered = ALL.filter(d => passes(d, F));
   updateMSButtons();
   renderPresets();
@@ -865,6 +1015,59 @@ function applyFilters() {
 }
 
 const RANGE_IDS = ['priceMin','priceMax','capMin','capMax','discMin','discMax'];
+function promoteQuery() {
+  const P = parseQuery(document.getElementById('searchInput').value), $ = id => document.getElementById(id);
+  if (P.cats.length === 1) { const t = document.querySelector(`.tab[data-cat="${CSS.escape(P.cats[0])}"]`);
+    if (t) { document.querySelectorAll('.tab').forEach(el => el.classList.remove('active')); t.classList.add('active'); activeTab = P.cats[0]; } }
+  P.brands.forEach(b => SEL.brand.add(b)); P.shops.forEach(x => SEL.shop.add(x)); P.feats.forEach(f => SEL.feat.add(f));
+  if (P.pMin != null) $('priceMin').value = P.pMin;
+  if (P.pMax != null) $('priceMax').value = P.pMax;
+  if (P.cap) { $('capMin').value = P.cap[1]; $('capMax').value = P.cap[1]; }
+  if (P.rpm) SEL.spec.add(String(P.rpm));
+  if (P.burners) SEL.spec.add('b' + P.burners);
+  if (P.sort && !$('sortBy').value) $('sortBy').value = P.sort;
+  $('searchInput').value = [...(P.cats.length > 1 ? P.cats : []), ...P.words].join(' ');
+  refreshRangeHints(); applyFilters();
+}
+function showMore() { SHOW += 300; applyFilters(true); }
+// nothing matches → which single filter, if removed, brings results back?
+function relaxSuggestions() {
+  const F = LASTF || readFilters(), out = [];
+  const count = skip => ALL.reduce((n, d) => n + (passes(d, F, skip) ? 1 : 0), 0);
+  const NAMES = { brand: 'الماركة', shop: 'المحل', feat: 'المميزات', motor: 'الموتور', spec: 'المواصفة' };
+  for (const k in SEL) if (SEL[k].size) out.push([`شيل فلتر ${NAMES[k]}`, count(k), `SEL.${k}.clear();applyFilters()`]);
+  if (F.pMin != null || F.pMax != null) out.push(['شيل فلتر السعر', count('price'), "removeFilter('price')"]);
+  if (F.cMin != null || F.cMax != null) out.push(['شيل فلتر السعة', count('cap'), "removeFilter('cap')"]);
+  if (F.dMin != null || F.dMax != null) out.push(['شيل فلتر الخصم', count('disc'), "removeFilter('disc')"]);
+  if (F.stock) out.push(['اعرض اللي نفذ كمان', count('stock'), "removeFilter('stock')"]);
+  if (F.P) {   // try dropping one understood part of the search sentence
+    const P = F.P, fmt = n => n.toLocaleString();
+    const parts = [
+      ...P.cats.map(c => ['c', c, c]), ...P.brands.map(b => ['b', b, b]), ...P.shops.map(x => ['s', x, x]),
+      ...P.feats.map(f => ['f', f, f]),
+      ...(P.cap ? [['cap', null, `${P.cap[1]} ${({kg:'كيلو', l:'لتر', cm:'سم'})[P.cap[0]]}`]] : []),
+      ...(P.pMin != null || P.pMax != null ? [['p', null, 'السعر']] : []),
+      ...(P.words.length ? [['w', null, P.words.join(' ')]] : []),
+    ];
+    const toText = Q => [...Q.cats, ...Q.brands, ...Q.shops, ...Q.feats,
+      Q.cap ? `${Q.cap[1]} ${({kg:'كيلو', l:'لتر', cm:'سم'})[Q.cap[0]]}` : '', Q.burners ? `${Q.burners} شعلات` : '', Q.rpm ? `${Q.rpm} لفه` : '',
+      Q.pMin != null && Q.pMax != null ? `بين ${Q.pMin} و ${Q.pMax}` : Q.pMax != null ? `تحت ${Q.pMax}` : Q.pMin != null ? `فوق ${Q.pMin}` : '',
+      Q.sort === 'price_asc' ? 'ارخص' : '', ...Q.words].filter(Boolean).join(' ');
+    for (const [kind, val, label] of parts) {
+      const Q = { ...P, cats: P.cats.filter(x => !(kind === 'c' && x === val)), brands: P.brands.filter(x => !(kind === 'b' && x === val)),
+        shops: P.shops.filter(x => !(kind === 's' && x === val)), feats: P.feats.filter(x => !(kind === 'f' && x === val)),
+        cap: kind === 'cap' ? null : P.cap, pMin: kind === 'p' ? null : P.pMin, pMax: kind === 'p' ? null : P.pMax, words: kind === 'w' ? [] : P.words };
+      const G = { ...F, P: Q };
+      const n = ALL.reduce((a, d) => a + (passes(d, G) ? 1 : 0), 0);
+      const txt = toText(Q).replace(/'/g, '');
+      out.push([`من غير «${label}»`, n, `searchInput.value='${txt}';applyFilters()`]);
+    }
+  }
+  if (F.q) out.push(['امسح البحث', count('q'), "removeFilter('q')"]);
+  if (activeTab) { const t = activeTab; activeTab = ''; out.push(['دوّر في كل الأقسام', count(), "document.querySelector('.tab').click()"]); activeTab = t; }
+  return out.filter(o => o[1] > 0).sort((a, b) => a[1] - b[1]).slice(0, 4);  // smallest relaxation first
+}
+
 function resetFilters() {
   document.getElementById('searchInput').value = '';
   RANGE_IDS.forEach(id => document.getElementById(id).value = '');
@@ -927,10 +1130,13 @@ function render() {
   const area = document.getElementById('mainArea');
   renderRec();
   if (!filtered.length) {
-    area.innerHTML = '<div class="empty"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><br>لا توجد نتائج مطابقة</div>';
+    const rs = relaxSuggestions();
+    area.innerHTML = '<div class="empty"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><br>لا توجد نتائج مطابقة' +
+      (rs.length ? '<div class="relax">جرّب:' + rs.map(([t, n, js]) => `<button onclick="${js.replace(/"/g, '&quot;')}">${t} ← ${n} جهاز</button>`).join('') + '</div>' : '') + '</div>';
     return;
   }
-  area.innerHTML = view === 'table' ? renderTable() : renderCards();
+  area.innerHTML = (view === 'table' ? renderTable() : renderCards()) +
+    (filtered.length > SHOW ? `<div class="more-wrap"><button class="btn btn-orange" onclick="showMore()">اعرض أكتر (${(filtered.length - SHOW).toLocaleString()} كمان)</button></div>` : '');
 }
 
 function brandClass(brand) { return 'b-' + brand.replace(/\s+/g,''); }
@@ -992,7 +1198,7 @@ function renderTable() {
       ${c.k?`<span class="sort-arrow">${sortCol===c.k?(sortDir>0?'↑':'↓'):'↕'}</span>`:''}${c.label}</th>`
   ).join('')}</tr></thead>`;
 
-  const rows = filtered.map((d, i) => {
+  const rows = filtered.slice(0, SHOW).map((d, i) => {
     const isBest = best[d.category] === d;
     const inCmp  = compareIds.has(d.id);
     const isBV = d.id === bestVal;
@@ -1019,7 +1225,7 @@ function renderTable() {
 function renderCards() {
   const best = bestByCategory();
   const bestVal = [...VS.entries()].find(([,v]) => v===100)?.[0];
-  return `<div class="cards">${filtered.map(d => {
+  return `<div class="cards">${filtered.slice(0, SHOW).map(d => {
     const isBest = best[d.category] === d;
     const isBV   = d.id === bestVal;
     const inCmp  = compareIds.has(d.id);
@@ -1167,8 +1373,11 @@ function closeCompareModal() {
 }
 
 // ─── Event listeners ─────────────────────────────────────
-['searchInput','sortBy','mergeToggle','stockOnly', ...RANGE_IDS]
-  .forEach(id => document.getElementById(id).addEventListener('input', applyFilters));
+let _deb;
+const debounced = () => { clearTimeout(_deb); _deb = setTimeout(applyFilters, 220); };
+['searchInput', ...RANGE_IDS].forEach(id => document.getElementById(id).addEventListener('input', debounced));
+['sortBy','mergeToggle','stockOnly'].forEach(id => document.getElementById(id).addEventListener('input', applyFilters));
+document.getElementById('searchInput').addEventListener('keydown', e => { if (e.key === 'Enter') { clearTimeout(_deb); applyFilters(); } });
 </script>
 </body>
 </html>
