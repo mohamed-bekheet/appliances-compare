@@ -2,7 +2,7 @@
   "meta": {
     "last_updated": "2026-11-05",
     "currency": "EGP",
-    "note": "Prices extracted from B.TECH promotional posts on Facebook, Cairo Sales, Nomor"
+    "note": "Prices from B.TECH (Facebook), Cairo Sales, Nomor, Carrefour, Zanussi Showroom"
   },
   "products": [
     {
@@ -11,7 +11,11 @@
       "brand": "Zanussi",
       "category": "بوتاجاز",
       "burners": 4,
-      "features": ["أمان كامل", "إشعال ذاتي", "استانلس ستيل"],
+      "features": [
+        "أمان كامل",
+        "إشعال ذاتي",
+        "استانلس ستيل"
+      ],
       "oven_capacity_liters": 65,
       "gas_consumption_kg_h": 0.35,
       "price_before": 10554,
@@ -26,7 +30,12 @@
       "brand": "Midea",
       "category": "بوتاجاز",
       "burners": 5,
-      "features": ["أمان كامل", "إشعال ذاتي", "إضاءة داخلية بالفرن", "زجاج مقاوم للحرارة"],
+      "features": [
+        "أمان كامل",
+        "إشعال ذاتي",
+        "إضاءة داخلية بالفرن",
+        "زجاج مقاوم للحرارة"
+      ],
       "oven_capacity_liters": 65,
       "price_before": 12221,
       "price_after": 10999,
@@ -40,7 +49,12 @@
       "brand": "Unionaire",
       "category": "بوتاجاز",
       "burners": 5,
-      "features": ["حوامل زهر", "مروحة توزيع حرارة", "استانلس ستيل", "برنر ثلاثي تاجي"],
+      "features": [
+        "حوامل زهر",
+        "مروحة توزيع حرارة",
+        "استانلس ستيل",
+        "برنر ثلاثي تاجي"
+      ],
       "oven_capacity_liters": 70,
       "price_before": 12200,
       "price_after": 10999,
@@ -54,7 +68,11 @@
       "brand": "Kiriazi",
       "category": "بوتاجاز",
       "burners": 5,
-      "features": ["أمان كامل", "إضاءة داخلية بالفرن", "استانلس ستيل"],
+      "features": [
+        "أمان كامل",
+        "إضاءة داخلية بالفرن",
+        "استانلس ستيل"
+      ],
       "oven_capacity_liters": 65,
       "gas_consumption_kg_h": 0.38,
       "price_before": 13999,
@@ -69,7 +87,12 @@
       "brand": "Fresh",
       "category": "بوتاجاز",
       "burners": 5,
-      "features": ["إشعال ذاتي", "مروحة توزيع حرارة", "برنر جامبو", "استانلس ستيل"],
+      "features": [
+        "إشعال ذاتي",
+        "مروحة توزيع حرارة",
+        "برنر جامبو",
+        "استانلس ستيل"
+      ],
       "oven_capacity_liters": 80,
       "price_before": 13999,
       "price_after": 12499,
@@ -83,7 +106,11 @@
       "brand": "Unionaire",
       "category": "بوتاجاز",
       "burners": 5,
-      "features": ["حوامل زهر ثقيلة", "مروحة توزيع حرارة", "برنر ثلاثي تاجي"],
+      "features": [
+        "حوامل زهر ثقيلة",
+        "مروحة توزيع حرارة",
+        "برنر ثلاثي تاجي"
+      ],
       "oven_capacity_liters": 80,
       "price_before": 17999,
       "price_after": 15999,
@@ -97,7 +124,12 @@
       "brand": "Midea",
       "category": "بوتاجاز",
       "burners": 5,
-      "features": ["أمان كامل", "مروحة توزيع حرارة", "استانلس ستيل", "إشعال ذاتي"],
+      "features": [
+        "أمان كامل",
+        "مروحة توزيع حرارة",
+        "استانلس ستيل",
+        "إشعال ذاتي"
+      ],
       "oven_capacity_liters": 70,
       "price_before": 18888,
       "price_after": 16999,
@@ -111,7 +143,12 @@
       "brand": "Fresh",
       "category": "بوتاجاز",
       "burners": 5,
-      "features": ["برنر بروفيشنال", "مروحة توزيع حرارة", "أمان كامل", "استانلس ستيل"],
+      "features": [
+        "برنر بروفيشنال",
+        "مروحة توزيع حرارة",
+        "أمان كامل",
+        "استانلس ستيل"
+      ],
       "oven_capacity_liters": 90,
       "price_before": 18799,
       "price_after": 16999,
@@ -125,7 +162,12 @@
       "brand": "Zanussi",
       "category": "بوتاجاز",
       "burners": 5,
-      "features": ["أمان كامل", "شواية علوية", "استانلس ستيل", "برنر سريع"],
+      "features": [
+        "أمان كامل",
+        "شواية علوية",
+        "استانلس ستيل",
+        "برنر سريع"
+      ],
       "oven_capacity_liters": 65,
       "price_before": 19999,
       "price_after": 17890,
@@ -140,7 +182,10 @@
       "category": "شفاط",
       "width_cm": 90,
       "speeds": 3,
-      "features": ["فلتر ألومنيوم قابل للغسيل", "موتور نحاسي"],
+      "features": [
+        "فلتر ألومنيوم قابل للغسيل",
+        "موتور نحاسي"
+      ],
       "power_w": 200,
       "noise_db": 65,
       "price_before": 8079,
@@ -156,7 +201,10 @@
       "category": "شفاط",
       "width_cm": 90,
       "speeds": 3,
-      "features": ["فلتر ألومنيوم قابل للغسيل", "موتور نحاسي"],
+      "features": [
+        "فلتر ألومنيوم قابل للغسيل",
+        "موتور نحاسي"
+      ],
       "power_w": 180,
       "noise_db": 62,
       "price_before": 8679,
@@ -172,7 +220,10 @@
       "category": "شفاط",
       "width_cm": 90,
       "speeds": 3,
-      "features": ["فلاتر كربونية", "مناسب بدون مجرى هواء"],
+      "features": [
+        "فلاتر كربونية",
+        "مناسب بدون مجرى هواء"
+      ],
       "power_w": 200,
       "price_before": 6049,
       "price_after": 4999,
@@ -186,7 +237,12 @@
       "brand": "Fresh",
       "category": "شفاط",
       "width_cm": 90,
-      "features": ["تحكم لمسي", "2 موتور نحاسي", "فلتر ألومنيوم", "إضاءة LED"],
+      "features": [
+        "تحكم لمسي",
+        "2 موتور نحاسي",
+        "فلتر ألومنيوم",
+        "إضاءة LED"
+      ],
       "power_w": 220,
       "price_before": 6666,
       "price_after": 5999,
@@ -201,7 +257,10 @@
       "category": "شفاط",
       "width_cm": 90,
       "speeds": 3,
-      "features": ["فلتر ألومنيوم قابل للغسيل", "موتور نحاسي"],
+      "features": [
+        "فلتر ألومنيوم قابل للغسيل",
+        "موتور نحاسي"
+      ],
       "power_w": 200,
       "noise_db": 64,
       "price_before": 9499,
@@ -216,7 +275,12 @@
       "brand": "Ariston",
       "category": "شفاط",
       "width_cm": 90,
-      "features": ["تحكم لمسي", "فلتر ألومنيوم", "إضاءة LED", "تصميم مائل"],
+      "features": [
+        "تحكم لمسي",
+        "فلتر ألومنيوم",
+        "إضاءة LED",
+        "تصميم مائل"
+      ],
       "power_w": 230,
       "price_before": 23309,
       "price_after": 20999,
@@ -230,7 +294,11 @@
       "brand": "Fresh",
       "category": "مسطح غاز",
       "burners": 4,
-      "features": ["حوامل حديد زهر", "أمان كامل", "سطح استانلس"],
+      "features": [
+        "حوامل حديد زهر",
+        "أمان كامل",
+        "سطح استانلس"
+      ],
       "price_before": 6999,
       "price_after": 6299,
       "discount_pct": 10,
@@ -243,7 +311,12 @@
       "brand": "Purity",
       "category": "مسطح غاز",
       "burners": 5,
-      "features": ["إشعال ذاتي", "حوامل حديد زهر", "سطح زجاجي", "أمان كامل"],
+      "features": [
+        "إشعال ذاتي",
+        "حوامل حديد زهر",
+        "سطح زجاجي",
+        "أمان كامل"
+      ],
       "width_cm": 90,
       "price_before": 18689,
       "price_after": 16499,
@@ -257,7 +330,12 @@
       "brand": "Beko",
       "category": "مسطح غاز",
       "burners": 5,
-      "features": ["أمان كامل", "إشعال ذاتي", "حوامل استانلس", "برنر ثلاثي تاجي"],
+      "features": [
+        "أمان كامل",
+        "إشعال ذاتي",
+        "حوامل استانلس",
+        "برنر ثلاثي تاجي"
+      ],
       "width_cm": 90,
       "price_before": 23199,
       "price_after": 16699,
@@ -271,7 +349,12 @@
       "brand": "LG",
       "category": "مسطح غاز",
       "burners": 5,
-      "features": ["إشعال ذاتي", "استانلس ستيل", "برنر 4كيلوواط", "أمان كامل"],
+      "features": [
+        "إشعال ذاتي",
+        "استانلس ستيل",
+        "برنر 4كيلوواط",
+        "أمان كامل"
+      ],
       "width_cm": 90,
       "price_before": 19999,
       "price_after": 17999,
@@ -285,7 +368,10 @@
       "brand": "Gorenje",
       "category": "مسطح كهرباء",
       "burners": 4,
-      "features": ["سطح سيراميك زجاجي", "تحكم لمسي"],
+      "features": [
+        "سطح سيراميك زجاجي",
+        "تحكم لمسي"
+      ],
       "power_w": 6000,
       "width_cm": 60,
       "price_before": 21620,
@@ -301,7 +387,12 @@
       "category": "فرن",
       "capacity_liters": 56,
       "width_cm": 60,
-      "features": ["مروحة توزيع حرارة", "شواية علوية", "8 وظائف", "تحكم ميكانيكي"],
+      "features": [
+        "مروحة توزيع حرارة",
+        "شواية علوية",
+        "8 وظائف",
+        "تحكم ميكانيكي"
+      ],
       "power_w": 2200,
       "price_before": 15499,
       "price_after": 13999,
@@ -316,7 +407,11 @@
       "category": "فرن",
       "capacity_liters": 65,
       "width_cm": 60,
-      "features": ["مروحة توزيع حرارة", "وظيفة تبريد", "9 وظائف طهي"],
+      "features": [
+        "مروحة توزيع حرارة",
+        "وظيفة تبريد",
+        "9 وظائف طهي"
+      ],
       "power_w": 2400,
       "price_before": 17679,
       "price_after": 15699,
@@ -331,7 +426,12 @@
       "category": "فرن",
       "capacity_liters": 71,
       "width_cm": 60,
-      "features": ["أمان كامل", "شاشة ديجيتال", "استانلس ستيل", "5 وظائف"],
+      "features": [
+        "أمان كامل",
+        "شاشة ديجيتال",
+        "استانلس ستيل",
+        "5 وظائف"
+      ],
       "price_before": 27999,
       "price_after": 25099,
       "discount_pct": 10,
@@ -345,7 +445,12 @@
       "category": "فرن",
       "capacity_liters": 96,
       "width_cm": 90,
-      "features": ["أمان كامل", "تيمر إلكتروني", "مروحة", "10 وظائف"],
+      "features": [
+        "أمان كامل",
+        "تيمر إلكتروني",
+        "مروحة",
+        "10 وظائف"
+      ],
       "power_w": 3200,
       "price_before": 25499,
       "price_after": 22299,
@@ -360,7 +465,11 @@
       "category": "فرن",
       "capacity_liters": 76,
       "width_cm": 60,
-      "features": ["تنظيف ذاتي", "15 وظيفة", "تحكم ديجيتال"],
+      "features": [
+        "تنظيف ذاتي",
+        "15 وظيفة",
+        "تحكم ديجيتال"
+      ],
       "power_w": 3600,
       "energy_class": "A++",
       "price_before": 100551,
@@ -375,7 +484,10 @@
       "brand": "Ariston",
       "category": "مايكروويف",
       "capacity_liters": 22,
-      "features": ["مايكروويف + شواية", "5 مستويات طاقة"],
+      "features": [
+        "مايكروويف + شواية",
+        "5 مستويات طاقة"
+      ],
       "power_w": 1000,
       "price_before": 32999,
       "price_after": 29999,
@@ -389,7 +501,11 @@
       "brand": "Miele",
       "category": "مايكروويف",
       "capacity_liters": 26,
-      "features": ["تحكم ديجيتال", "10 مستويات طاقة", "مايكروويف + شواية"],
+      "features": [
+        "تحكم ديجيتال",
+        "10 مستويات طاقة",
+        "مايكروويف + شواية"
+      ],
       "power_w": 1800,
       "energy_class": "A",
       "price_before": 91499,
@@ -405,7 +521,11 @@
       "category": "غسالة",
       "capacity_kg": 10,
       "spin_rpm": 1400,
-      "features": ["محرك انفرتر", "بخار", "مصنع تركي"],
+      "features": [
+        "محرك انفرتر",
+        "بخار",
+        "مصنع تركي"
+      ],
       "programs": 15,
       "noise_db": 72,
       "energy_class": "A+++",
@@ -422,7 +542,11 @@
       "category": "غسالة",
       "capacity_kg": 10.5,
       "spin_rpm": 1400,
-      "features": ["محرك انفرتر", "بخار", "Wi-Fi متاح"],
+      "features": [
+        "محرك انفرتر",
+        "بخار",
+        "Wi-Fi متاح"
+      ],
       "programs": 15,
       "noise_db": 74,
       "energy_class": "A++",
@@ -439,7 +563,9 @@
       "category": "غسالة",
       "capacity_kg": 8,
       "spin_rpm": 1400,
-      "features": ["محرك انفرتر"],
+      "features": [
+        "محرك انفرتر"
+      ],
       "programs": 16,
       "noise_db": 74,
       "energy_class": "A++",
@@ -456,7 +582,9 @@
       "category": "غسالة",
       "capacity_kg": 9,
       "spin_rpm": 1200,
-      "features": ["محرك انفرتر"],
+      "features": [
+        "محرك انفرتر"
+      ],
       "programs": 15,
       "noise_db": 72,
       "energy_class": "A++",
@@ -473,7 +601,10 @@
       "category": "غسالة",
       "capacity_kg": 10,
       "spin_rpm": 1400,
-      "features": ["محرك انفرتر", "موديل 2026"],
+      "features": [
+        "محرك انفرتر",
+        "موديل 2026"
+      ],
       "programs": 16,
       "noise_db": 71,
       "energy_class": "A+++",
@@ -490,7 +621,10 @@
       "category": "غسالة",
       "capacity_kg": 11,
       "spin_rpm": 1400,
-      "features": ["محرك انفرتر", "موديل 2026"],
+      "features": [
+        "محرك انفرتر",
+        "موديل 2026"
+      ],
       "programs": 16,
       "energy_class": "A+++",
       "price_before": 27499,
@@ -506,7 +640,11 @@
       "category": "غسالة",
       "capacity_kg": 9,
       "spin_rpm": 1400,
-      "features": ["Wi-Fi مدمج", "تحكم بالتطبيق", "بخار"],
+      "features": [
+        "Wi-Fi مدمج",
+        "تحكم بالتطبيق",
+        "بخار"
+      ],
       "programs": 20,
       "energy_class": "A+++",
       "price_before": 26999,
@@ -522,7 +660,10 @@
       "category": "غسالة",
       "capacity_kg": 9,
       "spin_rpm": 1400,
-      "features": ["محرك انفرتر", "EcoBubble"],
+      "features": [
+        "محرك انفرتر",
+        "EcoBubble"
+      ],
       "programs": 15,
       "energy_class": "A++",
       "price_before": 27999,
@@ -538,7 +679,9 @@
       "category": "غسالة",
       "capacity_kg": 9,
       "spin_rpm": 1400,
-      "features": ["خاصية تنظيف ذاتي للحلة"],
+      "features": [
+        "خاصية تنظيف ذاتي للحلة"
+      ],
       "programs": 15,
       "noise_db": 72,
       "energy_class": "A++",
@@ -554,7 +697,10 @@
       "brand": "Haier",
       "category": "غسالة",
       "capacity_kg": 9,
-      "features": ["محرك مباشر", "شاشة ديجيتال"],
+      "features": [
+        "محرك مباشر",
+        "شاشة ديجيتال"
+      ],
       "programs": 15,
       "noise_db": 70,
       "energy_class": "A++",
@@ -570,7 +716,10 @@
       "brand": "Beko",
       "category": "غسالة",
       "capacity_kg": 9,
-      "features": ["محرك انفرتر", "شاشة ديجيتال"],
+      "features": [
+        "محرك انفرتر",
+        "شاشة ديجيتال"
+      ],
       "programs": 16,
       "energy_class": "A++",
       "price_before": 19999,
@@ -586,7 +735,10 @@
       "category": "غسالة",
       "capacity_kg": 8,
       "spin_rpm": 1200,
-      "features": ["بخار", "محرك انفرتر"],
+      "features": [
+        "بخار",
+        "محرك انفرتر"
+      ],
       "programs": 15,
       "energy_class": "A++",
       "price_before": 21999,
@@ -601,7 +753,11 @@
       "brand": "Toshiba",
       "category": "غسالة",
       "capacity_kg": 8.5,
-      "features": ["Wi-Fi", "بخار", "محرك انفرتر"],
+      "features": [
+        "Wi-Fi",
+        "بخار",
+        "محرك انفرتر"
+      ],
       "programs": 15,
       "energy_class": "A++",
       "price_before": 20499,
@@ -617,7 +773,10 @@
       "category": "غسالة",
       "capacity_kg": 8,
       "spin_rpm": 1200,
-      "features": ["بخار", "محرك انفرتر"],
+      "features": [
+        "بخار",
+        "محرك انفرتر"
+      ],
       "programs": 15,
       "energy_class": "A++",
       "price_before": 22599,
@@ -633,7 +792,9 @@
       "category": "غسالة",
       "capacity_kg": 10,
       "spin_rpm": 1400,
-      "features": ["محرك انفرتر"],
+      "features": [
+        "محرك انفرتر"
+      ],
       "programs": 15,
       "energy_class": "A++",
       "price_before": 23499,
@@ -648,7 +809,10 @@
       "brand": "Zanussi",
       "category": "غسالة",
       "capacity_kg": 9,
-      "features": ["بخار", "محرك انفرتر"],
+      "features": [
+        "بخار",
+        "محرك انفرتر"
+      ],
       "programs": 16,
       "noise_db": 72,
       "energy_class": "A++",
@@ -664,7 +828,10 @@
       "brand": "Toshiba",
       "category": "غسالة",
       "capacity_kg": 8,
-      "features": ["Wi-Fi", "بخار"],
+      "features": [
+        "Wi-Fi",
+        "بخار"
+      ],
       "programs": 16,
       "energy_class": "A++",
       "price_before": 22299,
@@ -680,7 +847,9 @@
       "category": "غسالة",
       "capacity_kg": 7,
       "spin_rpm": 1200,
-      "features": ["صناعة تركية"],
+      "features": [
+        "صناعة تركية"
+      ],
       "programs": 12,
       "noise_db": 75,
       "energy_class": "A+",
@@ -697,7 +866,10 @@
       "category": "غسالة",
       "capacity_kg": 7,
       "spin_rpm": 1200,
-      "features": ["محرك انفرتر", "12 برنامج"],
+      "features": [
+        "محرك انفرتر",
+        "12 برنامج"
+      ],
       "noise_db": 73,
       "energy_class": "A++",
       "price_before": 16799,
@@ -713,7 +885,9 @@
       "category": "غسالة",
       "capacity_kg": 8,
       "spin_rpm": 1400,
-      "features": ["محرك انفرتر"],
+      "features": [
+        "محرك انفرتر"
+      ],
       "programs": 15,
       "energy_class": "A++",
       "price_before": 19999,
@@ -729,7 +903,9 @@
       "category": "غسالة",
       "capacity_kg": 7,
       "spin_rpm": 1200,
-      "features": ["صناعة تركية"],
+      "features": [
+        "صناعة تركية"
+      ],
       "programs": 12,
       "energy_class": "A+",
       "price_before": 16999,
@@ -745,7 +921,9 @@
       "category": "غسالة",
       "capacity_kg": 8,
       "spin_rpm": 1200,
-      "features": ["محرك انفرتر"],
+      "features": [
+        "محرك انفرتر"
+      ],
       "programs": 14,
       "energy_class": "A++",
       "price_before": 17999,
@@ -761,7 +939,9 @@
       "category": "غسالة",
       "capacity_kg": 8,
       "spin_rpm": 1200,
-      "features": ["محرك انفرتر"],
+      "features": [
+        "محرك انفرتر"
+      ],
       "programs": 15,
       "energy_class": "A++",
       "price_before": 18999,
@@ -776,7 +956,10 @@
       "brand": "Beko",
       "category": "غسالة",
       "capacity_kg": 8,
-      "features": ["محرك انفرتر", "شاشة ديجيتال"],
+      "features": [
+        "محرك انفرتر",
+        "شاشة ديجيتال"
+      ],
       "programs": 16,
       "energy_class": "A++",
       "price_before": 18499,
@@ -791,7 +974,9 @@
       "brand": "Fresh",
       "category": "غسالة",
       "capacity_kg": 7,
-      "features": ["ماتور دفع مباشر"],
+      "features": [
+        "ماتور دفع مباشر"
+      ],
       "programs": 10,
       "noise_db": 75,
       "energy_class": "A+",
@@ -806,8 +991,14 @@
       "name": "باكدج: فرن غاز + مسطح كهرباء",
       "brand": "Unionaire",
       "category": "باكدج",
-      "bundle_items": ["فرن غاز 5 شعلة", "مسطح كهرباء 60 سم"],
-      "features": ["5 شعلة", "استانلس ستيل"],
+      "bundle_items": [
+        "فرن غاز 5 شعلة",
+        "مسطح كهرباء 60 سم"
+      ],
+      "features": [
+        "5 شعلة",
+        "استانلس ستيل"
+      ],
       "price_before": 24208,
       "price_after": 19999,
       "discount_pct": 17,
@@ -819,8 +1010,16 @@
       "name": "باكدج: شفاط + مسطح غاز + فرن كهرباء",
       "brand": "Fresh",
       "category": "باكدج",
-      "bundle_items": ["شفاط 90 سم", "مسطح غاز 5 شعلة إشعال ذاتي", "فرن 56 لتر مروحة بشواية"],
-      "features": ["أمان كامل", "إشعال ذاتي", "مروحة"],
+      "bundle_items": [
+        "شفاط 90 سم",
+        "مسطح غاز 5 شعلة إشعال ذاتي",
+        "فرن 56 لتر مروحة بشواية"
+      ],
+      "features": [
+        "أمان كامل",
+        "إشعال ذاتي",
+        "مروحة"
+      ],
       "price_before": 24899,
       "price_after": 22699,
       "discount_pct": 10,
@@ -832,8 +1031,16 @@
       "name": "باكدج: شفاط هرمي + مسطح غاز + فرن",
       "brand": "Kenwood",
       "category": "باكدج",
-      "bundle_items": ["شفاط هرمي 90 سم فلتر قابل للغسيل", "مسطح غاز 5 شعلة حوامل زهر", "فرن 71 لتر شاشة ديجيتال"],
-      "features": ["فلتر قابل للغسيل", "حوامل زهر", "شاشة ديجيتال"],
+      "bundle_items": [
+        "شفاط هرمي 90 سم فلتر قابل للغسيل",
+        "مسطح غاز 5 شعلة حوامل زهر",
+        "فرن 71 لتر شاشة ديجيتال"
+      ],
+      "features": [
+        "فلتر قابل للغسيل",
+        "حوامل زهر",
+        "شاشة ديجيتال"
+      ],
       "price_before": 49999,
       "price_after": 24999,
       "discount_pct": 50,
@@ -845,8 +1052,16 @@
       "name": "باكدج: شفاط + مسطح غاز + فرن كهرباء",
       "brand": "Beko",
       "category": "باكدج",
-      "bundle_items": ["شفاط 60 سم تحكم بلمس", "مسطح غاز 4 شعلة حوامل زهر", "فرن 72 لتر تيمر شواية"],
-      "features": ["تحكم لمسي", "حوامل زهر", "تيمر"],
+      "bundle_items": [
+        "شفاط 60 سم تحكم بلمس",
+        "مسطح غاز 4 شعلة حوامل زهر",
+        "فرن 72 لتر تيمر شواية"
+      ],
+      "features": [
+        "تحكم لمسي",
+        "حوامل زهر",
+        "تيمر"
+      ],
       "price_before": 50147,
       "price_after": 29999,
       "discount_pct": 40,
@@ -861,7 +1076,17 @@
       "model": "WW80T4040CX1AS",
       "capacity_kg": 8,
       "spin_rpm": 1400,
-      "features": ["موتور انفرتر ديجيتال", "بخار 99.9% إزالة جراثيم", "StayClean", "Bubble Soak", "شاشة LED", "Internal Heater", "Pump", "Front Load", "استانلس ستيل"],
+      "features": [
+        "موتور انفرتر ديجيتال",
+        "بخار 99.9% إزالة جراثيم",
+        "StayClean",
+        "Bubble Soak",
+        "شاشة LED",
+        "Internal Heater",
+        "Pump",
+        "Front Load",
+        "استانلس ستيل"
+      ],
       "programs": 10,
       "energy_class": "A++",
       "dimensions": "600x850x550",
@@ -880,7 +1105,14 @@
       "model": "F4R5TYG2T",
       "capacity_kg": 8,
       "spin_rpm": 1400,
-      "features": ["Direct Drive Motor", "بخار", "Wi-Fi مدمج", "انفرتر", "لون فضي", "Front Load"],
+      "features": [
+        "Direct Drive Motor",
+        "بخار",
+        "Wi-Fi مدمج",
+        "انفرتر",
+        "لون فضي",
+        "Front Load"
+      ],
       "energy_class": "A+++",
       "price_before": 0,
       "price_after": 28989,
@@ -896,7 +1128,14 @@
       "model": "F4R5TYG2T",
       "capacity_kg": 8,
       "spin_rpm": 1400,
-      "features": ["Direct Drive Motor", "بخار", "Wi-Fi مدمج", "انفرتر", "لون فضي", "Front Load"],
+      "features": [
+        "Direct Drive Motor",
+        "بخار",
+        "Wi-Fi مدمج",
+        "انفرتر",
+        "لون فضي",
+        "Front Load"
+      ],
       "energy_class": "A+++",
       "price_before": 0,
       "price_after": 28989,
@@ -912,7 +1151,20 @@
       "model": "ZWF8221BL8",
       "capacity_kg": 8,
       "spin_rpm": 1200,
-      "features": ["SteamMax", "PMM Inverter Motor", "بخار 99.9% إزالة جراثيم", "Baby Steam Care", "Smart Restart", "Auto Sense", "باب XXL", "Child Lock", "Pro White Steam", "Anti-Flood", "لون أسود", "Front Load"],
+      "features": [
+        "SteamMax",
+        "PMM Inverter Motor",
+        "بخار 99.9% إزالة جراثيم",
+        "Baby Steam Care",
+        "Smart Restart",
+        "Auto Sense",
+        "باب XXL",
+        "Child Lock",
+        "Pro White Steam",
+        "Anti-Flood",
+        "لون أسود",
+        "Front Load"
+      ],
       "energy_class": "A",
       "dimensions": "600x850x581",
       "price_before": 0,
@@ -929,7 +1181,17 @@
       "model": "TW-BK19S9EG",
       "capacity_kg": 9,
       "spin_rpm": 1400,
-      "features": ["Ultra Fine Bubble", "Origin Inverter", "TSmartLife Wi-Fi", "بخار", "Drum Clean", "Water Shield", "15 Quick Wash", "لون رمادي موراندي", "Front Load"],
+      "features": [
+        "Ultra Fine Bubble",
+        "Origin Inverter",
+        "TSmartLife Wi-Fi",
+        "بخار",
+        "Drum Clean",
+        "Water Shield",
+        "15 Quick Wash",
+        "لون رمادي موراندي",
+        "Front Load"
+      ],
       "dimensions": "595x615x850",
       "price_before": 0,
       "price_after": 21199,
@@ -945,7 +1207,14 @@
       "model": "F4Y2TYGYP",
       "capacity_kg": 8,
       "spin_rpm": 1400,
-      "features": ["AI Direct Drive", "بخار", "ThinQ Wi-Fi", "انفرتر", "لون Platinum Silver", "Front Load"],
+      "features": [
+        "AI Direct Drive",
+        "بخار",
+        "ThinQ Wi-Fi",
+        "انفرتر",
+        "لون Platinum Silver",
+        "Front Load"
+      ],
       "dimensions": "660x660x880",
       "price_before": 0,
       "price_after": 25989,
@@ -962,7 +1231,12 @@
       "capacity_kg": 10,
       "dryer_capacity_kg": 7,
       "spin_rpm": 1400,
-      "features": ["انفرتر موتور مباشر", "مجفف مدمج", "لون سيلفرغامق", "Front Load"],
+      "features": [
+        "انفرتر موتور مباشر",
+        "مجفف مدمج",
+        "لون سيلفرغامق",
+        "Front Load"
+      ],
       "price_before": 37204,
       "price_after": 33484,
       "discount_pct": 10,
@@ -977,7 +1251,12 @@
       "model": "B3WFU501040MCI",
       "capacity_kg": 10,
       "spin_rpm": 1600,
-      "features": ["بخار", "انفرتر ديجيتال", "لون رمادي", "Front Load"],
+      "features": [
+        "بخار",
+        "انفرتر ديجيتال",
+        "لون رمادي",
+        "Front Load"
+      ],
       "price_before": 25597,
       "price_after": 23549,
       "discount_pct": 8,
@@ -992,7 +1271,12 @@
       "model": "BD-80YFVEM",
       "capacity_kg": 8,
       "spin_rpm": 1400,
-      "features": ["بخار", "انفرتر", "لون رمادي", "Front Load"],
+      "features": [
+        "بخار",
+        "انفرتر",
+        "لون رمادي",
+        "Front Load"
+      ],
       "price_before": 26847,
       "price_after": 24699,
       "discount_pct": 8,
@@ -1007,7 +1291,12 @@
       "model": "WF3V9042BSEG",
       "capacity_kg": 9,
       "spin_rpm": 1400,
-      "features": ["بخار", "انفرتر ديجيتال", "لون سيلفر", "Front Load"],
+      "features": [
+        "بخار",
+        "انفرتر ديجيتال",
+        "لون سيلفر",
+        "Front Load"
+      ],
       "price_before": 21086,
       "price_after": 19399,
       "discount_pct": 8,
@@ -1023,7 +1312,11 @@
       "capacity_kg": 12,
       "dryer_capacity_kg": 8,
       "spin_rpm": 1400,
-      "features": ["مجفف مدمج", "لون أسود", "Front Load"],
+      "features": [
+        "مجفف مدمج",
+        "لون أسود",
+        "Front Load"
+      ],
       "price_before": 36901,
       "price_after": 33949,
       "discount_pct": 8,
@@ -1038,7 +1331,12 @@
       "model": "WNS1X4ARTWIFI",
       "capacity_kg": 10.5,
       "spin_rpm": 1400,
-      "features": ["Wi-Fi مدمج", "انفرتر", "لون أبيض", "Front Load"],
+      "features": [
+        "Wi-Fi مدمج",
+        "انفرتر",
+        "لون أبيض",
+        "Front Load"
+      ],
       "price_before": 47698,
       "price_after": 44359,
       "discount_pct": 7,
@@ -1053,7 +1351,11 @@
       "model": "TW-BK115GF4EG(MK)",
       "capacity_kg": 10.5,
       "spin_rpm": 1400,
-      "features": ["انفرتر", "لون رمادي", "Front Load"],
+      "features": [
+        "انفرتر",
+        "لون رمادي",
+        "Front Load"
+      ],
       "price_before": 26412,
       "price_after": 24299,
       "discount_pct": 8,
@@ -1068,7 +1370,10 @@
       "model": "WFST8GWHR",
       "capacity_kg": 8,
       "spin_rpm": 1400,
-      "features": ["انفرتر", "Front Load"],
+      "features": [
+        "انفرتر",
+        "Front Load"
+      ],
       "price_before": 22777,
       "price_after": 20499,
       "discount_pct": 10,
@@ -1084,7 +1389,12 @@
       "capacity_kg": 9,
       "dryer_capacity_kg": 5,
       "spin_rpm": 1400,
-      "features": ["مجفف مدمج", "لون أسود", "انفرتر", "Front Load"],
+      "features": [
+        "مجفف مدمج",
+        "لون أسود",
+        "انفرتر",
+        "Front Load"
+      ],
       "price_before": 33548,
       "price_after": 30864,
       "discount_pct": 8,
@@ -1099,7 +1409,11 @@
       "model": "WFST10KGG-EG",
       "capacity_kg": 10,
       "spin_rpm": 1400,
-      "features": ["انفرتر", "لون رمادي", "Front Load"],
+      "features": [
+        "انفرتر",
+        "لون رمادي",
+        "Front Load"
+      ],
       "price_before": 28199,
       "price_after": 25379,
       "discount_pct": 10,
@@ -1114,7 +1428,12 @@
       "model": "MF205W105WB/TK",
       "capacity_kg": 10.5,
       "spin_rpm": 1400,
-      "features": ["بخار", "انفرتر ديجيتال", "لون رمادي", "Front Load"],
+      "features": [
+        "بخار",
+        "انفرتر ديجيتال",
+        "لون رمادي",
+        "Front Load"
+      ],
       "price_before": 23970,
       "price_after": 20854,
       "discount_pct": 13,
@@ -1129,7 +1448,12 @@
       "model": "WW90T4040CX1AS",
       "capacity_kg": 9,
       "spin_rpm": 1400,
-      "features": ["موتور انفرتر ديجيتال", "بخار", "لون إينوكس", "Front Load"],
+      "features": [
+        "موتور انفرتر ديجيتال",
+        "بخار",
+        "لون إينوكس",
+        "Front Load"
+      ],
       "price_before": 28398,
       "price_after": 24990,
       "discount_pct": 12,
@@ -1144,7 +1468,12 @@
       "model": "HW80-BP14929AS6",
       "capacity_kg": 8,
       "spin_rpm": 1400,
-      "features": ["بخار", "انفرتر", "لون سيلفر", "Front Load"],
+      "features": [
+        "بخار",
+        "انفرتر",
+        "لون سيلفر",
+        "Front Load"
+      ],
       "price_before": 14673,
       "price_after": 13499,
       "discount_pct": 8,
@@ -1159,12 +1488,303 @@
       "model": "TW-T21BU115UWEG(MK)",
       "capacity_kg": 10,
       "spin_rpm": 1400,
-      "features": ["بخار", "انفرتر", "لون رمادي", "Front Load"],
+      "features": [
+        "بخار",
+        "انفرتر",
+        "لون رمادي",
+        "Front Load"
+      ],
       "price_before": 23902,
       "price_after": 21990,
       "discount_pct": 8,
       "shop": "Cairo Sales",
       "source": "cairosales.com"
+    },
+    {
+      "id": 77,
+      "name": "غسالة ملابس فرونت لودر - Steam Max",
+      "brand": "Zanussi",
+      "category": "غسالة",
+      "model": "Steam Max 8kg",
+      "capacity_kg": 8,
+      "features": [
+        "Steam Max",
+        "Hygiene Max",
+        "إضافة ملابس أثناء الغسيل",
+        "البخار يقلل التجاعيد",
+        "باب XXL",
+        "Front Load"
+      ],
+      "warranty_years": 5,
+      "price_after": 22250,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
+    },
+    {
+      "id": 78,
+      "name": "غسالة ملابس فرونت لودر - Steam Max Family Care 700، موتور انفرتر",
+      "brand": "Zanussi",
+      "category": "غسالة",
+      "model": "Family Care 700 (ZWF8221 series)",
+      "capacity_kg": 8,
+      "spin_rpm": 1200,
+      "features": [
+        "Steam Max",
+        "Inverter Motor",
+        "Add Clothes",
+        "Add Steam",
+        "Time Manager",
+        "Save Favourite",
+        "لون فضي",
+        "Front Load"
+      ],
+      "energy_class": "A",
+      "warranty_years": 10,
+      "price_after": 21750,
+      "trade_in_price": 19350,
+      "note": "ضمان 10 سنوات على الموتور الانفرتر؛ سعر الاستبدال 19,350",
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
+    },
+    {
+      "id": 79,
+      "name": "بوتاجاز 60 سم 4 شعلة - Cool Max، تايمر ديجيتال",
+      "brand": "Zanussi",
+      "category": "بوتاجاز",
+      "model": "Cool Max",
+      "burners": 4,
+      "width_cm": 60,
+      "features": [
+        "تايمر ديجيتال",
+        "مروحة تبريد",
+        "إشعال ذاتي",
+        "أمان تام (قطع الغاز)",
+        "استانلس ستيل",
+        "باب مرآة"
+      ],
+      "price_after": 12890,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
+    },
+    {
+      "id": 80,
+      "name": "بوتاجاز 60 سم 4 شعلة - Cool Cast، فرن XXL",
+      "brand": "Zanussi",
+      "category": "بوتاجاز",
+      "model": "Cool Cast",
+      "burners": 4,
+      "width_cm": 60,
+      "features": [
+        "حوامل زهر",
+        "فرن XXL",
+        "مروحة توزيع حرارة",
+        "تايمر ميكانيكي",
+        "أمان تام",
+        "استانلس ستيل"
+      ],
+      "price_after": 12290,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
+    },
+    {
+      "id": 81,
+      "name": "بوتاجاز 60 سم 4 شعلة - Cool",
+      "brand": "Zanussi",
+      "category": "بوتاجاز",
+      "model": "Cool",
+      "burners": 4,
+      "width_cm": 60,
+      "features": [
+        "أمان تام",
+        "استانلس ستيل"
+      ],
+      "price_after": 11590,
+      "note": "السعر من بطاقة ظاهرة جزئياً في طرف الصورة",
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
+    },
+    {
+      "id": 82,
+      "name": "بوتاجاز 90 سم 5 شعلة - فرن XXL",
+      "brand": "Zanussi",
+      "category": "بوتاجاز",
+      "model": "90cm 5 burners",
+      "burners": 5,
+      "width_cm": 90,
+      "features": [
+        "فرن XXL",
+        "مروحة توزيع حرارة",
+        "تايمر ديجيتال",
+        "حوامل زهر",
+        "استانلس ستيل",
+        "باب مرآة"
+      ],
+      "price_after": 18590,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
+    },
+    {
+      "id": 83,
+      "name": "ثلاجة نوفروست 535 لتر - فريزر علوي، شاشة ديجيتال",
+      "brand": "Zanussi",
+      "category": "ثلاجة",
+      "model": "535L Top Freezer",
+      "capacity_liters": 535,
+      "features": [
+        "نوفروست",
+        "Inverter 4x4",
+        "شاشة ديجيتال",
+        "Quick Chill",
+        "Humidity Control Zone",
+        "EasySlide Shelf",
+        "ADT C-Fresh",
+        "استهلاك 28 ك.و.س/شهر",
+        "لون فضي"
+      ],
+      "energy_class": "A",
+      "price_after": 30210,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
+    },
+    {
+      "id": 84,
+      "name": "ثلاجة نوفروست 463 لتر - فريزر علوي",
+      "brand": "Zanussi",
+      "category": "ثلاجة",
+      "model": "463L Top Freezer",
+      "capacity_liters": 463,
+      "features": [
+        "نوفروست",
+        "Inverter 4x4",
+        "Quick Chill",
+        "Humidity Control Zone",
+        "EasySlide Shelf",
+        "ADT C-Fresh",
+        "استهلاك 22 ك.و.س/شهر",
+        "لون فضي"
+      ],
+      "energy_class": "A",
+      "price_after": 28010,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
+    },
+    {
+      "id": 85,
+      "name": "فرن بيلت إن 60 سم - مروحة",
+      "brand": "Zanussi",
+      "category": "فرن",
+      "model": "Oven Built-in (3 knobs)",
+      "features": [
+        "مروحة تبريد",
+        "إشعال ذاتي",
+        "أمان تام",
+        "تايمر",
+        "استانلس ستيل"
+      ],
+      "warranty_years": 3,
+      "price_after": 24719,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
+    },
+    {
+      "id": 86,
+      "name": "فرن بيلت إن 60 سم",
+      "brand": "Zanussi",
+      "category": "فرن",
+      "model": "Oven Built-in (premium)",
+      "features": [
+        "مروحة",
+        "أمان تام",
+        "استانلس ستيل"
+      ],
+      "warranty_years": 3,
+      "price_after": 40219,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
+    },
+    {
+      "id": 87,
+      "name": "مسطح غاز بيلت إن 4 شعلة - زجاج أسود",
+      "brand": "Zanussi",
+      "category": "مسطح غاز",
+      "model": "Hob 60cm 4B glass",
+      "burners": 4,
+      "width_cm": 60,
+      "features": [
+        "زجاج أسود",
+        "إشعال ذاتي",
+        "أمان تام",
+        "حوامل مينا"
+      ],
+      "price_after": 13899,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
+    },
+    {
+      "id": 88,
+      "name": "مسطح غاز بيلت إن 5 شعلة - زجاج أسود، صناعة إيطالية",
+      "brand": "Zanussi",
+      "category": "مسطح غاز",
+      "model": "Hob 5B glass (Italy)",
+      "burners": 5,
+      "features": [
+        "زجاج أسود",
+        "شعلة ووك",
+        "حوامل زهر",
+        "إشعال ذاتي",
+        "أمان تام",
+        "صناعة إيطالية"
+      ],
+      "warranty_years": 3,
+      "price_after": 16199,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
+    },
+    {
+      "id": 89,
+      "name": "شفاط جزيرة 90 سم - استانلس، 3 سرعات، كربون فلتر",
+      "brand": "Zanussi",
+      "category": "شفاط",
+      "model": "Island Hood 90cm",
+      "width_cm": 90,
+      "speeds": 3,
+      "features": [
+        "جزيرة",
+        "استانلس ستيل",
+        "1 موتور",
+        "كربون فلتر",
+        "رف زجاج"
+      ],
+      "warranty_years": 3,
+      "price_after": 13199,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Zanussi Showroom",
+      "source": "Zanussi showroom (in-store price tag, cash)"
     }
   ]
 }
