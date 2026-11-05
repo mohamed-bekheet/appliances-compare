@@ -249,6 +249,14 @@ def ehab(f, ctx):
     return woo(f, ctx, "https://ehabcenter.com", EHAB_CATS, "Ehab Center", "ehabcenter.com")
 
 
+WAZEN_CATS = ["washing-machine", "refrigerators", "freezers", "cookers", "dishwashers", "built-in", "water-heater",
+              "microwaves"]
+
+
+def wazen(f, ctx):
+    return woo(f, ctx, "https://wazen.eg", WAZEN_CATS, "Wazen", "wazen.eg")
+
+
 def berty(f, ctx):
     # robots.txt disallows "?per_page=" on this site, so use the default page size (10)
     return woo(f, ctx, "https://berty-center.com", BERTY_CATS, "Berty Center", "berty-center.com", per_page=None)
@@ -380,5 +388,5 @@ def carrefour(f, ctx):
     return _cap(out, ctx)
 
 
-STORES = {"btech": btech, "elaraby": elaraby, "zanussi": zanussi, "jumia": jumia, "ehab": ehab, "berty": berty,
+STORES = {"btech": btech, "elaraby": elaraby, "zanussi": zanussi, "jumia": jumia, "ehab": ehab, "wazen": wazen, "berty": berty,
           "raneen": raneen, "azmy": azmy, "alreyada": alreyada, "carrefour": carrefour}

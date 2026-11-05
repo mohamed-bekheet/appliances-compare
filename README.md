@@ -91,6 +91,7 @@ python3 tools/upsert.py new_items.json --date 2026-11-12
 | Zanussi Official | صفحات الأقسام | |
 | Jumia | صفحات الأقسام العربي | robots.txt بيسمح للبوت المعرّف بنفسه أقل من 200 طلب/دقيقة |
 | Ehab Center / Berty Center | WooCommerce Store API العامة | Berty من اللابتوب، ومن غير `per_page` (ممنوع في robots) |
+| Wazen | WooCommerce Store API العامة | |
 | Raneen | صفحات الأقسام | Crawl-delay 10 ثواني |
 | Azmy | صفحات الأقسام (`?start=`) | |
 | Al Reyada | Shopify `/products.json` | |

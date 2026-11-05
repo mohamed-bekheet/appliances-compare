@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       stores:
-        description: "Comma-separated stores (btech,elaraby,zanussi,jumia,ehab,berty,raneen,azmy,alreyada,carrefour) or all"
+        description: "Comma-separated stores (btech,elaraby,zanussi,jumia,ehab,wazen,berty,raneen,azmy,alreyada,carrefour) or all"
         default: "all"
       limit:
         description: "Max listings per store (0 = no limit; use e.g. 15 for a quick test)"
@@ -36,7 +36,7 @@ jobs:
       matrix:
         # stores run in parallel jobs (different sites, so each one is still rate-limited on its own)
         # carrefour, berty and elaraby refuse cloud servers -> scraped from the laptop (run_local.bat)
-        store: [btech, zanussi, jumia, ehab, raneen, azmy, alreyada]
+        store: [btech, zanussi, jumia, ehab, wazen, raneen, azmy, alreyada]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
