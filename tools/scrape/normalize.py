@@ -187,6 +187,19 @@ FEATS = [
 FEATS = [(f, re.compile(r, re.I)) for f, r in FEATS]
 
 
+BUNDLE = re.compile(
+    r"\b(?:with|and|\+)\b[\w\s,-]{0,60}?\b(?:hood|oven|hob|cooker|microwave|air[\s-]?fryer|fryer|mini[\s-]?bar|dishwasher|"
+    r"refrigerator|fridge|freezer|washing machine|kettle|blender|iron|vacuum|tv|screen)\b|"
+    r"\bbundle\b|\bpackage\b|\bcombo set\b|\s\+\s|باكدج|باقة|عرض \d|مع (?:شفاط|فرن|مسطح|ثلاجة|ميكرويف|مايكروويف|قلاية)", re.I)
+
+
+def is_bundle(name, url=""):
+    slug = (url or "").rstrip("/").rsplit("/", 1)[-1].replace("-", " ")
+    t = name + " " + slug
+    return bool(BUNDLE.search(t)) and not re.search(r"washer[\s&-]*dryer|with dryer|مع مجفف|بمجفف|with grill|بالشواية|with fan", t, re.I) \
+        or bool(re.search(r"\s\+\s|باكدج|bundle|package", t, re.I))
+
+
 def build(raw):
     """raw: name, price, old, url, shop, source, in_stock, brand_hint, cat_hint, model_hint, extra.
     Returns a data.json product dict or None (with reason in raw['_skip'])."""
@@ -202,10 +215,18 @@ def build(raw):
         cat = guess_category(name)
     if not cat:
         raw["_skip"] = "not an appliance"; return None
+    bundle = is_bundle(name, raw.get("url"))
+    if bundle:
+        cat = "باكدج"
     brand = brand_from(name, raw.get("brand_hint"))
     if not brand:
         raw["_skip"] = "no brand"; return None
-    model = (raw.get("model_hint") or "").strip().upper() or extract_model(name, raw.get("extra"))
+    title_model = extract_model(name, raw.get("extra"))
+    hint = (raw.get("model_hint") or "").strip().upper()
+    # a store-supplied model (SKU / "Model Number") is trusted only if the title has no model of its own
+    # or the two agree; B.TECH sometimes carries another product's model in the description
+    model = title_model if (title_model and hint and model_key(brand, hint) != model_key(brand, title_model)
+                             and raw.get("source") == "btech.com") else (hint or title_model)
     if model and not re.search(r"\d", model):
         model = extract_model(name, raw.get("extra"))
     old = int(raw.get("old") or 0)
@@ -225,7 +246,7 @@ def build(raw):
         p["motor_class"] = "inverter"
     elif cat == "غسالة":
         p["motor_class"] = "unknown"
-    k = model_key(brand, model)
+    k = None if bundle else model_key(brand, model)
     if k:
         p["product_key"] = k
     return p

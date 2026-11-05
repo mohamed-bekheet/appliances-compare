@@ -559,14 +559,15 @@ function renderRec() {
   </div>`;
 }
 // ─── Same model across shops + price history ─────────────
-let GROUPS = new Map();          // product_key -> [listings]
+let GROUPS = new Map();          // product_key|category -> [listings] (same model number under another category = different product)
+const gk = d => d.product_key ? d.product_key + '|' + d.category : null;
 function buildGroups() {
   GROUPS = new Map();
-  ALL.forEach(d => { if (d.product_key) { if (!GROUPS.has(d.product_key)) GROUPS.set(d.product_key, []); GROUPS.get(d.product_key).push(d); } });
+  ALL.forEach(d => { const k = gk(d); if (k) { if (!GROUPS.has(k)) GROUPS.set(k, []); GROUPS.get(k).push(d); } });
 }
 const stale = d => d.scraped && d.last_seen && LATEST && (Date.parse(LATEST) - Date.parse(d.last_seen)) > 21*864e5;
 const avail = d => d.price_after > 0 && d.in_stock !== false && !stale(d);
-function groupOf(d) { return d.product_key ? (GROUPS.get(d.product_key) || [d]) : [d]; }
+function groupOf(d) { return gk(d) ? (GROUPS.get(gk(d)) || [d]) : [d]; }
 function cheapestOf(list) { const a = list.filter(avail); return a.length ? a.reduce((m,x)=> x.price_after < m.price_after ? x : m) : null; }
 function shopsLine(d) {
   const g = groupOf(d);
@@ -586,12 +587,16 @@ function priceChange(d) {
   return `<span class="pchg ${diff<0?'down':'up'}" title="من ${prev.toLocaleString()} يوم ${h[h.length-2].date}">${diff<0?'▼':'▲'} ${Math.abs(diff).toLocaleString()}</span>`;
 }
 function mergeSameModel(list) {
-  const seen = new Map(), out = [];
+  const seen = new Set(), out = [];
+  const byKey = new Map();
+  list.forEach(d => { const k = gk(d); if (k) { if (!byKey.has(k)) byKey.set(k, []); byKey.get(k).push(d); } });
   list.forEach(d => {
-    if (!d.product_key) { out.push(d); return; }
-    const inList = list.filter(x => x.product_key === d.product_key);
-    const best = cheapestOf(inList) || inList[0];
-    if (!seen.has(d.product_key)) { seen.set(d.product_key, 1); out.push(best); }
+    const k = gk(d);
+    if (!k) { out.push(d); return; }
+    if (seen.has(k)) return;
+    seen.add(k);
+    const g = byKey.get(k);
+    out.push(cheapestOf(g) || g[0]);
   });
   return out;
 }

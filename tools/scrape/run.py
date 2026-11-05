@@ -37,7 +37,7 @@ def cheapest_table(products, date):
     groups = collections.defaultdict(list)
     for p in products:
         if p.get("product_key") and p.get("price_after") and p.get("in_stock", True) and p.get("last_seen") == date:
-            groups[p["product_key"]].append(p)
+            groups[(p["product_key"], p["category"])].append(p)
     rows = []
     for k, g in groups.items():
         shops = {x["shop"] for x in g}

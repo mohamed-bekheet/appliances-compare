@@ -26788,7 +26788,7 @@
       "id": 849,
       "name": "فرن بلت إن غاز فاليريو (Valerio) تركي 90 سم، سعة عملاقة 123 لتر، زجاج أسود داكن، مروحتين توزيع حراري تربو + مروحتين تبريد، جوانب تنظيف ذاتي VBO90DX01",
       "brand": "Valerio",
-      "category": "فرن",
+      "category": "باكدج",
       "model": "VBO90DX01",
       "price_after": 36900,
       "price_before": 41328,
@@ -26801,7 +26801,6 @@
       "scraped": true,
       "capacity_liters": 123,
       "width_cm": 90,
-      "product_key": "VALERIO:VBO90DX01",
       "history": [
         {
           "date": "2026-11-05",
@@ -26817,7 +26816,7 @@
       "id": 850,
       "name": "فرن بلت إن غاز أسود فاليريو (Valerio) تركي 90 سم، سعة عملاقة 123 لتر، زجاج أسود داكن، مروحتين توزيع حراري تربو + مروحتين تبريد، جوانب تنظيف ذاتي VBO90DB02",
       "brand": "Valerio",
-      "category": "فرن",
+      "category": "باكدج",
       "model": "VBO90DB02",
       "price_after": 36300,
       "price_before": 40656,
@@ -26830,7 +26829,6 @@
       "scraped": true,
       "capacity_liters": 123,
       "width_cm": 90,
-      "product_key": "VALERIO:VBO90DB02",
       "history": [
         {
           "date": "2026-11-05",
@@ -28594,7 +28592,7 @@
       "id": 914,
       "name": "شفاط ديكوري تيفا (Teva) 90 سم زجاج أسود واستانلس LUNA BLACK، قوة شفط 850 م³/ساعة، 3 سرعات باللمس + ريموت كنترول – موديل LUNA BLACK",
       "brand": "Teka",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "LUNA",
       "price_after": 14200,
       "price_before": 15904,
@@ -29149,7 +29147,7 @@
       "id": 934,
       "name": "فرن غاز بلت إن أوشن (Ocean) 60 سم ستانلس ستيل، شواية غاز، مروحة طهي + مروحة تبريد، تايمر جرس – موديل OOGR 65 I F SV",
       "brand": "Ocean",
-      "category": "فرن",
+      "category": "باكدج",
       "model": "OOGR",
       "price_after": 19790,
       "price_before": 22165,
@@ -29178,7 +29176,7 @@
       "id": 935,
       "name": "فرن غاز بلت إن أوشن (Ocean) 60 سم أسود مع لمسات استانلس ستيل، شواية غاز، مروحة طهي + مروحة تبريد، تايمر جرس – موديل OOGR 65 N F SV",
       "brand": "Ocean",
-      "category": "فرن",
+      "category": "باكدج",
       "model": "OOGR",
       "price_after": 20890,
       "price_before": 23397,
@@ -29265,7 +29263,7 @@
       "id": 938,
       "name": "ميكروويف بلت إن أوشن (Ocean) 60 سم سعة عملاقة 44 لتر مع قلاية هوائية (1700 واط)، شواية (1750 واط) – موديل MWOI 449 TCGB",
       "brand": "Ocean",
-      "category": "مايكروويف",
+      "category": "باكدج",
       "model": "MWOI",
       "price_after": 39590,
       "price_before": 44341,
@@ -29292,7 +29290,7 @@
       "id": 939,
       "name": "مسطح غاز بلت إن أوشن (Ocean) 90 سم استانلس ستيل، 5 عيون (شعلة ثلاثية الاحتراق + 4 عيون)حوامل ثقيلة، وإشعال ذاتي مع أمان كامل – موديل OHGR 95 IPRO SV",
       "brand": "Ocean",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "OHGR",
       "price_after": 17290,
       "price_before": 19365,
@@ -29322,7 +29320,7 @@
       "id": 940,
       "name": "مسطح غاز بلت إن أوشن 60 سم استانلس ستيل، 4 عيون (شعلة ثلاثية الاحتراق + 3 عيون) ، حوامل ثقيلة، وإشعال ذاتي مع أمان كامل – موديل Ocean OHG1R 64 IPROSV",
       "brand": "Ocean",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "OCEAN",
       "price_after": 9500,
       "price_before": 10640,
@@ -29352,7 +29350,7 @@
       "id": 941,
       "name": "مسطح غاز بلت إن أوشن (Ocean) 60 سم، 4 عيون (شعلة ثلاثية الاحتراق + 3 عيون) مع نظام أمان كامل – موديل OHGG1R 64 N PRO SV",
       "brand": "Ocean",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "OHGG1R",
       "price_after": 10500,
       "price_before": 11760,
@@ -29367,7 +29365,6 @@
       "scraped": true,
       "width_cm": 60,
       "burners": 4,
-      "product_key": "OCEAN:OHGG1R",
       "history": [
         {
           "date": "2026-11-05",
@@ -29383,7 +29380,7 @@
       "id": 942,
       "name": "ميكروويف أوشن (Ocean) 26 لتر مع قلاية هوائية كونفكشن (تسخين حراري 1000 واط)، شواية (1000 واط)، تحكم ديجيتال – موديل MWO 279 DG CAN",
       "brand": "Ocean",
-      "category": "مايكروويف",
+      "category": "باكدج",
       "model": "MWO",
       "price_after": 13190,
       "price_before": 14773,
@@ -29410,7 +29407,7 @@
       "id": 943,
       "name": "ميكروويف بلت إن أوشن (Ocean) 60 سم سعة 34 لتر مع قلاية هوائية كونفكشن (2300 واط)، شواية (1100 واط) – موديل MWOI 349 TCGA B",
       "brand": "Ocean",
-      "category": "مايكروويف",
+      "category": "باكدج",
       "model": "MWOI",
       "price_after": 36290,
       "price_before": 40645,
@@ -29466,7 +29463,7 @@
       "id": 945,
       "name": "فرن غاز بلت إن أوشن (Ocean) 60 سم ستانلس ستيل، مروحة طهي + مروحة تبريد، قلاية هوائية تنظيف كتالتيك – موديل OOGR65 IL ECF2 SV",
       "brand": "Ocean",
-      "category": "فرن",
+      "category": "باكدج",
       "model": "OOGR65",
       "price_after": 24990,
       "price_before": 27989,
@@ -29480,7 +29477,6 @@
       ],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "OCEAN:OOGR65",
       "history": [
         {
           "date": "2026-11-05",
@@ -32582,7 +32578,7 @@
       "id": 1053,
       "name": "عرض حصري (فرن إيكوماتيك G6404T + مسطح إيكوماتيك S973C + شفاط إيكوماتيك H9206RB) + ميكروويف جالانز بشواية D90D25AP-H7 (BLACK) \"هدية\" 🎁",
       "brand": "Ecomatic",
-      "category": "مايكروويف",
+      "category": "باكدج",
       "model": "D90D25AP-H7",
       "price_after": 39499,
       "price_before": 47399,
@@ -32593,7 +32589,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "ECOMATIC:D90D25APH7",
       "history": [
         {
           "date": "2026-11-05",
@@ -32734,7 +32729,7 @@
       "id": 1058,
       "name": "مبرد مياه جراند (Grand) 3 حنفية مع ثلاجة سفلية وخزان ستانلس ستيل – فضي – موديل F-320-S",
       "brand": "جراند",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "F-320-S",
       "price_after": 6300,
       "price_before": 7056,
@@ -32745,7 +32740,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "جراند:F320S",
       "history": [
         {
           "date": "2026-11-05",
@@ -33410,7 +33404,7 @@
       "id": 1081,
       "name": "بوتجاز كهرباء كامل بيورتي (Purity) 60 سم – مسطح سيراميك 4 مناطق + فرن 64 لتر بمؤقت ديجيتال – أسود – موديل VF6056XXVB",
       "brand": "Purity",
-      "category": "مسطح كهرباء",
+      "category": "باكدج",
       "model": "VF6056XXVB",
       "price_after": 24199,
       "price_before": 29525,
@@ -33422,7 +33416,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "PURITY:VF6056XXVB",
       "history": [
         {
           "date": "2026-11-05",
@@ -33501,7 +33494,7 @@
       "id": 1084,
       "name": "بوتجاز كهرباء كامل بيورتي (Purity) 60 سم – مسطح سيراميك 4 مناطق + فرن مزدوج 94 لتر – أسود – موديل DV6056XXVB",
       "brand": "Purity",
-      "category": "مسطح كهرباء",
+      "category": "باكدج",
       "model": "DV6056XXVB",
       "price_after": 33199,
       "price_before": 40500,
@@ -33513,7 +33506,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "PURITY:DV6056XXVB",
       "history": [
         {
           "date": "2026-11-05",
@@ -33649,7 +33641,7 @@
       "id": 1089,
       "name": "مسطح بلت إن إندكشن اليكا (ELICA) 83 سم مع شفاط مدمج – إيطالي بالكامل – موديل NIKOLATESLA ALPHA",
       "brand": "اليكا",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "NIKOLATESLA",
       "price_after": 92000,
       "price_before": 103040,
@@ -33959,7 +33951,7 @@
       "id": 1100,
       "name": "شفاط مطبخ بيورتي بلت إن 90 سم – تاتش + ريموت – قوة شفط 1000 م³/س – موديل CURVNICE BL 90CM",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "CURVNICE",
       "price_after": 13390,
       "price_before": 16690,
@@ -34286,7 +34278,7 @@
       "id": 1112,
       "name": "مبرد مياه جراند (Grand) 3 حنفية مع ثلاجة – ساخن/بارد/فاتر – لون سيلفر – موديل C-320-S",
       "brand": "جراند",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "C-320-S",
       "price_after": 7095,
       "price_before": 7946,
@@ -34297,7 +34289,6 @@
       "in_stock": false,
       "features": [],
       "scraped": true,
-      "product_key": "جراند:C320S",
       "history": [
         {
           "date": "2026-11-05",
@@ -34453,7 +34444,7 @@
       "id": 1118,
       "name": "غسالة أطباق بلت إن بوش (BOSCH) 14 فرد بالكامل – 6 برامج – عرض 60 سم – موديل SMV26DX00T",
       "brand": "Bosch",
-      "category": "غسالة أطباق",
+      "category": "باكدج",
       "model": "SMV26DX00T",
       "price_after": 36999,
       "price_before": 41439,
@@ -34464,7 +34455,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "BOSCH:SMV26DX00T",
       "history": [
         {
           "date": "2026-11-05",
@@ -36856,7 +36846,7 @@
       "id": 1202,
       "name": "عرض حصري (فرن إيكوماتيك G6504TDX + مسطح إيكوماتيك S993XLC + شفاط إيكوماتيك H9307TB) + ميكروويف جالانز بشواية P70H20AP-ST(BLACK) \"هدية\" 🎁",
       "brand": "Ecomatic",
-      "category": "مايكروويف",
+      "category": "باكدج",
       "model": "P70H20AP-ST(BLACK)",
       "price_after": 47999,
       "price_before": 57599,
@@ -36867,7 +36857,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "ECOMATIC:P70H20APST",
       "history": [
         {
           "date": "2026-11-05",
@@ -36883,7 +36872,7 @@
       "id": 1203,
       "name": "عرض حصري (فرن بيورتي OPT602GG + مسطح بيورتي HPT939G + شفاط بيورتي PANSY 90 BL) + ميكروويف جالانز بشواية P70H20AP-ST(SILVER) \"هدية\" 🎁",
       "brand": "Purity",
-      "category": "مايكروويف",
+      "category": "باكدج",
       "model": "P70H20AP-ST(SILVER)",
       "price_after": 35090,
       "price_before": 42108,
@@ -36894,7 +36883,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "PURITY:P70H20APST",
       "history": [
         {
           "date": "2026-11-05",
@@ -36910,7 +36898,7 @@
       "id": 1204,
       "name": "عرض حصري (فرن بيورتي OPT602GGD + مسطح بيورتي HPT913G + شفاط بيورتي PTSLIM 90 X) + ميكروويف جالانز بشواية D90D25AP-H7 (SILVER) \"هدية\" 🎁",
       "brand": "Purity",
-      "category": "مايكروويف",
+      "category": "باكدج",
       "model": "D90D25AP-H7",
       "price_after": 35370,
       "price_before": 42444,
@@ -36921,7 +36909,6 @@
       "in_stock": false,
       "features": [],
       "scraped": true,
-      "product_key": "PURITY:D90D25APH7",
       "history": [
         {
           "date": "2026-11-05",
@@ -36937,7 +36924,7 @@
       "id": 1205,
       "name": "طقم بلت إن بيورتي - شفاط مطبخ 90 سم أسود من بيورتي بقوة شفط 1000 م3/ساعة - موديل - ROSE PLUS BL 90CM + بوتاجاز بلت إن غاز بيورتي 90 سم – زجاج أسود – 5 شعلات - موديل - HPT911G + بيورتي فرن بلت إن غاز ديجتال بشواية غاز 90 سم أسود 97 لتر - موديل – OPT902GGD",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "ROSE",
       "price_after": 48270,
       "price_before": 57924,
@@ -36965,7 +36952,7 @@
       "id": 1206,
       "name": "طقم بلت إن بيورتي - شفاط مطبخ بيورتي مسطح 90 سم بقوة شفط قوة 450 م³/ساعة – موديل - PTSLIM PLUS 90 X + بوتاجاز بلت إن غاز بيورتي 90 سم – 6 شعلات - موديل - HPT903G + بيورتي فرن بلت إن غاز بشواية غاز 90 سم أسود 97 لتر - موديل - OPT903GG",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "PTSLIM",
       "price_after": 43050,
       "price_before": 51660,
@@ -36993,7 +36980,7 @@
       "id": 1207,
       "name": "طقم بلت إن بيورتي - شفاط بيورتي هرمي - 90 سم - فضي - قوة شفط 650 م3/ساعة - موديل - PANSY 90 X + مسطح بلت إن غاز بيورتي 90 سم - موديل - HPT911S + بيورتي فرن ديجتال بلت إن غاز بشواية غاز 90 سم سيلفر 98 لتر - موديل – OPT901GXD",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "PANSY",
       "price_after": 48790,
       "price_before": 58548,
@@ -37201,7 +37188,7 @@
       "id": 1214,
       "name": "غسالة أطباق اريستون (Ariston) 10 أفراد إنفرتر (DFS606XQ) عرض 45 سم، توفير ذكي",
       "brand": "Ariston",
-      "category": "غسالة أطباق",
+      "category": "باكدج",
       "model": "DFS606XQ)",
       "price_after": 27929,
       "price_before": 31280,
@@ -37215,7 +37202,6 @@
       ],
       "scraped": true,
       "motor_class": "inverter",
-      "product_key": "ARISTON:DFS606XQ",
       "history": [
         {
           "date": "2026-11-05",
@@ -37520,7 +37506,7 @@
       "id": 1225,
       "name": "طقم بلت إن فرن بلت إن اريستون 90 سم GGSM 53 IX A 30 + PHN 961 TS/IX/A مسطح 6 شعلة – موديل",
       "brand": "Ariston",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": null,
       "price_after": 68145,
       "price_before": 81774,
@@ -38654,7 +38640,7 @@
       "id": 1264,
       "name": "غسالة أطباق اريستون 10 أفراد إنفرتر (Ariston – LSFO 3T223 W X – عرض 45 سم – 9 برامج – ستانلس",
       "brand": "Ariston",
-      "category": "غسالة أطباق",
+      "category": "باكدج",
       "model": "3T223",
       "price_after": 33284,
       "price_before": 37278,
@@ -38668,7 +38654,6 @@
       ],
       "scraped": true,
       "motor_class": "inverter",
-      "product_key": "ARISTON:3T223",
       "history": [
         {
           "date": "2026-11-05",
@@ -38684,7 +38669,7 @@
       "id": 1265,
       "name": "غسالة أطباق اريستون 10 أفراد (Ariston) – LSFE 1B19 S – عرض 45 سم – 7 برامج – سيلفر",
       "brand": "Ariston",
-      "category": "غسالة أطباق",
+      "category": "باكدج",
       "model": null,
       "price_after": 29294,
       "price_before": 32809,
@@ -38886,7 +38871,7 @@
       "id": 1272,
       "name": "طقم بلت إن إيكوماتيك - مسطح غاز إيكوماتيك بلت إن 92 سم - موديل - S937XLC + فرن بلت إن إيكوماتيك 90 سم غاز - موديل - G9604GT + شفاط مطبخ إيكوماتيك – 90 سم – قوة شفط 650 م³/ساعة - موديل – H9106EBB",
       "brand": "Ecomatic",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "S937XLC",
       "price_after": 65520,
       "price_before": 79935,
@@ -38898,7 +38883,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 92,
-      "product_key": "ECOMATIC:S937XLC",
       "history": [
         {
           "date": "2026-11-05",
@@ -41525,7 +41509,7 @@
       "id": 1365,
       "name": "مسطح غاز بلت إن هانز 90 سم ستانلس ستيل – 5 شعلات + شعلتي ووك - موديل - HANS BROGHO L INOX",
       "brand": "Hans",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "HANS",
       "price_after": 18855,
       "price_before": 21118,
@@ -41740,7 +41724,7 @@
       "id": 1373,
       "name": "طقم بلت إن سيمفر - شفاط مطبخ هرمي سيمفر - 90 سم - قوة شفط 650 م³/ساعة - موديل - BH90P01 + بوتاجاز بلت إن غاز سيمفر 90 سم استانلس ستيل – 5 شعلات - موديل - BH90SG01 + سيمفر فرن بلت إن غاز 60 سم أسود - موديل – BO60SG01",
       "brand": "Simfer",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "BH90P01",
       "price_after": 34635,
       "price_before": 41562,
@@ -41753,7 +41737,6 @@
       "scraped": true,
       "width_cm": 90,
       "burners": 5,
-      "product_key": "SIMFER:BH90P01",
       "history": [
         {
           "date": "2026-11-05",
@@ -42138,7 +42121,7 @@
       "id": 1386,
       "name": "طقم بلت إن بيورتي - شفاط مطبخ بيورتي مسطح بلت إن - 90 سم - قوة شفط 450 م3/ساعة - موديل - PTSLIM PLUS BL 90CM + بوتاجاز بلت إن غاز بيورتي 90 سم زجاج أسود – 5 شعلات - موديل - HPT912G + بيورتي فرن بلت إن غاز بشواية غاز 90 سم أسود 97 لتر - موديل – OPT903GG",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "PTSLIM",
       "price_after": 49260,
       "price_before": 59112,
@@ -42166,7 +42149,7 @@
       "id": 1387,
       "name": "طقم بلت إن بيورتي - شفاط مطبخ هرمي بيورتي 90 سم – قوة شفط 1000 م³/ساعة – موديل - PANSY PRO PLUS 90CM + مسطح غاز بلت إن 90 سم من بيورتي – 6 شعلات – موديل - HPT903S + بيورتي فرن ديجتال بلت إن غاز بشواية غاز 90 سم سيلفر 97 لتر - موديل - موديل – OPT901GXD",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "PANSY",
       "price_after": 49895,
       "price_before": 59874,
@@ -42225,7 +42208,7 @@
       "id": 1389,
       "name": "طقم بلت إن بيورتي - فرن بيورتي بلت ان غاز 60 سم أسود مع شواية - موديل - OPT602GG + شفاط بيورتي هرمي - 90 سم - أسود - قوة شفط 650 م3/ساعة - موديل - PANSY 90 BL + بوتاجاز بلت إن غاز بيورتي 90 سم – 5 شعلات SABAF – إشعال أوتوماتيك – HPT939G",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "OPT602GG",
       "price_after": 31950,
       "price_before": 38340,
@@ -42240,7 +42223,6 @@
       "scraped": true,
       "width_cm": 60,
       "burners": 5,
-      "product_key": "PURITY:OPT602GG",
       "history": [
         {
           "date": "2026-11-05",
@@ -43043,7 +43025,7 @@
       "id": 1418,
       "name": "شفاط إيكوماتيك 90 سم ديكوراتيف – كريستال أسود وإستانلس – تاتش + ريموت – 3 سرعات – قوة شفط 1000 م³/س – موديل - H910ET",
       "brand": "Ecomatic",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "H910ET",
       "price_after": 13999,
       "price_before": 15679,
@@ -43055,7 +43037,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 90,
-      "product_key": "ECOMATIC:H910ET",
       "history": [
         {
           "date": "2026-11-05",
@@ -43492,7 +43473,7 @@
       "id": 1434,
       "name": "مسطح غاز كتشن لاين 90 سم – 6 عيون غاز – ستانلس ستيل – شبك زهر – اشعال ذاتي + أمان - موديل - J6020BK",
       "brand": "Kitchen Line",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "J6020BK",
       "price_after": 28405,
       "price_before": 40579,
@@ -43505,7 +43486,6 @@
       "scraped": true,
       "width_cm": 90,
       "burners": 6,
-      "product_key": "KITCHENLINE:J6020BK",
       "history": [
         {
           "date": "2026-11-05",
@@ -43548,7 +43528,7 @@
       "id": 1436,
       "name": "شفاط مطبخ اليكا بلت إن 90 سم – تحكم تاتش + جوال – قوة شفط 950 م³/س – أسود - موديل - ELICA GETUP",
       "brand": "اليكا",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "ELICA",
       "price_after": 155300,
       "price_before": 173936,
@@ -43776,7 +43756,7 @@
       "id": 1444,
       "name": "شفاط مطبخ حفر اليكا - لون رصاصي – عرض 72 سم – قوة شفط 350 م³/ساعة – إضاءة LED موديل - ERA",
       "brand": "اليكا",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "ERA",
       "price_after": 7000,
       "price_before": 7840,
@@ -44409,7 +44389,7 @@
       "id": 1466,
       "name": "شفاط مطبخ حفر اليكا - لون رصاصي – عرض 52 سم – قوة شفط 350 م³/ساعة – إضاءة LED موديل - ERA",
       "brand": "اليكا",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "ERA",
       "price_after": 6500,
       "price_before": 7280,
@@ -44582,7 +44562,7 @@
       "id": 1472,
       "name": "بوتاجاز كيتشن لاين بلت إن – 4 شعلات غاز + 2 كهرباء ستانلس ستيل - 90 سم - موديل - JN5022",
       "brand": "Kitchen Line",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "JN5022",
       "price_after": 31000,
       "price_before": 34720,
@@ -44595,7 +44575,6 @@
       "scraped": true,
       "width_cm": 90,
       "burners": 4,
-      "product_key": "KITCHENLINE:JN5022",
       "history": [
         {
           "date": "2026-11-05",
@@ -44611,7 +44590,7 @@
       "id": 1473,
       "name": "كيتشن لاين مسطح 4 عين كهرباء اندكشن كهرباء مع شفاط بلت ان زجاجي سيراميك اسود مقاس - 80 سم - موديل - SF06W",
       "brand": "Kitchen Line",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "SF06W",
       "price_after": 123785,
       "price_before": 176836,
@@ -44626,7 +44605,6 @@
       "scraped": true,
       "width_cm": 80,
       "burners": 4,
-      "product_key": "KITCHENLINE:SF06W",
       "history": [
         {
           "date": "2026-11-05",
@@ -44642,7 +44620,7 @@
       "id": 1474,
       "name": "كيتشن لاين مسطح 4 عين غاز شبك هيفي ديوتي + 2 عين سيراميك اندكشن 90 سم - موديل - IN4020",
       "brand": "Kitchen Line",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "IN4020",
       "price_after": 42950,
       "price_before": 61357,
@@ -44655,7 +44633,6 @@
       "scraped": true,
       "width_cm": 90,
       "burners": 4,
-      "product_key": "KITCHENLINE:IN4020",
       "history": [
         {
           "date": "2026-11-05",
@@ -45156,7 +45133,7 @@
       "id": 1492,
       "name": "بوتاجاز غاز بوش 90 سم استانلس ستيل مع فرن 147 لتر - موديل - HIZ5G7W51S",
       "brand": "Bosch",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "HIZ5G7W51S",
       "price_after": 31999,
       "price_before": 35839,
@@ -45168,7 +45145,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 90,
-      "product_key": "BOSCH:HIZ5G7W51S",
       "history": [
         {
           "date": "2026-11-05",
@@ -45184,7 +45160,7 @@
       "id": 1493,
       "name": "بوتاجاز غاز بوش 90×60 سم فري ستاند ستانلس ستيل مع فرن 125 لتر وشواية دوارة - HGP3I8W50S",
       "brand": "Bosch",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "HGP3I8W50S",
       "price_after": 22999,
       "price_before": 25759,
@@ -45196,7 +45172,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "BOSCH:HGP3I8W50S",
       "history": [
         {
           "date": "2026-11-05",
@@ -45499,7 +45474,7 @@
       "id": 1504,
       "name": "شفاط ديكوري إيكوماتيك 90 سم أسود حرف T – قوة شفط 1000 م³/ساعة + ريموت كنترول – H9310TTBK",
       "brand": "Ecomatic",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "H9310TTBK",
       "price_after": 10499,
       "price_before": 11759,
@@ -45511,7 +45486,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 90,
-      "product_key": "ECOMATIC:H9310TTBK",
       "history": [
         {
           "date": "2026-11-05",
@@ -45527,7 +45501,7 @@
       "id": 1505,
       "name": "شفاط ديكوري إيكوماتيك 90 سم فضي حرف T – قوة شفط 1000م³/ساعة + ريموت كنترول – H9310TT",
       "brand": "Ecomatic",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "H9310TT",
       "price_after": 9999,
       "price_before": 11199,
@@ -45539,7 +45513,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 90,
-      "product_key": "ECOMATIC:H9310TT",
       "history": [
         {
           "date": "2026-11-05",
@@ -45890,7 +45863,7 @@
       "id": 1518,
       "name": "شفاط ديكوري إيكوماتيك – 60 سم حرف T أسود، قوة شفط 1000 م³/ساعة، 3 سرعات + ريموت + CleanAir - H6310TTBK",
       "brand": "Ecomatic",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "H6310TTBK",
       "price_after": 9999,
       "price_before": 11199,
@@ -45902,7 +45875,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "ECOMATIC:H6310TTBK",
       "history": [
         {
           "date": "2026-11-05",
@@ -45918,7 +45890,7 @@
       "id": 1519,
       "name": "شفاط ديكوري إيكوماتيك – 60 سم حرف T فضي، قوة شفط 1000 م³/ساعة، 3 سرعات + ريموت + CleanAir - H6310TT",
       "brand": "Ecomatic",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "H6310TT",
       "price_after": 9499,
       "price_before": 10639,
@@ -45930,7 +45902,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "ECOMATIC:H6310TT",
       "history": [
         {
           "date": "2026-11-05",
@@ -46785,7 +46756,7 @@
       "id": 1549,
       "name": "بوتاجاز رويال (Royal) فاست 5 شعلة 90 سم بمروحة – 2010263",
       "brand": "رويال",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": null,
       "price_after": 11805,
       "price_before": 13222,
@@ -48135,7 +48106,7 @@
       "id": 1597,
       "name": "شفاط مطبخ زجاجي جداري كومتيل – 60 سم – زجاجي أسود – قوة شفط 650 م³/ساعة – لوحة لمس + ريموت – موديل - DA6-835",
       "brand": "Kumtel",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "DA6-835",
       "price_after": 6990,
       "price_before": 7829,
@@ -48147,7 +48118,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "KUMTEL:DA6835",
       "history": [
         {
           "date": "2026-11-05",
@@ -49521,7 +49491,7 @@
       "id": 1646,
       "name": "شفاط مطبخ هرمي بيورتي (Purity) - لون أسود – عرض 90 سم، قوة شفط 1000 م³/س - موديل - ETO PRO PLUS BL",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "ETO",
       "price_after": 8550,
       "price_before": 10650,
@@ -49548,7 +49518,7 @@
       "id": 1647,
       "name": "مسطح بيورتي بلت إن كهرباء اندكشن 90 سم مع شفاط بلت إن – موديل - FTS472G3QWP",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "FTS472G3QWP",
       "price_after": 57499,
       "price_before": 64399,
@@ -49560,7 +49530,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 90,
-      "product_key": "PURITY:FTS472G3QWP",
       "history": [
         {
           "date": "2026-11-05",
@@ -50808,7 +50777,7 @@
       "id": 1691,
       "name": "شفاط مطبخ حرف T ايكوماتيك 90 سم ستانلس ستيل تاتش + ريموت قوة 650 م³/ساعة - H9206OST",
       "brand": "Ecomatic",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "H9206OST",
       "price_after": 11990,
       "price_before": 13429,
@@ -50820,7 +50789,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 90,
-      "product_key": "ECOMATIC:H9206OST",
       "history": [
         {
           "date": "2026-11-05",
@@ -50836,7 +50804,7 @@
       "id": 1692,
       "name": "شفاط مطبخ حرف T ايكوماتيك 90 سم ستانلس ستيل تاتش + ريموت قوة 1000 م³/ساعة - H9210OST",
       "brand": "Ecomatic",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "H9210OST",
       "price_after": 12800,
       "price_before": 14336,
@@ -50848,7 +50816,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 90,
-      "product_key": "ECOMATIC:H9210OST",
       "history": [
         {
           "date": "2026-11-05",
@@ -55021,7 +54988,7 @@
       "id": 1837,
       "name": "شفاط مطبخ بوش حائط سيريس 2 – ستانلس ستيل 60 سم – قوة شفط 350 م³/ساعة",
       "brand": "Bosch",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": null,
       "price_after": 15749,
       "price_before": 17639,
@@ -55382,7 +55349,7 @@
       "id": 1850,
       "name": "شفاط مطبخ مسطح بلت إن بيورتي – 60 سم، فضي- قوة شفط 450 م³/ساعة، تحكم باللمس + ريموت - موديل - PTSLIM PLUS X 60CM",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "PTSLIM",
       "price_after": 4850,
       "price_before": 6050,
@@ -55850,7 +55817,7 @@
       "id": 1867,
       "name": "شفاط مطبخ مسطح بلت إن بيورتي (Purity) – 60 سم، أسود - قوة شفط 450 م³/ساعة، تحكم باللمس + ريموت - موديل - PTSLIM PLUS BL 60CM",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "PTSLIM",
       "price_after": 5190,
       "price_before": 6485,
@@ -56596,7 +56563,7 @@
       "id": 1894,
       "name": "شفاط مطبخ زجاجي أسود 90 سم قوة شفط 1000 م³/ساعة من بيورتي – ستانلس + كريستال – موديل – CAPPE BL",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": null,
       "price_after": 11250,
       "price_before": 13990,
@@ -57145,7 +57112,7 @@
       "id": 1914,
       "name": "شفاط مطبخ بيورتي TS Pro Plus حرف T مقاس 90 سم 1000 م³/ساعة – تحكم لمس وريموت",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": null,
       "price_after": 14310,
       "price_before": 15900,
@@ -57283,7 +57250,7 @@
       "id": 1919,
       "name": "شفاط مطبخ هرمي بيورتي (Purity) – عرض 90 سم، قوة شفط 1000 م³/س - موديل - ETO PRO PLUS X",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "ETO",
       "price_after": 8090,
       "price_before": 10100,
@@ -57664,7 +57631,7 @@
       "id": 1933,
       "name": "طقم بلت إن إلبا (ELBA) (إيطالي) 90 سم – مسطح 5 شعلة EN95-545XD + فرن غاز 109-52XN – رفاهية الطهي الإيطالي",
       "brand": "Elba",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "109-52XN",
       "price_after": 70445,
       "price_before": 84534,
@@ -57677,7 +57644,6 @@
       "scraped": true,
       "width_cm": 90,
       "burners": 5,
-      "product_key": "ELBA:10952XN",
       "history": [
         {
           "date": "2026-11-05",
@@ -57783,7 +57749,7 @@
       "id": 1937,
       "name": "طقم بلت إن بيورتي - فرن غاز بلت إن ديجيتال بشواية – 98 لتر – موديل KPD918GG + بوتجاز 90 سم موديل HPT907S + شفاط 90 سم بقوة 450 م3/ساعة موديل PTSLIM 90X",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "KPD918GG",
       "price_after": 41990,
       "price_before": 50388,
@@ -57795,7 +57761,6 @@
       "features": [],
       "scraped": true,
       "width_cm": 90,
-      "product_key": "PURITY:KPD918GG",
       "history": [
         {
           "date": "2026-11-05",
@@ -57898,7 +57863,7 @@
       "id": 1941,
       "name": "طقم بلت ان بيورتي -مسطح 6 عين غاز HPT904S + فرن غاز 60 سم PT601GG + شفاط 90 سم PANSY X",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "PT601GG",
       "price_after": 33390,
       "price_before": 40068,
@@ -57913,7 +57878,6 @@
       "scraped": true,
       "width_cm": 60,
       "burners": 6,
-      "product_key": "PURITY:PT601GG",
       "history": [
         {
           "date": "2026-11-05",
@@ -57929,7 +57893,7 @@
       "id": 1942,
       "name": "طقم بلت ان بيورتي - مسطح 6 عين غاز HPT904S + فرن بلت ان كهرباء ديجيتال 60 سم PT60EED + شفاط 90 سم PTSLIM 90 X",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "PT60EED",
       "price_after": 31590,
       "price_before": 37908,
@@ -57944,7 +57908,6 @@
       "scraped": true,
       "width_cm": 60,
       "burners": 6,
-      "product_key": "PURITY:PT60EED",
       "history": [
         {
           "date": "2026-11-05",
@@ -57960,7 +57923,7 @@
       "id": 1943,
       "name": "طقم بلت ان بيورتي - مسطح 6 عين غاز HPT904S + فرن بلت ان غاز 90 سم PT901GXD + شفاط 90 سم PANSY PRO BL",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "PT901GXD",
       "price_after": 47950,
       "price_before": 57540,
@@ -57975,7 +57938,6 @@
       "scraped": true,
       "width_cm": 90,
       "burners": 6,
-      "product_key": "PURITY:PT901GXD",
       "history": [
         {
           "date": "2026-11-05",
@@ -58136,7 +58098,7 @@
       "id": 1949,
       "name": "طقم بيورتي بلت إن – فرن بلت إن غاز بيورتي 60 سم – أسود – سعة 67 لتر - موديل – OPT602GG +شفاط مطبخ بلت إن 60 سم أسود – قوة شفط 450 م³/ساعة - موديل - PTSLIM 60 BL + بوتاجاز بلت إن 4 شعلات غاز – أسود – موديل – HPT602G",
       "brand": "Purity",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "PTSLIM",
       "price_after": 28500,
       "price_before": 34200,
@@ -61159,7 +61121,7 @@
       "id": 2053,
       "name": "مسطح إيكوماتيك بلت إن غاز – 92 سم – 5 شعلات غاز + 1 شعلة كهربائية – ستانلس ستيل – موديل – S963XLE",
       "brand": "Ecomatic",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "S963XLE",
       "price_after": 18999,
       "price_before": 21279,
@@ -61172,7 +61134,6 @@
       "scraped": true,
       "width_cm": 92,
       "burners": 5,
-      "product_key": "ECOMATIC:S963XLE",
       "history": [
         {
           "date": "2026-11-05",
@@ -64795,7 +64756,7 @@
       "id": 2173,
       "name": "إل جي غسالة ملابس اوتوماتيك تحميل علوي 16 كيلو بمحرك موتور انفرتر سيلفر T1688NEHTEC",
       "brand": "LG",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "T1688NEHTEC70",
       "price_after": 10990,
       "price_before": 15000,
@@ -64813,7 +64774,6 @@
       "scraped": true,
       "capacity_kg": 16,
       "motor_class": "inverter",
-      "product_key": "LG:T1688NEHTEC70",
       "history": [
         {
           "date": "2026-11-05",
@@ -64862,7 +64822,7 @@
       "id": 2175,
       "name": "ال جى غسالة ملابس 8 كيلو 1400 لفة بالبخار لون سلفر محرك الدفع المباشر + هدايا FH4G6TDY6",
       "brand": "LG",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "FH4G6TDY6",
       "price_after": 10490,
       "price_before": 19000,
@@ -64878,7 +64838,6 @@
       "capacity_kg": 8,
       "spin_rpm": 1400,
       "motor_class": "unknown",
-      "product_key": "LG:FH4G6TDY6",
       "history": [
         {
           "date": "2026-11-05",
@@ -64926,7 +64885,7 @@
       "id": 2177,
       "name": "ال جى غسالة ملابس 9كيلو 1400 لفة بالبخار لون سلفر محرك الدفع المباشر + هدايا FH4G6VDY6",
       "brand": "LG",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "FH4G6VDY6",
       "price_after": 10990,
       "price_before": 17000,
@@ -64942,7 +64901,6 @@
       "capacity_kg": 9,
       "spin_rpm": 1400,
       "motor_class": "unknown",
-      "product_key": "LG:FH4G6VDY6",
       "history": [
         {
           "date": "2026-11-05",
@@ -64958,7 +64916,7 @@
       "id": 2178,
       "name": "إل جي توين واش غسالة 15 كيلو + غسالة سفلية 2.5 كيلو و 8 كيلو مجفف FT018TGES",
       "brand": "LG",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "FT018TGES25",
       "price_after": 40990,
       "price_before": 45000,
@@ -64971,7 +64929,6 @@
       "scraped": true,
       "capacity_kg": 15,
       "motor_class": "unknown",
-      "product_key": "LG:FT018TGES25",
       "history": [
         {
           "date": "2026-11-05",
@@ -65391,7 +65348,7 @@
       "id": 2192,
       "name": "جورينيا ثلاجة وفريزر 2*1 انفرتر ديجيتال 592 لتر FN8191OX",
       "brand": "Gorenje",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "FN8191OX",
       "price_after": 94999,
       "price_before": 105000,
@@ -65406,7 +65363,6 @@
       "scraped": true,
       "capacity_liters": 592,
       "motor_class": "inverter",
-      "product_key": "GORENJE:FN8191OX",
       "history": [
         {
           "date": "2026-11-05",
@@ -65516,7 +65472,7 @@
       "id": 2196,
       "name": "اوشن توينز ثلاجة 402 لتر بحنفية و فريزر ستانلس ستيل OCM 402 TNF X A+",
       "brand": "Ocean",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": null,
       "price_after": 61399,
       "price_before": 70000,
@@ -65915,7 +65871,7 @@
       "id": 2209,
       "name": "ثلاجة بوش سيريس 6 ستانلس ستيل نوفروست 641 لتر ديجيتال BOSCH KDN86AI3E9",
       "brand": "Bosch",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "KDN86AI3E91997",
       "price_after": 60999,
       "price_before": 75000,
@@ -65929,7 +65885,6 @@
       ],
       "scraped": true,
       "capacity_liters": 641,
-      "product_key": "BOSCH:KDN86AI3E91997",
       "history": [
         {
           "date": "2026-11-05",
@@ -65976,7 +65931,7 @@
       "id": 2211,
       "name": "بوش ثلاجة 13 قدم 302 لتر كومبي بفريزر مستقل نو فروست لون سيلفر KGN36NL30U",
       "brand": "Bosch",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "KGN36NL30U1972",
       "price_after": 24699,
       "price_before": 28999,
@@ -65991,7 +65946,6 @@
       ],
       "scraped": true,
       "capacity_liters": 302,
-      "product_key": "BOSCH:KGN36NL30U1972",
       "history": [
         {
           "date": "2026-11-05",
@@ -67343,7 +67297,7 @@
       "id": 2255,
       "name": "بوش ثلاجة توينز 590 لتر KSV36VL30U/GSN36VL30U",
       "brand": "Bosch",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "GSN36VL30U",
       "price_after": 109999,
       "price_before": 120000,
@@ -67355,7 +67309,6 @@
       "features": [],
       "scraped": true,
       "capacity_liters": 590,
-      "product_key": "BOSCH:GSN36VL30U",
       "history": [
         {
           "date": "2026-11-05",
@@ -67892,7 +67845,7 @@
       "id": 2273,
       "name": "بوش ثلاجة 26 قدم 604 لتر كومبي بفريزر مستقل نو فروست لون سيلفر KGN36NL30U",
       "brand": "Bosch",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "KGN36NL30U2364",
       "price_after": 49499,
       "price_before": 55000,
@@ -67907,7 +67860,6 @@
       ],
       "scraped": true,
       "capacity_liters": 604,
-      "product_key": "BOSCH:KGN36NL30U2364",
       "history": [
         {
           "date": "2026-11-05",
@@ -68102,7 +68054,7 @@
       "id": 2280,
       "name": "بيكو فريزر عمودي - نو فروست - 8 ادراج (5 ادراج + 3 رفوف) - سعة صافية 286 لتر - تحكم رقمي في العرض - اسود - B3RFNE314ZXPEB1",
       "brand": "Beko",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "B3RFNE314ZXPEB1",
       "price_after": 35999,
       "price_before": 40000,
@@ -68116,7 +68068,6 @@
       ],
       "scraped": true,
       "capacity_liters": 286,
-      "product_key": "BEKO:B3RFNE314ZXPEB1",
       "history": [
         {
           "date": "2026-11-05",
@@ -70672,7 +70623,7 @@
       "id": 2368,
       "name": "جورينيه فرن كهربائي بلت ان 60 سم مزود بشاشة VISIONPLUS وخاصية الخبز متعدد المستويات لون أسود BSA6138B",
       "brand": "Gorenje",
-      "category": "فرن",
+      "category": "باكدج",
       "model": "BSA6138B",
       "price_after": 47999,
       "price_before": 55000,
@@ -70686,7 +70637,6 @@
       ],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "GORENJE:BSA6138B",
       "history": [
         {
           "date": "2026-11-05",
@@ -78128,7 +78078,7 @@
       "id": 2623,
       "name": "Ariston Built-in Dishwasher White - LIC 3B+26",
       "brand": "Ariston",
-      "category": "غسالة أطباق",
+      "category": "باكدج",
       "model": null,
       "price_after": 34999,
       "price_before": 0,
@@ -79359,7 +79309,7 @@
       "id": 2666,
       "name": "Black & White Built-In Flat Hood , 60 Centimeter , Silver - CK-660",
       "brand": "Black And White",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "CK-660",
       "price_after": 4087,
       "price_before": 0,
@@ -79372,7 +79322,6 @@
         "بلت إن"
       ],
       "scraped": true,
-      "product_key": "BLACKANDWHITE:CK660",
       "history": [
         {
           "date": "2026-11-05",
@@ -79388,7 +79337,7 @@
       "id": 2667,
       "name": "Black & White Built-In Pyramids Hood , 90 Centimeter , Silver - CY-970",
       "brand": "Black And White",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "CY-970",
       "price_after": 5575,
       "price_before": 0,
@@ -79401,7 +79350,6 @@
         "بلت إن"
       ],
       "scraped": true,
-      "product_key": "BLACKANDWHITE:CY970",
       "history": [
         {
           "date": "2026-11-05",
@@ -79417,7 +79365,7 @@
       "id": 2668,
       "name": "Black & White Built-In Flat Hood , 90 Centimeter , Silver - CK-960",
       "brand": "Black And White",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "CK-960",
       "price_after": 4645,
       "price_before": 0,
@@ -79430,7 +79378,6 @@
         "بلت إن"
       ],
       "scraped": true,
-      "product_key": "BLACKANDWHITE:CK960",
       "history": [
         {
           "date": "2026-11-05",
@@ -82124,7 +82071,7 @@
       "id": 2762,
       "name": "Indesit Dishwasher , 13 Persons Inox - DFC2B+16ACX",
       "brand": "Indesit",
-      "category": "غسالة أطباق",
+      "category": "باكدج",
       "model": "DFC2B+16ACX",
       "price_after": 26999,
       "price_before": 0,
@@ -82135,7 +82082,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "INDESIT:DFC2B16ACX",
       "history": [
         {
           "date": "2026-11-05",
@@ -84433,7 +84379,7 @@
       "id": 2842,
       "name": "LG WashTower Silver Model FWT2520SS (25 kg Washing Machine FWT25WSS + 20 kg Dryer FWT20DSS)",
       "brand": "LG",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "FWT20DSS",
       "price_after": 141110,
       "price_before": 146990,
@@ -84446,7 +84392,6 @@
       "scraped": true,
       "capacity_kg": 25,
       "motor_class": "unknown",
-      "product_key": "LG:FWT20DSS",
       "history": [
         {
           "date": "2026-11-05",
@@ -84686,7 +84631,7 @@
       "id": 2850,
       "name": "LG WashTower Black Steel Model FWT2520BS (25 kg Washer + 20 kg Dryer FWT25WBS + FWT20DBS)",
       "brand": "LG",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "FWT20DBS",
       "price_after": 143990,
       "price_before": 149990,
@@ -84699,7 +84644,6 @@
       "scraped": true,
       "capacity_kg": 25,
       "motor_class": "unknown",
-      "product_key": "LG:FWT20DBS",
       "history": [
         {
           "date": "2026-11-05",
@@ -86741,7 +86685,7 @@
       "id": 2915,
       "name": "BEKO Washing Machine 8kg 1400 rpm with 5kg Dryer Digital Inverter with Steam Gray BWD08520MCI",
       "brand": "Beko",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "BWD08520MCI",
       "price_after": 23999,
       "price_before": 28599,
@@ -86758,7 +86702,6 @@
       "capacity_kg": 8,
       "spin_rpm": 1400,
       "motor_class": "inverter",
-      "product_key": "BEKO:BWD08520MCI",
       "history": [
         {
           "date": "2026-11-05",
@@ -89712,7 +89655,7 @@
       "id": 3013,
       "name": "Ariston Refrigerator Inverter Digital with Water Dispenser Silver Model ART83 F6654 XNA",
       "brand": "Ariston",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "F6654",
       "price_after": 66645,
       "price_before": 70899,
@@ -89726,7 +89669,6 @@
       ],
       "scraped": true,
       "motor_class": "inverter",
-      "product_key": "ARISTON:F6654",
       "history": [
         {
           "date": "2026-11-05",
@@ -90745,7 +90687,7 @@
       "id": 3048,
       "name": "Refrigerator BEKO 477 liter Digital Inverter With Dispenser 2 Doors Silver Model B3RDNE500LDXB",
       "brand": "Beko",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "B3RDNE500LDXB",
       "price_after": 40849,
       "price_before": 42999,
@@ -90760,7 +90702,6 @@
       "scraped": true,
       "capacity_liters": 477,
       "motor_class": "inverter",
-      "product_key": "BEKO:B3RDNE500LDXB",
       "history": [
         {
           "date": "2026-11-05",
@@ -91979,7 +91920,7 @@
       "id": 3089,
       "name": "Beko Upright Freezer with 8 Drawers Inverter Technology Digital Display and Elegant Black RFNE313E13STIEGB",
       "brand": "Beko",
-      "category": "ديب فريزر",
+      "category": "باكدج",
       "model": "RFNE313E13STIEGB",
       "price_after": 28199,
       "price_before": 29999,
@@ -91993,7 +91934,6 @@
       ],
       "scraped": true,
       "motor_class": "inverter",
-      "product_key": "BEKO:RFNE313E13STIEGB",
       "history": [
         {
           "date": "2026-11-05",
@@ -93087,7 +93027,7 @@
       "id": 3128,
       "name": "Beko Cooker 90cm Full Safety Gas/Electric with Double Fan Stainless Steel Model BGGR 11125 GB",
       "brand": "Beko",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": null,
       "price_after": 16149,
       "price_before": 16999,
@@ -95303,7 +95243,7 @@
       "id": 3204,
       "name": "Fresh Built-In Gas Oven 60 Cm Modena With electric Grill -500009649",
       "brand": "Fresh",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": null,
       "price_after": 15541,
       "price_before": 0,
@@ -95483,7 +95423,7 @@
       "id": 3210,
       "name": "Fresh Built-In Gas Oven 60 Cm With Electric Grill GEOFR60CMB",
       "brand": "Fresh",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "GEOFR60CMB",
       "price_after": 15161,
       "price_before": 0,
@@ -95497,7 +95437,6 @@
       ],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "FRESH:GEOFR60CMB",
       "history": [
         {
           "date": "2026-11-05",
@@ -95633,7 +95572,7 @@
       "id": 3215,
       "name": "Fresh Built-In Gas Oven 60 Cm With Electric Grill GEOFR60CMS",
       "brand": "Fresh",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "GEOFR60CMS",
       "price_after": 15968,
       "price_before": 0,
@@ -95647,7 +95586,6 @@
       ],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "FRESH:GEOFR60CMS",
       "history": [
         {
           "date": "2026-11-05",
@@ -95663,7 +95601,7 @@
       "id": 3216,
       "name": "Elba Gas Oven With Gas Grill Fan Stainless Steel 90cm Model 140-G94F",
       "brand": "Elba",
-      "category": "فرن",
+      "category": "باكدج",
       "model": "140-G94F",
       "price_after": 58888,
       "price_before": 0,
@@ -95677,7 +95615,6 @@
       ],
       "scraped": true,
       "width_cm": 90,
-      "product_key": "ELBA:140G94F",
       "history": [
         {
           "date": "2026-11-05",
@@ -95693,7 +95630,7 @@
       "id": 3217,
       "name": "Fresh Built-In Gas Oven 60 Cm With Electric Grill GEOFR60CMSGE",
       "brand": "Fresh",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "GEOFR60CMSGE",
       "price_after": 15374,
       "price_before": 0,
@@ -95707,7 +95644,6 @@
       ],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "FRESH:GEOFR60CMSGE",
       "history": [
         {
           "date": "2026-11-05",
@@ -96287,7 +96223,7 @@
       "id": 3237,
       "name": "Zanussi Built in Gas Oven 60 cm with Electric Grill Model ZQENF1X1",
       "brand": "Zanussi",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "ZQENF1X1",
       "price_after": 23764,
       "price_before": 24499,
@@ -96301,7 +96237,6 @@
       ],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "ZANUSSI:ZQENF1X1",
       "history": [
         {
           "date": "2026-11-05",
@@ -96349,7 +96284,7 @@
       "id": 3239,
       "name": "HOOVER Built-In Oven Gas – Electric Grill 90 cm 93 Liter In Stainless Steel Color With Convection Fan HGGF92DD",
       "brand": "Hoover",
-      "category": "فرن",
+      "category": "باكدج",
       "model": "HGGF92DD",
       "price_after": 55775,
       "price_before": 0,
@@ -96365,7 +96300,6 @@
       "scraped": true,
       "capacity_liters": 93,
       "width_cm": 90,
-      "product_key": "HOOVER:HGGF92DD",
       "history": [
         {
           "date": "2026-11-05",
@@ -97163,7 +97097,7 @@
       "id": 3266,
       "name": "Built-In Hob Elba In Ceramic Electric Toutch With 5 burners Model EVC905XF",
       "brand": "Elba",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "EVC905XF",
       "price_after": 35221,
       "price_before": 38704,
@@ -97177,7 +97111,6 @@
       ],
       "scraped": true,
       "burners": 5,
-      "product_key": "ELBA:EVC905XF",
       "history": [
         {
           "date": "2026-11-05",
@@ -98833,7 +98766,7 @@
       "id": 3322,
       "name": "Gorenje Built-In Hood 60 cm T-Shape Stainless Steel with Black Glass WHT644EXGB",
       "brand": "Gorenje",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "WHT644EXGB",
       "price_after": 13794,
       "price_before": 15499,
@@ -98847,7 +98780,6 @@
       ],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "GORENJE:WHT644EXGB",
       "history": [
         {
           "date": "2026-11-05",
@@ -99640,7 +99572,7 @@
       "id": 3350,
       "name": "BLACK and Decker Microwave 20 Liters 700W Black MZ2015P",
       "brand": "Black and Decker",
-      "category": "مايكروويف",
+      "category": "باكدج",
       "model": "MZ2015P",
       "price_after": 7815,
       "price_before": 8495,
@@ -99652,7 +99584,6 @@
       "features": [],
       "scraped": true,
       "capacity_liters": 20,
-      "product_key": "BLACKANDDECKER:MZ2015P",
       "history": [
         {
           "date": "2026-11-05",
@@ -101922,7 +101853,7 @@
       "id": 3430,
       "name": "Ariston built-in dishwasher 60 cm 14 people semi-integrated white LIC 3B+26",
       "brand": "Ariston",
-      "category": "غسالة أطباق",
+      "category": "باكدج",
       "model": null,
       "price_after": 34873,
       "price_before": 37099,
@@ -106064,7 +105995,7 @@
       "id": 3574,
       "name": "Beko فريزر رأسي - 260 لتر صافي - نوفروست - 7 أدراج - ديجيتال - عرض 59.7 سم - فضي - B3RFNE294XS",
       "brand": "Beko",
-      "category": "ديب فريزر",
+      "category": "باكدج",
       "model": "B3RFNE294XS",
       "price_after": 28499,
       "price_before": 35000,
@@ -106078,7 +106009,6 @@
       ],
       "scraped": true,
       "capacity_liters": 260,
-      "product_key": "BEKO:B3RFNE294XS",
       "history": [
         {
           "date": "2026-11-05",
@@ -106596,7 +106526,7 @@
       "id": 3593,
       "name": "Zanussi موقد قائم ذاتي 90 - كول ماكس - إصدار جديد (مروحة ساخنة وتبريد + مؤقت رقمي + دعم مقلاة من الحديد الزهر + أمان كامل + ستانلس ستيل غير لامع) ZCG94396XB",
       "brand": "Zanussi",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "ZCG94396XB",
       "price_after": 17877,
       "price_before": 22072,
@@ -106610,7 +106540,6 @@
         "مروحة"
       ],
       "scraped": true,
-      "product_key": "ZANUSSI:ZCG94396XB",
       "history": [
         {
           "date": "2026-11-05",
@@ -106713,7 +106642,7 @@
       "id": 3597,
       "name": "Hans موقد غاز مدمج من هانز 90 سم - منطقة طهي ماكسي + منطقة طهي كاملة - 5 مناطق طهي - صمامات غاز ساباف إيطالية أصلية، زجاج مقوى 8 مم، إشعال فوري تلقائي، نظام أمان FFD، ودعامات أواني من الحديد الزهر - ستانلس ستيل، BROGHO 9L3G2W X SF (صنع في تركيا)",
       "brand": "Hans",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": null,
       "price_after": 15399,
       "price_before": 29999,
@@ -107032,7 +106961,7 @@
       "id": 3608,
       "name": "Zanussi موقد غاز 90 سم SteelPlus، بخمسة شعلات، مع فرن غاز شبكي، أمان كامل، فضي ZCG922A6XB",
       "brand": "Zanussi",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "ZCG922A6XB",
       "price_after": 16308,
       "price_before": 22220,
@@ -107046,7 +106975,6 @@
       ],
       "scraped": true,
       "width_cm": 90,
-      "product_key": "ZANUSSI:ZCG922A6XB",
       "history": [
         {
           "date": "2026-11-05",
@@ -129044,7 +128972,7 @@
       "id": 4343,
       "name": "ديب فريزر راسي فريش، 4 درج + 1 رف، FNU-LR251EB 4k 500022760 - اسود",
       "brand": "Fresh",
-      "category": "ديب فريزر",
+      "category": "باكدج",
       "model": "EL1148561BLK",
       "price_after": 19849,
       "price_before": 20399,
@@ -129055,7 +128983,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "FRESH:EL1148561BLK",
       "history": [
         {
           "date": "2026-11-05",
@@ -132424,7 +132351,7 @@
       "id": 4456,
       "name": "بوتاجاز غاز ايطاليانو فريش، 80×55، 5 شعلة - فضى",
       "brand": "Fresh",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "FR057HL04J4DUNAFAMZ",
       "price_after": 12020,
       "price_before": 14545,
@@ -132436,7 +132363,6 @@
       "features": [],
       "scraped": true,
       "burners": 5,
-      "product_key": "FRESH:FR057HL04J4DUNAFAMZ",
       "history": [
         {
           "date": "2026-11-05",
@@ -143478,7 +143404,7 @@
       "id": 4826,
       "name": "فرن غاز مدمج بعرض 60 سم من KUMTEL، لون أسود، سعة 73 لتر، شواية غاز، A6CG-Black Glass",
       "brand": "Kumtel",
-      "category": "فرن",
+      "category": "باكدج",
       "model": "A6CG-BLACK",
       "price_after": 12945,
       "price_before": 18989,
@@ -143493,7 +143419,6 @@
       "scraped": true,
       "capacity_liters": 73,
       "width_cm": 60,
-      "product_key": "KUMTEL:A6CGBLACK",
       "history": [
         {
           "date": "2026-11-05",
@@ -144703,7 +144628,7 @@
       "id": 4870,
       "name": "سخان مياه غاز تورنيدو، 10 لتر، مزود بشاشة ديجيتال، GHM-C10BNE-S - فضي",
       "brand": "Tornado",
-      "category": "سخان",
+      "category": "باكدج",
       "model": "C10BNE",
       "price_after": 10800,
       "price_before": 11000,
@@ -144715,7 +144640,6 @@
       "features": [],
       "scraped": true,
       "capacity_liters": 10,
-      "product_key": "TORNADO:C10BNE",
       "history": [
         {
           "date": "2026-11-05",
@@ -144759,7 +144683,7 @@
       "id": 4872,
       "name": "سخان مياه غاز طبيعي بيكو، 6 لتر، بمدخنة، شاشة ديجيتال، مزود بمحول كهربائي + مدخل USB ، BGWH 6LS - فضي",
       "brand": "Beko",
-      "category": "سخان",
+      "category": "باكدج",
       "model": null,
       "price_after": 4499,
       "price_before": 5500,
@@ -145152,7 +145076,7 @@
       "id": 4886,
       "name": "سخان مياه ديجيتال تورنيدو، كهرباء، سعة 35 لتر، EWH-S35CSE-F - اوف وايت",
       "brand": "Tornado",
-      "category": "سخان",
+      "category": "باكدج",
       "model": "S35CSE",
       "price_after": 11999,
       "price_before": 12000,
@@ -145164,7 +145088,6 @@
       "features": [],
       "scraped": true,
       "capacity_liters": 35,
-      "product_key": "TORNADO:S35CSE",
       "history": [
         {
           "date": "2026-11-05",
@@ -150153,7 +150076,7 @@
       "id": 5065,
       "name": "Zanussi SteamMax 7kg front load washing machine - Black",
       "brand": "Zanussi",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "ZWF7221BS7",
       "price_after": 20050,
       "price_before": 0,
@@ -150169,7 +150092,6 @@
       "scraped": true,
       "capacity_kg": 7,
       "motor_class": "unknown",
-      "product_key": "ZANUSSI:ZWF7221BS7",
       "history": [
         {
           "date": "2026-11-05",
@@ -150185,7 +150107,7 @@
       "id": 5066,
       "name": "Zanussi SteamMax 7kg front load washing machine - Silver",
       "brand": "Zanussi",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "ZWF7221SS7",
       "price_after": 19750,
       "price_before": 0,
@@ -150201,7 +150123,6 @@
       "scraped": true,
       "capacity_kg": 7,
       "motor_class": "unknown",
-      "product_key": "ZANUSSI:ZWF7221SS7",
       "history": [
         {
           "date": "2026-11-05",
@@ -150217,7 +150138,7 @@
       "id": 5067,
       "name": "Zanussi SteamMax with lens 11k front load washing machine - Royal Black",
       "brand": "Zanussi",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "914909483",
       "price_after": 24950,
       "price_before": 0,
@@ -150247,7 +150168,7 @@
       "id": 5068,
       "name": "Zanussi SteamMax 8kg front load washing machine - Silver",
       "brand": "Zanussi",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "ZWF8221SL8",
       "price_after": 21750,
       "price_before": 0,
@@ -150263,7 +150184,6 @@
       "scraped": true,
       "capacity_kg": 8,
       "motor_class": "unknown",
-      "product_key": "ZANUSSI:ZWF8221SL8",
       "history": [
         {
           "date": "2026-11-05",
@@ -150279,7 +150199,7 @@
       "id": 5069,
       "name": "Zanussi PerlaMax 8kg front load washing machine - Dark Grey",
       "brand": "Zanussi",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "ZWF8240DS5",
       "price_after": 18550,
       "price_before": 0,
@@ -150294,7 +150214,6 @@
       "scraped": true,
       "capacity_kg": 8,
       "motor_class": "unknown",
-      "product_key": "ZANUSSI:ZWF8240DS5",
       "history": [
         {
           "date": "2026-11-05",
@@ -150310,7 +150229,7 @@
       "id": 5070,
       "name": "Zanussi CoolCast 5-burner range cooker",
       "brand": "Zanussi",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "ZCG91236XB",
       "price_after": 17390,
       "price_before": 0,
@@ -150321,7 +150240,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "ZANUSSI:ZCG91236XB",
       "history": [
         {
           "date": "2026-11-05",
@@ -150337,7 +150255,7 @@
       "id": 5071,
       "name": "Zanussi SteelMax 5-burner range cooker",
       "brand": "Zanussi",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "ZCG923A6XB",
       "price_after": 15090,
       "price_before": 0,
@@ -150348,7 +150266,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "ZANUSSI:ZCG923A6XB",
       "history": [
         {
           "date": "2026-11-05",
@@ -150364,7 +150281,7 @@
       "id": 5072,
       "name": "Zanussi SteelMax 4-burner range cooker",
       "brand": "Zanussi",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "ZCG623A6XB",
       "price_after": 11490,
       "price_before": 0,
@@ -150375,7 +150292,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "ZANUSSI:ZCG623A6XB",
       "history": [
         {
           "date": "2026-11-05",
@@ -150391,7 +150307,7 @@
       "id": 5073,
       "name": "Zanussi CoolCast 4-burner range cooker",
       "brand": "Zanussi",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "ZCG61296XB",
       "price_after": 12290,
       "price_before": 0,
@@ -150402,7 +150318,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "ZANUSSI:ZCG61296XB",
       "history": [
         {
           "date": "2026-11-05",
@@ -150418,7 +150333,7 @@
       "id": 5074,
       "name": "Zanussi TasteMax Plus 5-burner range cooker",
       "brand": "Zanussi",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "ZCG92696XA",
       "price_after": 30240,
       "price_before": 0,
@@ -150429,7 +150344,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "ZANUSSI:ZCG92696XA",
       "history": [
         {
           "date": "2026-11-05",
@@ -150445,7 +150359,7 @@
       "id": 5075,
       "name": "Zanussi Cool Easy 4-burner range cooker",
       "brand": "Zanussi",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "ZCG62196XB",
       "price_after": 11590,
       "price_before": 0,
@@ -150456,7 +150370,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "ZANUSSI:ZCG62196XB",
       "history": [
         {
           "date": "2026-11-05",
@@ -150499,7 +150412,7 @@
       "id": 5077,
       "name": "Zanussi CoolMax 5-burner range cooker",
       "brand": "Zanussi",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "ZCG94396XB",
       "price_after": 18590,
       "price_before": 0,
@@ -150510,7 +150423,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "ZANUSSI:ZCG94396XB",
       "history": [
         {
           "date": "2026-11-05",
@@ -150526,7 +150438,7 @@
       "id": 5078,
       "name": "Zanussi TasteMax 5-burner range cooker",
       "brand": "Zanussi",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "ZCG92686XA",
       "price_after": 28240,
       "price_before": 0,
@@ -150537,7 +150449,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "ZANUSSI:ZCG92686XA",
       "history": [
         {
           "date": "2026-11-05",
@@ -150553,7 +150464,7 @@
       "id": 5079,
       "name": "Zanussi SteelPlus 4-burner range cooker",
       "brand": "Zanussi",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "ZCG622A6XB",
       "price_after": 10190,
       "price_before": 0,
@@ -150564,7 +150475,6 @@
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "product_key": "ZANUSSI:ZCG622A6XB",
       "history": [
         {
           "date": "2026-11-05",
@@ -150580,7 +150490,7 @@
       "id": 5080,
       "name": "Zanussi 75cm built-in gas hob with 5 burners",
       "brand": "Zanussi",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "949630892",
       "price_after": 15199,
       "price_before": 0,
@@ -150610,7 +150520,7 @@
       "id": 5081,
       "name": "Zanussi 88cm built-in gas hob with 5 burners",
       "brand": "Zanussi",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "ZGO98520BA",
       "price_after": 21690,
       "price_before": 0,
@@ -150625,7 +150535,6 @@
       "scraped": true,
       "width_cm": 88,
       "burners": 5,
-      "product_key": "ZANUSSI:ZGO98520BA",
       "history": [
         {
           "date": "2026-11-05",
@@ -150672,7 +150581,7 @@
       "id": 5083,
       "name": "Zanussi 60cm built-in gas hob with 4 burners",
       "brand": "Zanussi",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "ZGH66424XS",
       "price_after": 13199,
       "price_before": 0,
@@ -150687,7 +150596,6 @@
       "scraped": true,
       "width_cm": 60,
       "burners": 4,
-      "product_key": "ZANUSSI:ZGH66424XS",
       "history": [
         {
           "date": "2026-11-05",
@@ -150733,7 +150641,7 @@
       "id": 5085,
       "name": "Zanussi 60cm Built-in Gas Oven",
       "brand": "Zanussi",
-      "category": "مسطح غاز",
+      "category": "باكدج",
       "model": "949493403",
       "price_after": 24719,
       "price_before": 0,
@@ -150762,7 +150670,7 @@
       "id": 5086,
       "name": "Zanussi 60cm Built-in Electric Oven with PlusSteam",
       "brand": "Zanussi",
-      "category": "فرن",
+      "category": "باكدج",
       "model": "949499378",
       "price_after": 25719,
       "price_before": 0,
