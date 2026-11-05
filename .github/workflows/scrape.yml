@@ -35,8 +35,8 @@ jobs:
       fail-fast: false
       matrix:
         # stores run in parallel jobs (different sites, so each one is still rate-limited on its own)
-        # carrefour and berty refuse cloud servers -> scraped from the laptop (run_local.bat)
-        store: [btech, elaraby, zanussi, jumia, ehab, raneen, azmy, alreyada]
+        # carrefour, berty and elaraby refuse cloud servers -> scraped from the laptop (run_local.bat)
+        store: [btech, zanussi, jumia, ehab, raneen, azmy, alreyada]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

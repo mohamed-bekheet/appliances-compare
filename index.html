@@ -270,6 +270,10 @@ tr.best-value td { background: #e8f5e9 !important; }
   <div class="tab" data-cat="مايكروويف">📡 مايكروويف</div>
   <div class="tab" data-cat="غسالة">🫧 غسالات</div>
   <div class="tab" data-cat="ثلاجة">🧊 ثلاجات</div>
+  <div class="tab" data-cat="ديب فريزر">❄️ ديب فريزر</div>
+  <div class="tab" data-cat="غسالة أطباق">🍽️ غسالات أطباق</div>
+  <div class="tab" data-cat="مجفف">🌀 مجففات</div>
+  <div class="tab" data-cat="سخان">🚿 سخانات</div>
   <div class="tab" data-cat="باكدج">📦 باكدجات</div>
 </div>
 
@@ -326,7 +330,7 @@ tr.best-value td { background: #e8f5e9 !important; }
         <button class="vbtn active" id="btnTable" onclick="setView('table')">📋 جدول</button>
         <button class="vbtn" id="btnCards" onclick="setView('cards')">🗂 بطاقات</button>
       </div>
-      <label class="merge-lbl" title="اعرض كل موديل مرة واحدة بأرخص سعر متاح"><input type="checkbox" id="mergeToggle"> 📦 دمج نفس الموديل</label>
+      <label class="merge-lbl" title="اعرض كل موديل مرة واحدة بأرخص سعر متاح"><input type="checkbox" id="mergeToggle" checked> 📦 أرخص سعر لكل موديل</label>
       <button class="btn btn-gray" onclick="resetFilters()">مسح</button>
     </div>
   </div>
@@ -371,6 +375,7 @@ tr.best-value td { background: #e8f5e9 !important; }
 <script>
 // ─── State ───────────────────────────────────────────────
 let ALL = [];
+let LATEST = '';   // newest last_seen; scraped listings not seen for 21+ days are treated as gone
 let filtered = [];
 let view = 'table';
 let sortCol = '';
@@ -383,6 +388,7 @@ fetch('data.json')
   .then(r => r.json())
   .then(json => {
     ALL = json.products;
+    LATEST = ALL.reduce((m,d)=> (d.last_seen||'') > m ? d.last_seen : m, '');
     buildGroups();
     document.getElementById('headerMeta').textContent =
       `${json.meta.last_updated} · ${json.meta.note}`;
@@ -558,7 +564,8 @@ function buildGroups() {
   GROUPS = new Map();
   ALL.forEach(d => { if (d.product_key) { if (!GROUPS.has(d.product_key)) GROUPS.set(d.product_key, []); GROUPS.get(d.product_key).push(d); } });
 }
-const avail = d => d.price_after > 0 && d.in_stock !== false;
+const stale = d => d.scraped && d.last_seen && LATEST && (Date.parse(LATEST) - Date.parse(d.last_seen)) > 21*864e5;
+const avail = d => d.price_after > 0 && d.in_stock !== false && !stale(d);
 function groupOf(d) { return d.product_key ? (GROUPS.get(d.product_key) || [d]) : [d]; }
 function cheapestOf(list) { const a = list.filter(avail); return a.length ? a.reduce((m,x)=> x.price_after < m.price_after ? x : m) : null; }
 function shopsLine(d) {
@@ -651,12 +658,12 @@ function jumpTo(id) {
 
 // ─── Filters ─────────────────────────────────────────────
 function capOf(d){ return d.capacity_kg || d.capacity_liters || 0; }
-function capUnit(){ return activeTab === 'ثلاجة' ? 'لتر' : 'كجم'; }
+function capUnit(){ return ['ثلاجة','ديب فريزر','سخان','مايكروويف','فرن'].includes(activeTab) ? 'لتر' : 'كجم'; }
 function refreshCapOptions() {
   const cSel = document.getElementById('capFilter');
   const prev = cSel.value;
   const pool = ALL.filter(d => capOf(d) && (!activeTab || d.category === activeTab));
-  const useL = activeTab === 'ثلاجة';
+  const useL = ['ثلاجة','ديب فريزر','سخان','مايكروويف','فرن'].includes(activeTab);
   let vals = [...new Set(pool.map(d => capOf(d)))].sort((a,b)=>a-b);
   cSel.innerHTML = '<option value="">كل السعات</option>';
   vals.forEach(c => { const o=document.createElement('option'); o.value=c; o.textContent=c+' '+(useL?'لتر':'كجم'); cSel.appendChild(o); });
@@ -735,7 +742,7 @@ function resetFilters() {
   document.getElementById('sortBy').value      = '';
   document.getElementById('capFilter').value   = '';
   document.getElementById('motorFilter').value = '';
-  document.getElementById('mergeToggle').checked = false;
+  document.getElementById('mergeToggle').checked = true;
   applyFilters();
 }
 

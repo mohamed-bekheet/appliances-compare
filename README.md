@@ -87,17 +87,20 @@ python3 tools/upsert.py new_items.json --date 2026-11-12
 | المتجر | المصدر | ملاحظة |
 |---|---|---|
 | B.TECH | صفحات الأقسام + JSON-LD في صفحة المنتج | السعر هو العرض الافتراضي؛ البائع ممكن يختلف |
-| العربي (El Araby) | sitemap + صفحة المنتج | الترقيم `?p=` ممنوع في robots.txt |
+| العربي (El Araby) | sitemap + صفحة المنتج | بيتشغل من اللابتوب (run_local.bat): بيرفض سيرفرات GitHub |
 | Zanussi Official | صفحات الأقسام | |
 | Jumia | صفحات الأقسام العربي | robots.txt بيسمح للبوت المعرّف بنفسه أقل من 200 طلب/دقيقة |
-| Ehab Center / Berty Center | WooCommerce Store API العامة | Berty: من غير `per_page` (ممنوع في robots) |
+| Ehab Center / Berty Center | WooCommerce Store API العامة | Berty من اللابتوب، ومن غير `per_page` (ممنوع في robots) |
 | Raneen | صفحات الأقسام | Crawl-delay 10 ثواني |
 | Azmy | صفحات الأقسام (`?start=`) | |
 | Al Reyada | Shopify `/products.json` | |
-| Carrefour | أول صفحة بس من كل قسم | `?currentPage=` ممنوع في robots.txt |
+| Carrefour | أول صفحة بس من كل قسم | من اللابتوب؛ `?currentPage=` ممنوع في robots.txt |
 
 - البوت بيعرّف نفسه (`AppliancesCompareBot`)، وبيحترم robots.txt وCrawl-delay، وطلب واحد كل ثانيتين لكل موقع.
 - **التشغيل**: GitHub Actions → *Scrape appliance prices* كل جمعة، أو يدوي من تبويب Actions (تقدر تختار متاجر و`limit` للتجربة).
 - **محلياً**: `pip install -r tools/scrape/requirements.txt` ثم `python tools/scrape/run.py --stores jumia --limit 20 --dry-run`.
 - نفس الموديل في محلات مختلفة بيتجمع بـ `product_key` (الماركة + الموديل بدون كود اللون)، والتقرير `scraped/report.md` فيه أرخص محل لكل موديل.
 - Midea الرسمي مش مدعوم: الأسعار بتتحمل بـ JavaScript بس.
+- **من اللابتوب** (للمتاجر اللي بترفض سيرفرات GitHub: كارفور، برتي، العربي، وجوميا كاحتياطي):
+  `git clone https://github.com/mohamed-bekheet/appliances-compare.git E:\Personal\compare_appliances` مرة واحدة، وبعدين دبل كليك على `run_local.bat`. النتايج بتتحط في `scraped/local/` وGitHub بيدمجها في الموقع لوحده.
+- في الموقع: الاختيار "أرخص سعر لكل موديل" شغال افتراضياً، والإعلان اللي ما ظهرش في السكرابر 21 يوم مش بيتحسب أرخص سعر.
