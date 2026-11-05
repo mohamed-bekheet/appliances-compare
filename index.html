@@ -400,6 +400,7 @@ function qualityPct(d) { const q = quality(d); return q==null ? null : Math.roun
 
 // value relative to the best item in the current filter (best = 100)
 function valueScores(list) {
+  list = list.filter(d => d.in_stock!==false);
   const vals = list.map(valueIdx).filter(v => v!=null);
   const max = vals.length ? Math.max(...vals) : 0;
   const map = new Map();
@@ -425,7 +426,7 @@ function techLine2(d) {
 
 function renderRec() {
   const area = document.getElementById('recArea');
-  const W = filtered.filter(d => d.category==='غسالة' && d.price_after>0);
+  const W = filtered.filter(d => d.category==='غسالة' && d.price_after>0 && d.in_stock!==false);
   if (W.length < 2) { area.innerHTML = ''; return; }
   const byValue   = [...W].sort((a,b) => valueIdx(b)-valueIdx(a));
   const byQuality = [...W].sort((a,b) => quality(b)-quality(a) || a.price_after-b.price_after);
@@ -448,7 +449,7 @@ function renderRec() {
 
   const diff = top.id !== best.id ? top.price_after - best.price_after : 0;
   area.innerHTML = `<div class="rec-panel">
-    <div class="rec-head"><h3>🤖 ترشيح أفضل اختيار من ${W.length} غسالة في الفلتر الحالي</h3>
+    <div class="rec-head"><h3>🤖 ترشيح أفضل اختيار من ${W.length} غسالة متاحة في الفلتر الحالي</h3>
       <small>غيّر الفلاتر (السعة، السعر، الماركة…) والترشيح يتحدث تلقائياً</small></div>
     <div class="rec-grid">
       ${card('🏆 أفضل قيمة مقابل السعر', best, '', 'top')}
@@ -519,7 +520,7 @@ function applyFilters() {
   const nz = v => v==null ? -1 : v;
   if (sort === 'value_desc')        filtered.sort((a,b) => nz(valueIdx(b)) - nz(valueIdx(a)));
   else if (sort === 'quality_desc') filtered.sort((a,b) => nz(quality(b)) - nz(quality(a)));
-  else if (sort === 'price_asc')     filtered.sort((a,b) => a.price_after - b.price_after);
+  else if (sort === 'price_asc')     filtered.sort((a,b) => (a.price_after||Infinity) - (b.price_after||Infinity));
   else if (sort === 'price_desc')   filtered.sort((a,b) => b.price_after - a.price_after);
   else if (sort === 'disc_desc')    filtered.sort((a,b) => b.discount_pct - a.discount_pct);
   else if (sort === 'brand')        filtered.sort((a,b) => a.brand.localeCompare(b.brand));
@@ -587,6 +588,7 @@ function techSummary(d) {
   if (d.speeds)            parts.push(`${d.speeds} سرعات`);
   if (d.power_w)           parts.push(`${d.power_w}W`);
   if (d.noise_db)          parts.push(`${d.noise_db}dB`);
+  if (d.annual_kwh)        parts.push(`${d.annual_kwh} ك.و.س/سنة`);
   if (d.programs)          parts.push(`${d.programs} برنامج`);
   return parts.join(' · ');
 }
@@ -634,7 +636,7 @@ function renderTable() {
     return `<tr data-id="${d.id}" class="${isBV?'best-value':isBest?'best-deal':''}">
       <td>${i+1}${isBV?' 🏆':''}${isBest?' ⭐':''}</td>
       <td><span class="brand-badge ${brandClass(d.brand)}">${d.brand}</span></td>
-      <td style="max-width:220px;line-height:1.4">${d.name}${d.model?`<br><small style="color:#888">${d.model}</small>`:''}</td>
+      <td style="max-width:220px;line-height:1.4">${d.url?`<a href="${d.url}" target="_blank" rel="noopener" style="color:inherit">${d.name} ↗</a>`:d.name}${d.in_stock===false?' <span class="tag" style="background:#ffebee;color:#c62828">نفذت</span>':''}${d.model?`<br><small style="color:#888">${d.model}</small>`:''}</td>
       <td><span class="tag">${d.category}</span></td>
       <td style="font-size:.72rem;color:#555;max-width:240px">${techSummary(d)}${techLine2(d)}</td>
       <td style="max-width:180px">${featureTags(d.features)}</td>
@@ -768,6 +770,8 @@ function openCompareModal() {
     ['مؤشر القيمة',      d => { const v = cmpVS.get(d.id); return v!=null ? v+'/100' : '-'; }],
     ['المميزات',         d => (d.features||[]).join(' • ')],
     ['المحل',            d => d.shop],
+    ['الاستهلاك السنوي', d => d.annual_kwh ? d.annual_kwh+' ك.و.س' : '-'],
+    ['متاح؟',            d => d.in_stock===false ? 'نفذت الكمية' : '-'],
   ];
 
   // find best price
