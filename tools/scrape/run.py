@@ -92,6 +92,7 @@ def main():
         all_items += built
 
     summary["_http"] = f.stats
+    summary["_date"] = a.date
     json.dump(summary, open(os.path.join(a.out, "summary.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     if a.dry_run:
         print(json.dumps(summary, ensure_ascii=False, indent=1))

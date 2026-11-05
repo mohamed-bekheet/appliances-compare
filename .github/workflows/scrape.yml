@@ -3,6 +3,9 @@ name: Scrape appliance prices
 on:
   schedule:
     - cron: "17 4 * * 5"        # every Friday 06:17 Cairo
+  push:                         # laptop run pushed fresh results -> merge them only
+    branches: [main]
+    paths: ["scraped/local/**/summary.json"]
   workflow_dispatch:
     inputs:
       stores:
@@ -25,13 +28,15 @@ concurrency:
 
 jobs:
   scrape:
+    if: ${{ github.event_name != 'push' }}
     runs-on: ubuntu-latest
     timeout-minutes: 300
     strategy:
       fail-fast: false
       matrix:
         # stores run in parallel jobs (different sites, so each one is still rate-limited on its own)
-        store: [btech, elaraby, zanussi, jumia, ehab, berty, raneen, azmy, alreyada, carrefour]
+        # carrefour and berty refuse cloud servers -> scraped from the laptop (run_local.bat)
+        store: [btech, elaraby, zanussi, jumia, ehab, raneen, azmy, alreyada]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -54,7 +59,7 @@ jobs:
 
   merge:
     needs: scrape
-    if: ${{ always() }}
+    if: ${{ always() && !cancelled() }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -63,11 +68,12 @@ jobs:
           python-version: "3.12"
       - run: pip install -r tools/scrape/requirements.txt
       - uses: actions/download-artifact@v4
+        if: ${{ github.event_name != 'push' }}
         with:
           pattern: scraped-*
           path: artifacts
       - name: Merge into data.json
-        run: python tools/scrape/merge.py artifacts ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: mkdir -p artifacts && python tools/scrape/merge.py artifacts scraped/local ${{ inputs.dry_run && '--dry-run' || '' }}
       - name: Commit
         if: ${{ !inputs.dry_run }}
         run: |
