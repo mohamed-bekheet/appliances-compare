@@ -2,7 +2,7 @@
   "meta": {
     "last_updated": "2026-11-05",
     "currency": "EGP",
-    "note": "Prices from B.TECH (Facebook), Cairo Sales, Nomor, Carrefour, Zanussi Showroom, zanussi.com.eg"
+    "note": "Prices from B.TECH (Facebook), Cairo Sales, Nomor, Carrefour, Zanussi Showroom, zanussi.com.eg, Dream 2000, Jumia"
   },
   "products": [
     {
@@ -2999,6 +2999,72 @@
       "drum_material": "ستانلس ستيل",
       "voucher_egp": 2500,
       "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+    },
+    {
+      "id": 114,
+      "name": "غسالة ملابس فرونت لودر - Inverter Direct Drive، بخار، ThinQ Wi-Fi",
+      "brand": "LG",
+      "category": "غسالة",
+      "model": "F4Y2TYG6X",
+      "capacity_kg": 8,
+      "spin_rpm": 1400,
+      "dimensions": "600x850x550",
+      "features": [
+        "Inverter Direct Drive",
+        "6 Motion",
+        "بخار",
+        "ThinQ Wi-Fi",
+        "لون أسود",
+        "Front Load",
+        "كود FRIDAY5 خصم 5% كاش/فيزا ← 23,180 ج"
+      ],
+      "price_before": 29420,
+      "price_after": 24400,
+      "discount_pct": 17,
+      "shop": "Dream 2000",
+      "source": "dream2000.com",
+      "url": "https://dream2000.com/en/products/lg-front-load-washing-machine-8-kg-1400-rpm-inverter-direct-drive-thinq-wi-fi-f4y2tyg6x-black",
+      "motor_class": "dd",
+      "motor_type": "Inverter Direct Drive",
+      "made_in": "مصر (مرجّح – نفس سلسلة F4Y2 المصرية)",
+      "made_in_verified": false,
+      "motor_warranty_years": 10,
+      "review_summary": "مفيش تقييمات على دريم 2000."
+    },
+    {
+      "id": 115,
+      "name": "غسالة ملابس فرونت لودر - AI Direct Drive، بخار، Allergy Care",
+      "brand": "LG",
+      "category": "غسالة",
+      "model": "F2T2TYM1S",
+      "capacity_kg": 8,
+      "spin_rpm": 1200,
+      "dimensions": "600x850x560",
+      "features": [
+        "AI Direct Drive",
+        "بخار",
+        "Allergy Care",
+        "Stain Care",
+        "Speed 12 / Quick 60",
+        "شاشة لمس",
+        "لون رمادي غامق",
+        "Front Load"
+      ],
+      "price_before": 31776.8,
+      "price_after": 21999,
+      "discount_pct": 31,
+      "shop": "Jumia",
+      "source": "jumia.com.eg (البائع: MAM Group MPDS)",
+      "url": "https://www.jumia.com.eg/ar/lg-8kg-front-load-washing-machine-dark-gray-f2t2tym1s-134213077.html",
+      "motor_class": "dd",
+      "motor_type": "AI Direct Drive",
+      "made_in": "غير محدد",
+      "made_in_verified": false,
+      "motor_warranty_years": 10,
+      "rating": 5.0,
+      "reviews_count": 1,
+      "rating_source": "Jumia (تقييم موثق)",
+      "review_summary": "تقييم موثق واحد بس (5 نجوم). تقييم البائع على جوميا 50% بس ومعدل التوصيل متوسط، فخلي بالك."
     }
   ]
 }
