@@ -1,0 +1,79 @@
+name: Scrape appliance prices
+
+on:
+  schedule:
+    - cron: "17 4 * * 5"        # every Friday 06:17 Cairo
+  workflow_dispatch:
+    inputs:
+      stores:
+        description: "Comma-separated stores (btech,elaraby,zanussi,jumia,ehab,berty,raneen,azmy,alreyada,carrefour) or all"
+        default: "all"
+      limit:
+        description: "Max listings per store (0 = no limit; use e.g. 15 for a quick test)"
+        default: "0"
+      dry_run:
+        description: "Dry run (do not change data.json)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        # stores run in parallel jobs (different sites, so each one is still rate-limited on its own)
+        store: [btech, elaraby, zanussi, jumia, ehab, berty, raneen, azmy, alreyada, carrefour]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r tools/scrape/requirements.txt
+      - name: Scrape ${{ matrix.store }}
+        if: ${{ github.event_name == 'schedule' || inputs.stores == 'all' || contains(format(',{0},', inputs.stores), format(',{0},', matrix.store)) }}
+        run: |
+          python tools/scrape/run.py --stores ${{ matrix.store }} --limit ${{ inputs.limit || 0 }} --dry-run \
+            --out scraped/${{ matrix.store }} 2>&1 | tee scraped-${{ matrix.store }}.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scraped-${{ matrix.store }}
+          path: |
+            scraped/${{ matrix.store }}/
+            scraped-${{ matrix.store }}.log
+          if-no-files-found: ignore
+
+  merge:
+    needs: scrape
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r tools/scrape/requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: scraped-*
+          path: artifacts
+      - name: Merge into data.json
+        run: python tools/scrape/merge.py artifacts ${{ inputs.dry_run && '--dry-run' || '' }}
+      - name: Commit
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "appliances-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data.json scraped/
+          git diff --cached --quiet && echo "no changes" && exit 0
+          git commit -m "Scraped prices $(date +%F)"
+          git pull --rebase -q && git push

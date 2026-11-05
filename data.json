@@ -1727,7 +1727,6 @@
       "reviews_count": 157,
       "rating_source": "B.TECH",
       "review_summary": "68% من التقييمات 5 نجوم، بس 10% نجمة واحدة. أكتر موديل عليه تقييمات في القائمة.",
-      "product_key": "SAMSUNG:WW80T4040CX1AS",
       "history": [
         {
           "date": "2026-11-05",
@@ -1737,7 +1736,8 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "url": "https://cairosales.com/en/washers-dryers/samsung-washing-machine-8-kg-1400-rpm-inverter-motor-with-eco-bubble-technology-inox-ww80t4040cx1as.html"
+      "url": "https://cairosales.com/en/washers-dryers/samsung-washing-machine-8-kg-1400-rpm-inverter-motor-with-eco-bubble-technology-inox-ww80t4040cx1as.html",
+      "product_key": "SAMSUNG:WW80T4040CX1AS"
     },
     {
       "id": 58,
@@ -1771,7 +1771,6 @@
       "reviews_count": 3,
       "rating_source": "B.TECH",
       "review_summary": "تقييمات قليلة بس كلها 5 نجوم. ضمان 10 سنين على الموتور و5 على الجهاز.",
-      "product_key": "LG:F4R5TYG2T",
       "history": [
         {
           "date": "2026-11-05",
@@ -1780,7 +1779,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "LG:F4R5TYG2T"
     },
     {
       "id": 59,
@@ -1810,7 +1810,6 @@
       "reviews_count": 3,
       "rating_source": "B.TECH",
       "review_summary": "نفس موديل نومور. تقييمات قليلة بس كلها 5 نجوم. ضمان 10 سنين على الموتور.",
-      "product_key": "LG:F4R5TYG2T",
       "history": [
         {
           "date": "2026-11-05",
@@ -1827,7 +1826,8 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "url": "https://www.carrefouregypt.com/mafegy/en/washing-machine/lg-mw-vivace-8-kg-f4r5tyg2t/p/529297",
-      "in_stock": true
+      "in_stock": true,
+      "product_key": "LG:F4R5TYG2T"
     },
     {
       "id": 74,
@@ -1858,7 +1858,6 @@
       "reviews_count": 2,
       "rating_source": "Carrefour",
       "review_summary": "تقييمين بس (5 نجوم). عدد صغير ميتبنيش عليه.",
-      "product_key": "ZANUSSI:ZWF8221BL8",
       "history": [
         {
           "date": "2026-11-05",
@@ -1875,7 +1874,8 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "url": "https://www.carrefouregypt.com/mafegy/ar/washing-machine/zanussi-wm-zwf8221bl8-459-tc2-1200/p/656974",
-      "in_stock": true
+      "in_stock": true,
+      "product_key": "ZANUSSI:ZWF8221BL8"
     },
     {
       "id": 75,
@@ -1906,7 +1906,6 @@
       "motor_type": "Inverter BLDC",
       "made_in": "مصر",
       "made_in_verified": true,
-      "product_key": "TOSHIBA:TWBK19S9EG",
       "history": [
         {
           "date": "2026-11-05",
@@ -1917,7 +1916,8 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "model_note": "اتصحح من TW-BK19S9EG حسب صفحة توشيبا على كارفور (نفس السعر واللون والمواصفات)",
-      "url": "https://www.carrefouregypt.com/mafegy/en/c/05386"
+      "url": "https://www.carrefouregypt.com/mafegy/en/c/05386",
+      "product_key": "TOSHIBA:TWBK100GF4"
     },
     {
       "id": 76,
@@ -1946,7 +1946,6 @@
       "reviews_count": 5,
       "rating_source": "Carrefour",
       "review_summary": "5 تقييمات كلها 5 نجوم على كارفور. المصنع: مصر.",
-      "product_key": "LG:F4Y2TYGYP",
       "history": [
         {
           "date": "2026-11-05",
@@ -1963,7 +1962,8 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "url": "https://www.carrefouregypt.com/mafegy/en/washing-machine/lg-wm-f4y2tygyp-8kg-platinum-silver/p/662794",
-      "in_stock": true
+      "in_stock": true,
+      "product_key": "LG:F4Y2TYGYP"
     },
     {
       "id": 60,
@@ -1989,7 +1989,6 @@
       "motor_type": "Direct Drive (دفع مباشر 7 حركات)",
       "made_in": "مصر",
       "made_in_verified": true,
-      "product_key": "FRESH:F500017744",
       "history": [
         {
           "date": "2026-11-05",
@@ -1999,7 +1998,8 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "url": "https://cairosales.com/en/washers-dryers/fresh-g2-washing-and-dryer-machine-107-kgs-inverter-direct-drive-1400-rpm-dark-silver-500017744.html"
+      "url": "https://cairosales.com/en/washers-dryers/fresh-g2-washing-and-dryer-machine-107-kgs-inverter-direct-drive-1400-rpm-dark-silver-500017744.html",
+      "product_key": "FRESH:F500017744"
     },
     {
       "id": 61,
@@ -2024,7 +2024,6 @@
       "motor_type": "ProSmart Inverter",
       "made_in": "غير محدد",
       "made_in_verified": false,
-      "product_key": "BEKO:B3WFU501040MCI",
       "history": [
         {
           "date": "2026-11-05",
@@ -2034,7 +2033,8 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "url": "https://cairosales.com/en/washers-dryers/beko-washing-machine-full-automatic-digital-10-kg-1600-rpm-steam-inverter-gray-b3wfu501040mci.html"
+      "url": "https://cairosales.com/en/washers-dryers/beko-washing-machine-full-automatic-digital-10-kg-1600-rpm-steam-inverter-gray-b3wfu501040mci.html",
+      "product_key": "BEKO:B3WFU501040MCI"
     },
     {
       "id": 62,
@@ -2064,7 +2064,6 @@
       "reviews_count": null,
       "rating_source": "El Araby Group",
       "review_summary": "تقييم 5.0 على موقع العربي (عدد التقييمات مش ظاهر). صناعة تركية بضمان العربي.",
-      "product_key": "HITACHI:BD80YFVEM",
       "history": [
         {
           "date": "2026-11-05",
@@ -2075,7 +2074,8 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "url": "https://cairosales.com/en/manufacturer/hitachi.html",
-      "url_note": "صفحة الماركة (ملقيتش رابط المنتج نفسه)"
+      "url_note": "صفحة الماركة (ملقيتش رابط المنتج نفسه)",
+      "product_key": "HITACHI:BD80YFVEM"
     },
     {
       "id": 63,
@@ -2100,7 +2100,6 @@
       "motor_type": "Inverter",
       "made_in": "غير محدد",
       "made_in_verified": false,
-      "product_key": "HISENSE:WF3V9042BSEG",
       "history": [
         {
           "date": "2026-11-05",
@@ -2110,7 +2109,8 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "url": "https://cairosales.com/en/washers-dryers/hisense-full-automatic-washing-machine-9-kg-1400-rpm-inverter-with-steam-digital-silver-wf3v9042bseg.html"
+      "url": "https://cairosales.com/en/washers-dryers/hisense-full-automatic-washing-machine-9-kg-1400-rpm-inverter-with-steam-digital-silver-wf3v9042bseg.html",
+      "product_key": "HISENSE:WF3V9042BS"
     },
     {
       "id": 64,
@@ -2135,7 +2135,6 @@
       "motor_type": "Inverter",
       "made_in": "غير محدد",
       "made_in_verified": false,
-      "product_key": "HISENSE:WD5S1245BB",
       "history": [
         {
           "date": "2026-11-05",
@@ -2145,7 +2144,8 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "url": "https://cairosales.com/en/washers-dryers/hisense-washer-12-kg-and-dryer-8-kg-black-wd5s1245bb.html"
+      "url": "https://cairosales.com/en/washers-dryers/hisense-washer-12-kg-and-dryer-8-kg-black-wd5s1245bb.html",
+      "product_key": "HISENSE:WD5S1245BB"
     },
     {
       "id": 65,
@@ -2174,7 +2174,6 @@
       "reviews_count": 2,
       "rating_source": "Merkur (سلوفينيا)",
       "review_summary": "تقييمين بس في سلوفينيا. صناعة أوروبية بس أغلى غسالة في القائمة.",
-      "product_key": "GORENJE:WNS1X4ARTWIFI",
       "history": [
         {
           "date": "2026-11-05",
@@ -2184,7 +2183,8 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "url": "https://cairosales.com/en/washers-dryers/gorenje-washing-machine-105-kg-1400-rpm-inverter-motor-wifi-wns1x4artwifi.html"
+      "url": "https://cairosales.com/en/washers-dryers/gorenje-washing-machine-105-kg-1400-rpm-inverter-motor-wifi-wns1x4artwifi.html",
+      "product_key": "GORENJE:WNS1X4ARTWIFI"
     },
     {
       "id": 66,
@@ -2208,7 +2208,6 @@
       "motor_type": "Inverter BLDC",
       "made_in": "مصر",
       "made_in_verified": true,
-      "product_key": "TOSHIBA:TWBK115GF4EGMK",
       "history": [
         {
           "date": "2026-11-05",
@@ -2218,7 +2217,8 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "url": "https://cairosales.com/en/washers-dryers/toshiba-washing-machine-front-loading-105kg-1400-rpm-inverter-morandi-grey-tw-bk115gf4egmk.html"
+      "url": "https://cairosales.com/en/washers-dryers/toshiba-washing-machine-front-loading-105kg-1400-rpm-inverter-morandi-grey-tw-bk115gf4egmk.html",
+      "product_key": "TOSHIBA:TWBK115GF4"
     },
     {
       "id": 67,
@@ -2241,7 +2241,6 @@
       "motor_type": "Inverter",
       "made_in": "تركيا",
       "made_in_verified": true,
-      "product_key": "ARISTON:WFST8GWHR",
       "history": [
         {
           "date": "2026-11-05",
@@ -2251,7 +2250,8 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "url": "https://cairosales.com/ar/washers-dryers/ariston-washing-machine-front-load-8-kg-inverter-1400-rpm-wfst8gwhr.html"
+      "url": "https://cairosales.com/ar/washers-dryers/ariston-washing-machine-front-load-8-kg-inverter-1400-rpm-wfst8gwhr.html",
+      "product_key": "ARISTON:WFST8GWHR"
     },
     {
       "id": 68,
@@ -2287,7 +2287,7 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "url": "https://cairosales.com/en/washers-dryers/hoover-digital-front-load-washing-machine-9-kg-inverter-fully-automatic-with-dryer-5-kg-black-h3dps495tambrela.html",
-      "product_key": "HOOVER:H3DPS495TAMBBELA"
+      "product_key": "HOOVER:H3DPS495TAMBB"
     },
     {
       "id": 69,
@@ -2311,7 +2311,6 @@
       "motor_type": "Inverter",
       "made_in": "غير محدد",
       "made_in_verified": false,
-      "product_key": "ARISTON:WFST10KGGEG",
       "history": [
         {
           "date": "2026-11-05",
@@ -2322,7 +2321,8 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "url": "https://cairosales.com/en/manufacturer/ariston.html",
-      "url_note": "صفحة الماركة (ملقيتش رابط المنتج نفسه)"
+      "url_note": "صفحة الماركة (ملقيتش رابط المنتج نفسه)",
+      "product_key": "ARISTON:WFST10KGG"
     },
     {
       "id": 70,
@@ -2347,7 +2347,6 @@
       "motor_type": "Digital Inverter",
       "made_in": "غير محدد",
       "made_in_verified": false,
-      "product_key": "MIDEA:MF205W105WBTK",
       "history": [
         {
           "date": "2026-11-05",
@@ -2356,7 +2355,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "MIDEA:MF205W105WBTK"
     },
     {
       "id": 71,
@@ -2382,7 +2382,6 @@
       "made_in": "غير محدد",
       "made_in_verified": false,
       "drum_material": "ستانلس – Diamond Drum",
-      "product_key": "SAMSUNG:WW90T4040CX1AS",
       "history": [
         {
           "date": "2026-11-05",
@@ -2392,7 +2391,8 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "url": "https://cairosales.com/en/washers-dryers/samsung-washing-machine-9kg-1400rpm-digital-inverter-steam-inox-ww90t4040cx1as.html"
+      "url": "https://cairosales.com/en/washers-dryers/samsung-washing-machine-9kg-1400rpm-digital-inverter-steam-inox-ww90t4040cx1as.html",
+      "product_key": "SAMSUNG:WW90T4040CX1AS"
     },
     {
       "id": 72,
@@ -2422,7 +2422,6 @@
       "reviews_count": 24,
       "rating_source": "Alza (النسخة الأوروبية HW80-BP14929A)",
       "review_summary": "النسخة الأوروبية من نفس الموديل واخدة 4.8 من 24 تقييم: بيمدحوا الهدوء والحجم الصغير والسعر. مفيش تقييمات مصرية كفاية.",
-      "product_key": "HAIER:HW80BP14929AS6",
       "history": [
         {
           "date": "2026-11-05",
@@ -2432,7 +2431,8 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "url": "https://cairosales.com/en/washers-dryers/haier-washing-machine-8kg-inverter-1400-rpm-with-steam-silver-hw80-bp14929as6.html"
+      "url": "https://cairosales.com/en/washers-dryers/haier-washing-machine-8kg-inverter-1400-rpm-with-steam-silver-hw80-bp14929as6.html",
+      "product_key": "HAIER:HW80BP14929AS6"
     },
     {
       "id": 73,
@@ -2457,7 +2457,6 @@
       "motor_type": "Inverter BLDC",
       "made_in": "مصر",
       "made_in_verified": true,
-      "product_key": "TOSHIBA:TWT21BU115UWEGMK",
       "history": [
         {
           "date": "2026-11-05",
@@ -2467,7 +2466,8 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "url": "https://cairosales.com/en/washers-dryers/toshiba-washing-machine-t21-series-105-kg-inverter-with-ultra-fine-bubble-aroma-morandi-gray-tw-t21bu115uwegmg.html"
+      "url": "https://cairosales.com/en/washers-dryers/toshiba-washing-machine-t21-series-105-kg-inverter-with-ultra-fine-bubble-aroma-morandi-gray-tw-t21bu115uwegmg.html",
+      "product_key": "TOSHIBA:TWT21BU115UW"
     },
     {
       "id": 77,
@@ -2504,7 +2504,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:STEAMMAX8KG"
     },
     {
       "id": 78,
@@ -2547,7 +2548,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:FAMILYCARE700"
     },
     {
       "id": 79,
@@ -2668,7 +2670,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:90CM5BURNERS"
     },
     {
       "id": 83,
@@ -2702,7 +2705,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:535LTOPFREEZER"
     },
     {
       "id": 84,
@@ -2735,7 +2739,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:463LTOPFREEZER"
     },
     {
       "id": 85,
@@ -2820,7 +2825,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:HOB60CM4BGLASS"
     },
     {
       "id": 88,
@@ -2851,7 +2857,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:HOB5BGLASS"
     },
     {
       "id": 89,
@@ -2882,7 +2889,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:ISLANDHOOD90CM"
     },
     {
       "id": 90,
@@ -2917,7 +2925,6 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "product_key": "ZANUSSI:ZW7F3946LS",
       "history": [
         {
           "date": "2026-11-05",
@@ -2927,7 +2934,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:ZW7F3946LS"
     },
     {
       "id": 91,
@@ -2967,7 +2975,6 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "product_key": "ZANUSSI:ZWF8221ML7",
       "history": [
         {
           "date": "2026-11-05",
@@ -2977,7 +2984,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:ZWF8221ML7"
     },
     {
       "id": 92,
@@ -3020,7 +3028,6 @@
       "rating_source": "zanussi.com.eg (موقع الشركة)",
       "rating_self_hosted": true,
       "review_summary": "100% من المراجعين بيرشحوه، و100% من التقييمات 5 نجوم. التقييمات دي على موقع زانوسي نفسه، فبتتحسب بنص الوزن.",
-      "product_key": "ZANUSSI:ZWF6240WH5",
       "history": [
         {
           "date": "2026-11-05",
@@ -3030,7 +3037,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:ZWF6240WH5"
     },
     {
       "id": 93,
@@ -3075,7 +3083,6 @@
       "rating_source": "zanussi.com.eg (موقع الشركة)",
       "rating_self_hosted": true,
       "review_summary": "99% من المراجعين بيرشحوه: 97% خمس نجوم و3% أربع نجوم. التقييمات دي على موقع زانوسي نفسه، فبتتحسب بنص الوزن.",
-      "product_key": "ZANUSSI:ZWF7221DS7",
       "history": [
         {
           "date": "2026-11-05",
@@ -3085,7 +3092,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:ZWF7221DS7"
     },
     {
       "id": 94,
@@ -3126,7 +3134,6 @@
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
       "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
-      "product_key": "ZANUSSI:ZWF7221BL7",
       "history": [
         {
           "date": "2026-11-05",
@@ -3136,7 +3143,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:ZWF7221BL7"
     },
     {
       "id": 95,
@@ -3226,7 +3234,6 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "product_key": "ZANUSSI:ZWF8221BL8",
       "history": [
         {
           "date": "2026-11-05",
@@ -3236,7 +3243,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:ZWF8221BL8"
     },
     {
       "id": 97,
@@ -3277,7 +3285,6 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "product_key": "ZANUSSI:914909483",
       "history": [
         {
           "date": "2026-11-05",
@@ -3325,7 +3332,6 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "product_key": "ZANUSSI:ZWF8240BS5",
       "history": [
         {
           "date": "2026-11-05",
@@ -3335,7 +3341,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:ZWF8240BS5"
     },
     {
       "id": 99,
@@ -3429,7 +3436,6 @@
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
       "voucher_egp": 2500,
-      "product_key": "ZANUSSI:ZWF8221DS7",
       "history": [
         {
           "date": "2026-11-05",
@@ -3439,7 +3445,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:ZWF8221DS7"
     },
     {
       "id": 101,
@@ -3477,7 +3484,6 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "product_key": "ZANUSSI:ZWF7240BS6",
       "history": [
         {
           "date": "2026-11-05",
@@ -3487,7 +3493,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:ZWF7240BS6"
     },
     {
       "id": 102,
@@ -3573,7 +3580,6 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "product_key": "ZANUSSI:ZW8F1168MS",
       "history": [
         {
           "date": "2026-11-05",
@@ -3583,7 +3589,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:ZW8F1168MS"
     },
     {
       "id": 104,
@@ -3825,7 +3832,6 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "product_key": "ZANUSSI:914909481",
       "history": [
         {
           "date": "2026-11-05",
@@ -4034,7 +4040,6 @@
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
       "voucher_egp": 2500,
-      "product_key": "ZANUSSI:914909476",
       "history": [
         {
           "date": "2026-11-05",
@@ -4127,7 +4132,6 @@
       "made_in_verified": false,
       "motor_warranty_years": 10,
       "review_summary": "مفيش تقييمات على دريم 2000.",
-      "product_key": "LG:F4Y2TYG6X",
       "history": [
         {
           "date": "2026-11-05",
@@ -4136,7 +4140,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "LG:F4Y2TYG6X"
     },
     {
       "id": 115,
@@ -4172,7 +4177,6 @@
       "reviews_count": 1,
       "rating_source": "Jumia (تقييم موثق)",
       "review_summary": "تقييم موثق واحد بس (5 نجوم). تقييم البائع على جوميا 50% بس ومعدل التوصيل متوسط، فخلي بالك.",
-      "product_key": "LG:F2T2TYM1S",
       "history": [
         {
           "date": "2026-11-05",
@@ -4181,7 +4185,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "LG:F2T2TYM1S"
     },
     {
       "id": 116,
@@ -4212,7 +4217,6 @@
       "made_in_verified": false,
       "motor_warranty_years": 10,
       "review_summary": "متبقي 3 قطع بس وقت البحث.",
-      "product_key": "LG:F4Y2TYG6X",
       "history": [
         {
           "date": "2026-11-05",
@@ -4221,7 +4225,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "LG:F4Y2TYG6X"
     },
     {
       "id": 117,
@@ -4252,7 +4257,6 @@
       "made_in_verified": false,
       "motor_warranty_years": 10,
       "review_summary": "أقل سعر في 30 يوم على بي.تك، بس البائع خارجي (Shahd) مش بي.تك نفسها؛ اتأكد من الضمان قبل الشرا. الصفحة نفسها ظهر فيها كمان 20,299 و20,970 فالسعر بيتغير.",
-      "product_key": "LG:F4Y2TYG6X",
       "history": [
         {
           "date": "2026-11-05",
@@ -4261,7 +4265,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "LG:F4Y2TYG6X"
     },
     {
       "id": 118,
@@ -4288,7 +4293,6 @@
       "motor_warranty_years": 10,
       "warranty_years": 5,
       "review_summary": "أقل سعر في 30 يوم على بي.تك، والبائع بي.تك نفسها بضمان 5 سنين.",
-      "product_key": "LG:F2T2TYM1S",
       "history": [
         {
           "date": "2026-11-05",
@@ -4305,7 +4309,8 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء."
+      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
+      "product_key": "LG:F2T2TYM1S"
     },
     {
       "id": 119,
@@ -4390,9 +4395,9 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "LG:F4R5TYG2T",
       "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء."
+      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
+      "product_key": "LG:F4R5TYG2T"
     },
     {
       "id": 121,
@@ -4612,7 +4617,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ARISTON:ARWFST10KGG"
     },
     {
       "id": 128,
@@ -4711,37 +4717,6 @@
       "product_key": "ARMADILLO:ARMFL7K1200DS"
     },
     {
-      "id": 131,
-      "name": "Toshiba Top Load washing Machine , 11 kg , Silver - AWUK1100HUPEG",
-      "brand": "Toshiba",
-      "category": "غسالة",
-      "model": "AWUK1100HUPEG",
-      "price_after": 17674,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/toshiba-top-washing-machine-11kg-awuk1100hupeg",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_kg": 11,
-      "motor_class": "unknown",
-      "features": [
-        "Top Load"
-      ],
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 17674,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:AWUK1100HUPEG"
-    },
-    {
       "id": 132,
       "name": "Toshiba T21 Inverter Front Load Washing Machine , 10.5 kg , Morandy Grey - TW-T21BU115UWEG",
       "brand": "Toshiba",
@@ -4771,7 +4746,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:TWT21BU115UWEG"
+      "product_key": "TOSHIBA:TWT21BU115UW"
     },
     {
       "id": 133,
@@ -4825,7 +4800,6 @@
         "Front Load",
         "انفرتر"
       ],
-      "product_key": "ZANUSSI:TC2ZWF9221SD7:SILVER",
       "history": [
         {
           "date": "2026-11-05",
@@ -4835,7 +4809,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ZANUSSI:TC2ZWF9221SD7"
     },
     {
       "id": 135,
@@ -4992,7 +4967,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:TWBK100GF4EGMK"
+      "product_key": "TOSHIBA:TWBK100GF4"
     },
     {
       "id": 140,
@@ -5056,7 +5031,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:AWDUK1300KUPEGMK"
+      "product_key": "TOSHIBA:AWDUK1300KUP"
     },
     {
       "id": 142,
@@ -5184,7 +5159,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BOSCH:WGA244Z1EG"
+      "product_key": "BOSCH:WGA244Z1"
     },
     {
       "id": 146,
@@ -5307,8 +5282,7 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "FRESH:50013520"
+      "last_seen": "2026-11-05"
     },
     {
       "id": 150,
@@ -5371,7 +5345,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:AWUK1100HUPEGMK"
+      "product_key": "TOSHIBA:AWUK1100HUP"
     },
     {
       "id": 152,
@@ -5657,7 +5631,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:AWJ900DUPEG"
+      "product_key": "TOSHIBA:AWJ900DUP"
     },
     {
       "id": 161,
@@ -6069,7 +6043,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:TWT21BU95UWEGSG"
+      "product_key": "TOSHIBA:TWT21BU95UW"
     },
     {
       "id": 174,
@@ -6542,7 +6516,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:H3WS173DC3RELA"
+      "product_key": "HOOVER:H3WS173DC3R"
     },
     {
       "id": 189,
@@ -6669,7 +6643,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:TWBK90GF4EGMK"
+      "product_key": "TOSHIBA:TWBK90GF4"
     },
     {
       "id": 193,
@@ -6828,7 +6802,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BOSCH:WGK254ZXEG"
+      "product_key": "BOSCH:WGK254ZX"
     },
     {
       "id": 198,
@@ -6955,7 +6929,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "CANDY:CSS1072DC3BELA"
+      "product_key": "CANDY:CSS1072DC3B"
     },
     {
       "id": 202,
@@ -7145,7 +7119,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:H3WS173DC3BELA"
+      "product_key": "HOOVER:H3WS173DC3B"
     },
     {
       "id": 208,
@@ -7334,7 +7308,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:H3WS17TMF3RELA"
+      "product_key": "HOOVER:H3WS17TMF3R"
     },
     {
       "id": 214,
@@ -7364,7 +7338,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FTM10F12BH"
     },
     {
       "id": 215,
@@ -7394,7 +7369,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FTM12F12BH"
     },
     {
       "id": 216,
@@ -7426,7 +7402,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:H3WS38TAMF7RELA"
+      "product_key": "HOOVER:H3WS38TAMF7R"
     },
     {
       "id": 217,
@@ -7711,7 +7687,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:H3WOS173DBR4ELA"
+      "product_key": "HOOVER:H3WOS173DBR4"
     },
     {
       "id": 226,
@@ -7933,7 +7909,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:SWM700"
     },
     {
       "id": 233,
@@ -8342,7 +8319,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "CANDY:CSS1072DC3RELA"
+      "product_key": "CANDY:CSS1072DC3R"
     },
     {
       "id": 246,
@@ -8530,7 +8507,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BOSCH:WLZ2421SEG"
+      "product_key": "BOSCH:WLZ2421S"
     },
     {
       "id": 252,
@@ -8562,7 +8539,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:VHQ110MEG"
+      "product_key": "TOSHIBA:VHQ110M"
     },
     {
       "id": 253,
@@ -8624,7 +8601,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BOSCH:WGK254ZREG"
+      "product_key": "BOSCH:WGK254ZR"
     },
     {
       "id": 255,
@@ -8686,7 +8663,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "OCEAN:WNO1061GS"
     },
     {
       "id": 257,
@@ -8809,7 +8787,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "TOSHIBA:AEW8460SPDS"
     },
     {
       "id": 261,
@@ -8996,7 +8975,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FTM11F12B"
     },
     {
       "id": 267,
@@ -9028,38 +9008,6 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "product_key": "SHARP:ESFP814CXES"
-    },
-    {
-      "id": 268,
-      "name": "Zanussi Inverter Front Load Washing Machine , 9 kg , Dark Gray - TC2ZWF9221SD7",
-      "brand": "Zanussi",
-      "category": "غسالة",
-      "model": "TC2ZWF9221SD7",
-      "price_after": 21999,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/923c4259-58d2-4081-bb09-64baab277a9a",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_kg": 9,
-      "motor_class": "inverter",
-      "features": [
-        "Front Load",
-        "انفرتر"
-      ],
-      "product_key": "ZANUSSI:TC2ZWF9221SD7:DARKGRAY",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 21999,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
     },
     {
       "id": 269,
@@ -9122,7 +9070,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HISENSE:WF3V7042BSSEG"
+      "product_key": "HISENSE:WF3V7042BSS"
     },
     {
       "id": 271,
@@ -9562,7 +9510,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BOSCH:WAN282X1EG"
+      "product_key": "BOSCH:WAN282X1"
     },
     {
       "id": 285,
@@ -9657,7 +9605,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:H3WS17TMF3BELA"
+      "product_key": "HOOVER:H3WS17TMF3B"
     },
     {
       "id": 288,
@@ -9908,7 +9856,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "CANDY:GVS107DC3RELA"
+      "product_key": "CANDY:GVS107DC3R"
     },
     {
       "id": 296,
@@ -10035,7 +9983,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:HW414AMBCREGY"
+      "product_key": "HOOVER:HW414AMBCR"
     },
     {
       "id": 300,
@@ -10066,8 +10014,7 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "FRESH:500013285"
+      "last_seen": "2026-11-05"
     },
     {
       "id": 301,
@@ -10413,7 +10360,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TORNADO:TMHHS12CPWK"
+      "product_key": "TORNADO:TMHHS12CP"
     },
     {
       "id": 312,
@@ -10435,7 +10382,6 @@
         "Top Load",
         "يدوي"
       ],
-      "product_key": "PRIFIX:FWM106:WHITE",
       "history": [
         {
           "date": "2026-11-05",
@@ -10445,7 +10391,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "PRIFIX:FWM106"
     },
     {
       "id": 313,
@@ -10529,7 +10476,6 @@
       "features": [
         "Top Load"
       ],
-      "product_key": "WHIRLPOOL:WTLA1000SL:SILVER",
       "history": [
         {
           "date": "2026-11-05",
@@ -10539,7 +10485,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "WHIRLPOOL:WTLA1000SL"
     },
     {
       "id": 316,
@@ -10762,7 +10709,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TORNADO:TMHHS07CWB"
+      "product_key": "TORNADO:TMHHS07C"
     },
     {
       "id": 323,
@@ -10856,7 +10803,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:H3WS383TAC3BELA"
+      "product_key": "HOOVER:H3WS383TAC3B"
     },
     {
       "id": 326,
@@ -11012,7 +10959,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:H3WS383TAC3RELA"
+      "product_key": "HOOVER:H3WS383TAC3R"
     },
     {
       "id": 331,
@@ -11074,7 +11021,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BOSCH:WGA244ZREG"
+      "product_key": "BOSCH:WGA244ZR"
     },
     {
       "id": 333,
@@ -11104,7 +11051,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "SONAI:MAR220"
     },
     {
       "id": 334,
@@ -11167,7 +11115,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:H3DP485TAMBRELA"
+      "product_key": "HOOVER:H3DP485TAMBR"
     },
     {
       "id": 336,
@@ -11488,37 +11436,6 @@
       "product_key": "LG:T1288NEHGE"
     },
     {
-      "id": 346,
-      "name": "Whirlpool Top Load washing Machine , 10 kg , Grey - WTLA1000SL",
-      "brand": "Whirlpool",
-      "category": "غسالة",
-      "model": "WTLA1000SL",
-      "price_after": 11200,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/7992e546-83e8-4d48-bcc0-e0c4e13bbd9b",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_kg": 10,
-      "motor_class": "unknown",
-      "features": [
-        "Top Load"
-      ],
-      "product_key": "WHIRLPOOL:WTLA1000SL:GREY",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 11200,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
       "id": 347,
       "name": "Fresh Front Load Washing Machine , 8 kg , Black - 500016432",
       "brand": "Fresh",
@@ -11546,8 +11463,7 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "FRESH:500016432"
+      "last_seen": "2026-11-05"
     },
     {
       "id": 348,
@@ -11579,38 +11495,6 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "product_key": "ZANUSSI:ZWF7240SS5"
-    },
-    {
-      "id": 349,
-      "name": "Prifix Fulla Top Load Manual Washing Machine , 6 kg , Silver - FWM106",
-      "brand": "Prifix",
-      "category": "غسالة",
-      "model": "FWM106",
-      "price_after": 3814,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/7fab45be-0e51-4fd0-88dd-8e2965f52263",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_kg": 6,
-      "motor_class": "unknown",
-      "features": [
-        "Top Load",
-        "يدوي"
-      ],
-      "product_key": "PRIFIX:FWM106:SILVER",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 3814,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
     },
     {
       "id": 350,
@@ -11734,7 +11618,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ARISTON:NLM11946SCAEX"
     },
     {
       "id": 354,
@@ -11764,7 +11649,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ARISTON:NM11823SS"
     },
     {
       "id": 355,
@@ -11816,7 +11702,6 @@
       "features": [
         "Front Load"
       ],
-      "product_key": "HOOVER:H3WOS283TABB4ELA:DARKSILV",
       "history": [
         {
           "date": "2026-11-05",
@@ -11826,38 +11711,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
-      "id": 357,
-      "name": "Hoover Front Load Washing Machine , 8 kg , Black - H3WOS283TABB4ELA",
-      "brand": "Hoover",
-      "category": "غسالة",
-      "model": "H3WOS283TABB4ELA",
-      "price_after": 21265,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/75174902-dc70-4e94-accc-94b0ad59810d",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_kg": 8,
-      "motor_class": "unknown",
-      "features": [
-        "Front Load"
-      ],
-      "product_key": "HOOVER:H3WOS283TABB4ELA:BLACK",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 21265,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "HOOVER:H3WOS283TABB4"
     },
     {
       "id": 358,
@@ -11887,7 +11742,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ARISTON:NM11823BS"
     },
     {
       "id": 359,
@@ -11981,8 +11837,7 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "FRESH:500020432"
+      "last_seen": "2026-11-05"
     },
     {
       "id": 362,
@@ -12013,7 +11868,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BOSCH:WGA254ZREG"
+      "product_key": "BOSCH:WGA254ZR"
     },
     {
       "id": 363,
@@ -12044,7 +11899,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ARISTON:NM10823SSEX"
     },
     {
       "id": 364,
@@ -12075,7 +11931,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BOSCH:WGB2440XEG"
+      "product_key": "BOSCH:WGB2440X"
     },
     {
       "id": 365,
@@ -12167,7 +12023,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "OCEAN:WFO1071WLS"
     },
     {
       "id": 368,
@@ -12198,7 +12055,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TORNADO:TMHHS12CWB"
+      "product_key": "TORNADO:TMHHS12C"
     },
     {
       "id": 369,
@@ -12356,7 +12213,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BOSCH:WGA254AXEG"
+      "product_key": "BOSCH:WGA254AX"
     },
     {
       "id": 374,
@@ -12452,7 +12309,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HISENSE:WF3V8042BSEG"
+      "product_key": "HISENSE:WF3V8042BS"
     },
     {
       "id": 377,
@@ -12673,7 +12530,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:TWBJ100M4ESK"
+      "product_key": "TOSHIBA:TWBJ100M4E"
     },
     {
       "id": 384,
@@ -12737,70 +12594,6 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "product_key": "ZANUSSI:ZWF7240SB5"
-    },
-    {
-      "id": 386,
-      "name": "Toshiba Inverter Front Load Washing Machine , 8.5 kg , Silver - TW-T21BU95UWEG(MG)",
-      "brand": "Toshiba",
-      "category": "غسالة",
-      "model": "TW-T21BU95UWEG(MG)",
-      "price_after": 22262,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/toshiba-t21-invrter-washingmachine-8-5kg-silver-twbl90a4egss",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_kg": 8.5,
-      "motor_class": "inverter",
-      "features": [
-        "Front Load",
-        "انفرتر"
-      ],
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 22262,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:TWT21BU95UWEGMG"
-    },
-    {
-      "id": 387,
-      "name": "Zanussi Inverter Front Load Washing Machine , 9 kg , Black - TC2ZWF9221SD7",
-      "brand": "Zanussi",
-      "category": "غسالة",
-      "model": "TC2ZWF9221SD7",
-      "price_after": 22799,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/af27f330-bd4e-47a3-a65e-3700a166dd2e",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_kg": 9,
-      "motor_class": "inverter",
-      "features": [
-        "Front Load",
-        "انفرتر"
-      ],
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 22799,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "ZANUSSI:TC2ZWF9221SD7"
     },
     {
       "id": 388,
@@ -12897,7 +12690,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:GRRT559WEPMN06"
+      "product_key": "TOSHIBA:GRRT559WEPMN"
     },
     {
       "id": 391,
@@ -12949,7 +12742,6 @@
         "ديفروست",
         "فريزر علوي"
       ],
-      "product_key": "FRESH:FDDBS400BMB:MATTEBLA",
       "history": [
         {
           "date": "2026-11-05",
@@ -12959,7 +12751,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FDDBS400BMB"
     },
     {
       "id": 393,
@@ -13026,39 +12819,6 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "product_key": "TOSHIBA:GRRT558WEPMN5"
-    },
-    {
-      "id": 395,
-      "name": "Toshiba NoFrost Top Freezer Refrigerator , 535 Liter Inverter Motor , Stainless Steel - GR-RT702WE-PMN(02)",
-      "brand": "Toshiba",
-      "category": "ثلاجة",
-      "model": "GR-RT702WE-PMN(02)",
-      "price_after": 38999,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/toshiba-top-freezer-refrigerator-535-liter-inverter-motor-stainless-steel-gr-rt702we-pmn-02",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 535,
-      "motor_class": "inverter",
-      "features": [
-        "نوفروست",
-        "فريزر علوي",
-        "انفرتر"
-      ],
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 38999,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:GRRT702WEPMN02"
     },
     {
       "id": 396,
@@ -13316,7 +13076,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:RT468WEPMN57"
+      "product_key": "TOSHIBA:RT468WEPMN"
     },
     {
       "id": 404,
@@ -13348,7 +13108,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ARISTON:ART70F1422DXNA"
     },
     {
       "id": 405,
@@ -13527,7 +13288,6 @@
       "features": [
         "ميني بار"
       ],
-      "product_key": "FRESH:18706:BLACK",
       "history": [
         {
           "date": "2026-11-05",
@@ -13570,7 +13330,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:GRRT702WEPMN06"
+      "product_key": "TOSHIBA:GRRT702WEPMN"
     },
     {
       "id": 412,
@@ -13600,7 +13360,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FDDB315S"
     },
     {
       "id": 413,
@@ -13788,7 +13549,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BEKO:RDSG420M20SXBEG"
+      "product_key": "BEKO:RDSG420M20SXB"
     },
     {
       "id": 419,
@@ -13819,7 +13580,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BEKO:RDSG550M20SEG"
+      "product_key": "BEKO:RDSG550M20S"
     },
     {
       "id": 420,
@@ -13917,7 +13678,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ARISTON:ART70F1422D"
     },
     {
       "id": 423,
@@ -13979,7 +13741,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "INDESIT:TINF70420SEG"
+      "product_key": "INDESIT:TINF70420S"
     },
     {
       "id": 425,
@@ -14106,7 +13868,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:GRRF895WIAPGV22"
+      "product_key": "TOSHIBA:GRRF895WIAPGV"
     },
     {
       "id": 429,
@@ -14416,7 +14178,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "TOSHIBA:GRRT559WEDMN49"
     },
     {
       "id": 439,
@@ -14546,7 +14309,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BEKO:RDN350M20SXEG"
+      "product_key": "BEKO:RDN350M20SX"
     },
     {
       "id": 443,
@@ -14577,7 +14340,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "SHARP:SJ48CST"
+      "product_key": "SHARP:SJ48C"
     },
     {
       "id": 444,
@@ -14607,7 +14370,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FNTBS370BBMFLD"
     },
     {
       "id": 445,
@@ -14627,7 +14391,6 @@
       "features": [
         "ميني بار"
       ],
-      "product_key": "FRESH:18706:SILVER",
       "history": [
         {
           "date": "2026-11-05",
@@ -14730,7 +14493,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FNTBR370BB"
     },
     {
       "id": 449,
@@ -14891,7 +14655,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BEKO:RDNE420K02DXISEG"
+      "product_key": "BEKO:RDNE420K02DXIS"
     },
     {
       "id": 454,
@@ -15084,39 +14848,6 @@
       "product_key": "UNIONAIRE:URN800CEPBLG1ADXHIRBXXLN"
     },
     {
-      "id": 460,
-      "name": "White Whale No Frost Inverter Refrigerator - WR-9320AB with Mini Bar Refrigerator, 95 Liters",
-      "brand": "White Whale",
-      "category": "ثلاجة",
-      "model": "WR-9320AB",
-      "price_after": 91999,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/white-whale-invrtr-fridge-610l-wr-9320ab-minibar-95l-wrh4kss",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 95,
-      "motor_class": "inverter",
-      "features": [
-        "نوفروست",
-        "ميني بار",
-        "انفرتر"
-      ],
-      "product_key": "WHITEWHALE:WR9320AB:",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 91999,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
       "id": 461,
       "name": "Ideal Defrost One Door Refrigerator , 320 Liter , White - DWIH320",
       "brand": "Ideal",
@@ -15302,7 +15033,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "WHITEWHALE:WRR4KSS"
     },
     {
       "id": 467,
@@ -15361,7 +15093,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:B137B"
     },
     {
       "id": 469,
@@ -15427,37 +15160,6 @@
       "product_key": "SAMSUNG:RB34C672EB1MR"
     },
     {
-      "id": 471,
-      "name": "Alaska Defrost One Door Refrigerator , 282 Liter , Silver - KS27",
-      "brand": "Alaska",
-      "category": "ثلاجة",
-      "model": "KS27",
-      "price_after": 11235,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/f25f2200-cc1f-4e5f-9637-af6706ceee16",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 282,
-      "features": [
-        "ديفروست",
-        "باب واحد"
-      ],
-      "product_key": "ALASKA:KS27:SILVER",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 11235,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
       "id": 472,
       "name": "Bosch Series 4 Defrost One Door Refrigerator , 346 Liter , Silver - KSV36VL30U",
       "brand": "Bosch",
@@ -15489,37 +15191,6 @@
       "product_key": "BOSCH:KSV36VL30U"
     },
     {
-      "id": 473,
-      "name": "Alaska Defrost One Door Refrigerator , 282 Liter , White - KS27",
-      "brand": "Alaska",
-      "category": "ثلاجة",
-      "model": "KS27",
-      "price_after": 11345,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/513200b0-8763-4ffd-9d06-95a8ba55f062",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 282,
-      "features": [
-        "ديفروست",
-        "باب واحد"
-      ],
-      "product_key": "ALASKA:KS27:WHITE",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 11345,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
       "id": 474,
       "name": "Unionaire Signature Combi NoFrost Bottom Freezer Refrigerator , 370 Liter , Black - URN500CLBLG",
       "brand": "Unionaire",
@@ -15538,7 +15209,6 @@
         "نوفروست",
         "فريزر سفلي"
       ],
-      "product_key": "UNIONAIRE:URN500CLBLG:BLACK",
       "history": [
         {
           "date": "2026-11-05",
@@ -15548,7 +15218,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "UNIONAIRE:URN500CLBLG"
     },
     {
       "id": 475,
@@ -15704,37 +15375,6 @@
       "product_key": "ALASKA:KGT2"
     },
     {
-      "id": 480,
-      "name": "Unionaire Signature Combi NoFrost Bottom Freezer Refrigerator , 370 Liter , Black - URN500CLBLG",
-      "brand": "Unionaire",
-      "category": "ثلاجة",
-      "model": "URN500CLBLG",
-      "price_after": 18776,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/ae2cff54-fd3b-4019-98c4-c23da0e10f57",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 370,
-      "features": [
-        "نوفروست",
-        "فريزر سفلي"
-      ],
-      "product_key": "UNIONAIRE:URN500CLBLG:BLACK#2",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 18776,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
       "id": 481,
       "name": "Bosch Series 6 NoFrost Bottom Freezer Refrigerator , 528 Liter Inverter Motor , Black - KGN76CXEE8",
       "brand": "Bosch",
@@ -15755,7 +15395,6 @@
         "فريزر سفلي",
         "انفرتر"
       ],
-      "product_key": "BOSCH:KGN76CXEE8:BLACK",
       "history": [
         {
           "date": "2026-11-05",
@@ -15765,7 +15404,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "BOSCH:KGN76CXEE8"
     },
     {
       "id": 482,
@@ -15861,35 +15501,6 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "product_key": "HITACHI:B367EY2R"
-    },
-    {
-      "id": 485,
-      "name": "Fresh Mini bar , 91 Liter , Silver - B137 B",
-      "brand": "Fresh",
-      "category": "ثلاجة",
-      "model": "B137 B",
-      "price_after": 8450,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/3cfc2efe-50ec-4e7e-b4e4-bb0fee7876be",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 91,
-      "features": [
-        "ميني بار"
-      ],
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 8450,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
     },
     {
       "id": 486,
@@ -16232,7 +15843,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ARISTON:ART83F6654XNA"
     },
     {
       "id": 497,
@@ -16253,7 +15865,6 @@
         "نوفروست",
         "فريزر علوي"
       ],
-      "product_key": "BOSCH:KGN76CI3E8:STAINLES",
       "history": [
         {
           "date": "2026-11-05",
@@ -16263,7 +15874,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "BOSCH:KGN76CI3E8"
     },
     {
       "id": 498,
@@ -16487,7 +16099,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ARISTON:ART78F6593XNA"
     },
     {
       "id": 505,
@@ -16583,37 +16196,6 @@
       "product_key": "PASSAP:FG390"
     },
     {
-      "id": 508,
-      "name": "Alaska Defrost Top Freezer Refrigerator , 326 Liter , Stainless Steel - KSD335",
-      "brand": "Alaska",
-      "category": "ثلاجة",
-      "model": "KSD335",
-      "price_after": 16515,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/863db953-f608-4ead-a6b3-c04123734dc6",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 326,
-      "features": [
-        "ديفروست",
-        "فريزر علوي"
-      ],
-      "product_key": "ALASKA:KSD335:STAINLES",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 16515,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
       "id": 509,
       "name": "Alaska Defrost Top Freezer Refrigerator , 411 Liter , White - KG46",
       "brand": "Alaska",
@@ -16632,7 +16214,6 @@
         "ديفروست",
         "فريزر علوي"
       ],
-      "product_key": "ALASKA:KG46:WHITE",
       "history": [
         {
           "date": "2026-11-05",
@@ -16642,7 +16223,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ALASKA:KG46"
     },
     {
       "id": 510,
@@ -16674,7 +16256,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ARISTON:ART70F1452D"
     },
     {
       "id": 511,
@@ -16704,7 +16287,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "PASSAP:FGV480"
     },
     {
       "id": 512,
@@ -16740,67 +16324,6 @@
       "product_key": "SHARP:SJGV48GSL"
     },
     {
-      "id": 513,
-      "name": "Passap NoFrost Top Freezer Refrigerator , 420 Liter , Black - FGV 480",
-      "brand": "Passap",
-      "category": "ثلاجة",
-      "model": "FGV 480",
-      "price_after": 25999,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/9b52b29c-763b-4d4a-a62f-c4a3dcc7b8d5",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 420,
-      "features": [
-        "نوفروست",
-        "فريزر علوي"
-      ],
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 25999,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
-      "id": 514,
-      "name": "Alaska NoFrost Top Freezer Refrigerator , 311 Liter , Silver - KSD320NF",
-      "brand": "Alaska",
-      "category": "ثلاجة",
-      "model": "KSD320NF",
-      "price_after": 17350,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/ca05c6b4-7e86-4bf4-9ecb-dcb4500140ad",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 311,
-      "features": [
-        "نوفروست",
-        "فريزر علوي"
-      ],
-      "product_key": "ALASKA:KSD320NF:SILVER",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 17350,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
       "id": 515,
       "name": "Fresh FNT-BS400 BBC (FLD) NoFrost Top Freezer Refrigerator , 369 Liter , Black - 500021716",
       "brand": "Fresh",
@@ -16828,8 +16351,7 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "FRESH:500021716"
+      "last_seen": "2026-11-05"
     },
     {
       "id": 516,
@@ -16892,37 +16414,6 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "product_key": "BEKO:RDNE340K22B"
-    },
-    {
-      "id": 518,
-      "name": "Kiriazi Zomoroda NoFrost Top Freezer Refrigerator , 480 Liter , Silver - E470NV/2",
-      "brand": "Kiriazi",
-      "category": "ثلاجة",
-      "model": "E470NV/2",
-      "price_after": 35540,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/851f3798-f5ce-4d8c-9afb-078b631af3fc",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 480,
-      "features": [
-        "نوفروست",
-        "فريزر علوي"
-      ],
-      "product_key": "KIRIAZI:E470NV2:SILVER",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 35540,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
     },
     {
       "id": 519,
@@ -17047,7 +16538,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "WHITEWHALE:WR4385HSS"
     },
     {
       "id": 523,
@@ -17077,7 +16569,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "WHITEWHALE:WR4385HBX"
     },
     {
       "id": 524,
@@ -17170,7 +16663,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BEKO:RDNE400K02DXIEG"
+      "product_key": "BEKO:RDNE400K02DXI"
     },
     {
       "id": 527,
@@ -17262,7 +16755,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FNTBS470KT"
     },
     {
       "id": 530,
@@ -17292,8 +16786,7 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "FRESH:500006362"
+      "last_seen": "2026-11-05"
     },
     {
       "id": 531,
@@ -17326,7 +16819,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HAIER:HRF672VCFMESEG"
+      "product_key": "HAIER:HRF672VCFMES"
     },
     {
       "id": 532,
@@ -17356,7 +16849,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FNTBS370KTFLD"
     },
     {
       "id": 533,
@@ -17386,7 +16880,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "KIRIAZI:E520NV2B"
     },
     {
       "id": 534,
@@ -17499,7 +16994,6 @@
         "ديفروست",
         "فريزر علوي"
       ],
-      "product_key": "ALASKA:KSD335:SILVER",
       "history": [
         {
           "date": "2026-11-05",
@@ -17509,7 +17003,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ALASKA:KSD335"
     },
     {
       "id": 538,
@@ -17695,7 +17190,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ALASKA:KSD25"
     },
     {
       "id": 544,
@@ -17951,7 +17447,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HAIER:HRF630VMCGBEG"
+      "product_key": "HAIER:HRF630VMCGB"
     },
     {
       "id": 552,
@@ -18046,7 +17542,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "SHARP:SJGV58ARD"
+      "product_key": "SHARP:SJGV58A"
     },
     {
       "id": 555,
@@ -18107,7 +17603,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "SHARP:SJ58CST"
+      "product_key": "SHARP:SJ58C"
     },
     {
       "id": 557,
@@ -18137,7 +17633,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FNTM540YT"
     },
     {
       "id": 558,
@@ -18200,7 +17697,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "SHARP:SJPC48AST"
+      "product_key": "SHARP:SJPC48A"
     },
     {
       "id": 560,
@@ -18298,37 +17795,6 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "product_key": "BEKO:RDNE448M20XB"
-    },
-    {
-      "id": 563,
-      "name": "Fresh Defrost Top Freezer Refrigerator , 369 Liter , Black - FDD-BS400BMB",
-      "brand": "Fresh",
-      "category": "ثلاجة",
-      "model": "FDD-BS400BMB",
-      "price_after": 18055,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/fresh-defrost-top-freezer-refrigerator-369-liter-black-fdd-bs400bmb",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 369,
-      "features": [
-        "ديفروست",
-        "فريزر علوي"
-      ],
-      "product_key": "FRESH:FDDBS400BMB:BLACK",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 18055,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
     },
     {
       "id": 564,
@@ -18583,7 +18049,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BEKO:RDNE455M20XBIDEG"
+      "product_key": "BEKO:RDNE455M20XBID"
     },
     {
       "id": 572,
@@ -18864,7 +18330,6 @@
         "فريزر علوي",
         "انفرتر"
       ],
-      "product_key": "WHITEWHALE:WR9320AB:BLACK",
       "history": [
         {
           "date": "2026-11-05",
@@ -18874,7 +18339,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "WHITEWHALE:WR9320AB"
     },
     {
       "id": 581,
@@ -19150,7 +18616,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FNTMS540YTFLD"
     },
     {
       "id": 590,
@@ -19184,97 +18651,6 @@
       "product_key": "FRESH:FNTMS540YT4K"
     },
     {
-      "id": 591,
-      "name": "Alaska Defrost Top Freezer Refrigerator , 326 Liter , Black - KSD335",
-      "brand": "Alaska",
-      "category": "ثلاجة",
-      "model": "KSD335",
-      "price_after": 16083,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/368689e8-ff73-48e2-a31c-f74e309cd76c",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 326,
-      "features": [
-        "ديفروست",
-        "فريزر علوي"
-      ],
-      "product_key": "ALASKA:KSD335:BLACK",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 16083,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
-      "id": 592,
-      "name": "Alaska NoFrost Top Freezer Refrigerator , 311 Liter , Silver - KSD320NF Digital",
-      "brand": "Alaska",
-      "category": "ثلاجة",
-      "model": "KSD320NF Digital",
-      "price_after": 18556,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/22f210dc-f9de-42e9-ab38-c1107073769a",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 311,
-      "features": [
-        "نوفروست",
-        "فريزر علوي"
-      ],
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 18556,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
-      "id": 593,
-      "name": "Alaska NoFrost Top Freezer Refrigerator , 311 Liter , Stainless Steel - KSD320NF Digital",
-      "brand": "Alaska",
-      "category": "ثلاجة",
-      "model": "KSD320NF Digital",
-      "price_after": 18556,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/94bf2ffe-3040-45e1-aa53-0a693f5c61e0",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 311,
-      "features": [
-        "نوفروست",
-        "فريزر علوي"
-      ],
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 18556,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
       "id": 594,
       "name": "Alaska NoFrost Top Freezer Refrigerator , 311 Liter , Black - KSD320NF Digital",
       "brand": "Alaska",
@@ -19302,71 +18678,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
-      "id": 595,
-      "name": "Alaska Defrost Top Freezer Refrigerator , 411 Liter , Silver - KG46",
-      "brand": "Alaska",
-      "category": "ثلاجة",
-      "model": "KG46",
-      "price_after": 17835,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/bb4b40ce-0993-4f92-b9c0-052d878fa38c",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 411,
-      "features": [
-        "ديفروست",
-        "فريزر علوي"
-      ],
-      "product_key": "ALASKA:KG46:SILVER",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 17835,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
-      "id": 596,
-      "name": "Bosch Series 6 NoFrost Bottom Freezer Refrigerator , 578 Liter Inverter Motor , Dark Inox - KGN76CXEE8",
-      "brand": "Bosch",
-      "category": "ثلاجة",
-      "model": "KGN76CXEE8",
-      "price_after": 62999,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/thlj-bwsh-fryzr-sfly-578ltr-swd-kgn76cxee8",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 578,
-      "motor_class": "inverter",
-      "features": [
-        "نوفروست",
-        "فريزر سفلي",
-        "انفرتر"
-      ],
-      "product_key": "BOSCH:KGN76CXEE8:DARKINOX",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 62999,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ALASKA:KSD320NFDIGITAL"
     },
     {
       "id": 597,
@@ -19387,7 +18700,6 @@
         "نوفروست",
         "فريزر علوي"
       ],
-      "product_key": "ALASKA:KSD320NF:BLACK",
       "history": [
         {
           "date": "2026-11-05",
@@ -19397,7 +18709,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ALASKA:KSD320NF"
     },
     {
       "id": 598,
@@ -19525,7 +18838,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ARISTON:ARB78F6593X"
     },
     {
       "id": 602,
@@ -19616,7 +18930,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FNTB470KT"
     },
     {
       "id": 605,
@@ -19646,7 +18961,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FNTB400BB"
     },
     {
       "id": 606,
@@ -19989,37 +19305,6 @@
       "product_key": "KIRIAZI:KH371NV2"
     },
     {
-      "id": 617,
-      "name": "Kiriazi NoFrost Top Freezer Refrigerator , 370 Liter , Black - KH370LN/3",
-      "brand": "Kiriazi",
-      "category": "ثلاجة",
-      "model": "KH370LN/3",
-      "price_after": 29130,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/kiriazi-nofrost-370l-kh370ln3",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 370,
-      "features": [
-        "نوفروست",
-        "فريزر علوي"
-      ],
-      "product_key": "KIRIAZI:KH370LN3:BLACK",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 29130,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
       "id": 618,
       "name": "Kiriazi NoFrost Top Freezer Refrigerator , 370 Liter , Silver - KH370LN",
       "brand": "Kiriazi",
@@ -20357,8 +19642,7 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "FRESH:500006361"
+      "last_seen": "2026-11-05"
     },
     {
       "id": 629,
@@ -20481,7 +19765,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FNTMS580YT"
     },
     {
       "id": 633,
@@ -20577,8 +19862,7 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "FRESH:500020805"
+      "last_seen": "2026-11-05"
     },
     {
       "id": 636,
@@ -20599,7 +19883,6 @@
         "نوفروست",
         "فريزر علوي"
       ],
-      "product_key": "KIRIAZI:E470NV2:SILVER#2",
       "history": [
         {
           "date": "2026-11-05",
@@ -20609,7 +19892,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "KIRIAZI:E470NV2"
     },
     {
       "id": 637,
@@ -20670,7 +19954,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "KIRIAZI:E520NV2"
     },
     {
       "id": 639,
@@ -20700,7 +19985,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "WHITEWHALE:WR3375HSS"
     },
     {
       "id": 640,
@@ -20733,7 +20019,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BEKO:GNE60500XEG"
+      "product_key": "BEKO:GNE60500X"
     },
     {
       "id": 641,
@@ -20793,7 +20079,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FNTBR400BB"
     },
     {
       "id": 643,
@@ -21077,37 +20364,6 @@
       "product_key": "SAMSUNG:RB34A6B0E41MR"
     },
     {
-      "id": 652,
-      "name": "Bosch Series 6 NoFrost Bottom Freezer Refrigerator , 526 Liter , Stainless Steel - KGN76CI3E8",
-      "brand": "Bosch",
-      "category": "ثلاجة",
-      "model": "KGN76CI3E8",
-      "price_after": 58999,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/2505b359-8fe0-4148-8284-36c2d2979895",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 526,
-      "features": [
-        "نوفروست",
-        "فريزر سفلي"
-      ],
-      "product_key": "BOSCH:KGN76CI3E8:STAINLES#2",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 58999,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
-    },
-    {
       "id": 653,
       "name": "Unionaire MAX Signature NoFrost Top Freezer Refrigerator , 420 Liter , Black - URN500LBG1ADTHRBSM",
       "brand": "Unionaire",
@@ -21199,7 +20455,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BEKO:RDNE455M20XBIDTEWEG"
+      "product_key": "BEKO:RDNE455M20XBIDTEW"
     },
     {
       "id": 656,
@@ -21385,7 +20641,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "OCEAN:OC780TNFDIAPLUS"
     },
     {
       "id": 662,
@@ -21437,7 +20694,6 @@
         "ديفروست",
         "باب واحد"
       ],
-      "product_key": "ALASKA:KS27:WHITE#2",
       "history": [
         {
           "date": "2026-11-05",
@@ -21447,7 +20703,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "ALASKA:KS27"
     },
     {
       "id": 664,
@@ -21479,37 +20736,6 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "product_key": "UNIONAIRE:URN500DLVLSADXSRBM"
-    },
-    {
-      "id": 665,
-      "name": "Alaska NoFrost Top Freezer Refrigerator , 311 Liter , Silver - KSD320NF",
-      "brand": "Alaska",
-      "category": "ثلاجة",
-      "model": "KSD320NF",
-      "price_after": 17423,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/3e714e9a-dbf8-481a-b5cc-7b79b30574c1",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 311,
-      "features": [
-        "نوفروست",
-        "فريزر علوي"
-      ],
-      "product_key": "ALASKA:KSD320NF:SILVER#2",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 17423,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
     },
     {
       "id": 666,
@@ -21729,7 +20955,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "FRESH:FNTB400KB"
     },
     {
       "id": 673,
@@ -21761,37 +20988,6 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "product_key": "FRESH:FNTBR470KGDR"
-    },
-    {
-      "id": 674,
-      "name": "Sharp NoFrost Top Freezer Refrigerator , 396 Liter , Black - SJ-PC48A(BK)",
-      "brand": "Sharp",
-      "category": "ثلاجة",
-      "model": "SJ-PC48A(BK)",
-      "price_after": 36425,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/sharp-refrigerator-no-frost-396l-sj-pc48a-bk",
-      "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
-      "capacity_liters": 396,
-      "features": [
-        "نوفروست",
-        "فريزر علوي"
-      ],
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 36425,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "SHARP:SJPC48ABK"
     },
     {
       "id": 675,
@@ -22166,7 +21362,6 @@
         "نوفروست",
         "فريزر علوي"
       ],
-      "product_key": "KIRIAZI:KH370LN3:SILVER",
       "history": [
         {
           "date": "2026-11-05",
@@ -22176,7 +21371,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "product_key": "KIRIAZI:KH370LN3"
     },
     {
       "id": 687,
@@ -22334,38 +21530,6 @@
       "product_key": "WHITEPOINT:WPTL9DBTEA"
     },
     {
-      "id": 692,
-      "name": "Toshiba Front Load Washing Machine, 9 kg, 1400 RPM, Inverter, Steam, Wi-Fi, Morandi Grey, TW-BK100GF4EG(MK)",
-      "brand": "Toshiba",
-      "category": "غسالة",
-      "model": "TW-BK100GF4EG(MK)",
-      "price_after": 21199,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "Carrefour",
-      "source": "carrefouregypt.com",
-      "url": "https://www.carrefouregypt.com/mafegy/en/p/654427",
-      "url_note": "رابط مختصر بالـ ID من كارفور — لو مفتحش دوّر بالموديل على الموقع.",
-      "in_stock": true,
-      "capacity_kg": 9,
-      "motor_class": "inverter",
-      "features": [
-        "Front Load",
-        "انفرتر"
-      ],
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 21199,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:TWBK100GF4EGMK"
-    },
-    {
       "id": 693,
       "name": "Haier Top Loading Washing Machine 10 Kg - Dark Silver - HMW100-316S8",
       "brand": "Haier",
@@ -22427,38 +21591,6 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "product_key": "SAMSUNG:WW80T4020CX1AS"
-    },
-    {
-      "id": 695,
-      "name": "Toshiba T21 Series Front Load Washing Machine 8.5kg - 1400rpm - Steam Wash - Origin Inverter - Wi-Fi - TW-T21BU95UWEG(SG) Silver",
-      "brand": "Toshiba",
-      "category": "غسالة",
-      "model": "TW-T21BU95UWEG(SG)",
-      "price_after": 19399,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "Carrefour",
-      "source": "carrefouregypt.com",
-      "url": "https://www.carrefouregypt.com/mafegy/en/p/672721",
-      "url_note": "رابط مختصر بالـ ID من كارفور — لو مفتحش دوّر بالموديل على الموقع.",
-      "in_stock": true,
-      "capacity_kg": 8.5,
-      "motor_class": "inverter",
-      "features": [
-        "Front Load",
-        "انفرتر"
-      ],
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 19399,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:TWT21BU95UWEGSG"
     },
     {
       "id": 696,
@@ -22558,7 +21690,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:TWT21BU115UWEGMG"
+      "product_key": "TOSHIBA:TWT21BU115UW"
     },
     {
       "id": 699,
@@ -22621,7 +21753,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:TWT21BU95UWEGMG"
+      "product_key": "TOSHIBA:TWT21BU95UW"
     },
     {
       "id": 701,
@@ -22685,7 +21817,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:TWBK90GF4EGMK"
+      "product_key": "TOSHIBA:TWBK90GF4"
     },
     {
       "id": 703,
@@ -23028,7 +22160,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:TWBK115GF4EGMK"
+      "product_key": "TOSHIBA:TWBK115GF4"
     },
     {
       "id": 714,
@@ -23220,7 +22352,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "TOSHIBA:AWDUHN1600LUPEGMK"
+      "product_key": "TOSHIBA:AWDUHN1600LUP"
     },
     {
       "id": 720,
@@ -23470,7 +22602,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:H3WOS283TABR4ELA"
+      "product_key": "HOOVER:H3WOS283TABR4"
     },
     {
       "id": 728,
@@ -23564,7 +22696,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BOSCH:WGA2540XEG"
+      "product_key": "BOSCH:WGA2540X"
     },
     {
       "id": 731,
@@ -23720,7 +22852,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:H3DPS4756TMBBELA"
+      "product_key": "HOOVER:H3DPS4756TMBB"
     },
     {
       "id": 736,
@@ -23751,7 +22883,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "BOSCH:WGK254Z1EG"
+      "product_key": "BOSCH:WGK254Z1"
     },
     {
       "id": 737,
@@ -23876,7 +23008,7 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
-      "product_key": "HOOVER:H3WPS284TAMBBELA"
+      "product_key": "HOOVER:H3WPS284TAMBB"
     },
     {
       "id": 741,
