@@ -67,6 +67,7 @@ Shop names already in use (reuse exactly): `B.TECH`, `Carrefour`, `Jumia`, `Rane
 - Washers get a quality score (motor type, capacity, rpm, inverter, steam, drum, warranty, brand
   reputation, rating) and a value score = quality ÷ price. Other categories rank by price and savings.
 - A scraped listing not seen for 21+ days is ignored for "cheapest".
+- Filters: multi-select brand / shop / features (features = must have all) / motor, ranges for price, capacity (kg, liters or cm width by category) and discount, "in stock only". Filter state lives in the URL hash, so a filtered view can be shared.
 
 ## Scraper (automatic)
 `python3 tools/scrape/run.py --stores <list|all> [--limit N] [--dry-run]`.
