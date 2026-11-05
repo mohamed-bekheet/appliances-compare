@@ -226,6 +226,15 @@ tr.best-value td { background: #e8f5e9 !important; }
 .card.best-value { outline: 2px solid #2e7d32; }
 .flash { animation: flash 1.6s ease; }
 @keyframes flash { 0%,40% { background:#c8e6c9; } 100% { background: inherit; } }
+.shops-line { font-size:.7rem; margin-top:4px; }
+.shops-line a { color:#1565c0; cursor:pointer; text-decoration:underline; }
+.pchg { font-size:.7rem; font-weight:700; margin-right:4px; }
+.pchg.down { color:#2e7d32; } .pchg.up { color:#c62828; }
+.hist-tbl td, .hist-tbl th { padding:6px 8px; border-bottom:1px solid #eee; font-size:.8rem; text-align:right; }
+.hist-tbl tr.cheapest td { background:#e8f5e9; font-weight:700; }
+.hist-note { font-size:.75rem; color:#777; margin:8px 0; }
+.ctrl-row { flex-wrap: wrap; }
+.merge-lbl { display:flex; align-items:center; gap:4px; font-size:.78rem; cursor:pointer; white-space:nowrap; }
 </style>
 </head>
 <body>
@@ -304,6 +313,7 @@ tr.best-value td { background: #e8f5e9 !important; }
         <button class="vbtn active" id="btnTable" onclick="setView('table')">📋 جدول</button>
         <button class="vbtn" id="btnCards" onclick="setView('cards')">🗂 بطاقات</button>
       </div>
+      <label class="merge-lbl" title="اعرض كل موديل مرة واحدة بأرخص سعر متاح"><input type="checkbox" id="mergeToggle"> 📦 دمج نفس الموديل</label>
       <button class="btn btn-gray" onclick="resetFilters()">مسح</button>
     </div>
   </div>
@@ -326,6 +336,14 @@ tr.best-value td { background: #e8f5e9 !important; }
   <div class="compare-items" id="compareChips"></div>
   <button class="btn btn-orange" onclick="openCompareModal()">قارن الآن</button>
   <button class="btn btn-gray" onclick="clearCompare()">مسح</button>
+</div>
+
+<!-- Price history modal -->
+<div class="modal-overlay" id="histModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('histModal').classList.remove('open')">✕ إغلاق</button>
+    <div id="histWrap"></div>
+  </div>
 </div>
 
 <!-- Compare modal -->
@@ -352,6 +370,7 @@ fetch('data.json')
   .then(r => r.json())
   .then(json => {
     ALL = json.products;
+    buildGroups();
     document.getElementById('headerMeta').textContent =
       `${json.meta.last_updated} · ${json.meta.note}`;
     populateFilters();
@@ -467,6 +486,98 @@ function renderRec() {
     </details>
   </div>`;
 }
+// ─── Same model across shops + price history ─────────────
+let GROUPS = new Map();          // product_key -> [listings]
+function buildGroups() {
+  GROUPS = new Map();
+  ALL.forEach(d => { if (d.product_key) { if (!GROUPS.has(d.product_key)) GROUPS.set(d.product_key, []); GROUPS.get(d.product_key).push(d); } });
+}
+const avail = d => d.price_after > 0 && d.in_stock !== false;
+function groupOf(d) { return d.product_key ? (GROUPS.get(d.product_key) || [d]) : [d]; }
+function cheapestOf(list) { const a = list.filter(avail); return a.length ? a.reduce((m,x)=> x.price_after < m.price_after ? x : m) : null; }
+function shopsLine(d) {
+  const g = groupOf(d);
+  const hist = (d.history||[]).length > 1;
+  if (g.length < 2 && !hist) return '';
+  const c = cheapestOf(g);
+  let txt = g.length > 1 ? `🏪 في ${g.length} محلات` : '📈 سجل السعر';
+  if (g.length > 1 && c) txt += c.id === d.id ? ' · <b style="color:#2e7d32">دا الأرخص</b>' : ` · الأرخص ${c.price_after.toLocaleString()} (${c.shop})`;
+  return `<div class="shops-line"><a onclick="openHistory(${d.id})">${txt}</a></div>`;
+}
+function priceChange(d) {
+  const h = d.history || [];
+  if (h.length < 2) return '';
+  const prev = h[h.length-2].price, now = h[h.length-1].price;
+  if (!prev || !now || prev === now) return '';
+  const diff = now - prev;
+  return `<span class="pchg ${diff<0?'down':'up'}" title="من ${prev.toLocaleString()} يوم ${h[h.length-2].date}">${diff<0?'▼':'▲'} ${Math.abs(diff).toLocaleString()}</span>`;
+}
+function mergeSameModel(list) {
+  const seen = new Map(), out = [];
+  list.forEach(d => {
+    if (!d.product_key) { out.push(d); return; }
+    const inList = list.filter(x => x.product_key === d.product_key);
+    const best = cheapestOf(inList) || inList[0];
+    if (!seen.has(d.product_key)) { seen.set(d.product_key, 1); out.push(best); }
+  });
+  return out;
+}
+const SHOP_COLORS = ['#e8560a','#1565c0','#2e7d32','#6a1b9a','#c62828','#00838f','#f9a825','#4e342e'];
+function openHistory(id) {
+  const d = ALL.find(x => x.id === id);
+  const g = [...groupOf(d)].sort((a,b) => (avail(b)-avail(a)) || (a.price_after - b.price_after));
+  const c = cheapestOf(g);
+  const rows = g.map(x => {
+    const h = x.history || [], first = h[0]?.price, now = x.price_after;
+    const vsFirst = (first && now && first !== now) ? `<span class="pchg ${now<first?'down':'up'}">${now<first?'▼':'▲'} ${Math.abs(now-first).toLocaleString()}</span> من ${h[0].date}` : '—';
+    const vsCheap = (c && avail(x) && x.id !== c.id) ? `+${(x.price_after - c.price_after).toLocaleString()}` : (c && x.id===c.id ? '✔ الأرخص' : '—');
+    return `<tr class="${c && x.id===c.id ? 'cheapest':''}">
+      <td>${x.url?`<a href="${x.url}" target="_blank" rel="noopener">${x.shop} ↗</a>`:x.shop}</td>
+      <td>${now>0 ? now.toLocaleString()+' ج' : '-'}${x.in_stock===false?' <span class="tag">نفذت</span>':''}</td>
+      <td>${vsCheap}</td><td>${vsFirst}</td><td>${h.length}</td><td>${x.last_seen||'-'}</td></tr>`;
+  }).join('');
+  document.getElementById('histWrap').innerHTML = `
+    <h2>📈 ${d.brand} ${d.model||''}</h2>
+    <div class="hist-note">${d.name}</div>
+    <div style="overflow-x:auto"><table class="hist-tbl" style="width:100%;border-collapse:collapse">
+      <thead><tr><th>المحل</th><th>السعر الحالي</th><th>الفرق عن الأرخص</th><th>التغير من أول سعر</th><th>عدد التسجيلات</th><th>آخر تحديث</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>
+    ${historyChart(g)}`;
+  document.getElementById('histModal').classList.add('open');
+}
+function historyChart(list) {
+  const series = list.map((x,i) => ({ shop: x.shop, color: SHOP_COLORS[i % SHOP_COLORS.length],
+                   pts: (() => { const pts = (x.history||[]).filter(h => h.price > 0).map(h => ({ t: Date.parse(h.date), p: h.price, date: h.date }));
+                     const last = pts[pts.length-1];   // price unchanged until last_seen -> extend the line
+                     if (last && x.last_seen && x.last_seen > last.date) pts.push({ t: Date.parse(x.last_seen), p: last.p, date: x.last_seen, carry: true });
+                     return pts; })() }))
+                 .filter(s => s.pts.length);
+  if (!series.length) return '';
+  const all = series.flatMap(s => s.pts);
+  const dates = [...new Set(all.map(p => p.date))].sort();
+  const W = 640, H = 260, L = 64, Rm = 16, T = 16, B = 34;
+  let tMin = Math.min(...all.map(p=>p.t)), tMax = Math.max(...all.map(p=>p.t));
+  if (tMin === tMax) { tMin -= 864e5*3; tMax += 864e5*3; }
+  let pMin = Math.min(...all.map(p=>p.p)), pMax = Math.max(...all.map(p=>p.p));
+  const pad = Math.max((pMax - pMin) * 0.15, pMax * 0.03); pMin -= pad; pMax += pad;
+  const X = t => L + (t - tMin) / (tMax - tMin) * (W - L - Rm);
+  const Y = p => T + (pMax - p) / (pMax - pMin) * (H - T - B);
+  const ticks = [0, .25, .5, .75, 1].map(f => pMin + f * (pMax - pMin));
+  const grid = ticks.map(v => `<line x1="${L}" x2="${W-Rm}" y1="${Y(v)}" y2="${Y(v)}" stroke="#eee"/>
+      <text x="${L-6}" y="${Y(v)+4}" font-size="10" text-anchor="end" fill="#888">${Math.round(v).toLocaleString()}</text>`).join('');
+  const xl = dates.map(dt => `<text x="${X(Date.parse(dt))}" y="${H-12}" font-size="10" text-anchor="middle" fill="#888">${dt.slice(5)}</text>`).join('');
+  const lines = series.map(s => {
+    const path = s.pts.map(p => `${X(p.t)},${Y(p.p)}`).join(' ');
+    return `${s.pts.length > 1 ? `<polyline points="${path}" fill="none" stroke="${s.color}" stroke-width="2.5"/>` : ''}
+      ${s.pts.filter(p=>!p.carry).map(p => `<circle cx="${X(p.t)}" cy="${Y(p.p)}" r="4.5" fill="${s.color}"><title>${s.shop}: ${p.p.toLocaleString()} ج (${p.date})</title></circle>`).join('')}`;
+  }).join('');
+  const legend = series.map(s => `<span style="display:inline-flex;align-items:center;gap:4px;margin-left:12px;font-size:.75rem"><span style="width:12px;height:12px;border-radius:3px;background:${s.color}"></span>${s.shop}</span>`).join('');
+  const note = dates.length < 2 ? '<div class="hist-note">لسه فيه تاريخ واحد بس. الخطوط هتظهر لما الأسعار تتحدث في أيام تانية.</div>' : '';
+  return `<h3 style="margin-top:16px;font-size:.95rem">تطور السعر</h3>${note}
+    <svg viewBox="0 0 ${W} ${H}" style="width:100%;max-width:${W}px;direction:ltr">${grid}${xl}${lines}</svg>
+    <div style="direction:rtl">${legend}</div>`;
+}
+
 function jumpTo(id) {
   const el = document.querySelector(`[data-id="${id}"]`);
   if (el) { el.scrollIntoView({behavior:'smooth', block:'center'}); el.classList.add('flash'); setTimeout(()=>el.classList.remove('flash'),1700); }
@@ -517,6 +628,7 @@ function applyFilters() {
             d.shop, JSON.stringify(d)].join(' ').toLowerCase().includes(q))
   );
 
+  if (document.getElementById('mergeToggle').checked) filtered = mergeSameModel(filtered);
   VS = valueScores(filtered);
   const nz = v => v==null ? -1 : v;
   if (sort === 'value_desc')        filtered.sort((a,b) => nz(valueIdx(b)) - nz(valueIdx(a)));
@@ -546,6 +658,7 @@ function resetFilters() {
   document.getElementById('sortBy').value      = '';
   document.getElementById('capFilter').value   = '';
   document.getElementById('motorFilter').value = '';
+  document.getElementById('mergeToggle').checked = false;
   applyFilters();
 }
 
@@ -642,10 +755,10 @@ function renderTable() {
       <td style="font-size:.72rem;color:#555;max-width:240px">${techSummary(d)}${techLine2(d)}</td>
       <td style="max-width:180px">${featureTags(d.features)}</td>
       <td>${d.price_before>0?`<span class="price-before">${d.price_before.toLocaleString()}</span>`:'-'}</td>
-      <td><span class="price-after">${d.price_after>0?d.price_after.toLocaleString()+' ج':'-'}</span></td>
+      <td><span class="price-after">${d.price_after>0?d.price_after.toLocaleString()+' ج':'-'}</span>${priceChange(d)}</td>
       <td>${d.discount_pct>0?`<span class="disc-badge">${d.discount_pct}%</span>`:'-'}</td>
       <td style="color:#2e7d32;font-weight:600">${saving(d)}</td>
-      <td>${d.shop}</td>
+      <td>${d.shop}${shopsLine(d)}</td>
       <td>${vsBadge(d)}</td>
       <td><input type="checkbox" ${inCmp?'checked':''} onchange="toggleCompare(${d.id})" title="أضف للمقارنة"></td>
     </tr>`;
@@ -677,12 +790,13 @@ function renderCards() {
       </div>
       <div class="card-name">${d.name}</div>
       <div class="card-price">
-        <span class="card-price-after">${d.price_after>0?d.price_after.toLocaleString()+' ج':'-'}</span>
+        <span class="card-price-after">${d.price_after>0?d.price_after.toLocaleString()+' ج':'-'}</span>${priceChange(d)}
         ${d.price_before>0?`<span class="card-price-before">${d.price_before.toLocaleString()}</span>`:''}
       </div>
       <div class="card-specs">${featureTags(d.features)}</div>
       <div class="card-tech">${techSummary(d)}${techLine2(d)}</div>
       ${VS.has(d.id) ? `<div style="font-size:.74rem;margin-top:6px">جودة <b>${qualityPct(d)}/100</b> · قيمة ${vsBadge(d)} · ${d.shop}</div>` : `<div style="font-size:.72rem;color:#888;margin-top:6px">${d.shop}</div>`}
+      ${shopsLine(d)}
     </div>`;
   }).join('')}</div>`;
 }
@@ -803,7 +917,7 @@ function closeCompareModal() {
 }
 
 // ─── Event listeners ─────────────────────────────────────
-['searchInput','brandFilter','shopFilter','priceMin','priceMax','sortBy','capFilter','motorFilter']
+['searchInput','brandFilter','shopFilter','priceMin','priceMax','sortBy','capFilter','motorFilter','mergeToggle']
   .forEach(id => document.getElementById(id).addEventListener('input', applyFilters));
 </script>
 </body>

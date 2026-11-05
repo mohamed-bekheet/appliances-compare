@@ -22,7 +22,16 @@
       "price_after": 9499,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 9499,
+          "price_before": 10554
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 2,
@@ -41,7 +50,16 @@
       "price_after": 10999,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 10999,
+          "price_before": 12221
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 3,
@@ -60,7 +78,16 @@
       "price_after": 10999,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 10999,
+          "price_before": 12200
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 4,
@@ -79,7 +106,16 @@
       "price_after": 12299,
       "discount_pct": 12,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 12299,
+          "price_before": 13999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 5,
@@ -98,7 +134,16 @@
       "price_after": 12499,
       "discount_pct": 11,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 12499,
+          "price_before": 13999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 6,
@@ -116,7 +161,16 @@
       "price_after": 15999,
       "discount_pct": 11,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 15999,
+          "price_before": 17999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 7,
@@ -135,7 +189,16 @@
       "price_after": 16999,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 16999,
+          "price_before": 18888
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 8,
@@ -154,7 +217,16 @@
       "price_after": 16999,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 16999,
+          "price_before": 18799
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 9,
@@ -173,7 +245,16 @@
       "price_after": 17890,
       "discount_pct": 11,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 17890,
+          "price_before": 19999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 10,
@@ -192,7 +273,16 @@
       "price_after": 4399,
       "discount_pct": 46,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 4399,
+          "price_before": 8079
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 11,
@@ -211,7 +301,16 @@
       "price_after": 4499,
       "discount_pct": 48,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 4499,
+          "price_before": 8679
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 12,
@@ -229,7 +328,16 @@
       "price_after": 4999,
       "discount_pct": 17,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 4999,
+          "price_before": 6049
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 13,
@@ -248,7 +356,16 @@
       "price_after": 5999,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 5999,
+          "price_before": 6666
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 14,
@@ -267,7 +384,16 @@
       "price_after": 8499,
       "discount_pct": 11,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 8499,
+          "price_before": 9499
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 15,
@@ -286,7 +412,16 @@
       "price_after": 20999,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 20999,
+          "price_before": 23309
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 16,
@@ -303,7 +438,16 @@
       "price_after": 6299,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 6299,
+          "price_before": 6999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 17,
@@ -322,7 +466,16 @@
       "price_after": 16499,
       "discount_pct": 12,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 16499,
+          "price_before": 18689
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 18,
@@ -341,7 +494,16 @@
       "price_after": 16699,
       "discount_pct": 28,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 16699,
+          "price_before": 23199
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 19,
@@ -360,7 +522,16 @@
       "price_after": 17999,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 17999,
+          "price_before": 19999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 20,
@@ -378,7 +549,16 @@
       "price_after": 19399,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 19399,
+          "price_before": 21620
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 21,
@@ -398,7 +578,16 @@
       "price_after": 13999,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 13999,
+          "price_before": 15499
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 22,
@@ -417,7 +606,16 @@
       "price_after": 15699,
       "discount_pct": 11,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 15699,
+          "price_before": 17679
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 23,
@@ -436,7 +634,16 @@
       "price_after": 25099,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 25099,
+          "price_before": 27999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 24,
@@ -456,7 +663,16 @@
       "price_after": 22299,
       "discount_pct": 13,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 22299,
+          "price_before": 25499
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 25,
@@ -476,7 +692,16 @@
       "price_after": 81999,
       "discount_pct": 18,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 81999,
+          "price_before": 100551
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 26,
@@ -493,7 +718,16 @@
       "price_after": 29999,
       "discount_pct": 9,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 29999,
+          "price_before": 32999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 27,
@@ -512,7 +746,16 @@
       "price_after": 75999,
       "discount_pct": 17,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 75999,
+          "price_before": 91499
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 28,
@@ -537,7 +780,16 @@
       "motor_class": "inverter",
       "motor_type": "Inverter",
       "made_in": "تركيا",
-      "made_in_verified": true
+      "made_in_verified": true,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 20999,
+          "price_before": 23999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 29,
@@ -562,7 +814,16 @@
       "motor_class": "inverter",
       "motor_type": "Digital Inverter",
       "made_in": "غير محدد",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 21499,
+          "price_before": 23299
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 30,
@@ -585,7 +846,16 @@
       "motor_class": "inverter",
       "motor_type": "Inverter",
       "made_in": "غير محدد",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 21999,
+          "price_before": 23999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 31,
@@ -610,7 +880,16 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 21999,
+          "price_before": 24399
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 32,
@@ -636,7 +915,16 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 23499,
+          "price_before": 25999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 33,
@@ -661,7 +949,16 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 24499,
+          "price_before": 27499
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 34,
@@ -685,7 +982,16 @@
       "motor_class": "inverter",
       "motor_type": "Inverter",
       "made_in": "غير محدد",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 24999,
+          "price_before": 26999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 35,
@@ -709,7 +1015,16 @@
       "motor_type": "Digital Inverter (BLDC)",
       "made_in": "غير محدد",
       "made_in_verified": false,
-      "drum_material": "ستانلس – Diamond Drum"
+      "drum_material": "ستانلس – Diamond Drum",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 24999,
+          "price_before": 27999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 36,
@@ -732,7 +1047,16 @@
       "motor_class": "inverter",
       "motor_type": "Digital Inverter",
       "made_in": "غير محدد",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 17499,
+          "price_before": 19499
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 37,
@@ -755,7 +1079,16 @@
       "motor_class": "dd",
       "motor_type": "Direct Drive (حسب إعلان بي.تك)",
       "made_in": "مصر (مرجّح – مصنع هاير بالعاشر من رمضان)",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 17999,
+          "price_before": 22999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 38,
@@ -777,7 +1110,16 @@
       "motor_class": "inverter",
       "motor_type": "ProSmart Inverter",
       "made_in": "غير محدد",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 17999,
+          "price_before": 19999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 39,
@@ -802,7 +1144,16 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 17999,
+          "price_before": 21999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 40,
@@ -825,7 +1176,16 @@
       "motor_class": "inverter",
       "motor_type": "Inverter BLDC",
       "made_in": "مصر",
-      "made_in_verified": true
+      "made_in_verified": true,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 19399,
+          "price_before": 20499
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 41,
@@ -850,7 +1210,16 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 19499,
+          "price_before": 22599
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 42,
@@ -872,7 +1241,16 @@
       "motor_class": "inverter",
       "motor_type": "Inverter BLDC",
       "made_in": "مصر (مرجّح – مصنع هاير بالعاشر من رمضان)",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 19499,
+          "price_before": 23499
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 43,
@@ -897,7 +1275,16 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 19999,
+          "price_before": 22500
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 44,
@@ -919,7 +1306,16 @@
       "motor_class": "inverter",
       "motor_type": "Inverter BLDC",
       "made_in": "مصر",
-      "made_in_verified": true
+      "made_in_verified": true,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 20199,
+          "price_before": 22299
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 45,
@@ -942,7 +1338,16 @@
       "motor_class": "unknown",
       "motor_type": "غير محدد في الإعلان",
       "made_in": "تركيا",
-      "made_in_verified": true
+      "made_in_verified": true,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 11999,
+          "price_before": 15999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 46,
@@ -967,7 +1372,16 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 13999,
+          "price_before": 16799
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 47,
@@ -989,7 +1403,16 @@
       "motor_class": "inverter",
       "motor_type": "Inverter BLDC",
       "made_in": "مصر (مرجّح – مصنع هاير بالعاشر من رمضان)",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 14499,
+          "price_before": 19999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 48,
@@ -1011,7 +1434,16 @@
       "motor_class": "unknown",
       "motor_type": "غير محدد في الإعلان",
       "made_in": "تركيا",
-      "made_in_verified": true
+      "made_in_verified": true,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 14899,
+          "price_before": 16999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 49,
@@ -1033,7 +1465,16 @@
       "motor_class": "inverter",
       "motor_type": "Inverter",
       "made_in": "تركيا",
-      "made_in_verified": true
+      "made_in_verified": true,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 15499,
+          "price_before": 17999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 50,
@@ -1057,7 +1498,16 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 15499,
+          "price_before": 18999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 51,
@@ -1079,7 +1529,16 @@
       "motor_class": "inverter",
       "motor_type": "ProSmart Inverter",
       "made_in": "غير محدد",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 16499,
+          "price_before": 18499
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 52,
@@ -1102,7 +1561,16 @@
       "motor_type": "Direct Drive (دفع مباشر 7 حركات)",
       "made_in": "مصر",
       "made_in_verified": true,
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 16999,
+          "price_before": 18799
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 53,
@@ -1121,7 +1589,16 @@
       "price_after": 19999,
       "discount_pct": 17,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 19999,
+          "price_before": 24208
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 54,
@@ -1142,7 +1619,16 @@
       "price_after": 22699,
       "discount_pct": 10,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 22699,
+          "price_before": 24899
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 55,
@@ -1163,7 +1649,16 @@
       "price_after": 24999,
       "discount_pct": 50,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 24999,
+          "price_before": 49999
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 56,
@@ -1184,7 +1679,16 @@
       "price_after": 29999,
       "discount_pct": 40,
       "shop": "B.TECH",
-      "source": "Facebook post"
+      "source": "Facebook post",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 29999,
+          "price_before": 50147
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 57,
@@ -1222,7 +1726,17 @@
       "rating": 4.3,
       "reviews_count": 157,
       "rating_source": "B.TECH",
-      "review_summary": "68% من التقييمات 5 نجوم، بس 10% نجمة واحدة. أكتر موديل عليه تقييمات في القائمة."
+      "review_summary": "68% من التقييمات 5 نجوم، بس 10% نجمة واحدة. أكتر موديل عليه تقييمات في القائمة.",
+      "product_key": "SAMSUNG:WW80T4040CX1AS",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 22299,
+          "price_before": 25340
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 58,
@@ -1255,7 +1769,17 @@
       "rating": 5.0,
       "reviews_count": 3,
       "rating_source": "B.TECH",
-      "review_summary": "تقييمات قليلة بس كلها 5 نجوم. ضمان 10 سنين على الموتور و5 على الجهاز."
+      "review_summary": "تقييمات قليلة بس كلها 5 نجوم. ضمان 10 سنين على الموتور و5 على الجهاز.",
+      "product_key": "LG:F4R5TYG2T",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 28989,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 59,
@@ -1288,7 +1812,17 @@
       "rating": 5.0,
       "reviews_count": 3,
       "rating_source": "B.TECH",
-      "review_summary": "نفس موديل نومور. تقييمات قليلة بس كلها 5 نجوم. ضمان 10 سنين على الموتور."
+      "review_summary": "نفس موديل نومور. تقييمات قليلة بس كلها 5 نجوم. ضمان 10 سنين على الموتور.",
+      "product_key": "LG:F4R5TYG2T",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 28989,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 74,
@@ -1328,7 +1862,17 @@
       "rating": 5.0,
       "reviews_count": 2,
       "rating_source": "Carrefour",
-      "review_summary": "تقييمين بس (5 نجوم). عدد صغير ميتبنيش عليه."
+      "review_summary": "تقييمين بس (5 نجوم). عدد صغير ميتبنيش عليه.",
+      "product_key": "ZANUSSI:ZWF8221BL8",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 21799,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 75,
@@ -1358,7 +1902,17 @@
       "motor_class": "inverter",
       "motor_type": "Inverter BLDC",
       "made_in": "مصر",
-      "made_in_verified": true
+      "made_in_verified": true,
+      "product_key": "TOSHIBA:TWBK19S9EG",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 21199,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 76,
@@ -1391,7 +1945,17 @@
       "rating": 5.0,
       "reviews_count": 5,
       "rating_source": "Carrefour",
-      "review_summary": "5 تقييمات كلها 5 نجوم على كارفور. المصنع: مصر."
+      "review_summary": "5 تقييمات كلها 5 نجوم على كارفور. المصنع: مصر.",
+      "product_key": "LG:F4Y2TYGYP",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 25989,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 60,
@@ -1416,7 +1980,17 @@
       "motor_class": "dd",
       "motor_type": "Direct Drive (دفع مباشر 7 حركات)",
       "made_in": "مصر",
-      "made_in_verified": true
+      "made_in_verified": true,
+      "product_key": "FRESH:F500017744",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 33484,
+          "price_before": 37204
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 61,
@@ -1440,7 +2014,17 @@
       "motor_class": "inverter",
       "motor_type": "ProSmart Inverter",
       "made_in": "غير محدد",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "product_key": "BEKO:B3WFU501040MCI",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 23549,
+          "price_before": 25597
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 62,
@@ -1469,7 +2053,17 @@
       "rating": 5.0,
       "reviews_count": null,
       "rating_source": "El Araby Group",
-      "review_summary": "تقييم 5.0 على موقع العربي (عدد التقييمات مش ظاهر). صناعة تركية بضمان العربي."
+      "review_summary": "تقييم 5.0 على موقع العربي (عدد التقييمات مش ظاهر). صناعة تركية بضمان العربي.",
+      "product_key": "HITACHI:BD80YFVEM",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 24699,
+          "price_before": 26847
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 63,
@@ -1493,7 +2087,17 @@
       "motor_class": "inverter",
       "motor_type": "Inverter",
       "made_in": "غير محدد",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "product_key": "HISENSE:WF3V9042BSEG",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 19399,
+          "price_before": 21086
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 64,
@@ -1517,7 +2121,17 @@
       "motor_class": "inverter",
       "motor_type": "Inverter",
       "made_in": "غير محدد",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "product_key": "HISENSE:WD5S1245BB",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 33949,
+          "price_before": 36901
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 65,
@@ -1545,7 +2159,17 @@
       "rating": 4.5,
       "reviews_count": 2,
       "rating_source": "Merkur (سلوفينيا)",
-      "review_summary": "تقييمين بس في سلوفينيا. صناعة أوروبية بس أغلى غسالة في القائمة."
+      "review_summary": "تقييمين بس في سلوفينيا. صناعة أوروبية بس أغلى غسالة في القائمة.",
+      "product_key": "GORENJE:WNS1X4ARTWIFI",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 44359,
+          "price_before": 47698
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 66,
@@ -1568,7 +2192,17 @@
       "motor_class": "inverter",
       "motor_type": "Inverter BLDC",
       "made_in": "مصر",
-      "made_in_verified": true
+      "made_in_verified": true,
+      "product_key": "TOSHIBA:TWBK115GF4EGMK",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 24299,
+          "price_before": 26412
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 67,
@@ -1590,7 +2224,17 @@
       "motor_class": "inverter",
       "motor_type": "Inverter",
       "made_in": "تركيا",
-      "made_in_verified": true
+      "made_in_verified": true,
+      "product_key": "ARISTON:WFST8GWHR",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 20499,
+          "price_before": 22777
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 68,
@@ -1615,7 +2259,16 @@
       "motor_class": "inverter",
       "motor_type": "Inverter",
       "made_in": "غير محدد",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 30864,
+          "price_before": 33548
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 69,
@@ -1638,7 +2291,17 @@
       "motor_class": "inverter",
       "motor_type": "Inverter",
       "made_in": "غير محدد",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "product_key": "ARISTON:WFST10KGGEG",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 25379,
+          "price_before": 28199
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 70,
@@ -1662,7 +2325,17 @@
       "motor_class": "inverter",
       "motor_type": "Digital Inverter",
       "made_in": "غير محدد",
-      "made_in_verified": false
+      "made_in_verified": false,
+      "product_key": "MIDEA:MF205W105WBTK",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 20854,
+          "price_before": 23970
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 71,
@@ -1687,7 +2360,17 @@
       "motor_type": "Digital Inverter (BLDC)",
       "made_in": "غير محدد",
       "made_in_verified": false,
-      "drum_material": "ستانلس – Diamond Drum"
+      "drum_material": "ستانلس – Diamond Drum",
+      "product_key": "SAMSUNG:WW90T4040CX1AS",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 24990,
+          "price_before": 28398
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 72,
@@ -1716,7 +2399,17 @@
       "rating": 4.8,
       "reviews_count": 24,
       "rating_source": "Alza (النسخة الأوروبية HW80-BP14929A)",
-      "review_summary": "النسخة الأوروبية من نفس الموديل واخدة 4.8 من 24 تقييم: بيمدحوا الهدوء والحجم الصغير والسعر. مفيش تقييمات مصرية كفاية."
+      "review_summary": "النسخة الأوروبية من نفس الموديل واخدة 4.8 من 24 تقييم: بيمدحوا الهدوء والحجم الصغير والسعر. مفيش تقييمات مصرية كفاية.",
+      "product_key": "HAIER:HW80BP14929AS6",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 13499,
+          "price_before": 14673
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 73,
@@ -1740,7 +2433,17 @@
       "motor_class": "inverter",
       "motor_type": "Inverter BLDC",
       "made_in": "مصر",
-      "made_in_verified": true
+      "made_in_verified": true,
+      "product_key": "TOSHIBA:TWT21BU115UWEGMK",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 21990,
+          "price_before": 23902
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 77,
@@ -1768,7 +2471,16 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 22250,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 78,
@@ -1802,7 +2514,16 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 21750,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 79,
@@ -1824,7 +2545,16 @@
       "price_before": 0,
       "discount_pct": 0,
       "shop": "Zanussi Showroom",
-      "source": "Zanussi showroom (in-store price tag, cash)"
+      "source": "Zanussi showroom (in-store price tag, cash)",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 12890,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 80,
@@ -1846,7 +2576,16 @@
       "price_before": 0,
       "discount_pct": 0,
       "shop": "Zanussi Showroom",
-      "source": "Zanussi showroom (in-store price tag, cash)"
+      "source": "Zanussi showroom (in-store price tag, cash)",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 12290,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 81,
@@ -1865,7 +2604,16 @@
       "price_before": 0,
       "discount_pct": 0,
       "shop": "Zanussi Showroom",
-      "source": "Zanussi showroom (in-store price tag, cash)"
+      "source": "Zanussi showroom (in-store price tag, cash)",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 11590,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 82,
@@ -1887,7 +2635,16 @@
       "price_before": 0,
       "discount_pct": 0,
       "shop": "Zanussi Showroom",
-      "source": "Zanussi showroom (in-store price tag, cash)"
+      "source": "Zanussi showroom (in-store price tag, cash)",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 18590,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 83,
@@ -1912,7 +2669,16 @@
       "price_before": 0,
       "discount_pct": 0,
       "shop": "Zanussi Showroom",
-      "source": "Zanussi showroom (in-store price tag, cash)"
+      "source": "Zanussi showroom (in-store price tag, cash)",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 30210,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 84,
@@ -1936,7 +2702,16 @@
       "price_before": 0,
       "discount_pct": 0,
       "shop": "Zanussi Showroom",
-      "source": "Zanussi showroom (in-store price tag, cash)"
+      "source": "Zanussi showroom (in-store price tag, cash)",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 28010,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 85,
@@ -1956,7 +2731,16 @@
       "price_before": 0,
       "discount_pct": 0,
       "shop": "Zanussi Showroom",
-      "source": "Zanussi showroom (in-store price tag, cash)"
+      "source": "Zanussi showroom (in-store price tag, cash)",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 24719,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 86,
@@ -1974,7 +2758,16 @@
       "price_before": 0,
       "discount_pct": 0,
       "shop": "Zanussi Showroom",
-      "source": "Zanussi showroom (in-store price tag, cash)"
+      "source": "Zanussi showroom (in-store price tag, cash)",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 40219,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 87,
@@ -1994,7 +2787,16 @@
       "price_before": 0,
       "discount_pct": 0,
       "shop": "Zanussi Showroom",
-      "source": "Zanussi showroom (in-store price tag, cash)"
+      "source": "Zanussi showroom (in-store price tag, cash)",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 13899,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 88,
@@ -2016,7 +2818,16 @@
       "price_before": 0,
       "discount_pct": 0,
       "shop": "Zanussi Showroom",
-      "source": "Zanussi showroom (in-store price tag, cash)"
+      "source": "Zanussi showroom (in-store price tag, cash)",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 16199,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 89,
@@ -2038,7 +2849,16 @@
       "price_before": 0,
       "discount_pct": 0,
       "shop": "Zanussi Showroom",
-      "source": "Zanussi showroom (in-store price tag, cash)"
+      "source": "Zanussi showroom (in-store price tag, cash)",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 13199,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 90,
@@ -2072,7 +2892,18 @@
       "motor_type": "Smart Inverter (الموقع مش بيحدد نوع الموتور)",
       "made_in": "مصر",
       "made_in_verified": true,
-      "drum_material": "ستانلس ستيل"
+      "drum_material": "ستانلس ستيل",
+      "product_key": "ZANUSSI:ZW7F3946LS",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 33250,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 91,
@@ -2111,7 +2942,18 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "product_key": "ZANUSSI:ZWF8221ML7",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 22750,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 92,
@@ -2153,7 +2995,18 @@
       "reviews_count": 27,
       "rating_source": "zanussi.com.eg (موقع الشركة)",
       "rating_self_hosted": true,
-      "review_summary": "100% من المراجعين بيرشحوه، و100% من التقييمات 5 نجوم. التقييمات دي على موقع زانوسي نفسه، فبتتحسب بنص الوزن."
+      "review_summary": "100% من المراجعين بيرشحوه، و100% من التقييمات 5 نجوم. التقييمات دي على موقع زانوسي نفسه، فبتتحسب بنص الوزن.",
+      "product_key": "ZANUSSI:ZWF6240WH5",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 14450,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 93,
@@ -2197,7 +3050,18 @@
       "reviews_count": 5688,
       "rating_source": "zanussi.com.eg (موقع الشركة)",
       "rating_self_hosted": true,
-      "review_summary": "99% من المراجعين بيرشحوه: 97% خمس نجوم و3% أربع نجوم. التقييمات دي على موقع زانوسي نفسه، فبتتحسب بنص الوزن."
+      "review_summary": "99% من المراجعين بيرشحوه: 97% خمس نجوم و3% أربع نجوم. التقييمات دي على موقع زانوسي نفسه، فبتتحسب بنص الوزن.",
+      "product_key": "ZANUSSI:ZWF7221DS7",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 20250,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 94,
@@ -2237,7 +3101,18 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
+      "product_key": "ZANUSSI:ZWF7221BL7",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 20050,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 95,
@@ -2277,7 +3152,17 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 19750,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 96,
@@ -2316,7 +3201,18 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "product_key": "ZANUSSI:ZWF8221BL8",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 22050,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 97,
@@ -2356,7 +3252,18 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "product_key": "ZANUSSI:914909483",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 24949.99,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 98,
@@ -2393,7 +3300,18 @@
       "motor_type": "Smart Inverter (الموقع مش بيحدد نوع الموتور)",
       "made_in": "مصر",
       "made_in_verified": true,
-      "drum_material": "ستانلس ستيل"
+      "drum_material": "ستانلس ستيل",
+      "product_key": "ZANUSSI:ZWF8240BS5",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 18450,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 99,
@@ -2435,7 +3353,17 @@
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
       "voucher_egp": 3500,
-      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 21750,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 100,
@@ -2476,7 +3404,18 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "voucher_egp": 2500
+      "voucher_egp": 2500,
+      "product_key": "ZANUSSI:ZWF8221DS7",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 22250,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 101,
@@ -2513,7 +3452,18 @@
       "motor_type": "Smart Inverter (الموقع مش بيحدد نوع الموتور)",
       "made_in": "مصر",
       "made_in_verified": true,
-      "drum_material": "ستانلس ستيل"
+      "drum_material": "ستانلس ستيل",
+      "product_key": "ZANUSSI:ZWF7240BS6",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 17050,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 102,
@@ -2553,7 +3503,17 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "voucher_egp": 2800,
-      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 18550,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 103,
@@ -2588,7 +3548,18 @@
       "motor_type": "Smart Inverter (الموقع مش بيحدد نوع الموتور)",
       "made_in": "مصر",
       "made_in_verified": true,
-      "drum_material": "ستانلس ستيل"
+      "drum_material": "ستانلس ستيل",
+      "product_key": "ZANUSSI:ZW8F1168MS",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 37250,
+          "price_before": 0,
+          "in_stock": false
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 104,
@@ -2627,7 +3598,17 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 0,
+          "price_before": 0,
+          "in_stock": false
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 105,
@@ -2666,7 +3647,17 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 0,
+          "price_before": 0,
+          "in_stock": false
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 106,
@@ -2707,7 +3698,17 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 0,
+          "price_before": 0,
+          "in_stock": false
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 107,
@@ -2748,7 +3749,17 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 0,
+          "price_before": 0,
+          "in_stock": false
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 108,
@@ -2789,7 +3800,18 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "product_key": "ZANUSSI:914909481",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 24050,
+          "price_before": 0,
+          "in_stock": false
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 109,
@@ -2831,7 +3853,17 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 0,
+          "price_before": 0,
+          "in_stock": false
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 110,
@@ -2873,7 +3905,17 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 0,
+          "price_before": 0,
+          "in_stock": false
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 111,
@@ -2915,7 +3957,17 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 0,
+          "price_before": 0,
+          "in_stock": false
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 112,
@@ -2957,7 +4009,18 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "motor_warranty_years": 10,
-      "voucher_egp": 2500
+      "voucher_egp": 2500,
+      "product_key": "ZANUSSI:914909476",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 22750,
+          "price_before": 0,
+          "in_stock": false
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 113,
@@ -2998,7 +4061,17 @@
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
       "voucher_egp": 2500,
-      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني"
+      "model_note": "الموقع مش بيذكر رقم الموديل لللون دا؛ المواصفات منقولة من نفس الموديل بلون تاني",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 0,
+          "price_before": 0,
+          "in_stock": false
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 114,
@@ -3029,7 +4102,17 @@
       "made_in": "مصر (مرجّح – نفس سلسلة F4Y2 المصرية)",
       "made_in_verified": false,
       "motor_warranty_years": 10,
-      "review_summary": "مفيش تقييمات على دريم 2000."
+      "review_summary": "مفيش تقييمات على دريم 2000.",
+      "product_key": "LG:F4Y2TYG6X",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 24400,
+          "price_before": 29420
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 115,
@@ -3064,7 +4147,17 @@
       "rating": 5.0,
       "reviews_count": 1,
       "rating_source": "Jumia (تقييم موثق)",
-      "review_summary": "تقييم موثق واحد بس (5 نجوم). تقييم البائع على جوميا 50% بس ومعدل التوصيل متوسط، فخلي بالك."
+      "review_summary": "تقييم موثق واحد بس (5 نجوم). تقييم البائع على جوميا 50% بس ومعدل التوصيل متوسط، فخلي بالك.",
+      "product_key": "LG:F2T2TYM1S",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 21999,
+          "price_before": 31776.8
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 116,
@@ -3094,7 +4187,17 @@
       "made_in": "مصر (مرجّح – نفس سلسلة F4Y2 المصرية)",
       "made_in_verified": false,
       "motor_warranty_years": 10,
-      "review_summary": "متبقي 3 قطع بس وقت البحث."
+      "review_summary": "متبقي 3 قطع بس وقت البحث.",
+      "product_key": "LG:F4Y2TYG6X",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 21999,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 117,
@@ -3124,7 +4227,17 @@
       "made_in": "مصر (مرجّح – نفس سلسلة F4Y2 المصرية)",
       "made_in_verified": false,
       "motor_warranty_years": 10,
-      "review_summary": "أقل سعر في 30 يوم على بي.تك، بس البائع خارجي (Shahd) مش بي.تك نفسها؛ اتأكد من الضمان قبل الشرا. الصفحة نفسها ظهر فيها كمان 20,299 و20,970 فالسعر بيتغير."
+      "review_summary": "أقل سعر في 30 يوم على بي.تك، بس البائع خارجي (Shahd) مش بي.تك نفسها؛ اتأكد من الضمان قبل الشرا. الصفحة نفسها ظهر فيها كمان 20,299 و20,970 فالسعر بيتغير.",
+      "product_key": "LG:F4Y2TYG6X",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 19939,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     },
     {
       "id": 118,
@@ -3157,7 +4270,17 @@
       "made_in_verified": false,
       "motor_warranty_years": 10,
       "warranty_years": 5,
-      "review_summary": "أقل سعر في 30 يوم على بي.تك، والبائع بي.تك نفسها بضمان 5 سنين."
+      "review_summary": "أقل سعر في 30 يوم على بي.تك، والبائع بي.تك نفسها بضمان 5 سنين.",
+      "product_key": "LG:F2T2TYM1S",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 21239,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05"
     }
   ]
 }
