@@ -203,6 +203,29 @@ tbody tr.best-deal td:first-child { border-right: 3px solid #ffc107; }
   .controls, main { padding: 10px 12px; }
   .cards { grid-template-columns: 1fr 1fr; gap: 10px; }
 }
+/* ── Value recommendation ── */
+.rec-panel { margin: 14px 24px 0; background: #fff; border-radius: 12px; border: 2px solid #ffe0b2; padding: 14px 16px; box-shadow: 0 2px 10px rgba(0,0,0,.05); }
+.rec-head { display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+.rec-head h3 { font-size: 1rem; color: var(--dark); }
+.rec-head small { color: var(--muted, #777); font-size: .72rem; }
+.rec-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 10px; }
+.rec-card { border-radius: 10px; padding: 12px; background: #fafafa; border: 1px solid #eee; cursor: pointer; }
+.rec-card.top { background: linear-gradient(135deg,#fff8e1,#fff3e0); border-color: #ffb74d; }
+.rec-label { font-size: .75rem; font-weight: 700; color: var(--orange); margin-bottom: 4px; }
+.rec-name { font-weight: 700; font-size: .88rem; margin: 2px 0 4px; line-height:1.4; }
+.rec-price { font-size: 1.05rem; font-weight: 800; color: var(--dark); }
+.rec-why { margin: 6px 0 0; padding: 0 16px 0 0; font-size: .74rem; color: #555; line-height: 1.6; }
+.rec-method { margin-top: 10px; font-size: .74rem; color: #555; }
+.rec-method summary { cursor: pointer; color: var(--orange); font-weight: 600; }
+.rec-method ul { padding-right: 18px; margin-top: 6px; line-height: 1.8; }
+.vscore { display:inline-block; min-width: 38px; text-align:center; padding: 2px 6px; border-radius: 6px; font-weight: 700; font-size: .75rem; color:#fff; }
+.vs-hi { background:#2e7d32; } .vs-mid { background:#f9a825; } .vs-lo { background:#9e9e9e; }
+.tech2 { font-size: .7rem; color: #6a4c93; margin-top: 3px; line-height: 1.5; }
+.stars { color: #f9a825; font-weight: 700; }
+tr.best-value td { background: #e8f5e9 !important; }
+.card.best-value { outline: 2px solid #2e7d32; }
+.flash { animation: flash 1.6s ease; }
+@keyframes flash { 0%,40% { background:#c8e6c9; } 100% { background: inherit; } }
 </style>
 </head>
 <body>
@@ -242,6 +265,19 @@ tbody tr.best-deal td:first-child { border-right: 3px solid #ffc107; }
     <select id="shopFilter"><option value="">كل المحلات</option></select>
   </div>
   <div class="ctrl">
+    <label>⚖️ السعة</label>
+    <select id="capFilter"><option value="">كل السعات</option></select>
+  </div>
+  <div class="ctrl">
+    <label>🔧 الموتور</label>
+    <select id="motorFilter">
+      <option value="">الكل</option>
+      <option value="dd">دفع مباشر (DD)</option>
+      <option value="inverter">انفرتر</option>
+      <option value="unknown">غير محدد</option>
+    </select>
+  </div>
+  <div class="ctrl">
     <label>💰 السعر (ج)</label>
     <div class="ctrl-row">
       <input type="number" id="priceMin" placeholder="من" style="width:80px">
@@ -252,6 +288,8 @@ tbody tr.best-deal td:first-child { border-right: 3px solid #ffc107; }
     <label>↕️ ترتيب</label>
     <select id="sortBy">
       <option value="">افتراضي</option>
+      <option value="value_desc">🏆 أفضل قيمة مقابل السعر</option>
+      <option value="quality_desc">💎 أعلى جودة</option>
       <option value="price_asc">السعر: الأقل أولاً</option>
       <option value="price_desc">السعر: الأعلى أولاً</option>
       <option value="disc_desc">أعلى خصم</option>
@@ -279,6 +317,7 @@ tbody tr.best-deal td:first-child { border-right: 3px solid #ffc107; }
   <div class="stat-item"><span class="stat-lbl">إجمالي توفير ممكن:</span><span class="stat-val" id="sTotalSaving">-</span> ج</div>
 </div>
 
+<div id="recArea"></div>
 <main id="mainArea"></main>
 
 <!-- Compare bar -->
@@ -323,8 +362,119 @@ fetch('data.json')
       '<div class="empty">⚠️ تعذر تحميل data.json — تأكد إن الملف موجود في نفس المجلد</div>';
   });
 
+// ─── Quality & value scoring (washers) ───────────────────
+// Brand tier = تقديري: سمعة الماركة + شبكة الصيانة في مصر (مش بيانات رسمية)
+const BRAND_TIER = { LG:10, Samsung:9, Gorenje:8, Zanussi:8, Toshiba:7, Beko:7, Hitachi:7, Ariston:7,
+                     Haier:6, Midea:6, Hisense:6, Fresh:5, 'White Point':5, Hoover:5, Armadillo:4 };
+const MOTOR_LABEL = { dd:'دفع مباشر (DD)', inverter:'انفرتر', universal:'عادي', unknown:'غير محدد' };
+const has = (d, re) => re.test((d.features||[]).join(' ') + ' ' + d.name);
+
+function qualityBreakdown(d) {
+  if (d.category !== 'غسالة') return null;
+  const parts = [];
+  const add = (pts, label) => { parts.push([pts, label]); return pts; };
+  let q = 0;
+  const m = d.motor_class || 'unknown';
+  q += add({dd:25, inverter:18, universal:6, unknown:10}[m], `موتور ${MOTOR_LABEL[m]}`);
+  const rpm = d.spin_rpm;
+  q += add(rpm>=1600?10 : rpm>=1400?8 : rpm>=1200?5 : rpm?3 : 4, rpm?`${rpm} لفة`:'لفات غير معروفة');
+  const cap = d.capacity_kg || 0;
+  q += add(Math.min(cap*2, 26), `سعة ${cap} كجم`);
+  if (has(d,/بخار|steam/i))        q += add(5, 'بخار');
+  if (has(d,/wi-?fi|thinq|واي/i))  q += add(3, 'Wi-Fi');
+  if (d.dryer_capacity_kg || has(d,/مجفف/)) q += add(6, 'مجفف مدمج');
+  if ((d.motor_warranty_years||0) >= 10) q += add(5, 'ضمان موتور 10 سنين');
+  const mi = d.made_in || '';
+  q += add(/سلوفينيا|إيطاليا|ألمانيا|بولندا/.test(mi)?8 : /تركيا|مصر/.test(mi)?6 : 4, `صناعة: ${mi||'غير محدد'}`);
+  q += add(BRAND_TIER[d.brand] ?? 5, `سمعة وصيانة ${d.brand} (تقديري)`);
+  if (d.rating) {
+    const w = (d.reviews_count||0) >= 3 ? 1 : 0.5;            // تقييمات قليلة = وزن أقل
+    q += add(Math.round((d.rating-4)*8*w*10)/10, `تقييم ${d.rating}★${d.reviews_count?` (${d.reviews_count})`:''}`);
+  }
+  return { score: Math.round(q*10)/10, parts };
+}
+const QMAX = 25+10+26+5+3+6+5+8+10+8;
+function quality(d) { const b = qualityBreakdown(d); return b ? b.score : null; }
+function valueIdx(d) { const q = quality(d); return (q && d.price_after>0) ? q / (d.price_after/1000) : null; }
+function qualityPct(d) { const q = quality(d); return q==null ? null : Math.round(q/QMAX*100); }
+
+// value relative to the best item in the current filter (best = 100)
+function valueScores(list) {
+  const vals = list.map(valueIdx).filter(v => v!=null);
+  const max = vals.length ? Math.max(...vals) : 0;
+  const map = new Map();
+  list.forEach(d => { const v = valueIdx(d); if (v!=null && max) map.set(d.id, Math.round(v/max*100)); });
+  return map;
+}
+let VS = new Map();
+function vsBadge(d) {
+  const v = VS.get(d.id);
+  if (v==null) return '-';
+  return `<span class="vscore ${v>=85?'vs-hi':v>=65?'vs-mid':'vs-lo'}" title="مؤشر القيمة مقابل السعر (الأفضل في الفلتر الحالي = 100)">${v}</span>`;
+}
+function techLine2(d) {
+  if (d.category !== 'غسالة') return '';
+  const bits = [];
+  if (d.motor_type) bits.push('🔧 ' + d.motor_type);
+  if (d.made_in) bits.push('🏭 ' + d.made_in + (d.made_in_verified===false && d.made_in!=='غير محدد' ? ' (غير مؤكد)' : ''));
+  if (d.drum_material) bits.push('🥁 ' + d.drum_material);
+  if (d.motor_warranty_years) bits.push(`🛡️ موتور ${d.motor_warranty_years} سنين`);
+  if (d.rating) bits.push(`<span class="stars">★ ${d.rating}</span>${d.reviews_count?` (${d.reviews_count})`:''}`);
+  return `<div class="tech2">${bits.join(' · ')}</div>`;
+}
+
+function renderRec() {
+  const area = document.getElementById('recArea');
+  const W = filtered.filter(d => d.category==='غسالة' && d.price_after>0);
+  if (W.length < 2) { area.innerHTML = ''; return; }
+  const byValue   = [...W].sort((a,b) => valueIdx(b)-valueIdx(a));
+  const byQuality = [...W].sort((a,b) => quality(b)-quality(a) || a.price_after-b.price_after);
+  const cheapest  = [...W].sort((a,b) => a.price_after-b.price_after)[0];
+  const best = byValue[0], top = byQuality[0], runner = byValue[1];
+
+  const why = d => {
+    const b = qualityBreakdown(d).parts.filter(p => p[0] > 0).sort((x,y)=>y[0]-x[0]).slice(0,4).map(p=>p[1]);
+    return `<ul class="rec-why">${b.map(x=>`<li>${x}</li>`).join('')}</ul>`;
+  };
+  const card = (label, d, extra='', cls='') => `
+    <div class="rec-card ${cls}" onclick="jumpTo(${d.id})">
+      <div class="rec-label">${label}</div>
+      <span class="brand-badge ${brandClass(d.brand)}">${d.brand}</span> <small>${d.model||''}</small>
+      <div class="rec-name">${d.name}</div>
+      <div class="rec-price">${d.price_after.toLocaleString()} ج <small style="font-weight:400;font-size:.72rem">· ${d.shop}</small></div>
+      <div style="font-size:.74rem;margin-top:3px">جودة <b>${qualityPct(d)}/100</b> · قيمة ${vsBadge(d)} ${extra}</div>
+      ${why(d)}
+    </div>`;
+
+  const diff = top.id !== best.id ? top.price_after - best.price_after : 0;
+  area.innerHTML = `<div class="rec-panel">
+    <div class="rec-head"><h3>🤖 ترشيح أفضل اختيار من ${W.length} غسالة في الفلتر الحالي</h3>
+      <small>غيّر الفلاتر (السعة، السعر، الماركة…) والترشيح يتحدث تلقائياً</small></div>
+    <div class="rec-grid">
+      ${card('🏆 أفضل قيمة مقابل السعر', best, '', 'top')}
+      ${top.id!==best.id ? card('💎 أعلى جودة', top, diff>0?`<br><small>أغلى بـ ${diff.toLocaleString()} ج من الترشيح الأول</small>`:'') : ''}
+      ${runner && runner.id!==top.id ? card('🥈 بديل قوي', runner) : ''}
+      ${cheapest.id!==best.id && cheapest.id!==(runner&&runner.id) && cheapest.id!==top.id ? card('💰 الأرخص', cheapest) : ''}
+    </div>
+    <details class="rec-method"><summary>إزاي بنحسب الجودة والقيمة؟</summary>
+      <ul>
+        <li><b>الجودة (من 100)</b>: نوع الموتور (دفع مباشر 25، انفرتر 18، غير محدد 10) + اللفات (حتى 10) + السعة (2 لكل كيلو) + بخار 5 + Wi-Fi 3 + مجفف 6 + ضمان موتور 10 سنين 5 + بلد الصنع (أوروبا 8، تركيا/مصر 6، غير محدد 4) + سمعة الماركة وشبكة الصيانة (تقديري، حتى 10) + تقييم العملاء لو موجود (تقييمات أقل من 3 بتاخد نص الوزن).</li>
+        <li><b>القيمة</b> = الجودة ÷ السعر. أفضل غسالة في الفلتر الحالي بتاخد 100 والباقي نسبة منها.</li>
+        <li>البيانات اللي مكتوب جنبها "غير مؤكد" أو "تقديري" ملقيتش لها مصدر رسمي، فخدها كمؤشر بس.</li>
+      </ul>
+    </details>
+  </div>`;
+}
+function jumpTo(id) {
+  const el = document.querySelector(`[data-id="${id}"]`);
+  if (el) { el.scrollIntoView({behavior:'smooth', block:'center'}); el.classList.add('flash'); setTimeout(()=>el.classList.remove('flash'),1700); }
+}
+
 // ─── Filters ─────────────────────────────────────────────
 function populateFilters() {
+  const caps = [...new Set(ALL.filter(d=>d.capacity_kg).map(d => d.capacity_kg))].sort((a,b)=>a-b);
+  const cSel = document.getElementById('capFilter');
+  caps.forEach(c => { const o=document.createElement('option'); o.value=c; o.textContent=c+' كجم'; cSel.appendChild(o); });
   const brands = [...new Set(ALL.map(d => d.brand))].sort();
   const shops  = [...new Set(ALL.map(d => d.shop))].sort();
   const bSel   = document.getElementById('brandFilter');
@@ -350,9 +500,13 @@ function applyFilters() {
   const pMin  = parseFloat(document.getElementById('priceMin').value) || 0;
   const pMax  = parseFloat(document.getElementById('priceMax').value) || Infinity;
   const sort  = document.getElementById('sortBy').value;
+  const cap   = document.getElementById('capFilter').value;
+  const motor = document.getElementById('motorFilter').value;
 
   filtered = ALL.filter(d =>
     (!activeTab || d.category === activeTab) &&
+    (!cap   || String(d.capacity_kg) === cap) &&
+    (!motor || (d.motor_class || '') === motor) &&
     (!brand  || d.brand === brand) &&
     (!shop   || d.shop  === shop)  &&
     (d.price_after >= pMin && (pMax === Infinity || d.price_after <= pMax)) &&
@@ -361,7 +515,11 @@ function applyFilters() {
             d.shop, JSON.stringify(d)].join(' ').toLowerCase().includes(q))
   );
 
-  if (sort === 'price_asc')     filtered.sort((a,b) => a.price_after - b.price_after);
+  VS = valueScores(filtered);
+  const nz = v => v==null ? -1 : v;
+  if (sort === 'value_desc')        filtered.sort((a,b) => nz(valueIdx(b)) - nz(valueIdx(a)));
+  else if (sort === 'quality_desc') filtered.sort((a,b) => nz(quality(b)) - nz(quality(a)));
+  else if (sort === 'price_asc')     filtered.sort((a,b) => a.price_after - b.price_after);
   else if (sort === 'price_desc')   filtered.sort((a,b) => b.price_after - a.price_after);
   else if (sort === 'disc_desc')    filtered.sort((a,b) => b.discount_pct - a.discount_pct);
   else if (sort === 'brand')        filtered.sort((a,b) => a.brand.localeCompare(b.brand));
@@ -384,6 +542,8 @@ function resetFilters() {
   document.getElementById('priceMin').value    = '';
   document.getElementById('priceMax').value    = '';
   document.getElementById('sortBy').value      = '';
+  document.getElementById('capFilter').value   = '';
+  document.getElementById('motorFilter').value = '';
   applyFilters();
 }
 
@@ -394,13 +554,14 @@ function updateStats() {
   document.getElementById('sMin').textContent      = valid.length ? Math.min(...valid.map(d=>d.price_after)).toLocaleString() : '-';
   document.getElementById('sMax').textContent      = valid.length ? Math.max(...valid.map(d=>d.price_after)).toLocaleString() : '-';
   document.getElementById('sAvgDisc').textContent  = valid.length ? Math.round(valid.reduce((s,d)=>s+d.discount_pct,0)/valid.length) : '-';
-  const saving = valid.reduce((s,d)=>s+(d.price_before-d.price_after),0);
+  const saving = valid.filter(d=>d.price_before>0).reduce((s,d)=>s+(d.price_before-d.price_after),0);
   document.getElementById('sTotalSaving').textContent = saving.toLocaleString();
 }
 
 // ─── Render ──────────────────────────────────────────────
 function render() {
   const area = document.getElementById('mainArea');
+  renderRec();
   if (!filtered.length) {
     area.innerHTML = '<div class="empty"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><br>لا توجد نتائج مطابقة</div>';
     return;
@@ -456,8 +617,10 @@ function renderTable() {
     {k:'discount_pct', label:'خصم'},
     {k:'',      label:'توفير'},
     {k:'shop',  label:'المحل'},
+    {k:'',      label:'قيمة 🏆'},
     {k:'',      label:'قارن'},
   ];
+  const bestVal = [...VS.entries()].find(([,v]) => v===100)?.[0];
 
   const thead = `<thead><tr>${cols.map((c,i) =>
     `<th class="${sortCol===c.k&&c.k?'sorted':''}" onclick="${c.k?`sortBy('${c.k}')`:''}" style="${c.k?'cursor:pointer':''}">
@@ -467,18 +630,20 @@ function renderTable() {
   const rows = filtered.map((d, i) => {
     const isBest = best[d.category] === d;
     const inCmp  = compareIds.has(d.id);
-    return `<tr class="${isBest?'best-deal':''}">
-      <td>${i+1}${isBest?' ⭐':''}</td>
+    const isBV = d.id === bestVal;
+    return `<tr data-id="${d.id}" class="${isBV?'best-value':isBest?'best-deal':''}">
+      <td>${i+1}${isBV?' 🏆':''}${isBest?' ⭐':''}</td>
       <td><span class="brand-badge ${brandClass(d.brand)}">${d.brand}</span></td>
-      <td style="max-width:220px;line-height:1.4">${d.name}</td>
+      <td style="max-width:220px;line-height:1.4">${d.name}${d.model?`<br><small style="color:#888">${d.model}</small>`:''}</td>
       <td><span class="tag">${d.category}</span></td>
-      <td style="font-size:.72rem;color:#555;max-width:200px">${techSummary(d)}</td>
+      <td style="font-size:.72rem;color:#555;max-width:240px">${techSummary(d)}${techLine2(d)}</td>
       <td style="max-width:180px">${featureTags(d.features)}</td>
       <td>${d.price_before>0?`<span class="price-before">${d.price_before.toLocaleString()}</span>`:'-'}</td>
       <td><span class="price-after">${d.price_after>0?d.price_after.toLocaleString()+' ج':'-'}</span></td>
       <td>${d.discount_pct>0?`<span class="disc-badge">${d.discount_pct}%</span>`:'-'}</td>
       <td style="color:#2e7d32;font-weight:600">${saving(d)}</td>
       <td>${d.shop}</td>
+      <td>${vsBadge(d)}</td>
       <td><input type="checkbox" ${inCmp?'checked':''} onchange="toggleCompare(${d.id})" title="أضف للمقارنة"></td>
     </tr>`;
   }).join('');
@@ -488,11 +653,13 @@ function renderTable() {
 
 function renderCards() {
   const best = bestByCategory();
+  const bestVal = [...VS.entries()].find(([,v]) => v===100)?.[0];
   return `<div class="cards">${filtered.map(d => {
     const isBest = best[d.category] === d;
+    const isBV   = d.id === bestVal;
     const inCmp  = compareIds.has(d.id);
-    return `<div class="card">
-      ${isBest ? '<div class="best-corner">⭐ أفضل خصم</div>' : ''}
+    return `<div class="card ${isBV?'best-value':''}" data-id="${d.id}">
+      ${isBV ? '<div class="best-corner" style="background:#2e7d32">🏆 أفضل قيمة</div>' : isBest ? '<div class="best-corner">⭐ أفضل خصم</div>' : ''}
       <div class="card-top">
         <div>
           <div class="card-brand"><span class="brand-badge ${brandClass(d.brand)}">${d.brand}</span></div>
@@ -511,7 +678,8 @@ function renderCards() {
         ${d.price_before>0?`<span class="card-price-before">${d.price_before.toLocaleString()}</span>`:''}
       </div>
       <div class="card-specs">${featureTags(d.features)}</div>
-      <div class="card-tech">${techSummary(d)}</div>
+      <div class="card-tech">${techSummary(d)}${techLine2(d)}</div>
+      ${VS.has(d.id) ? `<div style="font-size:.74rem;margin-top:6px">جودة <b>${qualityPct(d)}/100</b> · قيمة ${vsBadge(d)} · ${d.shop}</div>` : `<div style="font-size:.72rem;color:#888;margin-top:6px">${d.shop}</div>`}
     </div>`;
   }).join('')}</div>`;
 }
@@ -571,6 +739,8 @@ function clearCompare() {
 function openCompareModal() {
   if (compareIds.size < 2) { alert('اختار منتجين على الأقل للمقارنة'); return; }
   const items = [...compareIds].map(id => ALL.find(x => x.id === id));
+  const cmpVS = valueScores(items);
+  const topQ  = Math.max(...items.map(d => quality(d) ?? -1));
 
   const rows = [
     ['الماركة',          d => d.brand],
@@ -588,6 +758,14 @@ function openCompareModal() {
     ['العرض',            d => d.width_cm ? d.width_cm+' سم' : '-'],
     ['عدد الشعلات',      d => d.burners || '-'],
     ['عدد السرعات',      d => d.speeds || '-'],
+    ['نوع الموتور',      d => d.motor_type || '-'],
+    ['بلد الصنع',        d => d.made_in ? d.made_in + (d.made_in_verified===false && d.made_in!=='غير محدد' ? ' (غير مؤكد)' : '') : '-'],
+    ['خامة الحلة',       d => d.drum_material || '-'],
+    ['ضمان الموتور',     d => d.motor_warranty_years ? d.motor_warranty_years+' سنين' : '-'],
+    ['تقييم العملاء',    d => d.rating ? `★ ${d.rating}${d.reviews_count?` (${d.reviews_count} تقييم)`:''} – ${d.rating_source||''}` : 'لا يوجد'],
+    ['رأي العملاء',      d => d.review_summary || '-'],
+    ['درجة الجودة',      d => qualityPct(d)!=null ? qualityPct(d)+'/100' : '-'],
+    ['مؤشر القيمة',      d => { const v = cmpVS.get(d.id); return v!=null ? v+'/100' : '-'; }],
     ['المميزات',         d => (d.features||[]).join(' • ')],
     ['المحل',            d => d.shop],
   ];
@@ -599,10 +777,13 @@ function openCompareModal() {
   const thead = `<tr><th>البيان</th>${items.map(d=>`<th>${d.brand}<br><span style="font-weight:400;font-size:.7rem">${d.name.slice(0,30)}...</span></th>`).join('')}</tr>`;
   const tbody = rows.map(([label, fn]) => {
     const vals = items.map(fn);
+    if (vals.every(v => v==='-' || v==='لا يوجد' || v==='' || v==null)) return '';
     return `<tr><td style="font-weight:600;color:var(--dark)">${label}</td>${items.map((d,i) => {
       const v = vals[i];
       const best = (label==='السعر بعد الخصم' && d.price_after===bestPrice && d.price_after>0)
-                || (label==='الخصم' && d.discount_pct===bestDisc);
+                || (label==='الخصم' && d.discount_pct===bestDisc)
+                || (label==='مؤشر القيمة' && cmpVS.get(d.id)===100)
+                || (label==='درجة الجودة' && quality(d)!=null && quality(d)===topQ);
       return `<td class="${best?'cmp-winner':''}">${v}</td>`;
     }).join('')}</tr>`;
   }).join('');
@@ -617,7 +798,7 @@ function closeCompareModal() {
 }
 
 // ─── Event listeners ─────────────────────────────────────
-['searchInput','brandFilter','shopFilter','priceMin','priceMax','sortBy']
+['searchInput','brandFilter','shopFilter','priceMin','priceMax','sortBy','capFilter','motorFilter']
   .forEach(id => document.getElementById(id).addEventListener('input', applyFilters));
 </script>
 </body>
