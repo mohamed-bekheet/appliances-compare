@@ -235,6 +235,9 @@ tr.best-value td { background: #e8f5e9 !important; }
 .hist-note { font-size:.75rem; color:#777; margin:8px 0; }
 .ctrl-row { flex-wrap: wrap; }
 .merge-lbl { display:flex; align-items:center; gap:4px; font-size:.78rem; cursor:pointer; white-space:nowrap; }
+  .fchips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+  .fchip{background:#fff3e0;color:#e65100;border:1px solid #ffcc80;border-radius:12px;padding:2px 9px;font-size:.72rem}
+  .rec-note{font-size:.74rem;color:#666;margin-top:8px}
 </style>
 </head>
 <body>
@@ -444,17 +447,37 @@ function techLine2(d) {
   return `<div class="tech2">${bits.join(' · ')}</div>`;
 }
 
+// weighted customer rating (Bayesian): few reviews pull toward 4.3
+function ratingScore(d) {
+  if (!d.rating || !d.reviews_count) return null;
+  const m = 5, C = 4.3, v = d.reviews_count * (d.rating_self_hosted ? 0.5 : 1);
+  return (v * d.rating + m * C) / (v + m);
+}
+function filterSummary() {
+  const g = id => document.getElementById(id);
+  const bits = [];
+  bits.push(activeTab || 'كل الأقسام');
+  if (g('capFilter').value)   bits.push(g('capFilter').value + ' كجم');
+  if (g('motorFilter').value) bits.push('موتور ' + (MOTOR_LABEL[g('motorFilter').value] || g('motorFilter').value));
+  if (g('brandFilter').value) bits.push(g('brandFilter').value);
+  if (g('shopFilter').value)  bits.push(g('shopFilter').value);
+  const mn = g('priceMin').value, mx = g('priceMax').value;
+  if (mn || mx) bits.push(`السعر ${mn?Number(mn).toLocaleString():'0'} – ${mx?Number(mx).toLocaleString():'∞'}`);
+  if (g('searchInput').value.trim()) bits.push(`بحث: "${g('searchInput').value.trim()}"`);
+  return bits.map(x => `<span class="fchip">${x}</span>`).join('');
+}
 function renderRec() {
   const area = document.getElementById('recArea');
-  const W = filtered.filter(d => d.category==='غسالة' && d.price_after>0 && d.in_stock!==false);
-  if (W.length < 2) { area.innerHTML = ''; return; }
-  const byValue   = [...W].sort((a,b) => valueIdx(b)-valueIdx(a));
-  const byQuality = [...W].sort((a,b) => quality(b)-quality(a) || a.price_after-b.price_after);
-  const cheapest  = [...W].sort((a,b) => a.price_after-b.price_after)[0];
-  const best = byValue[0], top = byQuality[0], runner = byValue[1];
+  const A = filtered.filter(d => d.price_after>0 && d.in_stock!==false);
+  const outN = filtered.filter(d => d.in_stock===false).length;
+  if (!A.length) { area.innerHTML = filtered.length ? `<div class="rec-panel"><div class="rec-head"><h3>🤖 ترشيحات الفلتر الحالي</h3><div class="fchips">${filterSummary()}</div></div><div class="rec-note">مفيش منتج متاح بسعر في الفلتر ده${outN?` (${outN} نفذت)`:''}. وسّع الفلتر.</div></div>` : ''; return; }
+  const W = A.filter(d => d.category==='غسالة');
+  const washersOnly = W.length === A.length;
 
   const why = d => {
-    const b = qualityBreakdown(d).parts.filter(p => p[0] > 0).sort((x,y)=>y[0]-x[0]).slice(0,4).map(p=>p[1]);
+    const qb = qualityBreakdown(d);
+    if (!qb) return '';
+    const b = qb.parts.filter(p => p[0] > 0).sort((x,y)=>y[0]-x[0]).slice(0,4).map(p=>p[1]);
     return `<ul class="rec-why">${b.map(x=>`<li>${x}</li>`).join('')}</ul>`;
   };
   const card = (label, d, extra='', cls='') => `
@@ -463,24 +486,57 @@ function renderRec() {
       <span class="brand-badge ${brandClass(d.brand)}">${d.brand}</span> <small>${d.model||''}</small>
       <div class="rec-name">${d.name}</div>
       <div class="rec-price">${d.price_after.toLocaleString()} ج <small style="font-weight:400;font-size:.72rem">· ${d.shop}</small></div>
-      <div style="font-size:.74rem;margin-top:3px">جودة <b>${qualityPct(d)}/100</b> · قيمة ${vsBadge(d)} ${extra}</div>
+      <div style="font-size:.74rem;margin-top:3px">${quality(d)!=null?`جودة <b>${qualityPct(d)}/100</b> · قيمة ${vsBadge(d)}`:''}${d.rating?` <span class="stars">★ ${d.rating}</span>${d.reviews_count?` (${d.reviews_count} تقييم)`:''}`:''} ${extra}</div>
       ${why(d)}
     </div>`;
 
-  const diff = top.id !== best.id ? top.price_after - best.price_after : 0;
+  const cards = [], used = new Set();
+  const push = (label, d, extra='', cls='') => { if (d && !used.has(d.id)) { used.add(d.id); cards.push({label, d, extra, cls}); } };
+
+  // the scored pool: washers when the filter has washers, so value/quality are comparable
+  const S = W;
+  let best = null;
+  if (S.length) {
+    const byValue   = [...S].sort((a,b) => valueIdx(b)-valueIdx(a));
+    const byQuality = [...S].sort((a,b) => quality(b)-quality(a) || a.price_after-b.price_after);
+    best = byValue[0];
+    const top = byQuality[0];
+    push('🏆 أفضل قيمة مقابل السعر', best, '', 'top');
+    const diff = top.price_after - best.price_after;
+    push('💎 أعلى جودة', top, diff>0?`<br><small>أغلى بـ ${diff.toLocaleString()} ج من الترشيح الأول</small>`:'');
+  }
+  // top customer rating (any category in the filter)
+  const rated = A.filter(d => ratingScore(d) != null).sort((a,b) => ratingScore(b)-ratingScore(a) || a.price_after-b.price_after);
+  if (rated.length) {
+    const r = rated[0];
+    const ex = cards.find(c => c.d.id === r.id);
+    if (ex) ex.label += ' + ⭐ أعلى تقييم';
+    else push('⭐ أعلى تقييم من العملاء', r, `<br><small>من ${rated.length} منتج عليه تقييمات في الفلتر</small>`);
+  }
+  if (S.length) {
+    const byValue = [...S].sort((a,b) => valueIdx(b)-valueIdx(a));
+    push('🥈 بديل قوي', byValue.find(d => !used.has(d.id)));
+  }
+  const cheapest = [...A].sort((a,b) => a.price_after-b.price_after)[0];
+  push('💰 الأرخص', cheapest);
+  const disc = A.filter(d => d.price_before>0).sort((a,b) => (b.price_before-b.price_after)-(a.price_before-a.price_after))[0];
+  if (disc && !S.length) push('🏷️ أكبر توفير', disc, `<br><small>توفير ${(disc.price_before-disc.price_after).toLocaleString()} ج</small>`);
+
+  if (A.length === 1) cards[0].label = '✅ الاختيار الوحيد المتاح في الفلتر';
+  const stockNote = outN ? `<div class="rec-note">${outN} منتج نفذ من المخزن ومش داخل في الترشيح.</div>` : '';
+  const noRatings = !rated.length ? '<div class="rec-note">مفيش تقييمات عملاء لأي منتج في الفلتر ده لسه.</div>' : '';
+  const scoredNote = (S.length && !washersOnly) ? `<div class="rec-note">الجودة والقيمة محسوبين للغسالات بس (${W.length} غسالة في الفلتر).</div>` : '';
+
   area.innerHTML = `<div class="rec-panel">
-    <div class="rec-head"><h3>🤖 ترشيح أفضل اختيار من ${W.length} غسالة متاحة في الفلتر الحالي</h3>
-      <small>غيّر الفلاتر (السعة، السعر، الماركة…) والترشيح يتحدث تلقائياً</small></div>
-    <div class="rec-grid">
-      ${card('🏆 أفضل قيمة مقابل السعر', best, '', 'top')}
-      ${top.id!==best.id ? card('💎 أعلى جودة', top, diff>0?`<br><small>أغلى بـ ${diff.toLocaleString()} ج من الترشيح الأول</small>`:'') : ''}
-      ${runner && runner.id!==top.id ? card('🥈 بديل قوي', runner) : ''}
-      ${cheapest.id!==best.id && cheapest.id!==(runner&&runner.id) && cheapest.id!==top.id ? card('💰 الأرخص', cheapest) : ''}
-    </div>
-    <details class="rec-method"><summary>إزاي بنحسب الجودة والقيمة؟</summary>
+    <div class="rec-head"><h3>🤖 ترشيحات الفلتر الحالي · ${A.length} منتج متاح</h3>
+      <div class="fchips">${filterSummary()}</div></div>
+    <div class="rec-grid">${cards.map(c => card(c.label, c.d, c.extra, c.cls)).join('')}</div>
+    ${noRatings}${scoredNote}${stockNote}
+    <details class="rec-method"><summary>إزاي بنحسب الجودة والقيمة والتقييم؟</summary>
       <ul>
-        <li><b>الجودة (من 100)</b>: نوع الموتور (دفع مباشر 25، انفرتر 18، غير محدد 10) + اللفات (حتى 10) + السعة (2 لكل كيلو) + بخار 5 + Wi-Fi 3 + مجفف 6 + ضمان موتور 10 سنين 5 + بلد الصنع (أوروبا 8، تركيا/مصر 6، غير محدد 4) + سمعة الماركة وشبكة الصيانة (تقديري، حتى 10) + تقييم العملاء لو موجود (أقل من 3 تقييمات أو تقييمات على موقع الشركة نفسها بتاخد نص الوزن).</li>
-        <li><b>القيمة</b> = الجودة ÷ السعر. أفضل غسالة في الفلتر الحالي بتاخد 100 والباقي نسبة منها.</li>
+        <li><b>الجودة (من 100)</b>: نوع الموتور (دفع مباشر 25، انفرتر 18، غير محدد 10) + اللفات (حتى 10) + السعة (2 لكل كيلو) + بخار 5 + Wi-Fi 3 + مجفف 6 + ضمان موتور 10 سنين 5 + بلد الصنع (أوروبا 8، تركيا/مصر 6، غير محدد 4) + سمعة الماركة وشبكة الصيانة (تقديري، حتى 10) + تقييم العملاء لو موجود.</li>
+        <li><b>القيمة</b> = الجودة ÷ السعر. أفضل منتج في الفلتر الحالي بياخد 100 والباقي نسبة منه.</li>
+        <li><b>أعلى تقييم</b>: متوسط مرجّح بعدد التقييمات، فمنتج عليه تقييم واحد 5★ مش بيكسب منتج عليه 500 تقييم 4.8★. التقييمات على موقع الشركة نفسها بتاخد نص الوزن.</li>
         <li>البيانات اللي مكتوب جنبها "غير مؤكد" أو "تقديري" ملقيتش لها مصدر رسمي، فخدها كمؤشر بس.</li>
       </ul>
     </details>
