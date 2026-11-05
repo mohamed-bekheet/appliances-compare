@@ -151529,7 +151529,7 @@
       "id": 5115,
       "name": "LG Washing Machine 23 kg Top Load Onyx Black Smart with Steam and Thin Q Wi-Fi T23X5EHHSTX",
       "brand": "LG",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "T23X5EHHSTX",
       "price_after": 46495,
       "price_before": 51145,
@@ -151546,7 +151546,6 @@
       "scraped": true,
       "capacity_kg": 23,
       "motor_class": "unknown",
-      "product_key": "LG:T23X5EHHSTX",
       "history": [
         {
           "date": "2026-11-05",
@@ -152035,7 +152034,7 @@
       "id": 5131,
       "name": "LG Top Load Washing Machine 25KG With Steam T25X7EFHTTP",
       "brand": "LG",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "T25X7EFHTTP",
       "price_after": 51145,
       "price_before": 54330,
@@ -152051,7 +152050,6 @@
       "scraped": true,
       "capacity_kg": 25,
       "motor_class": "unknown",
-      "product_key": "LG:T25X7EFHTTP",
       "history": [
         {
           "date": "2026-11-05",
@@ -152287,7 +152285,7 @@
       "id": 5139,
       "name": "Haier Washing Machine 13 kg MultiWash Triple Drum 11kg + 1kg + 1kg Digital Steam Dark Sky Blue HW130-BD14697GNU1",
       "brand": "Haier",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "BD14697GNU1",
       "price_after": 68600,
       "price_before": 75999,
@@ -152302,7 +152300,6 @@
       "scraped": true,
       "capacity_kg": 13,
       "motor_class": "unknown",
-      "product_key": "HAIER:BD14697GNU1",
       "history": [
         {
           "date": "2026-11-05",
@@ -152444,7 +152441,7 @@
       "id": 5144,
       "name": "Bosch Washing Machine 9 kg Silver Inox 1400 RPM with Iron Steam Assist – German WGB2440XEG",
       "brand": "Bosch",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "WGB2440XEG",
       "price_after": 34320,
       "price_before": 42900,
@@ -152460,7 +152457,6 @@
       "capacity_kg": 9,
       "spin_rpm": 1400,
       "motor_class": "unknown",
-      "product_key": "BOSCH:WGB2440X",
       "history": [
         {
           "date": "2026-11-05",
@@ -152698,7 +152694,7 @@
       "id": 5152,
       "name": "Fresh Washing Machine 12 kg Half-Automatic with Plastic Spin Tub 22720",
       "brand": "Fresh",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": null,
       "price_after": 7425,
       "price_before": 7900,
@@ -153165,7 +153161,7 @@
       "id": 5167,
       "name": "Zanussi Washing Machine 8 Kg Silver with Black Door Inverter ZWF8241-SS7-9450",
       "brand": "Zanussi",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "ZWF8241",
       "price_after": 19680,
       "price_before": 22999,
@@ -153180,7 +153176,6 @@
       "scraped": true,
       "capacity_kg": 8,
       "motor_class": "inverter",
-      "product_key": "ZANUSSI:ZWF8241",
       "history": [
         {
           "date": "2026-11-05",
@@ -153844,7 +153839,7 @@
       "id": 5189,
       "name": "Zanussi Washing Machine 8 Kg Silver with Black Door ZWF8240SX5",
       "brand": "Zanussi",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "ZWF8240SX5",
       "price_after": 19680,
       "price_before": 21650,
@@ -153857,7 +153852,6 @@
       "scraped": true,
       "capacity_kg": 8,
       "motor_class": "unknown",
-      "product_key": "ZANUSSI:ZWF8240SX5",
       "history": [
         {
           "date": "2026-11-05",
@@ -154643,7 +154637,7 @@
       "id": 5215,
       "name": "Fresh Washing Machine 12 KG Half-Automatic with Extra Scrubbing Door FWT12000ND-11309",
       "brand": "Fresh",
-      "category": "غسالة",
+      "category": "باكدج",
       "model": "FWT12000ND",
       "price_after": 7520,
       "price_before": 8025,
@@ -154658,7 +154652,6 @@
       "scraped": true,
       "capacity_kg": 12,
       "motor_class": "unknown",
-      "product_key": "FRESH:FWT12000ND",
       "history": [
         {
           "date": "2026-11-05",
@@ -162281,7 +162274,7 @@
       "id": 5463,
       "name": "Unionaire Refrigerator 330 Liter with Digital Display and Aluminum Door Black URN-400DLBLBA-DTSRM",
       "brand": "Unionaire",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "400DLBLBA",
       "price_after": 14030,
       "price_before": 16115,
@@ -162293,7 +162286,6 @@
       "features": [],
       "scraped": true,
       "capacity_liters": 330,
-      "product_key": "UNIONAIRE:400DLBLBA",
       "history": [
         {
           "date": "2026-11-05",
@@ -162461,7 +162453,7 @@
       "id": 5469,
       "name": "Ariston Refrigerator 630 Liter Silver Digital Side-by-Side with Water Dispenser Turkish ARS91 F6634 XNA-SBS",
       "brand": "Ariston",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "F6634",
       "price_after": 63265,
       "price_before": 74765,
@@ -162475,7 +162467,6 @@
       ],
       "scraped": true,
       "capacity_liters": 630,
-      "product_key": "ARISTON:F6634",
       "history": [
         {
           "date": "2026-11-05",
@@ -164557,7 +164548,7 @@
       "id": 5539,
       "name": "Passap Refrigerator 303 Liter Silver with Defrost FG330L",
       "brand": "Passap",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "FG330L",
       "price_after": 10600,
       "price_before": 11660,
@@ -164571,7 +164562,6 @@
       ],
       "scraped": true,
       "capacity_liters": 303,
-      "product_key": "PASSAP:FG330L",
       "history": [
         {
           "date": "2026-11-05",
@@ -164587,7 +164577,7 @@
       "id": 5540,
       "name": "LG Refrigerator 450 Liter Black with Digital Inverter GTF452SSAN",
       "brand": "LG",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "GTF452SSAN",
       "price_after": 37995,
       "price_before": 41795,
@@ -164602,7 +164592,6 @@
       "scraped": true,
       "capacity_liters": 450,
       "motor_class": "inverter",
-      "product_key": "LG:GTF452SSAN",
       "history": [
         {
           "date": "2026-11-05",
@@ -164674,7 +164663,7 @@
       "id": 5543,
       "name": "Beko 430 Liter Silver Digital Inverter Refrigerator with Water Dispenser RDNE455M20XBIDTEWEG",
       "brand": "Beko",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "RDNE455M20XBIDTEWEG",
       "price_after": 26335,
       "price_before": 29415,
@@ -164689,7 +164678,6 @@
       "scraped": true,
       "capacity_liters": 430,
       "motor_class": "inverter",
-      "product_key": "BEKO:RDNE455M20XBIDTEW",
       "history": [
         {
           "date": "2026-11-05",
@@ -165093,7 +165081,7 @@
       "id": 5557,
       "name": "LG Refrigerator 508 Liters Instaview With Water dispenser Matte Black GC-X22FFQAB",
       "brand": "LG",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "X22FFQAB",
       "price_after": 175745,
       "price_before": 193320,
@@ -165105,7 +165093,6 @@
       "features": [],
       "scraped": true,
       "capacity_liters": 508,
-      "product_key": "LG:X22FFQAB",
       "history": [
         {
           "date": "2026-11-05",
@@ -165151,7 +165138,7 @@
       "id": 5559,
       "name": "LG Refrigerator 638 Liters Inverter 2-Door Side by Side with Water Dispenser Silver GC-J257KLKW",
       "brand": "LG",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "J257KLKW",
       "price_after": 100735,
       "price_before": 104885,
@@ -165167,7 +165154,6 @@
       "scraped": true,
       "capacity_liters": 638,
       "motor_class": "inverter",
-      "product_key": "LG:J257KLKW",
       "history": [
         {
           "date": "2026-11-05",
@@ -166487,7 +166473,7 @@
       "id": 5604,
       "name": "Beko Refrigerator 495 Liters Combi Black Glass with UV Purification Feature RCNE560E40ZGBUV",
       "brand": "Beko",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "RCNE560E40ZGBUV",
       "price_after": 72805,
       "price_before": 87775,
@@ -166501,7 +166487,6 @@
       ],
       "scraped": true,
       "capacity_liters": 495,
-      "product_key": "BEKO:RCNE560E40ZGBUV",
       "history": [
         {
           "date": "2026-11-05",
@@ -168707,7 +168692,7 @@
       "id": 5677,
       "name": "LG Refrigerator 592 Liters With Water Dispenser Silver GRF822HLHM",
       "brand": "LG",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "F822HLHM",
       "price_after": 110245,
       "price_before": 113755,
@@ -168719,7 +168704,6 @@
       "features": [],
       "scraped": true,
       "capacity_liters": 592,
-      "product_key": "LG:F822HLHM",
       "history": [
         {
           "date": "2026-11-05",
@@ -168881,7 +168865,7 @@
       "id": 5683,
       "name": "White Whale Refrigerator 540 L With Water Dispenser St WR5395HSSX",
       "brand": "White Whale",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "5395HSSX",
       "price_after": 37195,
       "price_before": 41660,
@@ -168893,7 +168877,6 @@
       "features": [],
       "scraped": true,
       "capacity_liters": 540,
-      "product_key": "WHITEWHALE:5395HSSX",
       "history": [
         {
           "date": "2026-11-05",
@@ -170228,7 +170211,7 @@
       "id": 5728,
       "name": "LG Refrigerator 509 L With Water Dispenser Silver GNF722HLHL",
       "brand": "LG",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "F722HLHL",
       "price_after": 67445,
       "price_before": 84330,
@@ -170240,7 +170223,6 @@
       "features": [],
       "scraped": true,
       "capacity_liters": 509,
-      "product_key": "LG:F722HLHL",
       "history": [
         {
           "date": "2026-11-05",
@@ -172058,7 +172040,7 @@
       "id": 5790,
       "name": "Sharp NoFrost Digital Bottom Fridge 565L Silver SJ-BG725D-SS",
       "brand": "Sharp",
-      "category": "ثلاجة",
+      "category": "باكدج",
       "model": "BG725D",
       "price_after": 53850,
       "price_before": 59235,
@@ -172073,7 +172055,6 @@
       ],
       "scraped": true,
       "capacity_liters": 565,
-      "product_key": "SHARP:BG725D",
       "history": [
         {
           "date": "2026-11-05",
@@ -173511,7 +173492,7 @@
       "id": 5839,
       "name": "Unionaire Deep Freezer 250 Liters Digital with Silver Handle UC-250VVA-02DH",
       "brand": "Unionaire",
-      "category": "ديب فريزر",
+      "category": "باكدج",
       "model": "250VVA",
       "price_after": 8900,
       "price_before": 9790,
@@ -173523,7 +173504,6 @@
       "features": [],
       "scraped": true,
       "capacity_liters": 250,
-      "product_key": "UNIONAIRE:250VVA",
       "history": [
         {
           "date": "2026-11-05",
@@ -174098,7 +174078,7 @@
       "id": 5860,
       "name": "Unionaire Deep Freezer 282 Liters Digital with Handle Silver UC-320VV-02DS",
       "brand": "Unionaire",
-      "category": "ديب فريزر",
+      "category": "باكدج",
       "model": "320VV",
       "price_after": 10485,
       "price_before": 11640,
@@ -174110,7 +174090,6 @@
       "features": [],
       "scraped": true,
       "capacity_liters": 282,
-      "product_key": "UNIONAIRE:320VV",
       "history": [
         {
           "date": "2026-11-05",
@@ -177104,7 +177083,7 @@
       "id": 5963,
       "name": "Zanussi Gas Cooker Steel Max 5 Burners Black and Silver ZCG923A6XA",
       "brand": "Zanussi",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": "ZCG923A6XA",
       "price_after": 12890,
       "price_before": 14180,
@@ -177116,7 +177095,6 @@
       "features": [],
       "scraped": true,
       "burners": 5,
-      "product_key": "ZANUSSI:ZCG923A6XA",
       "history": [
         {
           "date": "2026-11-05",
@@ -178096,7 +178074,7 @@
       "id": 5997,
       "name": "Fresh Cooker Hero Gas 50 cm with Fixed Grill 4 Burners Black 19942",
       "brand": "Fresh",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": null,
       "price_after": 5895,
       "price_before": 6555,
@@ -179349,7 +179327,7 @@
       "id": 6041,
       "name": "Fresh Hammer Gas Cooker 5 Burners St Digital With Air Fryer 14442",
       "brand": "Fresh",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": null,
       "price_after": 18650,
       "price_before": 19290,
@@ -179403,7 +179381,7 @@
       "id": 6043,
       "name": "Fresh Professional Gas Cooker 5 Burners With Air Fryer St 14441",
       "brand": "Fresh",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": null,
       "price_after": 19915,
       "price_before": 23855,
@@ -179485,7 +179463,7 @@
       "id": 6046,
       "name": "Fresh Professional Gas Cooker 4 Burners St With Air Fryer 14487",
       "brand": "Fresh",
-      "category": "بوتاجاز",
+      "category": "باكدج",
       "model": null,
       "price_after": 14020,
       "price_before": 15595,
@@ -183786,7 +183764,7 @@
       "id": 6198,
       "name": "Beko Flat Cooker Hood 90cm with 2 Motors Black CFB 9433 XFE",
       "brand": "Beko",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": null,
       "price_after": 6750,
       "price_before": 7660,
@@ -183843,7 +183821,7 @@
       "id": 6200,
       "name": "Kenwood Built-in Set (Gas Oven 60 cm OVG60.000SS + Built-in Gas Hob 90 cm 5 Burners HOB90.000SS + Built-in Hood 90 cm Stainless Steel HOD90.655SS )",
       "brand": "Kenwood",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "HOD90.655SS",
       "price_after": 36550,
       "price_before": 40205,
@@ -183858,7 +183836,6 @@
       "scraped": true,
       "width_cm": 60,
       "burners": 5,
-      "product_key": "KENWOOD:HOD90655SS",
       "history": [
         {
           "date": "2026-11-05",
@@ -183874,7 +183851,7 @@
       "id": 6201,
       "name": "Kenwood Built-in Set (60 cm – Gas Oven OVG60.000SS + Gas Hob HOB60.000SS + Built-in Hood HOD60.450SS)",
       "brand": "Kenwood",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "HOD60.450SS)",
       "price_after": 27970,
       "price_before": 30770,
@@ -183888,7 +183865,6 @@
       ],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "KENWOOD:HOD60450SS",
       "history": [
         {
           "date": "2026-11-05",
@@ -184202,7 +184178,7 @@
       "id": 6212,
       "name": "Fresh Built-In Oven 60 cm Gas with Gas Grill Black 20515",
       "brand": "Fresh",
-      "category": "فرن",
+      "category": "باكدج",
       "model": null,
       "price_after": 11310,
       "price_before": 15385,
@@ -184861,7 +184837,7 @@
       "id": 6234,
       "name": "Fresh Built-in Oven 60 cm Stainless Steel Gas Oven with Gas Grill 19801",
       "brand": "Fresh",
-      "category": "فرن",
+      "category": "باكدج",
       "model": null,
       "price_after": 11570,
       "price_before": 15745,
@@ -185337,7 +185313,7 @@
       "id": 6250,
       "name": "BOSCH Gas Built-in Oven 60 Cm With Electric Grill St HGL10E150",
       "brand": "Bosch",
-      "category": "فرن",
+      "category": "باكدج",
       "model": "HGL10E150",
       "price_after": 35490,
       "price_before": 39040,
@@ -185351,7 +185327,6 @@
       ],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "BOSCH:HGL10E150",
       "history": [
         {
           "date": "2026-11-05",
@@ -185642,7 +185617,7 @@
       "id": 6260,
       "name": "LG Insta View Built-in Oven 60 Cm Electric with Airfryer BK x SL WSED7613S",
       "brand": "LG",
-      "category": "فرن",
+      "category": "باكدج",
       "model": "WSED7613S",
       "price_after": 55280,
       "price_before": 60810,
@@ -185657,7 +185632,6 @@
       "scraped": true,
       "capacity_liters": 76,
       "width_cm": 60,
-      "product_key": "LG:WSED7613S",
       "history": [
         {
           "date": "2026-11-05",
@@ -185850,7 +185824,7 @@
       "id": 6267,
       "name": "Fresh Built-In Hood with Chimney 90 cm Stainless Steel 16045",
       "brand": "Fresh",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": null,
       "price_after": 7130,
       "price_before": 8315,
@@ -186054,7 +186028,7 @@
       "id": 6274,
       "name": "Fresh Built-in Oven 60 Cm Gas With Electric Grill Black 8877",
       "brand": "Fresh",
-      "category": "فرن",
+      "category": "باكدج",
       "model": null,
       "price_after": 14470,
       "price_before": 16405,
@@ -186415,7 +186389,7 @@
       "id": 6286,
       "name": "Fresh Built-in Oven 60 cm Gas Black with Air Fryer 9653",
       "brand": "Fresh",
-      "category": "فرن",
+      "category": "باكدج",
       "model": null,
       "price_after": 15580,
       "price_before": 17850,
@@ -187824,7 +187798,7 @@
       "id": 6333,
       "name": "Tornado Built-in Hood 90 cm with chimney HO90PS-1",
       "brand": "Tornado",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "HO90PS",
       "price_after": 8599,
       "price_before": 9460,
@@ -187838,7 +187812,6 @@
       ],
       "scraped": true,
       "width_cm": 90,
-      "product_key": "TORNADO:HO90PS",
       "history": [
         {
           "date": "2026-11-05",
@@ -187884,7 +187857,7 @@
       "id": 6335,
       "name": "Tornado Built-in Hood 90 cm with Chimney Stainless Steel HO90DS-1",
       "brand": "Tornado",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "HO90DS",
       "price_after": 13399,
       "price_before": 14740,
@@ -187898,7 +187871,6 @@
       ],
       "scraped": true,
       "width_cm": 90,
-      "product_key": "TORNADO:HO90DS",
       "history": [
         {
           "date": "2026-11-05",
@@ -187914,7 +187886,7 @@
       "id": 6336,
       "name": "Tornado Built-in Hood 60 cm with chimney HO60PS-1",
       "brand": "Tornado",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "HO60PS",
       "price_after": 8299,
       "price_before": 9130,
@@ -187928,7 +187900,6 @@
       ],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "TORNADO:HO60PS",
       "history": [
         {
           "date": "2026-11-05",
@@ -187944,7 +187915,7 @@
       "id": 6337,
       "name": "Tornado Built-in Hood 60 cm with chimney HO60DS-1",
       "brand": "Tornado",
-      "category": "شفاط",
+      "category": "باكدج",
       "model": "HO60DS",
       "price_after": 11699,
       "price_before": 12870,
@@ -187958,7 +187929,6 @@
       ],
       "scraped": true,
       "width_cm": 60,
-      "product_key": "TORNADO:HO60DS",
       "history": [
         {
           "date": "2026-11-05",
