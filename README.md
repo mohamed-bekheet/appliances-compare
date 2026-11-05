@@ -92,7 +92,7 @@ python3 tools/upsert.py new_items.json --date 2026-11-12
 | Jumia | صفحات الأقسام العربي | robots.txt بيسمح للبوت المعرّف بنفسه أقل من 200 طلب/دقيقة |
 | Ehab Center / Berty Center | WooCommerce Store API العامة | Berty من اللابتوب، ومن غير `per_page` (ممنوع في robots) |
 | Wazen | WooCommerce Store API العامة | |
-| Raneen | صفحات الأقسام | Crawl-delay 10 ثواني |
+| Raneen | صفحات الأقسام | Crawl-delay 10 ثواني؛ سوق فيه بائعين، السعر بتاع البائع المعروض |
 | Azmy | صفحات الأقسام (`?start=`) | |
 | Al Reyada | Shopify `/products.json` | |
 | Carrefour | أول صفحة بس من كل قسم | من اللابتوب؛ `?currentPage=` ممنوع في robots.txt |
