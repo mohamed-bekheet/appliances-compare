@@ -1736,7 +1736,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/washers-dryers/samsung-washing-machine-8-kg-1400-rpm-inverter-motor-with-eco-bubble-technology-inox-ww80t4040cx1as.html"
     },
     {
       "id": 58,
@@ -1873,14 +1874,15 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://www.carrefouregypt.com/mafegy/ar/washing-machine/zanussi-wm-zwf8221bl8-459-tc2-1200/p/656974"
     },
     {
       "id": 75,
       "name": "غسالة ملابس فرونت لودر - بخار، Wi-Fi، Origin Inverter",
       "brand": "Toshiba",
       "category": "غسالة",
-      "model": "TW-BK19S9EG",
+      "model": "TW-BK100GF4EG(MK)",
       "capacity_kg": 9,
       "spin_rpm": 1400,
       "features": [
@@ -1913,7 +1915,9 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "model_note": "اتصحح من TW-BK19S9EG حسب صفحة توشيبا على كارفور (نفس السعر واللون والمواصفات)",
+      "url": "https://www.carrefouregypt.com/mafegy/en/c/05386"
     },
     {
       "id": 76,
@@ -1992,7 +1996,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/washers-dryers/fresh-g2-washing-and-dryer-machine-107-kgs-inverter-direct-drive-1400-rpm-dark-silver-500017744.html"
     },
     {
       "id": 61,
@@ -2026,7 +2031,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/washers-dryers/beko-washing-machine-full-automatic-digital-10-kg-1600-rpm-steam-inverter-gray-b3wfu501040mci.html"
     },
     {
       "id": 62,
@@ -2065,7 +2071,9 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/manufacturer/hitachi.html",
+      "url_note": "صفحة الماركة (ملقيتش رابط المنتج نفسه)"
     },
     {
       "id": 63,
@@ -2099,7 +2107,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/washers-dryers/hisense-full-automatic-washing-machine-9-kg-1400-rpm-inverter-with-steam-digital-silver-wf3v9042bseg.html"
     },
     {
       "id": 64,
@@ -2133,7 +2142,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/washers-dryers/hisense-washer-12-kg-and-dryer-8-kg-black-wd5s1245bb.html"
     },
     {
       "id": 65,
@@ -2171,7 +2181,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/washers-dryers/gorenje-washing-machine-105-kg-1400-rpm-inverter-motor-wifi-wns1x4artwifi.html"
     },
     {
       "id": 66,
@@ -2204,7 +2215,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/washers-dryers/toshiba-washing-machine-front-loading-105kg-1400-rpm-inverter-morandi-grey-tw-bk115gf4egmk.html"
     },
     {
       "id": 67,
@@ -2236,14 +2248,15 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/ar/washers-dryers/ariston-washing-machine-front-load-8-kg-inverter-1400-rpm-wfst8gwhr.html"
     },
     {
       "id": 68,
       "name": "غسالة ملابس مع مجفف فرونت لودر",
       "brand": "Hoover",
       "category": "غسالة",
-      "model": "Hoover-9-5-washer-dryer",
+      "model": "H3DPS495TAMBBELA",
       "capacity_kg": 9,
       "dryer_capacity_kg": 5,
       "spin_rpm": 1400,
@@ -2270,7 +2283,9 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/washers-dryers/hoover-digital-front-load-washing-machine-9-kg-inverter-fully-automatic-with-dryer-5-kg-black-h3dps495tambrela.html",
+      "product_key": "HOOVER:H3DPS495TAMBBELA"
     },
     {
       "id": 69,
@@ -2303,7 +2318,9 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/manufacturer/ariston.html",
+      "url_note": "صفحة الماركة (ملقيتش رابط المنتج نفسه)"
     },
     {
       "id": 70,
@@ -2372,7 +2389,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/washers-dryers/samsung-washing-machine-9kg-1400rpm-digital-inverter-steam-inox-ww90t4040cx1as.html"
     },
     {
       "id": 72,
@@ -2411,7 +2429,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/washers-dryers/haier-washing-machine-8kg-inverter-1400-rpm-with-steam-silver-hw80-bp14929as6.html"
     },
     {
       "id": 73,
@@ -2445,7 +2464,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://cairosales.com/en/washers-dryers/toshiba-washing-machine-t21-series-105-kg-inverter-with-ultra-fine-bubble-aroma-morandi-gray-tw-t21bu115uwegmg.html"
     },
     {
       "id": 77,
@@ -4326,6 +4346,47 @@
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05",
       "product_key": "LG:F4Y2TYGYZ"
+    },
+    {
+      "id": 120,
+      "name": "غسالة ملابس فرونت لودر - Direct Drive، بخار، Wi-Fi",
+      "brand": "LG",
+      "category": "غسالة",
+      "model": "F4R5TYG2T",
+      "capacity_kg": 8,
+      "spin_rpm": 1400,
+      "features": [
+        "Direct Drive Motor",
+        "بخار",
+        "Wi-Fi مدمج",
+        "انفرتر",
+        "لون فضي",
+        "Front Load"
+      ],
+      "energy_class": "A+++",
+      "discount_pct": 0,
+      "motor_class": "dd",
+      "motor_type": "AI Direct Drive (دفع مباشر انفرتر)",
+      "made_in": "مصر (تجميع LG)",
+      "made_in_verified": true,
+      "drum_material": "ستانلس ستيل بالكامل (حلة + رافعات)",
+      "motor_warranty_years": 10,
+      "review_summary": "على موقع بي.تك: \"أقل سعر في 30 يوم\". اسم البائع مش ظاهر على الصفحة.",
+      "price_after": 25499,
+      "price_before": 0,
+      "shop": "B.TECH",
+      "source": "btech.com",
+      "url": "https://btech.com/en/p/lg-vivace-washing-machine-8-kg-f4r5tyg2t",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 25499,
+          "price_before": 0
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "product_key": "LG:F4R5TYG2T"
     }
   ]
 }
