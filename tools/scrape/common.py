@@ -102,7 +102,7 @@ class Fetcher:
                     time.sleep(15 * (attempt + 1))
                     continue
                 self.stats["http_error"] += 1
-                log.warning("HTTP %s %s", r.status_code, url)
+                log.warning("HTTP %s %s :: %s", r.status_code, url, re.sub(r"\s+", " ", r.text[:160]))
                 return None
             except (requests.RequestException, ValueError) as e:
                 self.last[host] = time.time()

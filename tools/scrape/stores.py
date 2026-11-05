@@ -71,10 +71,26 @@ def btech(f, ctx):
     return out
 
 
+ELARABY_CATS = ["washing-machines", "tumble-dryer", "refrigerators", "deep-freezer", "freestanding-cookers",
+                "built-in-hobs-cookers", "built-in-ovens", "cookers-hoods", "dishwashers", "water-heaters"]
+
+
 # ── El Araby: sitemap (listed in robots.txt) + product pages (Magento meta tags) ──────────────
 def elaraby(f, ctx):
-    sm = f.get("https://www.elarabygroup.com/pub/media/sitemap/en.xml") or ""
-    urls = re.findall(r"<loc>([^<]+)</loc>", sm)
+    B = "https://www.elarabygroup.com"
+    urls = []
+    for smu in ("/pub/media/sitemap/en.xml", "/media/sitemap/en.xml", "/sitemap.xml"):
+        sm = f.get(B + smu) or ""
+        urls = [u for u in re.findall(r"<loc>([^<]+)</loc>", sm) if "/en/" in u and not u.endswith(".xml")]
+        if urls:
+            break
+    if not urls:   # fallback: first page of each category (robots.txt disallows ?p= paging)
+        for c in ELARABY_CATS:
+            h = f.get(f"{B}/en/electric-home-appliances/large-home-appliances/{c}")
+            if h:
+                urls += [a["href"] for a in BeautifulSoup(h, "lxml").select("a.product-item-link")]
+        urls = list(dict.fromkeys(urls))
+        log.info("elaraby: sitemap unavailable, %d products from category first pages", len(urls))
     kw = re.compile(r"washing-machine|washer|refrigerator|fridge|freezer|cooker|oven|microwave|hood|-hob|"
                     r"dishwasher|water-heater|heater|dryer|mini-bar|stove", re.I)
     urls = [u for u in urls if kw.search(u.rsplit("/", 1)[-1])]
@@ -100,6 +116,20 @@ def elaraby(f, ctx):
     return out
 
 
+def magento_prices(it):
+    """(final, old) from a Magento product tile: data-price-amount if present, else the visible price text."""
+    fp = it.select_one('[data-price-type="finalPrice"]')
+    op = it.select_one('[data-price-type="oldPrice"]')
+    if fp and fp.get("data-price-amount"):
+        return to_num(fp.get("data-price-amount")), to_num(op.get("data-price-amount")) if op else 0
+    box = it.select_one(".price-box")
+    if not box:
+        return 0, 0
+    sp = box.select_one(".special-price .price") or box.select_one(".price")
+    ol = box.select_one(".old-price .price")
+    return to_num(sp.get_text() if sp else 0), to_num(ol.get_text()) if ol else 0
+
+
 # ── Zanussi Egypt (official store, Magento; robots.txt is empty) ──────────────────────────────
 ZANUSSI_CATS = ["laundry/washing-machines", "laundry/washer-dryers", "laundry/dryers", "cooking/range-cookers",
                 "cooking/built-in-gas-hobs", "cooking/ovens", "cooking/microwaves", "cooking/hoods",
@@ -117,12 +147,10 @@ def zanussi(f, ctx):
             soup, new = BeautifulSoup(h, "lxml"), 0
             for it in soup.select(".product-item"):
                 a = it.select_one("a.product-item-link")
-                fp = it.select_one('[data-price-type="finalPrice"]')
-                if not a or not fp or a["href"] in listing:
+                price, old = magento_prices(it)
+                if not a or not price or a["href"] in listing:
                     continue
-                op = it.select_one('[data-price-type="oldPrice"]')
-                listing[a["href"]] = dict(name=a.get_text(" ", strip=True), price=to_num(fp.get("data-price-amount")),
-                                          old=to_num(op.get("data-price-amount")) if op else 0, cat_hint=c,
+                listing[a["href"]] = dict(name=a.get_text(" ", strip=True), price=price, old=old, cat_hint=c,
                                           in_stock=not it.select_one(".stock.unavailable"))
                 new += 1
             if not new:
@@ -234,14 +262,12 @@ def raneen(f, ctx):
             soup, new = BeautifulSoup(h, "lxml"), 0
             for it in soup.select(".product-item"):
                 a = it.select_one("a.product-item-link")
-                fp = it.select_one('[data-price-type="finalPrice"]')
-                if not a or not fp or a["href"] in seen:
+                price, old = magento_prices(it)
+                if not a or not price or a["href"] in seen:
                     continue
                 seen.add(a["href"])
                 new += 1
-                op = it.select_one('[data-price-type="oldPrice"]')
-                out.append(dict(name=a.get_text(" ", strip=True), price=to_num(fp.get("data-price-amount")),
-                                old=to_num(op.get("data-price-amount")) if op else 0, url=a["href"],
+                out.append(dict(name=a.get_text(" ", strip=True), price=price, old=old, url=a["href"],
                                 in_stock=not it.select_one(".stock.unavailable"), shop="Raneen", source="raneen.com",
                                 brand_hint=None, cat_hint=c.rsplit("/", 1)[-1].replace("-", " "), model_hint=None,
                                 extra=a["href"].rsplit("/", 1)[-1].replace("-", " ")))
