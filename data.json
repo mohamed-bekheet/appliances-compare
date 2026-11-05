@@ -1822,7 +1822,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://www.carrefouregypt.com/mafegy/en/washing-machine/lg-mw-vivace-8-kg-f4r5tyg2t/p/529297"
     },
     {
       "id": 74,
@@ -1955,7 +1956,8 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-05",
+      "url": "https://www.carrefouregypt.com/mafegy/en/washing-machine/lg-wm-f4y2tygyp-8kg-platinum-silver/p/662794"
     },
     {
       "id": 60,
@@ -4281,6 +4283,49 @@
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-05"
+    },
+    {
+      "id": 119,
+      "name": "غسالة ملابس فرونت لودر - Inverter، شاشة ديجيتال (أسود)",
+      "brand": "LG",
+      "category": "غسالة",
+      "model": "F4Y2TYGYZ",
+      "capacity_kg": 8,
+      "spin_rpm": 1400,
+      "features": [
+        "انفرتر",
+        "شاشة ديجيتال",
+        "لون أسود",
+        "Front Load"
+      ],
+      "energy_class": "A",
+      "dimensions": "600x550x850",
+      "price_before": 26989,
+      "price_after": 25990,
+      "discount_pct": 4,
+      "shop": "Carrefour (Electro Zone)",
+      "source": "carrefour web",
+      "url": "https://www.carrefouregypt.com/mafegy/en/washing-machine/lg-wm-f4y2tygyz-8kg-platinum-black/p/662795",
+      "in_stock": true,
+      "motor_class": "inverter",
+      "motor_type": "Inverter (ضمان 10 سنين من البائع)",
+      "made_in": "غير مؤكد",
+      "made_in_verified": false,
+      "motor_warranty_years": 10,
+      "rating": 0,
+      "reviews_count": 0,
+      "review_summary": "بائع خارجي (Electro Zone) على كارفور. متبقي قطعة واحدة. ضمان 5 سنين.",
+      "history": [
+        {
+          "date": "2026-11-05",
+          "price": 25990,
+          "price_before": 26989,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "product_key": "LG:F4Y2TYGYZ"
     }
   ]
 }
