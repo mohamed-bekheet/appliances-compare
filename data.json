@@ -887,6 +887,22 @@
       "discount_pct": 0,
       "shop": "Nomor",
       "source": "nomor app"
+    },
+    {
+      "id": 59,
+      "name": "غسالة ملابس فرونت لودر - Direct Drive، بخار، Wi-Fi",
+      "brand": "LG",
+      "category": "غسالة",
+      "model": "F4R5TYG2T",
+      "capacity_kg": 8,
+      "spin_rpm": 1400,
+      "features": ["Direct Drive Motor", "بخار", "Wi-Fi مدمج", "انفرتر", "لون فضي", "Front Load"],
+      "energy_class": "A+++",
+      "price_before": 0,
+      "price_after": 28989,
+      "discount_pct": 0,
+      "shop": "Carrefour",
+      "source": "carrefour app"
     }
   ]
 }
