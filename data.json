@@ -1,8 +1,8 @@
 {
   "meta": {
-    "last_updated": "2026-11-04",
+    "last_updated": "2026-11-05",
     "currency": "EGP",
-    "note": "Prices extracted from B.TECH promotional posts on Facebook"
+    "note": "Prices extracted from B.TECH promotional posts on Facebook, Cairo Sales, Nomor"
   },
   "products": [
     {
@@ -852,6 +852,41 @@
       "discount_pct": 40,
       "shop": "B.TECH",
       "source": "Facebook post"
+    },
+    {
+      "id": 57,
+      "name": "غسالة ملابس فرونت لودر - بخار، StayClean، Bubble Soak",
+      "brand": "Samsung",
+      "category": "غسالة",
+      "model": "WW80T4040CX1AS",
+      "capacity_kg": 8,
+      "spin_rpm": 1400,
+      "features": ["موتور انفرتر ديجيتال", "بخار 99.9% إزالة جراثيم", "StayClean", "Bubble Soak", "شاشة LED", "Internal Heater", "Pump", "Front Load", "استانلس ستيل"],
+      "programs": 10,
+      "energy_class": "A++",
+      "dimensions": "600x850x550",
+      "warranty_years": 10,
+      "price_before": 25340,
+      "price_after": 22299,
+      "discount_pct": 12,
+      "shop": "Cairo Sales",
+      "source": "cairosales.com"
+    },
+    {
+      "id": 58,
+      "name": "غسالة ملابس فرونت لودر - Direct Drive، بخار، Wi-Fi",
+      "brand": "LG",
+      "category": "غسالة",
+      "model": "F4R5TYG2T",
+      "capacity_kg": 8,
+      "spin_rpm": 1400,
+      "features": ["Direct Drive Motor", "بخار", "Wi-Fi مدمج", "انفرتر", "لون فضي", "Front Load"],
+      "energy_class": "A+++",
+      "price_before": 0,
+      "price_after": 28989,
+      "discount_pct": 0,
+      "shop": "Nomor",
+      "source": "nomor app"
     }
   ]
 }
