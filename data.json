@@ -2148,7 +2148,12 @@
       "motor_type": "Smart Inverter (الموقع مش بيحدد نوع الموتور)",
       "made_in": "مصر",
       "made_in_verified": true,
-      "drum_material": "ستانلس ستيل"
+      "drum_material": "ستانلس ستيل",
+      "rating": 5.0,
+      "reviews_count": 27,
+      "rating_source": "zanussi.com.eg (موقع الشركة)",
+      "rating_self_hosted": true,
+      "review_summary": "100% من المراجعين بيرشحوه، و100% من التقييمات 5 نجوم. التقييمات دي على موقع زانوسي نفسه، فبتتحسب بنص الوزن."
     },
     {
       "id": 93,
@@ -2187,7 +2192,12 @@
       "made_in": "مصر",
       "made_in_verified": true,
       "drum_material": "ستانلس ستيل",
-      "motor_warranty_years": 10
+      "motor_warranty_years": 10,
+      "rating": 5.0,
+      "reviews_count": 5688,
+      "rating_source": "zanussi.com.eg (موقع الشركة)",
+      "rating_self_hosted": true,
+      "review_summary": "99% من المراجعين بيرشحوه: 97% خمس نجوم و3% أربع نجوم. التقييمات دي على موقع زانوسي نفسه، فبتتحسب بنص الوزن."
     },
     {
       "id": 94,
