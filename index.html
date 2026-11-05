@@ -457,7 +457,7 @@ function filterSummary() {
   const g = id => document.getElementById(id);
   const bits = [];
   bits.push(activeTab || 'كل الأقسام');
-  if (g('capFilter').value)   bits.push(g('capFilter').value + ' كجم');
+  if (g('capFilter').value)   bits.push(g('capFilter').value + ' ' + capUnit());
   if (g('motorFilter').value) bits.push('موتور ' + (MOTOR_LABEL[g('motorFilter').value] || g('motorFilter').value));
   if (g('brandFilter').value) bits.push(g('brandFilter').value);
   if (g('shopFilter').value)  bits.push(g('shopFilter').value);
@@ -640,10 +640,21 @@ function jumpTo(id) {
 }
 
 // ─── Filters ─────────────────────────────────────────────
-function populateFilters() {
-  const caps = [...new Set(ALL.filter(d=>d.capacity_kg).map(d => d.capacity_kg))].sort((a,b)=>a-b);
+function capOf(d){ return d.capacity_kg || d.capacity_liters || 0; }
+function capUnit(){ return activeTab === 'ثلاجة' ? 'لتر' : 'كجم'; }
+function refreshCapOptions() {
   const cSel = document.getElementById('capFilter');
-  caps.forEach(c => { const o=document.createElement('option'); o.value=c; o.textContent=c+' كجم'; cSel.appendChild(o); });
+  const prev = cSel.value;
+  const pool = ALL.filter(d => capOf(d) && (!activeTab || d.category === activeTab));
+  const useL = activeTab === 'ثلاجة';
+  let vals = [...new Set(pool.map(d => capOf(d)))].sort((a,b)=>a-b);
+  cSel.innerHTML = '<option value="">كل السعات</option>';
+  vals.forEach(c => { const o=document.createElement('option'); o.value=c; o.textContent=c+' '+(useL?'لتر':'كجم'); cSel.appendChild(o); });
+  cSel.value = vals.map(String).includes(prev) ? prev : '';
+}
+
+function populateFilters() {
+  refreshCapOptions();
   const brands = [...new Set(ALL.map(d => d.brand))].sort();
   const shops  = [...new Set(ALL.map(d => d.shop))].sort();
   const bSel   = document.getElementById('brandFilter');
@@ -674,7 +685,7 @@ function applyFilters() {
 
   filtered = ALL.filter(d =>
     (!activeTab || d.category === activeTab) &&
-    (!cap   || String(d.capacity_kg) === cap) &&
+    (!cap   || String(capOf(d)) === cap) &&
     (!motor || (d.motor_class || '') === motor) &&
     (!brand  || d.brand === brand) &&
     (!shop   || d.shop  === shop)  &&
@@ -878,6 +889,7 @@ document.getElementById('tabs').addEventListener('click', e => {
   document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
   t.classList.add('active');
   activeTab = t.dataset.cat;
+  refreshCapOptions();
   applyFilters();
 });
 
