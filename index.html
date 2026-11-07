@@ -253,6 +253,17 @@ tbody tr.best-deal td:first-child { border-right: 3px solid #ffc107; }
 .rec-head h3 { font-size: 1rem; color: var(--dark); }
 .rec-head small { color: var(--muted, #777); font-size: .72rem; }
 .rec-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 10px; }
+.thumb { position: relative; background: #fff; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px solid #f0f0f0; }
+.thumb::before { content: attr(data-ic); position: absolute; opacity: .35; }
+.thumb img { position: relative; width: 100%; height: 100%; object-fit: contain; background: #fff; }
+.thumb-s { width: 56px; height: 56px; } .thumb-s::before { font-size: 1.4rem; }
+.thumb-m { width: 64px; height: 64px; } .thumb-m::before { font-size: 1.6rem; }
+.thumb-l { width: 100%; height: 160px; margin: 6px 0 8px; } .thumb-l::before { font-size: 3rem; }
+#histWrap .thumb-l { width: 130px; height: 130px; margin: 0 0 0 12px; }
+#imgZoom { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.75); z-index: 300; align-items: center; justify-content: center;
+  flex-direction: column; gap: 10px; color: #fff; cursor: zoom-out; }
+#imgZoom.open { display: flex; }
+#imgZoom img { max-width: 90vw; max-height: 80vh; background: #fff; border-radius: 10px; padding: 10px; object-fit: contain; }
 .rec-card { border-radius: 10px; padding: 12px; background: #fafafa; border: 1px solid #eee; cursor: pointer; }
 .rec-card.top { background: linear-gradient(135deg,#fff8e1,#fff3e0); border-color: #ffb74d; }
 .rec-label { font-size: .75rem; font-weight: 700; color: var(--orange); margin-bottom: 4px; }
@@ -381,6 +392,7 @@ tr.best-value td { background: #e8f5e9 !important; }
 
 <div id="recArea"></div>
 <main id="mainArea"></main>
+<div id="imgZoom" onclick="this.classList.remove('open')"></div>
 
 <!-- Compare bar -->
 <div class="compare-bar" id="compareBar">
@@ -534,6 +546,7 @@ function renderRec() {
   const card = (label, d, extra='', cls='') => `
     <div class="rec-card ${cls}" onclick="jumpTo(${d.id})">
       <div class="rec-label">${label}</div>
+      <div style="float:left;margin-right:8px">${thumb(d, 'm')}</div>
       <span class="brand-badge ${brandClass(d.brand)}">${d.brand}</span> <small>${d.model||''}</small>
       <div class="rec-name">${d.name}</div>
       <div class="rec-price">${d.price_after.toLocaleString()} ج <small style="font-weight:400;font-size:.72rem">· ${d.shop}</small></div>
@@ -650,6 +663,7 @@ function openHistory(id) {
       <td>${vsCheap}</td><td>${vsFirst}</td><td>${h.length}</td><td>${x.last_seen||'-'}</td></tr>`;
   }).join('');
   document.getElementById('histWrap').innerHTML = `
+    <div style="float:left">${thumb(d, 'l')}</div>
     <h2>📈 ${d.brand} ${d.model||''}</h2>
     <div class="hist-note">${d.name}</div>
     <div style="overflow-x:auto"><table class="hist-tbl" style="width:100%;border-collapse:collapse">
@@ -899,7 +913,7 @@ function buildMS() {
       e.target.checked ? SEL[k].add(e.target.value) : SEL[k].delete(e.target.value); applyFilters(); };
   });
   document.addEventListener('click', closeAllMS);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllMS(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeAllMS(); document.getElementById('imgZoom').classList.remove('open'); } });
 }
 function closeAllMS() { document.querySelectorAll('.ms.open').forEach(b => { b.classList.remove('open'); b.querySelector('.ms-btn').setAttribute('aria-expanded','false'); }); }
 
@@ -1141,6 +1155,28 @@ function render() {
 
 function brandClass(brand) { return 'b-' + brand.replace(/\s+/g,''); }
 
+// Product photo: the listing's own image, else any other shop's image of the same model.
+// Images are loaded from the store's CDN (lazy, no referrer); a broken one falls back to the category icon.
+const CAT_ICON = {'غسالة':'🫧','مجفف':'🌀','ثلاجة':'🧊','ديب فريزر':'❄️','بوتاجاز':'🔥','فرن':'🍞','مسطح غاز':'🔘','مسطح كهرباء':'⚡',
+  'شفاط':'💨','مايكروويف':'📡','غسالة أطباق':'🍽️','سخان':'🚿','باكدج':'📦'};
+function imgOf(d) {
+  if (d.image) return d.image;
+  for (const x of groupOf(d)) if (x.image) return x.image;
+  return null;
+}
+function thumb(d, size) {
+  const u = imgOf(d), ic = CAT_ICON[d.category] || '📦';
+  return `<div class="thumb thumb-${size}" data-ic="${ic}">${u ? `<img src="${esc(u)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">` : ''}</div>`;
+}
+function zoomImg(ev, id) {
+  ev.stopPropagation();
+  const d = ALL.find(x => x.id === id), u = d && imgOf(d);
+  if (!u) return;
+  const z = document.getElementById('imgZoom');
+  z.innerHTML = `<img src="${esc(u)}" referrerpolicy="no-referrer" alt=""><div>${esc(d.brand)} ${esc(d.model || '')}</div>`;
+  z.classList.add('open');
+}
+
 function featureTags(features) {
   return (features||[]).slice(0,4).map(f => `<span class="tag">${f}</span>`).join(' ');
 }
@@ -1178,6 +1214,7 @@ function renderTable() {
   const best = bestByCategory();
   const cols = [
     {k:'',      label:'#'},
+    {k:'',      label:''},
     {k:'brand', label:'الماركة ▾'},
     {k:'name',  label:'الجهاز'},
     {k:'category', label:'الفئة'},
@@ -1204,6 +1241,7 @@ function renderTable() {
     const isBV = d.id === bestVal;
     return `<tr data-id="${d.id}" class="${isBV?'best-value':isBest?'best-deal':''}">
       <td>${i+1}${isBV?' 🏆':''}${isBest?' ⭐':''}</td>
+      <td onclick="zoomImg(event, ${d.id})" style="cursor:zoom-in;padding:4px">${thumb(d, 's')}</td>
       <td><span class="brand-badge ${brandClass(d.brand)}">${d.brand}</span></td>
       <td style="max-width:220px;line-height:1.4">${d.url?`<a href="${d.url}" target="_blank" rel="noopener" style="color:inherit">${d.name} ↗</a>`:d.name}${d.in_stock===false?' <span class="tag" style="background:#ffebee;color:#c62828">نفذت</span>':''}${d.model?`<br><small style="color:#888">${d.model}</small>`:''}</td>
       <td><span class="tag">${d.category}</span></td>
@@ -1243,6 +1281,7 @@ function renderCards() {
           </label>
         </div>
       </div>
+      <div onclick="zoomImg(event, ${d.id})" style="cursor:zoom-in">${thumb(d, 'l')}</div>
       <div class="card-name">${d.name}</div>
       <div class="card-price">
         <span class="card-price-after">${d.price_after>0?d.price_after.toLocaleString()+' ج':'-'}</span>${priceChange(d)}

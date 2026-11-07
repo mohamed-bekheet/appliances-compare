@@ -12519,14 +12519,14 @@
       "brand": "Toshiba",
       "category": "غسالة",
       "model": "AEW-8460SP",
-      "price_after": 140,
+      "price_after": 13819,
       "price_before": 0,
       "discount_pct": 0,
       "shop": "B.TECH",
       "source": "btech.com",
       "url": "https://btech.com/en/p/toshiba-top-loading-washing-machine-8-kg-white-aew-8460sp",
       "in_stock": true,
-      "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
+      "price_note": "B.TECH عرض السعر 140 ج (غالباً قسط شهري) في 2026-11-05؛ اتشال كسعر غير منطقي.",
       "capacity_kg": 8,
       "motor_class": "unknown",
       "features": [
@@ -12536,12 +12536,6 @@
         {
           "date": "2026-11-05",
           "price": 13819,
-          "price_before": 0,
-          "in_stock": true
-        },
-        {
-          "date": "2026-11-05",
-          "price": 140,
           "price_before": 0,
           "in_stock": true
         }
@@ -25401,272 +25395,6 @@
       "last_seen": "2026-11-06"
     },
     {
-      "id": 794,
-      "name": "شفاط حمام ومطبخ أرورا (Aurora) 100 مم (4 بوصة) أكسيال أبيض أوتوماتيكي بقوة شفط 98م³/ساعة للحوائط والأسقف والزجاج – موديل ROMANA 100",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "ROMANA",
-      "price_after": 3990,
-      "price_before": 4469,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-حمام-أرورا",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 3990,
-          "price_before": 4469,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 795,
-      "name": "شفاط حمام أرورا (Aurora) 150 مم (6 بوصة) أكسيال أبيض بمؤقت Timer وشتر أوتوماتيكي 320م³/ساعة للحوائط والأسقف والزجاج – موديل ROMANA 150 T",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "ROMANA",
-      "price_after": 5690,
-      "price_before": 6373,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-حمام-أرورا-إسباني-150مم",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 5690,
-          "price_before": 6373,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 796,
-      "name": "شفاط حمام أرورا (Aurora) 100 مم (4 بوصة) أكسيال أبيض بمؤقت Timer وشتر أوتوماتيكي 98م³/ساعة للحوائط والأسقف والزجاج – موديل ROMANA 100 T",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "ROMANA",
-      "price_after": 4690,
-      "price_before": 5253,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-حمام-أرورا-إسباني",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 4690,
-          "price_before": 5253,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 797,
-      "name": "شفاط حمام ومطبخ أرورا (Aurora) 100 مم (4 بوصة) مدمج فائق النحافة بمؤقت Timer وحساس رطوبة Hygro ومؤشر إضاءة 98م³/ساعة – موديل GENO 100 T H",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "GENO",
-      "price_after": 3990,
-      "price_before": 4469,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-حمام-أرورا-إسباني-100مم-فائق",
-      "in_stock": true,
-      "features": [
-        "بلت إن"
-      ],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 3990,
-          "price_before": 4469,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 798,
-      "name": "شفاط حمام ومطبخ أرورا Aurora 150 مم (6 بوصة) مدمج فائق النحافة مع مؤشر إضاءة تشغيل 320م³/ساعة – موديل GENO 150",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "GENO",
-      "price_after": 3990,
-      "price_before": 4469,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-حمام-ومطبخ-أرورا-إسباني-150مم",
-      "in_stock": true,
-      "features": [
-        "بلت إن"
-      ],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 3990,
-          "price_before": 4469,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 799,
-      "name": "شفاط حمام ومطبخ أرورا إسباني 100 مم (4 بوصة) مدمج فائق النحافة مع مؤشر إضاءة تشغيل 98م³/ساعة – موديل Aurora GENO 100",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "AURORA",
-      "price_after": 2990,
-      "price_before": 3349,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-حمام-أرورا-إسباني-100مم",
-      "in_stock": true,
-      "features": [
-        "بلت إن"
-      ],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 2990,
-          "price_before": 3349,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 800,
-      "name": "شفاط حمام ومطبخ أرورا (Aurora) 100 مم (4 بوصة) جيل جديد بشتر أوتوماتيكي ونظام تثبيت سريع Quick Fix Grip تشغيل فائق الهدوء 38dB – موديل GIULIA 100",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "GIULIA",
-      "price_after": 4890,
-      "price_before": 5477,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-حمام-أرورا-إسباني-100مم-شتر-تثبيت-سريع",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 4890,
-          "price_before": 5477,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 801,
-      "name": "شفاط حمام ومطبخ أرورا (Aurora) 150 مم (6 بوصة) جيل جديد بشتر أوتوماتيكي ونظام تثبيت سريع Quick Fix Grip قوة شفط 320م³/ساعة هادئ – موديل GIULIA 150",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "GIULIA",
-      "price_after": 5990,
-      "price_before": 6709,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-حمام-ومطبخ-أرورا-إسباني-150مم-شتر-تثبيت-سريع",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 5990,
-          "price_before": 6709,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 802,
-      "name": "شفاط حمام ومطبخ أرورا (Aurora) 100 مم (4 بوصة) أسود بـ تايمر Timer وحساس رطوبة Hygro ومحرك Class B صامت جداً 26dB درجة حماية IP44 – موديل ARDENI 100 T B H",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "ARDENI",
-      "price_after": 6790,
-      "price_before": 7605,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-حمام-أرورا-إسباني-100مم-أسود-تايمر-ورطوبة",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 6790,
-          "price_before": 7605,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 803,
-      "name": "شفاط حمام ومطبخ أرورا (Aurora) 100 مم (4 بوصة) قوة شفط 105 م³/ساعة أسود بـ تايمر Timer وشتر محرك فئة Class B هادئ جداً 35dB درجة حماية IP44 – موديل ARDENI 100 T B",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "ARDENI",
-      "price_after": 4790,
-      "price_before": 5365,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-حمام-أرورا-إسباني-100مم-أسود",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 4790,
-          "price_before": 5365,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
       "id": 804,
       "name": "شفاط دكت خطي مدمج للمواسير أرورا (Aurora) 100 مم (4 بوصة) أبيض للمجاري الصلبة والمرنة هادئ وموفر – موديل ADRIANA 100",
       "brand": "ارورا",
@@ -27673,86 +27401,6 @@
       "last_seen": "2026-11-06"
     },
     {
-      "id": 873,
-      "name": "شفاط حمام أرورا (Aurora) أسود فائق النحافة، تدفق هواء 110 م³/ساعة، مؤقت رقمي موديل PRATI 100 T B",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "PRATI",
-      "price_after": 4590,
-      "price_before": 5141,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-أرورا-إسباني-أسود-تايمر",
-      "in_stock": false,
-      "features": [],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 4590,
-          "price_before": 5141,
-          "in_stock": false
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 874,
-      "name": "شفاط حمام ارورا 15 سم – قوة شفط 85 م³/ساعة – عزل مزدوج – أبيض – موديل – SLF100T",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "SLF100T",
-      "price_after": 4490,
-      "price_before": 5029,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/aurora-exhaust-fan-15cm-with-timer-slf100t-white",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "product_key": "ارورا:SLF100T",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 4490,
-          "price_before": 5029,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 875,
-      "name": "شفاط حمام ارورا 20 سم – قوة شفط 330 م³/ساعة – عزل مزدوج – أبيض – موديل – SLF150T",
-      "brand": "ارورا",
-      "category": "شفاط",
-      "model": "SLF150T",
-      "price_after": 4990,
-      "price_before": 5589,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/aurora-air-extractor-20cm-with-timer-slf150t-white",
-      "in_stock": false,
-      "features": [],
-      "scraped": true,
-      "product_key": "ارورا:SLF150T",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 4990,
-          "price_before": 5589,
-          "in_stock": false
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
       "id": 876,
       "name": "شفاط مطبخ فاليريو (Valerio) 90 سم ديكوري أسود، قوة شفط توربو 1000 م³/ساعة، ريموت كنترول، موتور 3 سرعات – موديل VCD90ND PRO",
       "brand": "Valerio",
@@ -29166,7 +28814,7 @@
       "id": 927,
       "name": "بوتاجاز كهربائي بلت إن أوشن 90 سم زجاج سيراميك – موديل – OHVR9401HNTC",
       "brand": "Ocean",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "OHVR9401HNTC",
       "price_after": 21190,
       "price_before": 23733,
@@ -29249,7 +28897,7 @@
       "id": 930,
       "name": "بوتاجاز كهربائي أوشن بلت إن 60 سم - 4 مناطق طهي – موديل – OEHF 64 I",
       "brand": "Ocean",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": null,
       "price_after": 9250,
       "price_before": 10360,
@@ -30181,7 +29829,7 @@
       "id": 962,
       "name": "بوتاجاز كهربائي أوشن بلت إن 2 مناطق طهي – موديل – OHVR 32 HN TC",
       "brand": "Ocean",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": null,
       "price_after": 6790,
       "price_before": 7605,
@@ -39862,7 +39510,7 @@
       "id": 1289,
       "name": "بوتاجاز كهربائي كومتيل LX-7011 شعلة واحدة بقدرة 1500 وات – جسم معدني متين",
       "brand": "Kumtel",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "LX-7011",
       "price_after": 1090,
       "price_before": 1221,
@@ -48729,7 +48377,7 @@
       "id": 1593,
       "name": "بوتاجاز كهربائي كومتيل مزدوج 2500 وات ستانلس ستيل - موديل - LX-7021",
       "brand": "Kumtel",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "LX-7021",
       "price_after": 1990,
       "price_before": 2229,
@@ -58423,32 +58071,6 @@
       "last_seen": "2026-11-06"
     },
     {
-      "id": 1929,
-      "name": "شفاط هواء ديكور 4 بوصة | للحمامات والجبسيون بورد | تهوية هادئة من زيفين",
-      "brand": "زيفين",
-      "category": "شفاط",
-      "model": null,
-      "price_after": 750,
-      "price_before": 1000,
-      "discount_pct": 25,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-هواء-ديكور-للجبسيون-بورد-4-بوصة-15x15-س",
-      "in_stock": false,
-      "features": [],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 750,
-          "price_before": 1000,
-          "in_stock": false
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
       "id": 1930,
       "name": "شفاط مطبخ هرمي جورينيا – 90 سم | قوة شفط 298 م³/ساعة - موديل - PWHC928EX",
       "brand": "Gorenje",
@@ -58470,58 +58092,6 @@
           "date": "2026-11-05",
           "price": 9999,
           "price_before": 11199,
-          "in_stock": false
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 1931,
-      "name": "شفاط هواء ديكور 5 بوصة | للحمامات والجبسيون بورد | تدفق هواء قوي من زيفين",
-      "brand": "زيفين",
-      "category": "شفاط",
-      "model": null,
-      "price_after": 850,
-      "price_before": 1118,
-      "discount_pct": 24,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-هواء-ديكور",
-      "in_stock": false,
-      "features": [],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 850,
-          "price_before": 1118,
-          "in_stock": false
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 1932,
-      "name": "شفاط هواء ديكور 6 بوصة | للحمامات والجبسيون بورد | تهوية قوية من زيفين",
-      "brand": "زيفين",
-      "category": "شفاط",
-      "model": null,
-      "price_after": 950,
-      "price_before": 1301,
-      "discount_pct": 27,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/شفاط-هواء",
-      "in_stock": false,
-      "features": [],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 950,
-          "price_before": 1301,
           "in_stock": false
         }
       ],
@@ -61875,32 +61445,6 @@
           "price": 6100,
           "price_before": 6832,
           "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 2043,
-      "name": "مجفف الشعر راش براش D3 Ultra-Black – 2400 وات، أيوني، مع ديفيوزر وفوهتين",
-      "brand": "راش براش",
-      "category": "مجفف",
-      "model": null,
-      "price_after": 3490,
-      "price_before": 3909,
-      "discount_pct": 11,
-      "shop": "Al Reyada",
-      "source": "alreyadastore.com",
-      "url": "https://alreyadastore.com/products/مجفف-الشعر-d3-ultra-أسود-من-راش-براش",
-      "in_stock": false,
-      "features": [],
-      "scraped": true,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 3490,
-          "price_before": 3909,
-          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -76050,33 +75594,6 @@
       "last_seen": "2026-11-06"
     },
     {
-      "id": 2516,
-      "name": "Generic Wire Refrigerator Shelf Set for Toshiba 14 and 16 ft Refrigerators White",
-      "brand": "Toshiba",
-      "category": "ثلاجة",
-      "model": null,
-      "price_after": 450,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/1e6ed248-7100-4a43-996e-fb9b1166b99e",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "capacity_feet": 16,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 450,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
       "id": 2517,
       "name": "Global Electronics Gas Cooker , 4 Burners , Black Gold",
       "brand": "Global Electronics",
@@ -76314,33 +75831,6 @@
         {
           "date": "2026-11-05",
           "price": 4590,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 2525,
-      "name": "Generic Wire Refrigerator Shelf for Toshiba 14 FT and 16 FT Refrigerators White",
-      "brand": "Toshiba",
-      "category": "ثلاجة",
-      "model": null,
-      "price_after": 185,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/29e64994-13aa-4afd-9cc3-06d2795a5435",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "capacity_feet": 14,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 185,
           "price_before": 0,
           "in_stock": true
         }
@@ -76830,33 +76320,6 @@
         {
           "date": "2026-11-05",
           "price": 51999,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 2543,
-      "name": "Generic Wire Refrigerator Shelf Set for Toshiba 16 ft refrigerators, with 3 doors White",
-      "brand": "Toshiba",
-      "category": "ثلاجة",
-      "model": null,
-      "price_after": 450,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/47c3e73e-4c93-4ff6-9148-470da37912cc",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "capacity_feet": 16,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 450,
           "price_before": 0,
           "in_stock": true
         }
@@ -79609,7 +79072,7 @@
       "id": 2638,
       "name": "Purity Electric Cooker , 4 Burners , Black - DV6056XXVB",
       "brand": "Purity",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "DV6056XXVB",
       "price_after": 33199,
       "price_before": 0,
@@ -81309,33 +80772,6 @@
       "last_seen": "2026-11-06"
     },
     {
-      "id": 2697,
-      "name": "Generic Wire Refrigerator Shelf Set for Toshiba 14ft and 16 ft refrigerators White",
-      "brand": "Toshiba",
-      "category": "ثلاجة",
-      "model": null,
-      "price_after": 500,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/da6a4c06-47d6-402e-96fd-a4b44268e56b",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "capacity_feet": 14,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 500,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
       "id": 2698,
       "name": "Purity ROSE PLUS BL Built-In Decorative Hood , 90 Centimeter , Black",
       "brand": "Purity",
@@ -82196,33 +81632,6 @@
         {
           "date": "2026-11-05",
           "price": 9500,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 2728,
-      "name": "Generic Refrigerator Shelf for Toshiba refrigerators 14 and 16 FT White",
-      "brand": "Toshiba",
-      "category": "ثلاجة",
-      "model": null,
-      "price_after": 180,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "B.TECH",
-      "source": "btech.com",
-      "url": "https://btech.com/en/p/fbbfd023-0171-4818-bf1b-a11ce0f6d63b",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "capacity_feet": 16,
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 180,
           "price_before": 0,
           "in_stock": true
         }
@@ -96038,7 +95447,7 @@
       "id": 3147,
       "name": "Gorenje Electric cooker 4 Plates Ceramic Black – GEC6A11SG",
       "brand": "Gorenje",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "GEC6A11SG",
       "price_after": 41136,
       "price_before": 0,
@@ -100766,7 +100175,7 @@
       "id": 3288,
       "name": "Built-In Hob Beko -in Digital Electric Stove 30cm Black Model HDMC 32400 TX",
       "brand": "Beko",
-      "category": "مسطح غاز",
+      "category": "مسطح كهرباء",
       "model": null,
       "price_after": 8819,
       "price_before": 0,
@@ -101324,7 +100733,7 @@
       "id": 3304,
       "name": "Built-In Hob Beko -In Digital Electric Stove With Timer, 60 Cm – Black – HIC 64503 TX",
       "brand": "Beko",
-      "category": "مسطح غاز",
+      "category": "مسطح كهرباء",
       "model": null,
       "price_after": 19529,
       "price_before": 0,
@@ -110133,7 +109542,7 @@
       "id": 3587,
       "name": "Fresh موقد كهربائي طازج 2500 واط، شعلتان، مصنوع من الفولاذ المقاوم للصدأ EC01-2HP",
       "brand": "Fresh",
-      "category": "مسطح غاز",
+      "category": "مسطح كهرباء",
       "model": "EC01-2HP",
       "price_after": 2090,
       "price_before": 2499,
@@ -110189,7 +109598,7 @@
       "id": 3589,
       "name": "Fresh موقد كهربائي طازج 1500 واط، شعلة واحدة، مصنوع من الفولاذ المقاوم للصدأ EC01-1HP",
       "brand": "Fresh",
-      "category": "مسطح غاز",
+      "category": "مسطح كهرباء",
       "model": "EC01-1HP",
       "price_after": 1175,
       "price_before": 1499,
@@ -110395,7 +109804,7 @@
       "id": 3596,
       "name": "Kitchen Line موقد دومينو الكهربائي المدمج 30 سم، 2 موقد كهربائي، ستانلس ستيل، إشعال ذاتي، أمان كامل، إيطالي، ZP.DN2003",
       "brand": "Kitchen Line",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "ZP.DN2003",
       "price_after": 5649,
       "price_before": 16999,
@@ -110545,7 +109954,7 @@
       "id": 3601,
       "name": "Kitchen Line موقد كهربائي مدمج 30 سم، سيراميك بإطار من الفولاذ المقاوم للصدأ، عنصران للتسخين، إشعال ذاتي، أمان كامل، إيطالي، فضي ZP.V2004",
       "brand": "Kitchen Line",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "ZP.V2004",
       "price_after": 11839,
       "price_before": 29999,
@@ -137741,7 +137150,7 @@
       "id": 4503,
       "name": "موقد كهربائي مدمج، 2 شعلة من الفولاذ المقاوم للصدأ من البا، 30 سم - موديل EN30-02TXD",
       "brand": "Elba",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "EN30-02TXD",
       "price_after": 8995,
       "price_before": 0,
@@ -138072,7 +137481,7 @@
       "id": 4514,
       "name": "بوتاجاز كهربائي قائم بذاته بيورتي ، 4 شعله ، 60 × 60 × 85 سم ،DV6056XXVB - اسود",
       "brand": "Purity",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "DV6056XXVB",
       "price_after": 31410,
       "price_before": 36945,
@@ -138100,7 +137509,7 @@
       "id": 4515,
       "name": "بوتاجاز كهربائي قائم بذاته بيورتي ، 4 شعله ، 60 × 60 × 85 سم ،VF6056XXVB - اسود",
       "brand": "Purity",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "VF6056XXVB",
       "price_after": 22935,
       "price_before": 26945,
@@ -144144,7 +143553,7 @@
       "id": 4713,
       "name": "بوتاجاز كهربائي مدمج من فريش، 2 شعلة، 500013942 - اسود",
       "brand": "Fresh",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "500013942BLK131MFRCOBI13942000L007",
       "price_after": 6144,
       "price_before": 6754,
@@ -180764,7 +180173,7 @@
       "id": 5942,
       "name": "Sokany Flat Cooker 600W 1 Burner Black SK-5119",
       "brand": "Sokany",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "SK-5119",
       "price_after": 300,
       "price_before": 335,
@@ -181939,7 +181348,7 @@
       "id": 5982,
       "name": "Sokany Flat Cooker 1 Burner 1000 watt Silver SK-5114",
       "brand": "Sokany",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "SK-5114",
       "price_after": 370,
       "price_before": 405,
@@ -182460,7 +181869,7 @@
       "id": 6000,
       "name": "Fresh Flat Cooker 2500W Stainless Steel 14216",
       "brand": "Fresh",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": null,
       "price_after": 1865,
       "price_before": 2050,
@@ -182486,7 +181895,7 @@
       "id": 6001,
       "name": "Fresh Flat Cooker 1 Burner Ceramic Black 13423",
       "brand": "Fresh",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": null,
       "price_after": 1750,
       "price_before": 1925,
@@ -182513,7 +181922,7 @@
       "id": 6002,
       "name": "Fresh Flat Cooker 1 Burner 1500 Watt 13490",
       "brand": "Fresh",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": null,
       "price_after": 1150,
       "price_before": 1265,
@@ -184391,7 +183800,7 @@
       "id": 6068,
       "name": "Fresh Hot Plate Double 2800 W Ceramic F-13424",
       "brand": "Fresh",
-      "category": "بوتاجاز",
+      "category": "مسطح كهرباء",
       "model": "F-13424",
       "price_after": 2825,
       "price_before": 3110,
@@ -201361,7 +200770,7 @@
       "id": 6657,
       "name": "Sokany موقد كهربائي سوكاني 1000 واط بحجم كبير SK-100A",
       "brand": "Sokany",
-      "category": "مسطح غاز",
+      "category": "مسطح كهرباء",
       "model": "SK-100A",
       "price_after": 678,
       "price_before": 1500,
@@ -201403,33 +200812,6 @@
         {
           "date": "2026-11-06",
           "price": 13017,
-          "price_before": 0,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-06",
-      "last_seen": "2026-11-06"
-    },
-    {
-      "id": 6659,
-      "name": "Kumtel موقد كومتيل من الفولاذ المقاوم للصدأ - 3 شعلات",
-      "brand": "Kumtel",
-      "category": "مسطح غاز",
-      "model": null,
-      "price_after": 999,
-      "price_before": 0,
-      "discount_pct": 0,
-      "shop": "Jumia",
-      "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/kumtel-stainless-steel-cook-top-3-burners-16421167.html",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "burners": 3,
-      "history": [
-        {
-          "date": "2026-11-06",
-          "price": 999,
           "price_before": 0,
           "in_stock": true
         }
@@ -202585,33 +201967,6 @@
       "last_seen": "2026-11-06"
     },
     {
-      "id": 6701,
-      "name": "Dsp موقد غاز-بوتاجاز بشعلتين-شعلتين-أسطح قابلة للإزالة-60 سم * 33 سم",
-      "brand": "Dsp",
-      "category": "بوتاجاز",
-      "model": null,
-      "price_after": 1299,
-      "price_before": 1920,
-      "discount_pct": 32,
-      "shop": "Jumia",
-      "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/2-burners-gas-stove-dual-burner-removable-hobs-60cm33cmkd5073-white-dsp-mpg3937129.html",
-      "in_stock": true,
-      "features": [],
-      "scraped": true,
-      "width_cm": 60,
-      "history": [
-        {
-          "date": "2026-11-06",
-          "price": 1299,
-          "price_before": 1920,
-          "in_stock": true
-        }
-      ],
-      "first_seen": "2026-11-06",
-      "last_seen": "2026-11-06"
-    },
-    {
       "id": 6702,
       "name": "Fresh موقد غاز Rock، 90*60، أمان كامل، 15559",
       "brand": "Fresh",
@@ -202727,7 +202082,7 @@
       "id": 6706,
       "name": "Bosch موقد كهربائي مدمج من بوش - دومينو 30 سم - 2 شعلة - طراز PKF375CA2E",
       "brand": "Bosch",
-      "category": "مسطح غاز",
+      "category": "مسطح كهرباء",
       "model": "PKF375CA2E",
       "price_after": 24299,
       "price_before": 33999,

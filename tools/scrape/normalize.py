@@ -12,16 +12,24 @@ CATS = [  # (category, regex) — order matters
     ("مايكروويف",   r"micro\s?wave|مايكرو?ويف|ميكرو?ويف"),
     ("غسالة",       r"washer[\s&-]*dryer|washer[\s-]dryer|combo|غسالة.{0,25}مجفف|washing machine|"
                     r"\bwasher\b|front[\s-]?load|top[\s-]?load|twin tub|غسال[ةه]|غسالات"),
-    ("مجفف",        r"(?<!hair )\b(?:tumble )?dryer\b|مجفف(?! شعر)|نشافة"),
+    ("مجفف",        r"(?<!hair )\b(?:tumble )?dryer\b|مجفف(?!\s*(?:ال)?شعر)|نشافة"),
     ("ديب فريزر",   r"deep[\s-]?freezer|chest[\s-]?freezer|upright[\s-]?freezer|ديب ?فريزر|فريزر رأسي|فريزر أفقي"),
     ("ثلاجة",       r"refrigerat|refrigrator|fridge|ثلاج[ةه]|ثلاجات|mini\s?-?bar|ميني ?بار|\bfreezer\b"),
     ("شفاط",        r"\bhood\b|chimney|cooker hood|شفاط"),
-    ("مسطح كهرباء", r"(?:induction|ceramic|electric|vitro)[\w\s-]{0,12}(?:hob|cook\s?top)|مسطح (?:كهرب|سيراميك|انداكشن)"),
+    ("مسطح كهرباء", r"hot\s?plate|flat cooker|electric (?:stove|cooker)|موقد كهربائي|بوتاجاز كهربائي|سخان طهي|(?:induction|ceramic|electric|vitro)[\w\s-]{0,12}(?:hob|cook\s?top)|مسطح (?:كهرب|سيراميك|انداكشن)"),
     ("مسطح غاز",    r"\bhob\b|cook\s?top|built[\s-]?in gas|مسطح"),
     ("بوتاجاز",     r"cooker|\brange\b|gas stove|بوتاجاز|بوتجاز|موقد"),
     ("فرن",         r"\boven\b|فرن"),
 ]
 CATS = [(c, re.compile(r, re.I)) for c, r in CATS]
+
+
+# not home appliances even though they share words with them
+NOT_APPLIANCE = re.compile(r"hair\s?dryer|مجفف\s*(?:ال)?شعر|سشوار|exhaust fan|ventilat|شفاط (?:هواء|حمام)|للحمام|للجبسيون|"
+                           r"clothes dryer rack|foldable clothes|منشر", re.I)
+# lowest believable price per category (EGP); below that it's an accessory, a spare part or a broken price
+MIN_PRICE = {"غسالة": 1000, "ثلاجة": 2500, "ديب فريزر": 3000, "غسالة أطباق": 3000, "مجفف": 2000, "بوتاجاز": 1500,
+             "باكدج": 3000}
 
 
 def guess_category(*texts):
@@ -208,7 +216,10 @@ def build(raw):
     price = int(raw.get("price") or 0)
     if not name or price <= 0:
         raw["_skip"] = "no name/price"; return None
-    if ACCESSORY.search(name) and not re.search(r"washing machine|refrigerator|cooker|oven", name, re.I):
+    if NOT_APPLIANCE.search(name):
+        raw["_skip"] = "not an appliance"; return None
+    if ACCESSORY.search(name) and (not re.search(r"washing machine|refrigerator|cooker|oven", name, re.I)
+                                   or re.search(r"\bfor\b|compatible|متوافق|\bلـ", name, re.I)):
         raw["_skip"] = "accessory"; return None
     cat = guess_category(raw.get("cat_hint"), name) if raw.get("cat_hint") else guess_category(name)
     if raw.get("cat_hint") and not cat:
@@ -218,6 +229,8 @@ def build(raw):
     bundle = is_bundle(name, raw.get("url"))
     if bundle:
         cat = "باكدج"
+    if price < MIN_PRICE.get(cat, 250):
+        raw["_skip"] = "implausible price"; return None
     brand = brand_from(name, raw.get("brand_hint"))
     if not brand:
         raw["_skip"] = "no brand"; return None
@@ -239,6 +252,8 @@ def build(raw):
         "features": [f for f, rx in FEATS if rx.search(text)],
         "scraped": True,
     }
+    if raw.get("image"):
+        p["image"] = raw["image"]
     if raw.get("seller"):
         p["seller"] = raw["seller"]
     p.update(capacities(text, cat))

@@ -117,3 +117,5 @@ category, consider adding a scraper adapter instead (see above).
 - B.TECH, Raneen and Jumia are marketplaces: the price is the shown seller's and can change by seller.
 - Midea's official site shows prices only through JavaScript, so it is not scraped.
 - Model matching needs the model number in the title (about 80% of listings).
+- `image` = product photo URL on the store CDN (scraper fills it; the UI falls back to another shop's photo of the same model, then to a category icon). Hand-entered listings get an image only if they had none.
+- `normalize.py` drops accessories, non-appliances (hair dryers, bathroom fans) and prices below `MIN_PRICE` per category (e.g. a B.TECH washer once showed 140 = an installment).
