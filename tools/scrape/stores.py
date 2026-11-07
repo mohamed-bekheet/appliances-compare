@@ -22,7 +22,7 @@ def _img(el):
     if el is None:
         return None
     for im in ([el] if el.name == "img" else el.select("img")):
-        for a in ("data-src", "data-original", "data-lazy-src", "src"):
+        for a in ("data-src", "data-lazysrc", "data-original", "data-lazy-src", "src"):
             u = im.get(a) or ""
             if u.startswith("http") and not re.search(r"placeholder|loader|blank|\.svg|data:image", u, re.I):
                 return u
