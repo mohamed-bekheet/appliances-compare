@@ -2,12 +2,99 @@
 
 | store | listings | kept | with model | minutes | note |
 |---|---|---|---|---|---|
-| zanussi | 60 | 58 | 27 | 3.1 |  |
+| alreyada | 1984 | 1445 | 894 | 0.4 |  |
+| azmy | 465 | 374 | 337 | 2.2 |  |
+| btech | 1021 | 987 | 843 | 41.9 |  |
+| ehab | 650 | 625 | 517 | 1.3 |  |
+| jumia | 320 | 251 | 173 | 18.3 |  |
+| raneen | 2268 | 1413 | 1204 | 24.6 |  |
+| wazen | 1614 | 1443 | 1221 | 1.4 |  |
+| zanussi | 60 | 58 | 27 | 3.4 |  |
 
-New listings: 0, price changes: 0, unchanged: 58
+New listings: 30, price changes: 238, unchanged: 6328
 
 ## Price changes
 
+- White Whale WRH4KSS @ B.TECH: 91,999 → 8,499 (-83,500)
+- Gorenje WHI944EB @ Al Reyada: 86,685 → 16,333 (-70,352)
+- Gorenje WHT944EXGB @ Al Reyada: 78,265 → 16,950 (-61,315)
+- Bosch DWK095G60 @ Al Reyada: 79,990 → 19,290 (-60,700)
+- Bosch HBJ534ES0 @ Al Reyada: 81,997 → 23,999 (-57,998)
+- Ariston SL191LPIX @ Al Reyada: 68,085 → 11,549 (-56,536)
+- Elba ELIO95-545CG @ Al Reyada: 92,015 → 39,850 (-52,165)
+- Gorenje GW951MB @ Al Reyada: 82,050 → 30,030 (-52,020)
+- Gorenje GW951X @ Al Reyada: 85,120 → 33,367 (-51,753)
+- Gorenje GW642AB @ Al Reyada: 66,295 → 19,755 (-46,540)
+- Ecomatic S983XLPRO @ Al Reyada: 64,155 → 17,999 (-46,156)
+- Beko HCA92640BHE @ Wazen: 59,270 → 13,950 (-45,320)
+- Ecomatic S973C @ Al Reyada: 54,499 → 12,799 (-41,700)
+- Ecomatic S943XL5C @ Al Reyada: 56,875 → 17,999 (-38,876)
+- Ecomatic S963XLGC @ Al Reyada: 59,150 → 20,999 (-38,151)
+- Ecomatic S963XLC @ Al Reyada: 54,150 → 15,999 (-38,151)
+- Ecomatic S937XLC @ Al Reyada: 65,520 → 27,499 (-38,021)
+- Ecomatic S993XLC @ Al Reyada: 57,325 → 19,999 (-37,326)
+- Beko BHCA99642BHE @ Wazen: 47,600 → 11,790 (-35,810)
+- Beko BHCA96641BFBHSE @ Wazen: 53,550 → 18,545 (-35,005)
+- Purity HPT903S @ Al Reyada: 50,590 → 15,650 (-34,940)
+- Purity HPT916G @ Al Reyada: 52,390 → 17,990 (-34,400)
+- Ecomatic S907RC @ Al Reyada: 50,959 → 16,999 (-33,960)
+- Ecomatic S933C @ Al Reyada: 52,235 → 19,499 (-32,736)
+- Purity HPT906S @ Al Reyada: 46,075 → 14,390 (-31,685)
+- Beko HIMW95226SXEL @ Wazen: 45,450 → 16,645 (-28,805)
+- Purity HPT907S @ Al Reyada: 42,990 → 14,850 (-28,140)
+- Fimash D008-BXELIT @ Al Reyada: 30,589 → 5,199 (-25,390)
+- Elba EL10XLBFG @ Al Reyada: 60,585 → 37,069 (-23,516)
+- Ecomatic S997XLC @ Al Reyada: 46,410 → 22,999 (-23,411)
+- Gorenje BOG9822E00X @ Al Reyada: 82,050 → 59,000 (-23,050)
+- Ariston 6R1G1C @ Wazen: 47,500 → 24,799 (-22,701)
+- Purity HPT602G @ Al Reyada: 34,150 → 11,590 (-22,560)
+- Ecomatic S927QC @ Al Reyada: 45,499 → 22,999 (-22,500)
+- Fimash D011 @ Al Reyada: 33,820 → 12,500 (-21,320)
+- Purity P70H20AP-ST(SILVER) @ Al Reyada: 56,350 → 35,090 (-21,260)
+- Purity HPT904S @ Al Reyada: 38,699 → 17,900 (-20,799)
+- Purity KPT907GGD @ Al Reyada: 46,790 → 25,999 (-20,791)
+- Ecomatic S903RC @ Al Reyada: 34,580 → 14,799 (-19,781)
+- Ecomatic S903RC @ Al Reyada: 54,050 → 34,580 (-19,470)
+- Purity OPT601GGD @ Al Reyada: 34,371 → 16,110 (-18,261)
+- Purity HPT915G @ Al Reyada: 33,899 → 16,190 (-17,709)
+- Purity KPD917GG @ Al Reyada: 46,190 → 29,250 (-16,940)
+- Purity HPT602S @ Al Reyada: 25,750 → 9,450 (-16,300)
+- Kumtel DA6-830-BL @ Al Reyada: 21,900 → 5,690 (-16,210)
+- Kumtel DA6-835-BL-RUSTIQ @ Al Reyada: 22,900 → 6,900 (-16,000)
+- Bosch PCR9A5B90 @ Al Reyada: 52,998 → 36,999 (-15,999)
+- Kumtel DA6-835-BL-MAGIC @ Al Reyada: 21,500 → 5,990 (-15,510)
+- Kumtel DA6-835-ANTHRACITE-CR @ Al Reyada: 21,500 → 5,990 (-15,510)
+- Purity OPT901GXD @ Al Reyada: 47,385 → 32,310 (-15,075)
+- Ecomatic S927QC @ Al Reyada: 60,399 → 45,499 (-14,900)
+- Purity OPT601GG @ Al Reyada: 29,999 → 15,210 (-14,789)
+- Purity OPT602GG @ Al Reyada: 31,950 → 17,550 (-14,400)
+- Ecomatic S603BC @ Al Reyada: 22,295 → 7,999 (-14,296)
+- Purity HPT908S @ Al Reyada: 29,610 → 15,650 (-13,960)
+- Purity HPT906S @ Al Reyada: 43,190 → 29,295 (-13,895)
+- Purity HPT908S) @ Al Reyada: 42,390 → 29,610 (-12,780)
+- Purity OPT601GG @ Al Reyada: 35,990 → 24,325 (-11,665)
+- Ecomatic D90D25AP-H7 @ Al Reyada: 50,999 → 39,499 (-11,500)
+- Purity OPT602GGD @ Al Reyada: 42,030 → 30,790 (-11,240)
+- Ariston SL191LPIX @ Al Reyada: 72,899 → 63,999 (-8,900)
+- Purity KPD918GG @ Al Reyada: 50,690 → 41,990 (-8,700)
+- Ecomatic P70H20AP-ST(BLACK) @ Al Reyada: 56,499 → 47,999 (-8,500)
+- Purity PURITY101 @ Raneen: 12,545 → 5,096 (-7,449)
+- Fimash D011 @ Al Reyada: 40,850 → 33,820 (-7,030)
+- Purity OPT602GG @ Al Reyada: 38,490 → 31,950 (-6,540)
+- Ecomatic P70H20AP-ST(BLACK) @ Al Reyada: 62,499 → 56,499 (-6,000)
+- Purity  @ Raneen: 10,775 → 4,945 (-5,830)
+- Purity HPT915G) @ Al Reyada: 39,299 → 33,899 (-5,400)
+- Purity HPT904S @ Al Reyada: 43,615 → 38,699 (-4,916)
+- Purity OPT602GG @ Al Reyada: 34,650 → 29,990 (-4,660)
+- Purity  @ Raneen: 10,795 → 6,245 (-4,550)
+- Purity  @ Raneen: 7,845 → 4,895 (-2,950)
+- Ocean OOGR95 @ Al Reyada: 37,290 → 34,490 (-2,800)
+- Zanussi TC2ZWF9221SD7 @ B.TECH: 22,485 → 19,999 (-2,486)
+- Tornado TWT-TLN10LWT @ B.TECH: 16,650 → 14,549 (-2,101)
+- Purity  @ Raneen: 7,195 → 5,165 (-2,030)
+- Bosch SMS6EMI62V @ Al Reyada: 47,999 → 45,998 (-2,001)
+- Ariston WFST9GWHR @ B.TECH: 25,999 → 23,999 (-2,000)
+- Purity  @ Raneen: 7,235 → 5,435 (-1,800)
 
 ## Same model, different shops (biggest gaps)
 
@@ -41,6 +128,7 @@ New listings: 0, price changes: 0, unchanged: 58
 - **LG F4X5RRG23BN** (غسالة): cheapest Wazen 38,695 — Ehab Center 42,990, B.TECH 46,765 (save 8,070)
 - **Bosch KDN76XI3E9** (ثلاجة): cheapest Azmy 48,999 — Ehab Center 49,999, Al Reyada 56,999 (save 8,000)
 - **Bosch KGN56LB3E9** (ثلاجة): cheapest Raneen 50,401 — B.TECH 57,999, Ehab Center 57,999 (save 7,598)
+- **LG DFC513FVE** (غسالة أطباق): cheapest B.TECH 36,459 — Wazen 40,915, Ehab Center 43,990 (save 7,531)
 - **White Whale WR4385** (ثلاجة): cheapest Wazen 21,480 — Raneen 28,950 (save 7,470)
 - **Beko GNE134626BH** (ثلاجة): cheapest Wazen 77,125 — B.TECH 84,499 (save 7,374)
 - **Bosch KGN76CI3E8** (ثلاجة): cheapest Azmy 53,799 — B.TECH 53,899, Ehab Center 60,999 (save 7,200)
@@ -70,4 +158,3 @@ New listings: 0, price changes: 0, unchanged: 58
 - **Midea MDRT489MTN45** (ثلاجة): cheapest Raneen 20,200 — B.TECH 26,000 (save 5,800)
 - **LG F4Y2TYGYZ** (غسالة): cheapest Jumia 23,899 — Wazen 26,095, Azmy 27,499, Raneen 29,545, B.TECH 29,599 (save 5,700)
 - **Samsung WD90F22BCSAS** (غسالة): cheapest B.TECH 87,999 — Ehab Center 89,999, Raneen 93,644 (save 5,645)
-- **Zanussi ZTE7002SA** (ثلاجة): cheapest Zanussi Official 30,210 — Jumia 35,614 (save 5,404)

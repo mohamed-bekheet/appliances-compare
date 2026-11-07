@@ -4968,7 +4968,7 @@
       "brand": "Zanussi",
       "category": "غسالة",
       "model": "TC2ZWF9221SD7",
-      "price_after": 22485,
+      "price_after": 19999,
       "price_before": 0,
       "discount_pct": 0,
       "shop": "B.TECH",
@@ -4992,6 +4992,12 @@
         {
           "date": "2026-11-07",
           "price": 22485,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 19999,
           "price_before": 0,
           "in_stock": true
         }
@@ -6442,7 +6448,7 @@
       "brand": "Ariston",
       "category": "غسالة",
       "model": "WFST9GWHR",
-      "price_after": 25999,
+      "price_after": 23999,
       "price_before": 0,
       "discount_pct": 0,
       "shop": "B.TECH",
@@ -6466,6 +6472,12 @@
         {
           "date": "2026-11-05",
           "price": 25999,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 23999,
           "price_before": 0,
           "in_stock": true
         }
@@ -9381,7 +9393,7 @@
       "brand": "LG",
       "category": "غسالة",
       "model": "T1366NEHG2",
-      "price_after": 20735,
+      "price_after": 22149,
       "price_before": 0,
       "discount_pct": 0,
       "shop": "B.TECH",
@@ -9399,6 +9411,12 @@
         {
           "date": "2026-11-05",
           "price": 20735,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 22149,
           "price_before": 0,
           "in_stock": true
         }
@@ -9454,7 +9472,7 @@
       "brand": "Haier",
       "category": "غسالة",
       "model": "HWM110-316S8",
-      "price_after": 15899,
+      "price_after": 15649,
       "price_before": 0,
       "discount_pct": 0,
       "shop": "B.TECH",
@@ -9477,6 +9495,12 @@
         {
           "date": "2026-11-07",
           "price": 15899,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 15649,
           "price_before": 0,
           "in_stock": true
         }
@@ -9526,7 +9550,7 @@
       "brand": "Tornado",
       "category": "غسالة",
       "model": "TWT-TLN10LWT",
-      "price_after": 16650,
+      "price_after": 14549,
       "price_before": 0,
       "discount_pct": 0,
       "shop": "B.TECH",
@@ -9549,6 +9573,12 @@
         {
           "date": "2026-11-05",
           "price": 16650,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 14549,
           "price_before": 0,
           "in_stock": true
         }
@@ -11930,7 +11960,7 @@
       "shop": "B.TECH",
       "source": "btech.com",
       "url": "https://btech.com/en/p/346b7dc7-ba54-43d4-9d6e-a18fff16c9bc",
-      "in_stock": true,
+      "in_stock": false,
       "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
       "capacity_kg": 14,
       "motor_class": "unknown",
@@ -11955,6 +11985,12 @@
           "price": 22089,
           "price_before": 0,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 22089,
+          "price_before": 0,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -15075,6 +15111,18 @@
           "price": 8499,
           "price_before": 0,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 91999,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 8499,
+          "price_before": 0,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -15937,7 +15985,7 @@
       "brand": "Toshiba",
       "category": "ثلاجة",
       "model": "GR-RT622WE",
-      "price_after": 32299,
+      "price_after": 34980,
       "price_before": 0,
       "discount_pct": 0,
       "shop": "B.TECH",
@@ -15968,6 +16016,12 @@
         {
           "date": "2026-11-07",
           "price": 32299,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 34980,
           "price_before": 0,
           "in_stock": true
         }
@@ -22583,6 +22637,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 10980,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 11083,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 10980,
           "price_before": 0,
           "in_stock": true
@@ -30746,6 +30812,18 @@
           "price": 37290,
           "price_before": 41765,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 34490,
+          "price_before": 38629,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 37290,
+          "price_before": 41765,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -33302,6 +33380,36 @@
           "price": 11549,
           "price_before": 12935,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 66499,
+          "price_before": 79799,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 72899,
+          "price_before": 87479,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 63999,
+          "price_before": 79999,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 68085,
+          "price_before": 81702,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 11549,
+          "price_before": 12935,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -34030,6 +34138,18 @@
           "price": 50999,
           "price_before": 62399,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 39499,
+          "price_before": 47399,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 50999,
+          "price_before": 62399,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -34573,6 +34693,18 @@
           "price": 5990,
           "price_before": 6709,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 21500,
+          "price_before": 25800,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 5990,
+          "price_before": 6709,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -34641,6 +34773,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 5690,
+          "price_before": 6373,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 21900,
+          "price_before": 26280,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 5690,
           "price_before": 6373,
           "in_stock": true
@@ -34742,6 +34886,18 @@
           "price": 5990,
           "price_before": 6709,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 21500,
+          "price_before": 25800,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 5990,
+          "price_before": 6709,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -34780,6 +34936,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 6900,
+          "price_before": 7728,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 22900,
+          "price_before": 27480,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 6900,
           "price_before": 7728,
           "in_stock": true
@@ -36128,6 +36296,24 @@
           "price": 12500,
           "price_before": 14000,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 40850,
+          "price_before": 49020,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 33820,
+          "price_before": 40584,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 12500,
+          "price_before": 14000,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -36166,6 +36352,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 5199,
+          "price_before": 5823,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 30589,
+          "price_before": 36707,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 5199,
           "price_before": 5823,
           "in_stock": false
@@ -36635,6 +36833,24 @@
           "price": 16333,
           "price_before": 18293,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 69585,
+          "price_before": 83502,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 86685,
+          "price_before": 104022,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 16333,
+          "price_before": 18293,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -36679,6 +36895,24 @@
         },
         {
           "date": "2026-11-06",
+          "price": 16950,
+          "price_before": 18984,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 64525,
+          "price_before": 77430,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 78265,
+          "price_before": 93918,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 16950,
           "price_before": 18984,
           "in_stock": true
@@ -38725,6 +38959,30 @@
           "price": 56499,
           "price_before": 69599,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 47999,
+          "price_before": 57599,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 62499,
+          "price_before": 74999,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 56499,
+          "price_before": 67799,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 56499,
+          "price_before": 69599,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -38783,6 +39041,24 @@
           "price": 56350,
           "price_before": 67620,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 35090,
+          "price_before": 42108,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 53290,
+          "price_before": 63948,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 56350,
+          "price_before": 67620,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -38814,6 +39090,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 36150,
+          "price_before": 43380,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 35370,
+          "price_before": 42444,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 36150,
           "price_before": 43380,
           "in_stock": false
@@ -40792,6 +41080,24 @@
           "price": 12799,
           "price_before": 14335,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 38499,
+          "price_before": 45474,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 54499,
+          "price_before": 59340,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 12799,
+          "price_before": 14335,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -40837,6 +41143,24 @@
         },
         {
           "date": "2026-11-06",
+          "price": 16999,
+          "price_before": 19039,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 34125,
+          "price_before": 42228,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 50959,
+          "price_before": 63479,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 16999,
           "price_before": 19039,
           "in_stock": true
@@ -40926,6 +41250,24 @@
           "price": 19999,
           "price_before": 22399,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 42769,
+          "price_before": 51325,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 57325,
+          "price_before": 66948,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 19999,
+          "price_before": 22399,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -40982,6 +41324,18 @@
           "price": 22999,
           "price_before": 25759,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 46410,
+          "price_before": 55690,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 22999,
+          "price_before": 25759,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -41013,6 +41367,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 27499,
+          "price_before": 30799,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 65520,
+          "price_before": 79935,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 27499,
           "price_before": 30799,
           "in_stock": false
@@ -41782,6 +42148,24 @@
           "price": 44135,
           "price_before": 53214,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 64155,
+          "price_before": 76536,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 17999,
+          "price_before": 20159,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 44135,
+          "price_before": 53214,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -41821,6 +42205,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 20999,
+          "price_before": 23519,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 59150,
+          "price_before": 68910,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 20999,
           "price_before": 23519,
           "in_stock": true
@@ -41890,6 +42286,18 @@
           "price": 15999,
           "price_before": 17919,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 54150,
+          "price_before": 66414,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 15999,
+          "price_before": 17919,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -41936,6 +42344,24 @@
         },
         {
           "date": "2026-11-06",
+          "price": 14799,
+          "price_before": 16575,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 54050,
+          "price_before": 63719,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 34580,
+          "price_before": 41868,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 14799,
           "price_before": 16575,
           "in_stock": true
@@ -42025,6 +42451,24 @@
           "price": 34580,
           "price_before": 43320,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 56875,
+          "price_before": 68250,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 17999,
+          "price_before": 20159,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 34580,
+          "price_before": 43320,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -42064,6 +42508,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 19499,
+          "price_before": 21839,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 52235,
+          "price_before": 61559,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 19499,
           "price_before": 21839,
           "in_stock": true
@@ -42126,6 +42582,24 @@
         },
         {
           "date": "2026-11-06",
+          "price": 22999,
+          "price_before": 25759,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 60399,
+          "price_before": 72479,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 45499,
+          "price_before": 55510,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 22999,
           "price_before": 25759,
           "in_stock": false
@@ -42240,6 +42714,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 46790,
+          "price_before": 56148,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 25999,
+          "price_before": 28900,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 46790,
           "price_before": 56148,
           "in_stock": false
@@ -44507,6 +44993,18 @@
           "price": 36999,
           "price_before": 41439,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 52998,
+          "price_before": 63598,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 36999,
+          "price_before": 41439,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -44544,6 +45042,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 47999,
+          "price_before": 53759,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 45998,
+          "price_before": 55198,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 47999,
           "price_before": 53759,
           "in_stock": true
@@ -44793,6 +45303,30 @@
           "price": 24325,
           "price_before": 29190,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 29999,
+          "price_before": 35999,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 15210,
+          "price_before": 21170,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 35990,
+          "price_before": 43188,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 24325,
+          "price_before": 29190,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -44878,6 +45412,36 @@
           "price": 38490,
           "price_before": 46188,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 31950,
+          "price_before": 38340,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 17550,
+          "price_before": 19500,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 34650,
+          "price_before": 41580,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 29990,
+          "price_before": 35988,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 38490,
+          "price_before": 46188,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -44927,6 +45491,24 @@
         },
         {
           "date": "2026-11-06",
+          "price": 43490,
+          "price_before": 52188,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 46190,
+          "price_before": 55428,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 29250,
+          "price_before": 36500,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 43490,
           "price_before": 52188,
           "in_stock": false
@@ -52805,6 +53387,36 @@
           "price": 34280,
           "price_before": 41136,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 46075,
+          "price_before": 55290,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 14390,
+          "price_before": 15990,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 43190,
+          "price_before": 51828,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 29295,
+          "price_before": 35154,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 34280,
+          "price_before": 41136,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -54563,6 +55175,18 @@
           "price": 66295,
           "price_before": 79554,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 19755,
+          "price_before": 22125,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 66295,
+          "price_before": 79554,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -54656,6 +55280,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 82050,
+          "price_before": 98460,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 30030,
+          "price_before": 33634,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 82050,
           "price_before": 98460,
           "in_stock": false
@@ -54766,6 +55402,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 85120,
+          "price_before": 102144,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 33367,
+          "price_before": 37371,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 85120,
           "price_before": 102144,
           "in_stock": false
@@ -55173,6 +55821,24 @@
           "price": 42990,
           "price_before": 51588,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 14850,
+          "price_before": 21214,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 32990,
+          "price_before": 39588,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 42990,
+          "price_before": 51588,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -55334,6 +56000,24 @@
         },
         {
           "date": "2026-11-06",
+          "price": 29610,
+          "price_before": 35532,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 15650,
+          "price_before": 22681,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 42390,
+          "price_before": 50868,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 29610,
           "price_before": 35532,
           "in_stock": false
@@ -56034,6 +56718,24 @@
           "price": 42030,
           "price_before": 50436,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 30790,
+          "price_before": 36948,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 35091,
+          "price_before": 42109,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 42030,
+          "price_before": 50436,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -56186,6 +56888,24 @@
           "price": 47385,
           "price_before": 56862,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 32310,
+          "price_before": 35900,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 46590,
+          "price_before": 55908,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 47385,
+          "price_before": 56862,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -56219,6 +56939,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 34150,
+          "price_before": 40980,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 11590,
+          "price_before": 15990,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 34150,
           "price_before": 40980,
           "in_stock": false
@@ -56297,6 +57029,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 25750,
+          "price_before": 30900,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 9450,
+          "price_before": 12945,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 25750,
           "price_before": 30900,
           "in_stock": false
@@ -56504,6 +57248,42 @@
           "price": 43615,
           "price_before": 52338,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 38699,
+          "price_before": 46439,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 17900,
+          "price_before": 20975,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 33790,
+          "price_before": 40548,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 43815,
+          "price_before": 52578,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 43490,
+          "price_before": 52188,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 43615,
+          "price_before": 52338,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -56567,6 +57347,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 50590,
+          "price_before": 60708,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 15650,
+          "price_before": 19085,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 50590,
           "price_before": 60708,
           "in_stock": false
@@ -60602,6 +61394,18 @@
           "price": 79990,
           "price_before": 95988,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 19290,
+          "price_before": 21605,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 79990,
+          "price_before": 95988,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -61259,6 +62063,18 @@
           "price": 37069,
           "price_before": 41517,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 60585,
+          "price_before": 72702,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 37069,
+          "price_before": 41517,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -61301,6 +62117,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 39850,
+          "price_before": 44632,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 92015,
+          "price_before": 110418,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 39850,
           "price_before": 44632,
           "in_stock": false
@@ -61430,6 +62258,48 @@
           "price": 16190,
           "price_before": 17990,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 32879,
+          "price_before": 39455,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 33999,
+          "price_before": 40799,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 39890,
+          "price_before": 47868,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 39100,
+          "price_before": 46920,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 39299,
+          "price_before": 47159,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 33899,
+          "price_before": 40679,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 16190,
+          "price_before": 17990,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -61473,6 +62343,30 @@
         },
         {
           "date": "2026-11-06",
+          "price": 50690,
+          "price_before": 60828,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 41990,
+          "price_before": 50388,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 43590,
+          "price_before": 52308,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 42490,
+          "price_before": 50988,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 50690,
           "price_before": 60828,
           "in_stock": false
@@ -61557,6 +62451,18 @@
           "price": 59000,
           "price_before": 66080,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 82050,
+          "price_before": 98460,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 59000,
+          "price_before": 66080,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -61613,6 +62519,18 @@
           "price": 7999,
           "price_before": 8959,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 22295,
+          "price_before": 28799,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 7999,
+          "price_before": 8959,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -61654,6 +62572,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 23999,
+          "price_before": 26879,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 81997,
+          "price_before": 98396,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 23999,
           "price_before": 26879,
           "in_stock": false
@@ -61846,6 +62776,18 @@
           "price": 34371,
           "price_before": 41245,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 16110,
+          "price_before": 22290,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 34371,
+          "price_before": 41245,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -61885,6 +62827,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 17990,
+          "price_before": 22772,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 52390,
+          "price_before": 62868,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 17990,
           "price_before": 22772,
           "in_stock": false
@@ -79549,6 +80503,18 @@
           "price": 4400,
           "price_before": 0,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 5300,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 4400,
+          "price_before": 0,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -80542,6 +81508,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 5300,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 4200,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 5300,
           "price_before": 0,
           "in_stock": true
@@ -81902,7 +82880,7 @@
       "brand": "Beko",
       "category": "ديب فريزر",
       "model": "RFNE448E35XB",
-      "price_after": 34999,
+      "price_after": 35700,
       "price_before": 0,
       "discount_pct": 0,
       "shop": "B.TECH",
@@ -81917,6 +82895,12 @@
         {
           "date": "2026-11-05",
           "price": 34999,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 35700,
           "price_before": 0,
           "in_stock": true
         }
@@ -87937,7 +88921,8 @@
       "url": "https://btech.com/en/p/sharp-tl-wm-13kg-es-tn13gslp",
       "in_stock": true,
       "features": [
-        "Top Load"
+        "Top Load",
+        "نصف أوتوماتيك"
       ],
       "scraped": true,
       "capacity_kg": 13,
@@ -92371,8 +93356,9 @@
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-06",
-      "loading": "أمامي"
+      "last_seen": "2026-11-07",
+      "loading": "أمامي",
+      "image": "https://ehabcenter.com/wp-content/uploads/2024/04/غسالة-ملابس-سامسونج-8ك-1400لفة-ECOBubble-ديجيتال-اسود-WW80CGC0EDABAS-300x300.png"
     },
     {
       "id": 2924,
@@ -113690,7 +114676,7 @@
       "brand": "LG",
       "category": "ثلاجة",
       "model": "GTF312SSBN",
-      "price_after": 31249,
+      "price_after": 31199,
       "price_before": 33999,
       "discount_pct": 8,
       "shop": "Jumia",
@@ -113705,6 +114691,12 @@
         {
           "date": "2026-11-05",
           "price": 31249,
+          "price_before": 33999,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 31199,
           "price_before": 33999,
           "in_stock": true
         }
@@ -113928,7 +114920,7 @@
       "brand": "Unionaire",
       "category": "ديب فريزر",
       "model": "UC-200VVA-DH",
-      "price_after": 8394,
+      "price_after": 8399,
       "price_before": 12132,
       "discount_pct": 31,
       "shop": "Jumia",
@@ -113953,6 +114945,12 @@
           "price": 8394,
           "price_before": 12132,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 8399,
+          "price_before": 12132,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -113961,16 +114959,16 @@
     },
     {
       "id": 3560,
-      "name": "Fresh مجمد صندوقي طازج من نوع ماتريكس FDF-330، سعة 255 لترًا",
+      "name": "Fresh فريزر أفقي فريش 255 لتر رمادي FDF-330 (18325)",
       "brand": "Fresh",
       "category": "ديب فريزر",
       "model": "FDF-330",
-      "price_after": 12186,
-      "price_before": 13175,
-      "discount_pct": 8,
+      "price_after": 12077,
+      "price_before": 12150,
+      "discount_pct": 1,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/fresh-chest-freezer-matrix-fdf-330-255-liters-134685065.html",
+      "url": "https://www.jumia.com.eg/ar/fresh-chest-freezer-255-liters-matrix-grey-fdf-330-18325-132968018.html",
       "in_stock": true,
       "features": [],
       "scraped": true,
@@ -113982,11 +114980,17 @@
           "price": 12186,
           "price_before": 13175,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 12077,
+          "price_before": 12150,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
       "last_seen": "2026-11-07",
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/56/0586431/1.jpg?7014"
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/81/0869231/1.jpg?7014"
     },
     {
       "id": 3561,
@@ -114558,16 +115562,16 @@
     },
     {
       "id": 3580,
-      "name": "Alaska فريزر عميق عمودي ديفروست بخمسة أدراج من اسكا، لون فضي، موديل UP270",
+      "name": "Alaska فريزر رأسي عميق بخمسة أدراج - فضي - موديل UP270",
       "brand": "Alaska",
       "category": "ديب فريزر",
       "model": "UP270",
-      "price_after": 13350,
-      "price_before": 18500,
-      "discount_pct": 28,
+      "price_after": 13167,
+      "price_before": 19564,
+      "discount_pct": 33,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/alaska-deep-freezer-upright-5-drawer-de-frost-up270-silver-134219135.html",
+      "url": "https://www.jumia.com.eg/ar/alaska-upright-deep-freezer-with-5-drawers-silver-model-up270-134153163.html",
       "in_stock": true,
       "features": [
         "ديفروست"
@@ -114580,10 +115584,17 @@
           "price": 13350,
           "price_before": 18500,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 13167,
+          "price_before": 19564,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-07",
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/36/1351431/1.jpg?5508"
     },
     {
       "id": 3581,
@@ -120106,7 +121117,9 @@
       "source": "raneen.com",
       "url": "https://www.raneen.com/ar/el1094468dgy-1",
       "in_stock": true,
-      "features": [],
+      "features": [
+        "نصف أوتوماتيك"
+      ],
       "scraped": true,
       "capacity_kg": 11,
       "motor_class": "unknown",
@@ -120366,7 +121379,9 @@
       "source": "raneen.com",
       "url": "https://www.raneen.com/ar/sharp-es-t09-gslp-top-automatic-washing-machine-9-kg-with-pump-silver-1",
       "in_stock": true,
-      "features": [],
+      "features": [
+        "نصف أوتوماتيك"
+      ],
       "scraped": true,
       "capacity_kg": 9,
       "motor_class": "unknown",
@@ -120667,7 +121682,8 @@
       "url": "https://www.raneen.com/ar/sharp-es-td15gbkp-top-loading-washing-machine-15-kg-digital-control-panel-black-2",
       "in_stock": true,
       "features": [
-        "Top Load"
+        "Top Load",
+        "نصف أوتوماتيك"
       ],
       "scraped": true,
       "capacity_kg": 15,
@@ -120805,7 +121821,8 @@
       "url": "https://www.raneen.com/ar/sharp-es-td11gbkp-washing-machine-top-automatic-11-kg-ddm-inverter-pump-black-el1094465blk-conf-attallah",
       "in_stock": true,
       "features": [
-        "انفرتر"
+        "انفرتر",
+        "نصف أوتوماتيك"
       ],
       "scraped": true,
       "capacity_kg": 11,
@@ -120905,7 +121922,9 @@
       "source": "raneen.com",
       "url": "https://www.raneen.com/ar/el1094469slv-1",
       "in_stock": true,
-      "features": [],
+      "features": [
+        "نصف أوتوماتيك"
+      ],
       "scraped": true,
       "capacity_kg": 11,
       "motor_class": "unknown",
@@ -128365,9 +129384,9 @@
       "brand": "Unionaire",
       "category": "ثلاجة",
       "model": "EL1154960SLV",
-      "price_after": 12910,
+      "price_after": 12749,
       "price_before": 14479,
-      "discount_pct": 11,
+      "discount_pct": 12,
       "shop": "Raneen",
       "source": "raneen.com",
       "url": "https://www.raneen.com/ar/el1154960slv-conf",
@@ -128388,6 +129407,12 @@
         {
           "date": "2026-11-07",
           "price": 12910,
+          "price_before": 14479,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 12749,
           "price_before": 14479,
           "in_stock": true
         }
@@ -128625,9 +129650,9 @@
       "brand": "Fresh",
       "category": "ديب فريزر",
       "model": "FDF-330",
-      "price_after": 12250,
-      "price_before": 14616,
-      "discount_pct": 16,
+      "price_after": 11550,
+      "price_before": 20152,
+      "discount_pct": 43,
       "shop": "Raneen",
       "source": "raneen.com",
       "url": "https://www.raneen.com/ar/fresh-fdf-330-matrix-horizontal-freezer-255-liters-grey-1",
@@ -128641,6 +129666,12 @@
           "date": "2026-11-05",
           "price": 12250,
           "price_before": 14616,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 11550,
+          "price_before": 20152,
           "in_stock": true
         }
       ],
@@ -136228,6 +137259,18 @@
           "price": 18888,
           "price_before": 19050,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 18839,
+          "price_before": 20550,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 18888,
+          "price_before": 19050,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -140501,6 +141544,18 @@
           "price": 7775,
           "price_before": 8285,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 7742,
+          "price_before": 8511,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 7775,
+          "price_before": 8285,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -140607,6 +141662,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 12474,
+          "price_before": 13294,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 12023,
+          "price_before": 13645,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 12474,
           "price_before": 13294,
           "in_stock": true
@@ -142483,6 +143550,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 12034,
+          "price_before": 12545,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 11845,
+          "price_before": 12045,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 12034,
           "price_before": 12545,
           "in_stock": true
@@ -147842,6 +148921,18 @@
           "price": 10775,
           "price_before": 12035,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 4945,
+          "price_before": 5535,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 10775,
+          "price_before": 12035,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -148158,6 +149249,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 6745,
+          "price_before": 7935,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 6745,
+          "price_before": 7980,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 6745,
           "price_before": 7935,
           "in_stock": true
@@ -149538,6 +150641,30 @@
           "price": 5435,
           "price_before": 6035,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 10795,
+          "price_before": 12035,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 6245,
+          "price_before": 6935,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 7235,
+          "price_before": 8035,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 5435,
+          "price_before": 6035,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -149581,6 +150708,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 7845,
+          "price_before": 8735,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 4895,
+          "price_before": 5435,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 7845,
           "price_before": 8735,
           "in_stock": true
@@ -149690,6 +150829,30 @@
           "price": 5165,
           "price_before": 5835,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 4715,
+          "price_before": 5235,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 5795,
+          "price_before": 6435,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 7195,
+          "price_before": 8035,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 5165,
+          "price_before": 5835,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -149733,6 +150896,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 7144,
+          "price_before": 7935,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 5345,
+          "price_before": 5935,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 7144,
           "price_before": 7935,
           "in_stock": true
@@ -152443,6 +153618,18 @@
           "price": 47635,
           "price_before": 53035,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 47695,
+          "price_before": 53035,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 47635,
+          "price_before": 53035,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -153906,6 +155093,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 12545,
+          "price_before": 19545,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 5096,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 12545,
           "price_before": 19545,
           "in_stock": true
@@ -155969,6 +157168,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 4499,
+          "price_before": 5500,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 4590,
+          "price_before": 5500,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 4499,
           "price_before": 5500,
           "in_stock": true
@@ -159049,9 +160260,9 @@
       "brand": "LG",
       "category": "مايكروويف",
       "model": "87131003537SLV",
-      "price_after": 11745,
+      "price_after": 13024,
       "price_before": 16007,
-      "discount_pct": 27,
+      "discount_pct": 19,
       "shop": "Raneen",
       "source": "raneen.com",
       "url": "https://www.raneen.com/ar/87131003537slv-conf",
@@ -159064,6 +160275,12 @@
         {
           "date": "2026-11-05",
           "price": 11745,
+          "price_before": 16007,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 13024,
           "price_before": 16007,
           "in_stock": true
         }
@@ -161574,6 +162791,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 4525,
+          "price_before": 5025,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 3824,
+          "price_before": 4125,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 4525,
           "price_before": 5025,
           "in_stock": true
@@ -168445,7 +169674,8 @@
       "in_stock": false,
       "features": [
         "انفرتر",
-        "Top Load"
+        "Top Load",
+        "نصف أوتوماتيك"
       ],
       "scraped": true,
       "capacity_kg": 15,
@@ -168512,7 +169742,8 @@
       "in_stock": false,
       "features": [
         "انفرتر",
-        "Top Load"
+        "Top Load",
+        "نصف أوتوماتيك"
       ],
       "scraped": true,
       "capacity_kg": 17,
@@ -168880,7 +170111,8 @@
       "in_stock": false,
       "features": [
         "انفرتر",
-        "Top Load"
+        "Top Load",
+        "نصف أوتوماتيك"
       ],
       "scraped": true,
       "capacity_kg": 17,
@@ -168914,7 +170146,8 @@
       "in_stock": false,
       "features": [
         "انفرتر",
-        "Top Load"
+        "Top Load",
+        "نصف أوتوماتيك"
       ],
       "scraped": true,
       "capacity_kg": 15,
@@ -174274,7 +175507,8 @@
       "url": "https://wazen.eg/product/sharp-washing-machine-top-automatic-9-kg-pump-silver-es-tn09gslp/",
       "in_stock": false,
       "features": [
-        "Top Load"
+        "Top Load",
+        "نصف أوتوماتيك"
       ],
       "scraped": true,
       "capacity_kg": 9,
@@ -196610,6 +197844,18 @@
           "price": 24799,
           "price_before": 31460,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 47500,
+          "price_before": 52250,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 24799,
+          "price_before": 31460,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-05",
@@ -196651,6 +197897,18 @@
         {
           "date": "2026-11-06",
           "price": 13065,
+          "price_before": 16240,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 47600,
+          "price_before": 52360,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 11790,
           "price_before": 16240,
           "in_stock": true
         },
@@ -197181,6 +198439,18 @@
           "price": 13950,
           "price_before": 15835,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 59270,
+          "price_before": 60365,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 13950,
+          "price_before": 15835,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -197401,6 +198671,18 @@
           "price": 18545,
           "price_before": 22585,
           "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 53550,
+          "price_before": 58905,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 18545,
+          "price_before": 22585,
+          "in_stock": false
         }
       ],
       "first_seen": "2026-11-05",
@@ -197441,6 +198723,18 @@
         {
           "date": "2026-11-06",
           "price": 18460,
+          "price_before": 20960,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 45450,
+          "price_before": 55545,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 16645,
           "price_before": 20960,
           "in_stock": false
         },
@@ -198148,6 +199442,18 @@
         },
         {
           "date": "2026-11-06",
+          "price": 37000,
+          "price_before": 40700,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
+          "price": 37000,
+          "price_before": 46310,
+          "in_stock": false
+        },
+        {
+          "date": "2026-11-07",
           "price": 37000,
           "price_before": 40700,
           "in_stock": false
@@ -208274,6 +209580,18 @@
           "price": 13684,
           "price_before": 0,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 14900,
+          "price_before": 0,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 13684,
+          "price_before": 0,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-06",
@@ -212625,7 +213943,7 @@
       "brand": "Midea",
       "category": "مايكروويف",
       "model": "MM720C2VR",
-      "price_after": 3885,
+      "price_after": 3890,
       "price_before": 5321,
       "discount_pct": 27,
       "shop": "Jumia",
@@ -212649,6 +213967,12 @@
         {
           "date": "2026-11-07",
           "price": 3885,
+          "price_before": 5321,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 3890,
           "price_before": 5321,
           "in_stock": true
         }
@@ -212726,7 +214050,7 @@
       "brand": "Midea",
       "category": "مايكروويف",
       "model": "AM9P022VB",
-      "price_after": 5544,
+      "price_after": 5549,
       "price_before": 7437,
       "discount_pct": 25,
       "shop": "Jumia",
@@ -212752,6 +214076,12 @@
           "price": 5544,
           "price_before": 7437,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 5549,
+          "price_before": 7437,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-06",
@@ -212760,16 +214090,16 @@
     },
     {
       "id": 6716,
-      "name": "Sharp شواية ميكروويف شارب سعة 34 لتر بقوة 1000 واط مصنوعة من الفولاذ المقاوم للصدأ مع شواية و9 قوائم طهي R-770AR(ST)",
+      "name": "Sharp ميكروويف شارب R-770AR(ST) مع الشواية - 34 لتر - 1000 واط",
       "brand": "Sharp",
       "category": "مايكروويف",
       "model": "R-770AR(ST)",
-      "price_after": 11198,
-      "price_before": 15997,
-      "discount_pct": 30,
+      "price_after": 12860,
+      "price_before": 13889,
+      "discount_pct": 7,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/sharp-microwave-grill-34-l-1000w-stainless-with-grill-and-9-cooking-menus-r-770arst-135253260.html",
+      "url": "https://www.jumia.com.eg/ar/sharp-r-770arst-microwave-with-grill-34-l-1000-w-115280167.html",
       "in_stock": true,
       "features": [],
       "scraped": true,
@@ -212787,11 +214117,17 @@
           "price": 11198,
           "price_before": 15997,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 12860,
+          "price_before": 13889,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-06",
       "last_seen": "2026-11-07",
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/06/2352531/1.jpg?1101"
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/76/1082511/1.jpg?8338"
     },
     {
       "id": 6717,
@@ -212911,16 +214247,16 @@
     },
     {
       "id": 6721,
-      "name": "Fresh فرن ميكروويف فريش 25 لتر فضي FMW-25KC-SW - 500020529",
+      "name": "Fresh ميكروويف 25 لتر سيلفر FMW-25KC-SW",
       "brand": "Fresh",
       "category": "مايكروويف",
       "model": "FMW-25KC-SW",
-      "price_after": 4999,
-      "price_before": 6500,
-      "discount_pct": 23,
+      "price_after": 5405,
+      "price_before": 6000,
+      "discount_pct": 10,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/fresh-microwave-oven-25l-silver-fmw-25kc-sw-500020529-134587209.html",
+      "url": "https://www.jumia.com.eg/ar/fresh-microwave-oven-25l-silver-fmw-25kc-sw-134267499.html",
       "in_stock": true,
       "features": [],
       "scraped": true,
@@ -212938,11 +214274,17 @@
           "price": 4999,
           "price_before": 6500,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 5405,
+          "price_before": 6000,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-06",
       "last_seen": "2026-11-07",
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/90/2785431/1.jpg?9370"
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/99/4762431/1.jpg?6234"
     },
     {
       "id": 6722,
@@ -213031,16 +214373,16 @@
     },
     {
       "id": 6725,
-      "name": "Fresh فرن ميكروويف فريش سعة 28 لترًا - أسود، تحكم ميكانيكي - FMW-28MC-BW",
+      "name": "Fresh فرن ميكروويف فريش 28 لتر أسود 900 واط FMW-28MC-BW",
       "brand": "Fresh",
       "category": "مايكروويف",
       "model": "FMW-28MC-BW",
-      "price_after": 5299,
+      "price_after": 5350,
       "price_before": 5999,
-      "discount_pct": 12,
+      "discount_pct": 11,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/fresh-microwave-oven-28-liters-black-mechanical-control-fmw-28mc-bw-134369354.html",
+      "url": "https://www.jumia.com.eg/ar/fresh-microwave-28l-black-900w-fmw-28mc-bw-135188161.html",
       "in_stock": true,
       "features": [],
       "scraped": true,
@@ -213058,11 +214400,17 @@
           "price": 5299,
           "price_before": 5999,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 5350,
+          "price_before": 5999,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-06",
       "last_seen": "2026-11-07",
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/45/3963431/1.jpg?5799"
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/16/1881531/1.jpg?1235"
     },
     {
       "id": 6726,
@@ -213395,16 +214743,16 @@
     },
     {
       "id": 6737,
-      "name": "Sharp فرن ميكروويف رقمي من الستانلس ستيل سعة 34 لتر 1100 واط مع شواية من شارب، فضي - r-77at-st",
+      "name": "Sharp ميكروويف شارب جريل بسعة 34 لتر - R-77AT-ST",
       "brand": "Sharp",
       "category": "مايكروويف",
       "model": "R-77AT-ST",
-      "price_after": 10100,
-      "price_before": 0,
-      "discount_pct": 0,
+      "price_after": 10200,
+      "price_before": 13000,
+      "discount_pct": 22,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/sharp-34-liters-1100-watts-stainless-steel-digital-combination-microwave-oven-with-grill-silver-r-77at-st-135203462.html",
+      "url": "https://www.jumia.com.eg/ar/sharp-microwave-grill-34-liter-stainless-r-77atst-128949790.html",
       "in_stock": true,
       "features": [],
       "scraped": true,
@@ -213422,11 +214770,17 @@
           "price": 10100,
           "price_before": 0,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 10200,
+          "price_before": 13000,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-06",
       "last_seen": "2026-11-07",
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/26/4302531/1.jpg?1844"
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/09/7949821/1.jpg?3203"
     },
     {
       "id": 6738,
@@ -213533,6 +214887,18 @@
       "history": [
         {
           "date": "2026-11-06",
+          "price": 10998,
+          "price_before": 15000,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 11350,
+          "price_before": 15000,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
           "price": 10998,
           "price_before": 15000,
           "in_stock": true
@@ -217975,7 +219341,8 @@
       "in_stock": false,
       "features": [
         "انفرتر",
-        "Top Load"
+        "Top Load",
+        "نصف أوتوماتيك"
       ],
       "scraped": true,
       "image": "https://media.btech.com/catalogs/7/5/9/3/7593424b1985ae86a1d0c5fe582a7880350574ed_sharp_washing_machine_top_automatic_13_kgs_td13gssp.jpeg",
@@ -224295,22 +225662,22 @@
     },
     {
       "id": 7106,
-      "name": "Toshiba ميكروويف 25 لتر مع شواية – 900 واط، مرآة سوداء، تكنولوجيا العاكس MW3-EG25PEI(BK)",
+      "name": "Toshiba ميكروويف إنفرتر رقمي مع شواية، 25 لتر، 1000 واط، أسود - MW3-EG25PEI(BK)",
       "brand": "Toshiba",
       "category": "مايكروويف",
       "model": "MW3-EG25PEI(BK)",
-      "price_after": 7700,
-      "price_before": 8000,
-      "discount_pct": 4,
+      "price_after": 7801,
+      "price_before": 12000,
+      "discount_pct": 35,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/toshiba-25-liter-microwave-with-grill-900-watts-black-mirror-inverter-technology-mw3-eg25peibk-134444140.html",
+      "url": "https://www.jumia.com.eg/ar/toshiba-inverter-digital-microwave-with-grill-25-liter-1000-watt-black-mw3-eg25peibk-133884284.html",
       "in_stock": true,
       "features": [
         "انفرتر"
       ],
       "scraped": true,
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/04/1444431/1.jpg?0664",
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/48/2488331/1.jpg?2483",
       "capacity_liters": 25,
       "motor_class": "inverter",
       "product_key": "TOSHIBA:MW3EG25PEI",
@@ -224319,6 +225686,12 @@
           "date": "2026-11-07",
           "price": 7700,
           "price_before": 8000,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 7801,
+          "price_before": 12000,
           "in_stock": true
         }
       ],
@@ -224355,20 +225728,20 @@
     },
     {
       "id": 7108,
-      "name": "Fresh فريش ميكروويف فرن بشواية فريش FMW-25KCG-SW ديجيتال، 25 لتر، 850 وات، فضي",
+      "name": "Fresh ميكروويف فريش ديجيتال بشواية – 25 لتر – 850 وات – شواية 1000 وات – تقنية 3D Heat – 11 مستوى طاقة – فضي – FMW-25KCG-SW ضمان سنتين",
       "brand": "Fresh",
       "category": "مايكروويف",
       "model": "FMW-25KCG-SW",
-      "price_after": 5917,
-      "price_before": 6999,
-      "discount_pct": 15,
+      "price_after": 6499,
+      "price_before": 7999,
+      "discount_pct": 19,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/fresh-microwave-oven-25l-silver-with-grill-fmw-25kcg-sw-134208004.html",
+      "url": "https://www.jumia.com.eg/ar/fresh-digital-microwave-oven-with-grill-25l-850w-1000w-grill-3d-heat-technology-11-power-levels-silver-fmw-25kcg-sw-2-years-warranty-134550242.html",
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/40/0802431/1.jpg?7211",
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/24/2055431/1.jpg?4237",
       "capacity_liters": 25,
       "product_key": "FRESH:FMW25KCGSW",
       "history": [
@@ -224377,6 +225750,12 @@
           "price": 5917,
           "price_before": 6999,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 6499,
+          "price_before": 7999,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-07",
@@ -224384,20 +225763,20 @@
     },
     {
       "id": 7109,
-      "name": "Sharp ميكروويف شارب شواية 25 لتر 900 وات 8 قوائم أسود R-250MGR-BK2",
+      "name": "Sharp ميكروويف شارب للشوي سعة 25 لتر 900 وات مع 8 قوائم - أسود R-250MGR-BK2",
       "brand": "Sharp",
       "category": "مايكروويف",
       "model": "R-250MGR-BK2",
-      "price_after": 9186,
-      "price_before": 9999,
-      "discount_pct": 8,
+      "price_after": 9200,
+      "price_before": 45000,
+      "discount_pct": 80,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/sharp-microwave-grill-25-liter-900-watt-8-menus-black-r-250mgr-bk2-134329294.html",
+      "url": "https://www.jumia.com.eg/ar/microwave-grill-25-liter-900-watt-8-menus-black-r-250mgr-bk2-sharp-mpg3851500.html",
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/49/2923431/1.jpg?2988",
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/02/0068721/1.jpg?9663",
       "capacity_liters": 25,
       "product_key": "SHARP:R250MGRBK2",
       "history": [
@@ -224405,6 +225784,12 @@
           "date": "2026-11-07",
           "price": 9186,
           "price_before": 9999,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 9200,
+          "price_before": 45000,
           "in_stock": true
         }
       ],
@@ -224557,20 +225942,22 @@
     },
     {
       "id": 7115,
-      "name": "I Home فرن كهربائي آي هوم KI-5050 بسعة 50 لتر و2000 واط - الحل الأمثل لمطبخك!",
+      "name": "I Home فرن كهربائي أي هوم 50 لتر مع شواية – قدرة 2000 وات – مروحة توزيع حرارة – مؤقت وثرموستات قابل للتحكم – باب زجاجي – تصميم أسود – موديل KI-5050 – ضمان عامين",
       "brand": "I Home",
       "category": "مايكروويف",
       "model": "KI-5050",
-      "price_after": 1909,
-      "price_before": 2399,
-      "discount_pct": 20,
+      "price_after": 2199,
+      "price_before": 2499,
+      "discount_pct": 12,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/i-home-electric-oven-ki-5050-50-liter-2000w-grill-fan-to-distribute-heat-mesh-rack-timer-60m-thermostat-black-132389203.html",
+      "url": "https://www.jumia.com.eg/ar/i-home-electric-oven-with-grill-ki-5050-50l-capacity-2000w-power-convection-fan-adjustable-thermostat-and-timer-black-design-2-years-warranty-134199590.html",
       "in_stock": true,
-      "features": [],
+      "features": [
+        "مروحة"
+      ],
       "scraped": true,
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/30/2983231/1.jpg?7037",
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/09/5991431/1.jpg?4724",
       "capacity_liters": 50,
       "product_key": "IHOME:KI5050",
       "history": [
@@ -224578,6 +225965,12 @@
           "date": "2026-11-07",
           "price": 1909,
           "price_before": 2399,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 2199,
+          "price_before": 2499,
           "in_stock": true
         }
       ],
@@ -224675,20 +226068,20 @@
     },
     {
       "id": 7119,
-      "name": "Sharp شواية ميكروويف سعة 25 لترًا 900 وات 8 قوائم لون فضي R-250MGR-SL2",
+      "name": "Sharp ميكروويف شواية 25 لتر 900 وات 8 قوائم سيلفر R-250MGR-SL2",
       "brand": "Sharp",
       "category": "مايكروويف",
       "model": "R-250MGR-SL2",
-      "price_after": 9000,
-      "price_before": 0,
-      "discount_pct": 0,
+      "price_after": 9200,
+      "price_before": 45000,
+      "discount_pct": 80,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/sharp-microwave-grill-25-liter-900-watt-8-menus-silver-r-250mgr-sl2-133934627.html",
+      "url": "https://www.jumia.com.eg/ar/digital-microwave-with-grill-25-liter-900-watt-silver-r-250mgr-sl2-sharp-mpg3851501.html",
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/72/6439331/1.jpg?6527",
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/15/9958721/1.jpg?9304",
       "capacity_liters": 25,
       "product_key": "SHARP:R250MGRSL2",
       "history": [
@@ -224697,6 +226090,12 @@
           "price": 9000,
           "price_before": 0,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 9200,
+          "price_before": 45000,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-07",
@@ -224704,20 +226103,20 @@
     },
     {
       "id": 7120,
-      "name": "Fresh فرن ميكروويف فريش FMW-20MC-B، 700 واط، 20 لترًا - أسود",
+      "name": "Fresh ميكرويف فريش، سعة 20 لتر، 700 وات، اسود - FMW-20MC-B",
       "brand": "Fresh",
       "category": "مايكروويف",
       "model": "FMW-20MC-B",
-      "price_after": 4139,
-      "price_before": 7000,
-      "discount_pct": 41,
+      "price_after": 4650,
+      "price_before": 5000,
+      "discount_pct": 7,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/fresh-fmw-20mc-b-microwave-oven-700-w-20-liters-black-132025172.html",
+      "url": "https://www.jumia.com.eg/ar/fresh-microwave-20-liter-700-watt-black-fmw-20mc-b-133644375.html",
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/27/1520231/1.jpg?7247",
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/57/3446331/1.jpg?1021",
       "capacity_liters": 20,
       "product_key": "FRESH:FMW20MCB",
       "history": [
@@ -224725,6 +226124,12 @@
           "date": "2026-11-07",
           "price": 4139,
           "price_before": 7000,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 4650,
+          "price_before": 5000,
           "in_stock": true
         }
       ],
@@ -224825,20 +226230,20 @@
     },
     {
       "id": 7124,
-      "name": "Sharp فرن ميكروويف شارب بشواية - 25 لتر مع 6 قوائم طهي تلقائية - R-75MT(S)",
+      "name": "Sharp فرن ميكروويف شارب R-75MT(S) مع الشواية والتحكم الرقمي - سعة 25 لتر - 900 وات",
       "brand": "Sharp",
       "category": "مايكروويف",
       "model": "R-75MT(S)",
-      "price_after": 8699,
-      "price_before": 9999,
-      "discount_pct": 13,
+      "price_after": 9995,
+      "price_before": 11999,
+      "discount_pct": 17,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/sharp-microwave-oven-with-grill-25l-r-75mts-132025358.html",
+      "url": "https://www.jumia.com.eg/ar/sharp-r-75mts-microwave-oven-with-grill-and-digital-control-25-liters-900-watts-106051125.html",
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/85/3520231/1.jpg?7304",
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/52/1150601/1.jpg?3084",
       "capacity_liters": 25,
       "product_key": "SHARP:R75MT",
       "history": [
@@ -224846,6 +226251,12 @@
           "date": "2026-11-07",
           "price": 8699,
           "price_before": 9999,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 9995,
+          "price_before": 11999,
           "in_stock": true
         }
       ],
@@ -225003,20 +226414,20 @@
     },
     {
       "id": 7130,
-      "name": "TORNADO ميكروويف تورنيدو سولو 25 لتر 900 وات 8 قوائم طهي لون أسود موديل TMDS-25EL-BKS",
+      "name": "TORNADO ميكروويف سولو 25 لتر 900 وات 8 قوائم أسود TMDS-25EL-BKS",
       "brand": "Tornado",
       "category": "مايكروويف",
       "model": "TMDS-25EL-BKS",
-      "price_after": 8571,
-      "price_before": 11398,
-      "discount_pct": 25,
+      "price_after": 8700,
+      "price_before": 8999,
+      "discount_pct": 3,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/tornado-microwave-solo-25-liters-900-watt-8-cooking-menus-black-model-tmds-25el-bks-134319887.html",
+      "url": "https://www.jumia.com.eg/ar/tornado-microwave-solo-25-liter-900-watt-8-menus-black-tmds-25el-bks-134432462.html",
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/78/8913431/1.jpg?4431",
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/26/4234431/1.jpg?1210",
       "capacity_liters": 25,
       "product_key": "TORNADO:TMDS25ELBKS",
       "history": [
@@ -225024,6 +226435,12 @@
           "date": "2026-11-07",
           "price": 8571,
           "price_before": 11398,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 8700,
+          "price_before": 8999,
           "in_stock": true
         }
       ],
@@ -227726,6 +229143,18 @@
           "price": 18449,
           "price_before": 19999,
           "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 18349,
+          "price_before": 24366,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 18449,
+          "price_before": 19999,
+          "in_stock": true
         }
       ],
       "first_seen": "2026-11-07",
@@ -227734,26 +229163,32 @@
     },
     {
       "id": 7224,
-      "name": "Midea Dishwasher MDWEF1533GUR(BS)-WU-EG, 15 place Black",
+      "name": "Midea غسالة أطباق <br /> MDWEF1533GUR(BS)-WU-EG، 15",
       "brand": "Midea",
       "category": "غسالة أطباق",
       "model": "MDWEF1533GUR(BS)-WU-EG",
-      "price_after": 26999,
-      "price_before": 27999,
-      "discount_pct": 4,
+      "price_after": 26394,
+      "price_before": 34626,
+      "discount_pct": 24,
       "shop": "Jumia",
       "source": "jumia.com.eg",
-      "url": "https://www.jumia.com.eg/ar/midea-dishwasher-mdwef1533gurbs-wu-eg-15-place-black-134936786.html",
+      "url": "https://www.jumia.com.eg/ar/midea-dishwaser-mdwef1533gurbs-wu-eg-15-place-sets-black-134040746.html",
       "in_stock": true,
       "features": [],
       "scraped": true,
-      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/68/7639431/1.jpg?9129",
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/64/7040431/1.jpg?0909",
       "product_key": "MIDEA:MDWEF1533GURBSWU",
       "history": [
         {
           "date": "2026-11-07",
           "price": 26999,
           "price_before": 27999,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 26394,
+          "price_before": 34626,
           "in_stock": true
         }
       ],
@@ -227867,6 +229302,18 @@
       "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/25/6716331/1.jpg?8526",
       "product_key": "BEKO:DVS05020S",
       "history": [
+        {
+          "date": "2026-11-07",
+          "price": 13299,
+          "price_before": 18999,
+          "in_stock": true
+        },
+        {
+          "date": "2026-11-07",
+          "price": 13999,
+          "price_before": 20999,
+          "in_stock": true
+        },
         {
           "date": "2026-11-07",
           "price": 13299,
@@ -231825,6 +233272,892 @@
           "date": "2026-11-07",
           "price": 5314,
           "price_before": 7325,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7366,
+      "name": "LG Free Standing Dishwasher , 14 Persons Inverter Motor Prime Silver - DFC513FVE",
+      "brand": "LG",
+      "category": "غسالة أطباق",
+      "model": "DFC513FVE",
+      "price_after": 36459,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "B.TECH",
+      "source": "btech.com",
+      "url": "https://btech.com/en/p/d3b3cdb5-86dc-4147-8635-69c81b37324d",
+      "in_stock": true,
+      "features": [
+        "انفرتر"
+      ],
+      "scraped": true,
+      "image": "https://media.btech.com/catalogs/4/0/4/f/404f8cc9ef106dda14003e64cf0748dd19adf4a5_73464624.png",
+      "motor_class": "inverter",
+      "product_key": "LG:DFC513FVE",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 36459,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7367,
+      "name": "Fresh مجمد صدري طازج سعة 165 لترًا، لون رمادي ماتريكس، موديل FDF-220 (18323)",
+      "brand": "Fresh",
+      "category": "ديب فريزر",
+      "model": "FDF-220",
+      "price_after": 10146,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/fresh-chest-freezer-165-liters-matrix-grey-fdf-220-18323-132968558.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/85/5869231/1.jpg?7014",
+      "capacity_liters": 165,
+      "product_key": "FRESH:FDF220",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 10146,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7368,
+      "name": "Yoken فريزر يوكن ES250L أفقي - 205 لتر - فضي - ضاغط GMCC",
+      "brand": "Yoken",
+      "category": "ديب فريزر",
+      "model": "ES250L",
+      "price_after": 8749,
+      "price_before": 12500,
+      "discount_pct": 30,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/yoken-es250l-chest-freezer-205-liters-silver-gmcc-compressor-133538572.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/27/5835331/1.jpg?3105",
+      "capacity_liters": 250,
+      "product_key": "YOKEN:ES250L",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 8749,
+          "price_before": 12500,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7369,
+      "name": "Siltal فريزر سيلتال 350 لتر",
+      "brand": "Siltal",
+      "category": "ديب فريزر",
+      "model": null,
+      "price_after": 11638,
+      "price_before": 12250,
+      "discount_pct": 5,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/siltal-chest-freezer-350l-40314942.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/24/941304/1.jpg?0851",
+      "capacity_liters": 350,
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 11638,
+          "price_before": 12250,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7370,
+      "name": "Bomann فريزر رأسي 85 لتر 3 أدراج أبيض مع ثرموستات للتحكم في درجة التجميد",
+      "brand": "Bomann",
+      "category": "ديب فريزر",
+      "model": null,
+      "price_after": 16975,
+      "price_before": 18900,
+      "discount_pct": 10,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/bomann-85l-upright-freezer-3-drawers-white-with-thermostat-temperature-control-white-135188280.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/08/2881531/1.jpg?1275",
+      "capacity_liters": 85,
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 16975,
+          "price_before": 18900,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7371,
+      "name": "Fresh ديب فريزر أفقى فريش 165 لتر , FDF - 220",
+      "brand": "Fresh",
+      "category": "ديب فريزر",
+      "model": null,
+      "price_after": 10668,
+      "price_before": 10800,
+      "discount_pct": 1,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/fresh-horizontal-deep-freezer-165-litres-fdf-220-129131027.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/72/0131921/1.jpg?8104",
+      "capacity_liters": 165,
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 10668,
+          "price_before": 10800,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7372,
+      "name": "Fresh ديب فريزر أفقي فريش ماجيك 145 لتر",
+      "brand": "Fresh",
+      "category": "ديب فريزر",
+      "model": null,
+      "price_after": 10042,
+      "price_before": 10360,
+      "discount_pct": 3,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/fresh-magic-chest-freezer-145-litres-fdf-190-129131026.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/62/0131921/1.jpg?8104",
+      "capacity_liters": 145,
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 10042,
+          "price_before": 10360,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7373,
+      "name": "Fresh Chest Freezer Stainless FDF-400 , 334 Liters - 500014608",
+      "brand": "Fresh",
+      "category": "ديب فريزر",
+      "model": "FDF-400",
+      "price_after": 15887,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/fresh-chest-freezer-stainless-fdf-400-334-liters-500014608-133900668.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/86/6009331/1.jpg?9792",
+      "capacity_liters": 334,
+      "product_key": "FRESH:FDF400",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 15887,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7374,
+      "name": "Fresh فريزر رأسي FNU-MRT270T، 6 أدراج تعمل باللمس من الفولاذ المقاوم للصدأ",
+      "brand": "Fresh",
+      "category": "ديب فريزر",
+      "model": "FNU-MRT270T",
+      "price_after": 21576,
+      "price_before": 22400,
+      "discount_pct": 4,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/upright-freezer-fnu-mrt270t-6-drawers-touch-stainless-fresh-mpg3847886.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/84/7333331/1.jpg?2166",
+      "product_key": "FRESH:FNUMRT270T",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 21576,
+          "price_before": 22400,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7375,
+      "name": "Hisense فريزر رأسي، 8 أدراج، عاكس رقمي، فضي، MDRU385FEN46",
+      "brand": "Hisense",
+      "category": "ديب فريزر",
+      "model": "MDRU385FEN46",
+      "price_after": 27777,
+      "price_before": 39080,
+      "discount_pct": 29,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/hisense-upright-freezer-8-drawers-digital-inverter-silver-mdru385fen46-134222165.html",
+      "in_stock": true,
+      "features": [
+        "انفرتر"
+      ],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/56/1222431/1.jpg?4084",
+      "motor_class": "inverter",
+      "product_key": "HISENSE:MDRU385FEN46",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 27777,
+          "price_before": 39080,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7376,
+      "name": "Fresh فريزر أفقي FDF-480، 403 لتر - 500010802",
+      "brand": "Fresh",
+      "category": "ديب فريزر",
+      "model": "FDF-480",
+      "price_after": 17192,
+      "price_before": 17700,
+      "discount_pct": 3,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/fresh-chest-freezer-fdf-480-403-liters-500010802-133809706.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/60/7908331/1.jpg?4800",
+      "capacity_liters": 403,
+      "product_key": "FRESH:FDF480",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 17192,
+          "price_before": 17700,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7377,
+      "name": "Alaska فريزر عمودي ألاسكا UP190 - 4 أدراج - سعة 190 لتر - فضي",
+      "brand": "Alaska",
+      "category": "ديب فريزر",
+      "model": "UP190",
+      "price_after": 11999,
+      "price_before": 13999,
+      "discount_pct": 14,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/alaska-up190-upright-freezer-4-drawers-190l-silver-124999716.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/61/7999421/1.jpg?6968",
+      "capacity_liters": 190,
+      "product_key": "ALASKA:UP190",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 11999,
+          "price_before": 13999,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7378,
+      "name": "Unionaire يونيون اير ديب فريزر نوفروست 5 درج - ديجيتال - لون سيلفر -UFN-205LVLVA-DTSM",
+      "brand": "Unionaire",
+      "category": "ديب فريزر",
+      "model": "UFN-205LVLVA-DTSM",
+      "price_after": 15249,
+      "price_before": 20000,
+      "discount_pct": 24,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/unionaire-upright-freezer-5-drawers-no-frost-digital-silver-ufn-205lvlva-dtsm-134247377.html",
+      "in_stock": true,
+      "features": [
+        "نوفروست"
+      ],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/77/3742431/1.jpg?0928",
+      "product_key": "UNIONAIRE:UFN205LVLVADTSM",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 15249,
+          "price_before": 20000,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7379,
+      "name": "Fresh ديب فريزر أفقي ديفروست، 255 لتر، FDF330-10471 - فضي",
+      "brand": "Fresh",
+      "category": "ديب فريزر",
+      "model": "FDF330-10471",
+      "price_after": 13659,
+      "price_before": 14379,
+      "discount_pct": 5,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/fresh-horizontal-deep-freezer-defrost-255-liters-fdf330-10471-silver-134701434.html",
+      "in_stock": true,
+      "features": [
+        "ديفروست"
+      ],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/43/4107431/1.jpg?6306",
+      "capacity_liters": 255,
+      "product_key": "FRESH:FDF33010471",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 13659,
+          "price_before": 14379,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7380,
+      "name": "Unionaire ثلاجة بتقنية نوفروست من Signature، 505 لتر، عرض رقمي، لمس، بلوتوث، مكبر صوت، ميكروفون، قابلة للعكس، مع صنبور، URN-700CLBLG1A-DTHRBWSM - أسود",
+      "brand": "Unionaire",
+      "category": "ثلاجة",
+      "model": "URN-700CLBLG1A-DTHRBWSM",
+      "price_after": 26999,
+      "price_before": 32999,
+      "discount_pct": 18,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/unionaire-signature-no-frost-refrigerator-505-liters-digital-display-touch-bluetooth-speaker-mic-reversible-with-faucet-urn-700clblg1a-dthrbwsm-black-133870062.html",
+      "in_stock": true,
+      "features": [
+        "نوفروست"
+      ],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/26/0078331/1.jpg?9577",
+      "capacity_liters": 505,
+      "product_key": "UNIONAIRE:URN700CLBLG1ADTHRBWSM",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 26999,
+          "price_before": 32999,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7381,
+      "name": "Beko ديب فريزر بيكو رأسي 5 درج – نو فروست – فضي موديل RFNM200E20S",
+      "brand": "Beko",
+      "category": "ديب فريزر",
+      "model": "RFNM200E20S",
+      "price_after": 21999,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/nofrost-upright-freezer-5-drawers-net-capacity-168-liter-electronic-control-rfnm200e20s-beko-mpg3859043.html",
+      "in_stock": true,
+      "features": [
+        "نوفروست"
+      ],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/05/4318331/1.jpg?1404",
+      "product_key": "BEKO:RFNM200E20S",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 21999,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7382,
+      "name": "Fresh فريزر أفقي عميق 200 لتر، FDF - 270",
+      "brand": "Fresh",
+      "category": "ديب فريزر",
+      "model": null,
+      "price_after": 11000,
+      "price_before": 12500,
+      "discount_pct": 12,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/fresh-horizontal-deep-freezer-200-liters-fdf-270-133685897.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/79/8586331/1.jpg?1379",
+      "capacity_liters": 200,
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 11000,
+          "price_before": 12500,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7383,
+      "name": "Alaska ألاسكا فريزر رأسي ٣ أدراج - خاصية إذابة الثلج - ١٤٠ لتر - فضي - UP140",
+      "brand": "Alaska",
+      "category": "ديب فريزر",
+      "model": "UP140",
+      "price_after": 10999,
+      "price_before": 11000,
+      "discount_pct": 0,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/alaska-upright-freezer-3-drawers-defrost-140-liter-silver-up140-133550725.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/52/7055331/1.jpg?9243",
+      "capacity_liters": 140,
+      "product_key": "ALASKA:UP140",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 10999,
+          "price_before": 11000,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7384,
+      "name": "Passap ديب فريزر أفقي ٣٠٠ لتر - داخلي سانستيل - فضي - موتور ES341",
+      "brand": "Passap",
+      "category": "ديب فريزر",
+      "model": "ES341",
+      "price_after": 13999,
+      "price_before": 16499,
+      "discount_pct": 15,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/passap-300l-horizontal-deep-freezer-stainless-steel-interior-silver-es341-motor-134213068.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/86/0312431/1.jpg?5626",
+      "capacity_liters": 300,
+      "product_key": "PASSAP:ES341",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 13999,
+          "price_before": 16499,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7385,
+      "name": "Alaska مجمدة صندوقية عميقة من دبليو ألاسكا - سعة 135 لترًا - فضي - CH140 ديجيتال",
+      "brand": "Alaska",
+      "category": "ديب فريزر",
+      "model": "CH140",
+      "price_after": 9425,
+      "price_before": 13600,
+      "discount_pct": 31,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/alaska-w-deep-box-freezer-135-liter-capacity-silver-ch140-digital-134268293.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/39/2862431/1.jpg?6153",
+      "capacity_liters": 135,
+      "product_key": "ALASKA:CH140",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 9425,
+          "price_before": 13600,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7386,
+      "name": "Bosch فريزر رأسي نو فروست – 7 أدراج – 2 رف – شاشة ديجيتال – فضي – GSN33ALEE8",
+      "brand": "Bosch",
+      "category": "ديب فريزر",
+      "model": "GSN33ALEE8",
+      "price_after": 31200,
+      "price_before": 40999,
+      "discount_pct": 24,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/bosch-no-frost-upright-freezer-7-drawers-2-shelves-digital-display-silver-gsn33alee8-135078959.html",
+      "in_stock": true,
+      "features": [
+        "نوفروست"
+      ],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/95/9870531/1.jpg?9898",
+      "product_key": "BOSCH:GSN33ALEE8",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 31200,
+          "price_before": 40999,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7387,
+      "name": "Fresh فريزر عمودي فريش بسعة 107 لتر - ديفروست - FDF-130",
+      "brand": "Fresh",
+      "category": "ديب فريزر",
+      "model": "FDF-130",
+      "price_after": 9740,
+      "price_before": 12000,
+      "discount_pct": 19,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/fresh-chest-deep-freezer-107-l-defrost-fdf-130-133599545.html",
+      "in_stock": true,
+      "features": [
+        "ديفروست"
+      ],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/54/5995331/1.jpg?4300",
+      "capacity_liters": 107,
+      "product_key": "FRESH:FDF130",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 9740,
+          "price_before": 12000,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7388,
+      "name": "Fresh ديب فريزر أفقى فريش فضي 165 لتر , FDF-220S",
+      "brand": "Fresh",
+      "category": "ديب فريزر",
+      "model": "FDF-220S",
+      "price_after": 10595,
+      "price_before": 11199,
+      "discount_pct": 5,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/fresh-chest-freezer-silverfdf-220s-165-liters-134245067.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/76/0542431/1.jpg?1576",
+      "capacity_liters": 165,
+      "product_key": "FRESH:FDF220S",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 10595,
+          "price_before": 11199,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7389,
+      "name": "Sharp ديب فريزر شارب انفرتر ديجيتال نوفروست 6 درج 250 لتر أسود FJ-EC23(BK)",
+      "brand": "Sharp",
+      "category": "ديب فريزر",
+      "model": "FJ-EC23(BK)",
+      "price_after": 39269,
+      "price_before": 56099,
+      "discount_pct": 30,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/sharp-deep-freezer-inverter-digital-no-frost-6-drawers-250-liter-black-fj-ec23bk-134334084.html",
+      "in_stock": true,
+      "features": [
+        "انفرتر",
+        "نوفروست"
+      ],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/48/0433431/1.jpg?1785",
+      "capacity_liters": 250,
+      "motor_class": "inverter",
+      "product_key": "SHARP:FJEC23",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 39269,
+          "price_before": 56099,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7390,
+      "name": "Toshiba ديب فريزر بخاصية إذابة الثلج (نو فروست) DF/REF، تجميد سريع/تبريد سريع، سعة كبيرة جدًا، شاشة رقمية قابلة للتحويل من توشيبا، 238 لتر، لون رمادي ساتان",
+      "brand": "Toshiba",
+      "category": "ديب فريزر",
+      "model": null,
+      "price_after": 29279,
+      "price_before": 0,
+      "discount_pct": 0,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/toshiba-deep-freezer-7-drawer-no-frost-dfref-fast-freezingfast-cooling-ultra-big-box-converting-digital-238-l-satin-grey-134764329.html",
+      "in_stock": true,
+      "features": [
+        "نوفروست"
+      ],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/92/3467431/1.jpg?5139",
+      "capacity_liters": 238,
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 29279,
+          "price_before": 0,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7391,
+      "name": "Hamburg ديب فريزر راسي هامبورج، ديفروست، 220 لتر، 5 درج، H.VF2025S - فضي",
+      "brand": "Hamburg",
+      "category": "ديب فريزر",
+      "model": "H.VF2025S",
+      "price_after": 11198,
+      "price_before": 16800,
+      "discount_pct": 33,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/hamburg-vertical-deep-freezer-defrost-220-liters-5-drawers-h.vf2025s-silver-134841000.html",
+      "in_stock": true,
+      "features": [
+        "ديفروست"
+      ],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/00/0148431/1.jpg?4760",
+      "capacity_liters": 220,
+      "product_key": "HAMBURG:HVF2025S",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 11198,
+          "price_before": 16800,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7392,
+      "name": "Unionaire فريزر أفقي 282 لتر - إزالة التجمد - رقمي - فضي - UC-400VVA-02DS - يونيون اير",
+      "brand": "Unionaire",
+      "category": "ديب فريزر",
+      "model": "UC-400VVA-02DS",
+      "price_after": 11349,
+      "price_before": 17500,
+      "discount_pct": 35,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/unionaire-chest-deep-freezer-282-liters-defrost-digital-silver-uc-400vva-02ds-133178765.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/56/7871331/1.jpg?3304",
+      "capacity_liters": 282,
+      "product_key": "UNIONAIRE:UC400VVA02DS",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 11349,
+          "price_before": 17500,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7393,
+      "name": "Alaska ديب فريزر عمودي 5 أدراج نوفروست - الاسكا - UP180NF - فضي",
+      "brand": "Alaska",
+      "category": "ديب فريزر",
+      "model": "UP180NF",
+      "price_after": 19401,
+      "price_before": 25900,
+      "discount_pct": 25,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/alaska-deep-freezer-upright-5-drawer-no-frost-up180nf-silver-134133048.html",
+      "in_stock": true,
+      "features": [
+        "نوفروست"
+      ],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/84/0331431/1.jpg?9774",
+      "product_key": "ALASKA:UP180NF",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 19401,
+          "price_before": 25900,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7394,
+      "name": "Electrostar ديب فريزر افقي الكتروستار 320 لتر سيلفر - ستانلس",
+      "brand": "Electrostar",
+      "category": "ديب فريزر",
+      "model": null,
+      "price_after": 15555,
+      "price_before": 22500,
+      "discount_pct": 31,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/electrostar-chest-freezer-silver-stainless-steel-320-l-lc320sst00-132341876.html",
+      "in_stock": true,
+      "features": [],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/67/8143231/1.jpg?1032",
+      "capacity_liters": 320,
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 15555,
+          "price_before": 22500,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "id": 7395,
+      "name": "Beko غسالة اطباق بمحرك انفرتر وشاشة ال اي دي BDFS15020B، برامج،5- اسود",
+      "brand": "Beko",
+      "category": "غسالة أطباق",
+      "model": "BDFS15020B",
+      "price_after": 15999,
+      "price_before": 18429,
+      "discount_pct": 13,
+      "shop": "Jumia",
+      "source": "jumia.com.eg",
+      "url": "https://www.jumia.com.eg/ar/beko-bdfs15020b-inverter-dishwasher-with-led-display-5-programs-black-38720496.html",
+      "in_stock": true,
+      "features": [
+        "انفرتر"
+      ],
+      "scraped": true,
+      "image": "https://eg.jumia.is/unsafe/fit-in/520x520/filters:fill(white)/product/69/402783/1.jpg?3473",
+      "motor_class": "inverter",
+      "product_key": "BEKO:BDFS15020B",
+      "history": [
+        {
+          "date": "2026-11-07",
+          "price": 15999,
+          "price_before": 18429,
           "in_stock": true
         }
       ],
