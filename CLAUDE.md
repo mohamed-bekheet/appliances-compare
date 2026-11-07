@@ -125,3 +125,7 @@ Every washer listing may carry `loading`: `"أمامي"` (front) or `"علوي"`
 (title words incl. فوق أوتوماتيك / 2 موتور / washer-dryer, then maker model-code families such as Samsung WW/WA, LG F/T, Bosch WG/WA).
 It is never guessed: unknown stays unset and the UI shows "غير محدد". `upsert_items` fills it when missing; the UI has a "نوع التحميل" filter and the smart search understands أمامي/علوي/فرونت/توب.
 For hand-entered washers, set `loading` explicitly.
+
+## B.TECH marketplace sellers
+B.TECH is a marketplace: the price on a product page is the current buy-box seller and rotates (e.g. LG F4Y2TYG6X showed 19,939 from an external seller, then 23,490).
+Never enter an external seller as its own shop (`B.TECH (بائع خارجي: ...)`): it never refreshes and ends up as a stale "cheapest" price. Use shop `B.TECH` with the product URL so the scraper keeps it current.

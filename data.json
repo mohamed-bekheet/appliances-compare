@@ -4309,47 +4309,6 @@
       "loading": "أمامي"
     },
     {
-      "id": 117,
-      "name": "غسالة ملابس فرونت لودر - Inverter Direct Drive، بخار، ThinQ Wi-Fi",
-      "brand": "LG",
-      "category": "غسالة",
-      "model": "F4Y2TYG6X",
-      "capacity_kg": 8,
-      "spin_rpm": 1400,
-      "dimensions": "600x850x550",
-      "features": [
-        "Inverter Direct Drive",
-        "6 Motion",
-        "بخار",
-        "ThinQ Wi-Fi",
-        "لون أسود",
-        "Front Load"
-      ],
-      "price_before": 0,
-      "price_after": 19939,
-      "discount_pct": 0,
-      "shop": "B.TECH (بائع خارجي: Shahd)",
-      "source": "btech.com marketplace",
-      "url": "https://btech.com/p/lg-front-load-inverter-washing-machine-8kg-black-f4y2tyg6x",
-      "motor_class": "dd",
-      "motor_type": "Inverter Direct Drive",
-      "made_in": "مصر (مرجّح – نفس سلسلة F4Y2 المصرية)",
-      "made_in_verified": false,
-      "motor_warranty_years": 10,
-      "review_summary": "أقل سعر في 30 يوم على بي.تك، بس البائع خارجي (Shahd) مش بي.تك نفسها؛ اتأكد من الضمان قبل الشرا. الصفحة نفسها ظهر فيها كمان 20,299 و20,970 فالسعر بيتغير.",
-      "history": [
-        {
-          "date": "2026-11-05",
-          "price": 19939,
-          "price_before": 0
-        }
-      ],
-      "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
-      "product_key": "LG:F4Y2TYG6X",
-      "loading": "أمامي"
-    },
-    {
       "id": 118,
       "name": "LG F2T2TYM1S Front Load Washing Machine , 8 kg , Black",
       "brand": "LG",
