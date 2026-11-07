@@ -247,6 +247,42 @@ tbody tr.best-deal td:first-child { border-right: 3px solid #ffc107; }
   .controls, main { padding: 10px 12px; }
   .cards { grid-template-columns: 1fr 1fr; gap: 10px; }
 }
+
+/* ── Mobile ── */
+.ftoggle, .fshow { display: none; }
+@media (max-width: 700px) {
+  html, body { overflow-x: hidden; }
+  header { padding: 10px 14px; gap: 6px; }
+  header h1 { font-size: 1.05rem; }
+  header p { display: none; }
+  .header-badges { flex-wrap: nowrap; overflow-x: auto; width: 100%; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
+  .hbadge { flex: 0 0 auto; font-size: .68rem; }
+  .tabs { padding: 0 6px; position: sticky; top: 0; z-index: 30; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { padding: 10px 11px; font-size: .78rem; }
+  /* filters: search always visible, the rest folds behind a button */
+  .controls { position: static; padding: 8px 12px; gap: 8px; display: grid; grid-template-columns: 1fr 1fr; align-items: end; }
+  .controls .ctrl { min-width: 0 !important; max-width: none !important; }
+  .controls .ctrl-search { grid-column: 1 / -1; order: 1; }
+  .controls .ftoggle { order: 2; grid-column: 1 / -1; display: flex; justify-content: center; align-items: center; gap: 6px;
+    padding: 9px; border: 1.5px solid var(--orange); background: var(--orange-light); color: var(--orange);
+    border-radius: 10px; font: inherit; font-weight: 700; font-size: .85rem; cursor: pointer; }
+  .controls .ctrl:not(.ctrl-search) { display: none; order: 3; }
+  .controls.open .ctrl:not(.ctrl-search) { display: flex; }
+  .controls.open #ctrlMotor[style*="none"], .controls.open #ctrlSpec[style*="none"], .controls.open #ctrlLoad[style*="none"] { display: none !important; }
+  .controls .ctrl:has(#priceMin), .controls .ctrl:has(#capMin), .controls .ctrl:has(#discMin), .controls .ctrl:has(#sortBy) { grid-column: 1 / -1; }
+  .controls.open .fshow { display: block; order: 4; grid-column: 1 / -1; padding: 12px; border: 0; border-radius: 10px; background: var(--orange); color: #fff; font: inherit; font-weight: 700; font-size: .95rem; position: sticky; bottom: 8px; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
+  .controls.open .ftoggle .car { transform: rotate(180deg); }
+  .ctrl input, .ctrl select, .ms-btn { font-size: 16px; min-height: 40px; }   /* 16px stops iOS zoom-on-focus */
+  .ms-panel { position: fixed; left: 10px; right: 10px; top: auto; bottom: 10px; max-height: 65vh; overflow-y: auto; min-width: 0; z-index: 400; box-shadow: 0 -6px 30px rgba(0,0,0,.35); }
+  .stats { padding: 6px 12px; gap: 14px; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+  .stat-item { flex: 0 0 auto; }
+  main { padding: 10px 10px 90px; }
+  .rec-panel { margin: 10px 10px 0; padding: 10px; }
+  .cards { grid-template-columns: 1fr; gap: 10px; }
+  .more-wrap button { width: 100%; }
+  .compare-bar { padding: 8px 12px; }
+}
 /* ── Value recommendation ── */
 .rec-panel { margin: 14px 24px 0; background: #fff; border-radius: 12px; border: 2px solid #ffe0b2; padding: 14px 16px; box-shadow: 0 2px 10px rgba(0,0,0,.05); }
 .rec-head { display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
@@ -323,7 +359,8 @@ tr.best-value td { background: #e8f5e9 !important; }
 </div>
 
 <div class="controls">
-  <div class="ctrl" style="min-width:260px;flex:2">
+  <button type="button" class="ftoggle" id="fToggle" onclick="toggleFilters()">🎛️ فلاتر <span id="fCount"></span> <span class="car">▾</span></button>
+  <div class="ctrl ctrl-search" style="min-width:260px;flex:2">
     <label>🔍 بحث ذكي</label>
     <input type="search" id="searchInput" placeholder="مثلاً: غسالة LG 8 كيلو انفرتر تحت 20 الف" autocomplete="off">
     <div class="qhint" id="qHint"></div>
@@ -381,6 +418,7 @@ tr.best-value td { background: #e8f5e9 !important; }
       <button class="btn btn-gray" onclick="resetFilters()">مسح</button>
     </div>
   </div>
+  <button type="button" class="fshow" onclick="toggleFilters(); document.getElementById('statsBar').scrollIntoView({behavior:'smooth'})">✅ اعرض النتائج</button>
 </div>
 
 <div class="stats" id="statsBar">
@@ -425,7 +463,9 @@ tr.best-value td { background: #e8f5e9 !important; }
 let ALL = [];
 let LATEST = '';   // newest last_seen; scraped listings not seen for 21+ days are treated as gone
 let filtered = [];
-let view = 'table';
+let view = innerWidth <= 700 ? 'cards' : 'table';
+document.getElementById('btnTable').classList.toggle('active', view === 'table');
+document.getElementById('btnCards').classList.toggle('active', view === 'cards');
 let sortCol = '';
 let sortDir = 1;
 let compareIds = new Set();
@@ -1147,6 +1187,7 @@ function updateStats() {
 
 // ─── Render ──────────────────────────────────────────────
 function render() {
+  updateFilterCount();
   const area = document.getElementById('mainArea');
   renderRec();
   if (!filtered.length) {
@@ -1308,6 +1349,12 @@ function sortBy(col) {
 }
 
 // ─── View toggle ─────────────────────────────────────────
+function toggleFilters() { document.querySelector('.controls').classList.toggle('open'); }
+function updateFilterCount() {
+  const n = Object.values(SEL).reduce((a, x) => a + x.size, 0) + ['priceMin','priceMax','capMin','capMax','discMin','discMax'].filter(i => document.getElementById(i).value).length
+    + (document.getElementById('stockOnly').checked ? 1 : 0);
+  document.getElementById('fCount').textContent = n ? '(' + n + ')' : '';
+}
 function setView(v) {
   view = v;
   document.getElementById('btnTable').classList.toggle('active', v==='table');
