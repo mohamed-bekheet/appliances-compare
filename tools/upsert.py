@@ -54,7 +54,7 @@ def upsert_items(d, items, date, verbose=True):
             for k, v in it.items():
                 if k in KEEP or v in (None, '', []):
                     continue
-                if curated and k not in PRICE_FIELDS and not (k in ('url', 'image') and not old.get(k)):
+                if curated and k not in PRICE_FIELDS and not (k in ('url', 'image', 'loading') and not old.get(k)):
                     continue
                 old[k] = v
             if key and not curated:

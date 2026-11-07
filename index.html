@@ -331,6 +331,7 @@ tr.best-value td { background: #e8f5e9 !important; }
   <div class="ctrl"><label>🏷️ الماركة</label><div class="ms" data-key="brand"></div></div>
   <div class="ctrl"><label>🏪 المحل</label><div class="ms" data-key="shop"></div></div>
   <div class="ctrl"><label>✨ المميزات</label><div class="ms" data-key="feat"></div></div>
+  <div class="ctrl" id="ctrlLoad"><label>🧺 نوع التحميل</label><div class="ms" data-key="load"></div></div>
   <div class="ctrl" id="ctrlMotor"><label>🔧 الموتور</label><div class="ms" data-key="motor"></div></div>
   <div class="ctrl" id="ctrlSpec"><label id="specLbl">🔩 المواصفة</label><div class="ms" data-key="spec"></div></div>
   <div class="ctrl">
@@ -504,6 +505,7 @@ function vsBadge(d) {
 function techLine2(d) {
   if (d.category !== 'غسالة') return '';
   const bits = [];
+  if (d.loading) bits.push('🧺 تحميل ' + d.loading);
   if (d.motor_type) bits.push('🔧 ' + d.motor_type);
   if (d.made_in) bits.push('🏭 ' + d.made_in + (d.made_in_verified===false && d.made_in!=='غير محدد' ? ' (غير مؤكد)' : ''));
   if (d.drum_material) bits.push('🥁 ' + d.drum_material);
@@ -728,7 +730,8 @@ function capUnit() {
 const FACETS = {
   brand: { all: 'كل الماركات', vals: d => [d.brand] },
   shop:  { all: 'كل المحلات',  vals: d => [d.shop] },
-  feat:  { all: 'أي مميزات',   vals: d => d._f || [], and: true },
+  feat:  { all: 'أي مميزات',   vals: d => d._ff || d._f || [], and: true },
+  load:  { all: 'الكل', vals: d => d.category === 'غسالة' ? [d.loading || 'غير محدد'] : [], label: v => v === 'غير محدد' ? v : 'تحميل ' + v },
   spec:  { all: 'الكل', vals: d => specOf(d), label: v => specLabel(v) },
   motor: { all: 'الكل',        vals: d => [d.motor_class || 'unknown'], label: v => MOTOR_LABEL[v] || v },
 };
@@ -762,7 +765,7 @@ const Q_CATS = [  // order matters (غسالة اطباق before غسالة)
 ];
 const Q_FEATS = [
   ['انفرتر', /انفرتر|inverter/], ['بخار', /بخار|steam/], ['نوفروست', /نو ?فروست|no ?frost/], ['ديفروست', /ديفروست|defrost/],
-  ['Wi-Fi', /واي ?فاي|wi-?fi|سمارت|smart/], ['Front Load', /فرونت|امامي|front/], ['Top Load', /توب ?لود|علوي|top ?load/],
+  ['Wi-Fi', /واي ?فاي|wi-?fi|سمارت|smart/], ['Front Load', /فرونت( ?لود)?|امامي|front( ?load)?/], ['Top Load', /توب( ?لود)?|علوي|top( ?load)?/],
   ['نصف أوتوماتيك', /نص(ف)? ?اوتوماتيك|half/], ['بلت إن', /بلت ?ان|built ?in/], ['أمان كامل', /امان|safety/],
   ['مروحة', /مروحه|fan/], ['سايد باي سايد', /سايد ?باي ?سايد|side ?by ?side/], ['ميني بار', /ميني ?بار|mini ?bar/],
 ];
@@ -786,7 +789,8 @@ function buildSmartIndex() {
   for (const d of ALL) {   // precomputed once: search text, model key, canonical features
     d._q = normAr([d.name, d.brand, d.model, d.category, (d.features || []).join(' '), d.shop, d.seller, d.made_in].join(' '));
     d._m = alnum(d.model);
-    d._f = canonFeats(d.features);
+    d._ff = canonFeats(d.features).filter(f => f !== 'Front Load' && f !== 'Top Load');   // facet list (loading type has its own filter)
+    d._f = [...d._ff, ...(d.loading === 'أمامي' ? ['Front Load'] : d.loading === 'علوي' ? ['Top Load'] : [])];   // search (smart query)
   }
 }
 const _pq = new Map();
@@ -948,6 +952,8 @@ const PRICE_PRESETS = [[0, 10000], [10000, 20000], [20000, 30000], [30000, 50000
 function refreshRangeHints() {
   document.getElementById('capUnitLbl').textContent = capUnit();
   document.getElementById('capLbl').textContent = WIDTH_CATS.includes(activeTab) ? 'العرض' : 'السعة';
+  document.getElementById('ctrlLoad').style.display = (!activeTab || activeTab === 'غسالة') ? '' : 'none';
+  if (activeTab && activeTab !== 'غسالة') SEL.load.clear();
   document.getElementById('ctrlMotor').style.display = (!activeTab || activeTab === 'غسالة' || activeTab === 'مجفف') ? '' : 'none';
   const specL = activeTab === 'غسالة' ? '🔩 سرعة العصر' : ['بوتاجاز','مسطح غاز','مسطح كهرباء'].includes(activeTab) ? '🔥 الشعلات'
               : ['ثلاجة','ديب فريزر'].includes(activeTab) ? '📏 بالقدم' : null;
@@ -1033,7 +1039,7 @@ function promoteQuery() {
   const P = parseQuery(document.getElementById('searchInput').value), $ = id => document.getElementById(id);
   if (P.cats.length === 1) { const t = document.querySelector(`.tab[data-cat="${CSS.escape(P.cats[0])}"]`);
     if (t) { document.querySelectorAll('.tab').forEach(el => el.classList.remove('active')); t.classList.add('active'); activeTab = P.cats[0]; } }
-  P.brands.forEach(b => SEL.brand.add(b)); P.shops.forEach(x => SEL.shop.add(x)); P.feats.forEach(f => SEL.feat.add(f));
+  P.brands.forEach(b => SEL.brand.add(b)); P.shops.forEach(x => SEL.shop.add(x)); P.feats.forEach(f => f === 'Front Load' ? SEL.load.add('أمامي') : f === 'Top Load' ? SEL.load.add('علوي') : SEL.feat.add(f));
   if (P.pMin != null) $('priceMin').value = P.pMin;
   if (P.pMax != null) $('priceMax').value = P.pMax;
   if (P.cap) { $('capMin').value = P.cap[1]; $('capMax').value = P.cap[1]; }
@@ -1048,7 +1054,7 @@ function showMore() { SHOW += 300; applyFilters(true); }
 function relaxSuggestions() {
   const F = LASTF || readFilters(), out = [];
   const count = skip => ALL.reduce((n, d) => n + (passes(d, F, skip) ? 1 : 0), 0);
-  const NAMES = { brand: 'الماركة', shop: 'المحل', feat: 'المميزات', motor: 'الموتور', spec: 'المواصفة' };
+  const NAMES = { brand: 'الماركة', shop: 'المحل', feat: 'المميزات', motor: 'الموتور', load: 'التحميل', spec: 'المواصفة' };
   for (const k in SEL) if (SEL[k].size) out.push([`شيل فلتر ${NAMES[k]}`, count(k), `SEL.${k}.clear();applyFilters()`]);
   if (F.pMin != null || F.pMax != null) out.push(['شيل فلتر السعر', count('price'), "removeFilter('price')"]);
   if (F.cMin != null || F.cMax != null) out.push(['شيل فلتر السعة', count('cap'), "removeFilter('cap')"]);

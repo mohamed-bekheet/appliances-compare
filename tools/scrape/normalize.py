@@ -179,7 +179,7 @@ FEATS = [
     ("انفرتر", r"inverter|انفرتر|إنفرتر|عاكس"),
     ("Front Load", r"front[\s-]?load|أمامي|امامي|front loader"),
     ("Top Load", r"top[\s-]?load|علوي|تحميل علوي"),
-    ("نصف أوتوماتيك", r"half[\s-]?auto|semi[\s-]?auto|twin[\s-]?tub|نصف"),
+    ("نصف أوتوماتيك", r"ES-T[A-Z0-9]|half[\s-]?auto|semi[\s-]?auto|twin[\s-]?tub|نصف"),
     ("غسالة مجفف", r"washer[\s&-]*dryer|combo|مع مجفف|بمجفف"),
     ("بخار", r"steam|بخار"),
     ("Wi-Fi", r"wi-?fi|smart|thinq|واي فاي"),
@@ -193,6 +193,50 @@ FEATS = [
     ("مروحة", r"\bfan\b|turbo|مروحة"),
 ]
 FEATS = [(f, re.compile(r, re.I)) for f, r in FEATS]
+
+
+
+# ── washer loading type: "أمامي" (front) / "علوي" (top) ───────────────────────
+_FRONT = re.compile(r"front[\s-]?load|فرونت|أمامي|امامي|امامى|أمامى|washer[\s&-]*dryer|combo|\d\s*(?:kg\s*)?dryer|\bFL\b|ES-F[A-Z0-9]|TWV-?FN|مجفف \d|BWD\d|غسالة مجفف|مع مجفف|بمجفف|بالمجفف|\bWD\d", re.I)
+_TOP = re.compile(r"top[\s-]?load|توب ?لود|علوي|علوى|فوق ?(?:ال)?(?:اتوماتيك|أتوماتيك|أوتوماتيك|اوتوماتيك)|2 ?موتور|حلة عصر|half[\s-]?auto|semi[\s-]?auto|twin[\s-]?tub|نصف ?اتوماتيك|نصف ?أوتوماتيك|single[\s-]?tub|double[\s-]?tub|تانك واحد|حوض", re.I)
+# model-code families whose loading type is fixed by the maker's naming scheme
+_MODEL_RULES = [
+    (r"^WW\d", "front"), (r"^WA\d", "top"), (r"^WD\d", "front"),             # Samsung
+    (r"^F\d|^FH|^FV|^FC", "front"), (r"^T\d|^TD\d", "top"),                      # LG (F4V.., T2108..)
+    (r"^ZWF|^ZWD|^ZWY", "front"), (r"^ZWT", "top"), (r"^EWF|^EWW", "front"), (r"^EWT", "top"),  # Zanussi / Electrolux
+    (r"^TWD|^TWF|^TWL|^TW-?BL", "front"), (r"^TW-?B[JK]|^AW-?[JKU]|^AW-?DJ", "top"),       # Toshiba
+    (r"^B\d?WF|^WTE|^WUE|^WMB|^WMY|^B3WF|^B5WF", "front"),                      # Beko
+    (r"^HW\d{3}-?B|^HWD|^HW\d{2,3}-?BP|^HW\d{2,3}-?B\d", "front"), (r"^HWT|^HWM", "top"),  # Haier
+    (r"^FWD|^FWM|^FFB|^FFT|^FF\d", "front"),                                      # Whirlpool/Fresh-like
+    (r"^WG[A-Z]\d|^WA[NJTU]\d|^WU[ZQ]?\d|^WM\d|^WL[GK]", "front"),            # Bosch / Siemens (no top-loaders sold)
+    (r"^NL[MS]|^NM\d|^NS\d|^AQ\d|^RPD|^RSG", "front"), (r"^H[3-9]W", "front"),   # Ariston / Hoover
+    (r"^MFN|^MF\d{2,3}[A-Z]|^MFK", "front"), (r"^MA\d|^MAS", "top"),            # Midea
+    (r"^BWD|^WFS|^WTX|^WTV|^WCV|^WDV|^WY", "front"),                            # Beko
+    (r"^GVS|^CS\d|^CSS|^CO\d", "front"),                                         # Candy
+]
+
+
+def loading_type(name, model="", features=(), category="غسالة"):
+    """Return 'أمامي' / 'علوي' / None for a washer. None = could not tell (never guess)."""
+    if category != "غسالة":
+        return None
+    t = " ".join([name or "", " ".join(features or [])])
+    f, tp = bool(_FRONT.search(t)), bool(_TOP.search(t))
+    if f and not tp:
+        return "أمامي"
+    if tp and not f:
+        return "علوي"
+    if f and tp:   # e.g. "washer dryer" next to a stray "حوض" — dryers combos are always front
+        return "أمامي" if re.search(r"dryer|combo|مجفف", t, re.I) else None
+    if re.search(r"مجفف ملابس|(?<!washer )\b(?:tumble )?dryer\b|^\s*مجفف", name or "", re.I) and not re.search(r"غسالة|washing|washer", name or "", re.I):
+        return None   # a drier that landed in the washer tab
+    cands = [re.sub(r"[^A-Z0-9-]", "", (model or "").upper())]
+    cands += [re.sub(r"[^A-Z0-9-]", "", w.upper()) for w in re.findall(r"[A-Za-z][A-Za-z0-9/-]{4,}", name or "")]
+    for m in cands:
+        for rx, kind in _MODEL_RULES:
+            if m and re.search(rx, m):
+                return "أمامي" if kind == "front" else "علوي"
+    return None
 
 
 BUNDLE = re.compile(
@@ -261,6 +305,10 @@ def build(raw):
         p["motor_class"] = "inverter"
     elif cat == "غسالة":
         p["motor_class"] = "unknown"
+    if cat == "غسالة":
+        lt = loading_type(name, model, p["features"], cat)
+        if lt:
+            p["loading"] = lt
     k = None if bundle else model_key(brand, model)
     if k:
         p["product_key"] = k
