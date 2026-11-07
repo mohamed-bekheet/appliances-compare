@@ -92,7 +92,7 @@ def btech(f, ctx):
         out.append(dict(name=prod.get("name"), price=to_num(off.get("price")), old=0, url=url,
                         in_stock="InStock" in str(off.get("availability", "InStock")),
                         shop="B.TECH", source="btech.com", brand_hint=(prod.get("brand") or {}).get("name"),
-                        cat_hint=cat, model_hint=mm.group(1).strip() if mm else None, extra=None,
+                        cat_hint=cat, model_hint=mm.group(1).strip() if mm else None, extra=None, desc=desc,
                         image=_ld_image(prod)))
     return out
 
@@ -256,6 +256,8 @@ def woo(f, ctx, base, cats, shop, source, per_page=100):
                                 brand_hint=(x.get("brands") or [{}])[0].get("name"),
                                 cat_hint=" ".join(k.get("slug", "").replace("-", " ") for k in x.get("categories", [])) + " " + c,
                                 model_hint=None, extra=html.unescape(x.get("slug") or "").replace("-", " "),
+                                desc=html.unescape(" ".join([x.get("short_description") or "", x.get("description") or "",
+                                     " ".join(f"{a.get('name')}: {' '.join(t.get('name', '') for t in a.get('terms', []))}" for a in (x.get("attributes") or []))])),
                                 image=((x.get("images") or [{}])[0].get("thumbnail") or (x.get("images") or [{}])[0].get("src"))))
             if len(j) < (per_page or 10):
                 break

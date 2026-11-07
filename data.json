@@ -7286,7 +7286,7 @@
       "in_stock": true,
       "price_note": "سعر B.TECH Marketplace: بيتغير حسب البائع، اتأكد من صفحة المنتج قبل الشراء.",
       "capacity_kg": 8,
-      "motor_class": "inverter",
+      "motor_class": "dd",
       "features": [
         "Front Load",
         "انفرتر"
@@ -7309,7 +7309,12 @@
       "last_seen": "2026-11-07",
       "product_key": "LG:F4Y2TYGYZ",
       "image": "https://media.btech.com/catalogs/9/c/f/5/9cf5230b6401d61a98316a456eb50325d16d04fd_361b6a1210f70c49381023950bcbb970bc376bc79f89a4acebbe2ea698ed85ce_copy.jpg",
-      "loading": "أمامي"
+      "loading": "أمامي",
+      "motor_warranty_years": 10,
+      "warranty_years": 5,
+      "programs": 10,
+      "dimensions": "85x60x55 cm",
+      "motor_type": "Direct Drive Inverter"
     },
     {
       "id": 199,

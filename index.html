@@ -542,16 +542,30 @@ function vsBadge(d) {
   if (v==null) return '-';
   return `<span class="vscore ${v>=85?'vs-hi':v>=65?'vs-mid':'vs-lo'}" title="مؤشر القيمة مقابل السعر (الأفضل في الفلتر الحالي = 100)">${v}</span>`;
 }
-function techLine2(d) {
-  if (d.category !== 'غسالة') return '';
+// a spec known for the model in any shop is shown on the cheapest card too (warranty keeps its source shop: it can differ per seller)
+function specOfGroup(d, k) {
+  if (d[k] != null && d[k] !== '' && d[k] !== 'unknown') return [d[k], null];
+  for (const x of groupOf(d)) if (x[k] != null && x[k] !== '' && x[k] !== 'unknown') return [x[k], x.shop];
+  return [null, null];
+}
+function techLine2(d0) {
+  const d = Object.assign({}, d0), from = {};
+  for (const k of ['loading', 'motor_type', 'dimensions', 'warranty_years', 'motor_warranty_years']) {
+    const [v, shop] = specOfGroup(d0, k); if (v != null) { d[k] = v; if (shop) from[k] = shop; }
+  }
+  const src = k => from[k] ? ` <small>(${esc(from[k])})</small>` : '';
   const bits = [];
+  if (d.category === 'غسالة') {
   if (d.loading) bits.push('🧺 تحميل ' + d.loading);
   if (d.motor_type) bits.push('🔧 ' + d.motor_type);
   if (d.made_in) bits.push('🏭 ' + d.made_in + (d.made_in_verified===false && d.made_in!=='غير محدد' ? ' (غير مؤكد)' : ''));
   if (d.drum_material) bits.push('🥁 ' + d.drum_material);
-  if (d.motor_warranty_years) bits.push(`🛡️ موتور ${d.motor_warranty_years} سنين`);
+  }
+  if (d.warranty_years) bits.push(`🛡️ ضمان ${d.warranty_years} سنين${src('warranty_years')}`);
+  if (d.motor_warranty_years) bits.push(`🛡️ ${d.category === 'ثلاجة' || d.category === 'ديب فريزر' ? 'كمبروسر' : 'موتور'} ${d.motor_warranty_years} سنين${src('motor_warranty_years')}`);
+  if (d.dimensions) bits.push('📐 ' + d.dimensions);
   if (d.rating) bits.push(`<span class="stars">★ ${d.rating}</span>${d.reviews_count?` (${d.reviews_count})`:''}`);
-  return `<div class="tech2">${bits.join(' · ')}</div>`;
+  return bits.length ? `<div class="tech2">${bits.join(' · ')}</div>` : '';
 }
 
 // weighted customer rating (Bayesian): few reviews pull toward 4.3
@@ -1426,7 +1440,9 @@ function openCompareModal() {
     ['نوع الموتور',      d => d.motor_type || '-'],
     ['بلد الصنع',        d => d.made_in ? d.made_in + (d.made_in_verified===false && d.made_in!=='غير محدد' ? ' (غير مؤكد)' : '') : '-'],
     ['خامة الحلة',       d => d.drum_material || '-'],
-    ['ضمان الموتور',     d => d.motor_warranty_years ? d.motor_warranty_years+' سنين' : '-'],
+    ['الضمان',           d => d.warranty_years ? d.warranty_years+' سنين' : '-'],
+    ['ضمان الموتور/الكمبروسر', d => d.motor_warranty_years ? d.motor_warranty_years+' سنين' : '-'],
+    ['الأبعاد',          d => d.dimensions || '-'],
     ['تقييم العملاء',    d => d.rating ? `★ ${d.rating}${d.reviews_count?` (${d.reviews_count} تقييم)`:''} – ${d.rating_source||''}` : 'لا يوجد'],
     ['رأي العملاء',      d => d.review_summary || '-'],
     ['درجة الجودة',      d => qualityPct(d)!=null ? qualityPct(d)+'/100' : '-'],

@@ -129,3 +129,6 @@ For hand-entered washers, set `loading` explicitly.
 ## B.TECH marketplace sellers
 B.TECH is a marketplace: the price on a product page is the current buy-box seller and rotates (e.g. LG F4Y2TYG6X showed 19,939 from an external seller, then 23,490).
 Never enter an external seller as its own shop (`B.TECH (بائع خارجي: ...)`): it never refreshes and ends up as a stale "cheapest" price. Use shop `B.TECH` with the product URL so the scraper keeps it current.
+
+## Specs from descriptions
+`specs_from_text()` (tools/scrape/normalize.py) reads warranty, motor/compressor warranty, motor type (direct drive / inverter), programs, dimensions, energy class and "Loading Type" from a store description. B.TECH passes its product-page JSON-LD description, Woo stores (Ehab, Wazen, Berty) pass description + attributes via the raw `desc` key. Nothing is guessed; missing stays empty. Curated listings get these fields only when empty (`FILL_IF_MISSING` in tools/upsert.py). The UI shows a spec known in any shop of the same model on the cheapest card, and names the shop for warranty (it can differ per seller).

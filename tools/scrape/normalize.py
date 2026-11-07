@@ -239,6 +239,53 @@ def loading_type(name, model="", features=(), category="غسالة"):
     return None
 
 
+# ── specs written in free text (B.TECH "Key: Value" descriptions, Woo descriptions, Arabic titles) ──
+_AR_DIGITS = str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")
+_YR = r"(?:years?|yrs?|سنين|سنوات|سنه|سنة)"
+
+
+def specs_from_text(desc, cat=None):
+    """Pull warranty / motor / programs / dimensions / energy class out of a product description.
+    Only fields that are actually written there are returned; nothing is guessed."""
+    t = re.sub(r"<[^>]+>", " ", desc or "").translate(_AR_DIGITS)
+    t = re.sub(r"&nbsp;|\s+", " ", t)
+    if not t.strip():
+        return {}
+    out = {}
+    m = re.search(r"(\d{1,2})\s*" + _YR + r"[^.;|\d]{0,25}?(?:on|for)\s+(?:the\s+)?(?:compressor|motor)", t, re.I) \
+        or re.search(r"(?:motor|compressor|الموتور|موتور|الكومبريسور|كمبروسر)[^.;|\d]{0,30}?(\d{1,2})\s*" + _YR, t, re.I) \
+        or re.search(r"(\d{1,2})\s*" + _YR + r"\s*(?:على|ضمان)\s*(?:ال)?(?:موتور|كومبريسور|كمبروسر)", t, re.I)
+    if m:
+        out["motor_warranty_years"] = int(m.group(1))
+    # general warranty = first "N years" next to the word warranty that is not the motor/compressor one
+    for m in re.finditer(r"(?:warranty|ضمان)[^0-9.;|]{0,12}(\d{1,2})\s*" + _YR + r"|(\d{1,2})\s*" + _YR + r"\s*(?:warranty|ضمان)", t, re.I):
+        n = int(m.group(1) or m.group(2))
+        if re.search(r"motor|compressor|موتور|كومبر|كمبر", t[max(0, m.start() - 14):m.end()], re.I):
+            continue   # that number is the motor/compressor warranty
+        if 1 <= n <= 15:
+            out["warranty_years"] = n
+            break
+    m = re.search(r"(?:number of programs|programs|عدد البرامج)\s*[:：-]?\s*(\d{1,2})\b|\b(\d{1,2})\s*(?:programs|برنامج)", t, re.I)
+    if m:
+        n = int(m.group(1) or m.group(2))
+        if 2 <= n <= 60:
+            out["programs"] = n
+    m = re.search(r"(?:dimensions?|الأبعاد|الابعاد)[^0-9]{0,25}(\d{2,3}(?:\.\d)?\s*[x×*]\s*\d{2,3}(?:\.\d)?(?:\s*[x×*]\s*\d{2,3}(?:\.\d)?)?)\s*(cm|سم|mm|مم)?", t, re.I)
+    if m:
+        out["dimensions"] = re.sub(r"\s*[x×*]\s*", "x", m.group(1)) + (" " + ("cm" if (m.group(2) or "cm").lower() in ("cm", "سم") else "mm"))
+    m = re.search(r"energy\s*(?:class|rating|efficiency)\s*[:：-]?\s*(A\+{0,3}|[B-E])(?![\w+])|فئة الطاقة\s*[:：-]?\s*(A\+{0,3})", t, re.I)
+    if m:
+        out["energy_class"] = (m.group(1) or m.group(2)).upper()
+    if cat in ("غسالة", "مجفف", None):
+        if re.search(r"direct[\s-]?drive|دفع مباشر|DD\s*motor", t, re.I):
+            out["motor_type"] = "Direct Drive Inverter" if re.search(r"inverter|انفرتر", t, re.I) else "Direct Drive"
+            out["motor_class"] = "dd"
+        elif re.search(r"inverter[\s-]*(?:motor|drive)|(?:motor|محرك|موتور)[^.;|]{0,15}inverter|انفرتر", t, re.I):
+            out["motor_type"] = "Inverter"
+            out["motor_class"] = "inverter"
+    return out
+
+
 BUNDLE = re.compile(
     r"\b(?:with|and|\+)\b[\w\s,-]{0,60}?\b(?:hood|oven|hob|cooker|microwave|air[\s-]?fryer|fryer|mini[\s-]?bar|dishwasher|"
     r"refrigerator|fridge|freezer|washing machine|kettle|blender|iron|vacuum|tv|screen)\b|"
@@ -301,7 +348,18 @@ def build(raw):
     if raw.get("seller"):
         p["seller"] = raw["seller"]
     p.update(capacities(text, cat))
-    if "انفرتر" in p["features"]:
+    sp = specs_from_text(raw.get("desc"), cat)
+    for k, v in sp.items():
+        if k in ("motor_class", "motor_type") and cat not in ("غسالة", "مجفف"):
+            continue
+        p[k] = v
+    if cat == "غسالة" and raw.get("desc"):
+        mt = re.search(r"loading\s*type\s*[:：-]?\s*(front|top)", raw["desc"], re.I)
+        if mt:
+            p["loading"] = "أمامي" if mt.group(1).lower() == "front" else "علوي"
+    if p.get("motor_class"):
+        pass   # already read from the description (e.g. direct drive)
+    elif "انفرتر" in p["features"]:
         p["motor_class"] = "inverter"
     elif cat == "غسالة":
         p["motor_class"] = "unknown"

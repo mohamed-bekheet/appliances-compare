@@ -18,6 +18,8 @@ from pricebook import product_key, snapshot, load, save
 
 KEEP = {'id', 'history', 'first_seen'}
 TRACK = ('price', 'price_before', 'in_stock')
+FILL_IF_MISSING = ('url', 'image', 'loading', 'warranty_years', 'motor_warranty_years', 'motor_type', 'motor_class',
+                   'programs', 'dimensions', 'energy_class')
 PRICE_FIELDS = ('price_after', 'price_before', 'discount_pct', 'in_stock', 'seller')
 
 
@@ -54,7 +56,7 @@ def upsert_items(d, items, date, verbose=True):
             for k, v in it.items():
                 if k in KEEP or v in (None, '', []):
                     continue
-                if curated and k not in PRICE_FIELDS and not (k in ('url', 'image', 'loading') and not old.get(k)):
+                if curated and k not in PRICE_FIELDS and not (k in FILL_IF_MISSING and (not old.get(k) or old.get(k) == 'unknown')):
                     continue
                 old[k] = v
             if key and not curated:
