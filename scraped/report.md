@@ -4,14 +4,14 @@
 |---|---|---|---|---|---|
 | alreyada | 1984 | 1445 | 894 | 0.4 |  |
 | azmy | 465 | 374 | 337 | 2.2 |  |
-| btech | 1021 | 987 | 843 | 41.9 |  |
-| ehab | 650 | 625 | 517 | 1.3 |  |
-| jumia | 320 | 251 | 173 | 18.3 |  |
-| raneen | 2268 | 1413 | 1204 | 24.6 |  |
-| wazen | 1614 | 1443 | 1221 | 1.4 |  |
+| btech | 1021 | 988 | 844 | 43.1 |  |
+| ehab | 656 | 630 | 522 | 1.3 |  |
+| jumia | 1139 | 826 | 399 | 26.9 |  |
+| raneen | 2263 | 1409 | 1201 | 28.0 |  |
+| wazen | 1614 | 1443 | 1221 | 1.7 |  |
 | zanussi | 60 | 58 | 27 | 3.4 |  |
 
-New listings: 30, price changes: 238, unchanged: 6328
+New listings: 157, price changes: 342, unchanged: 6674
 
 ## Price changes
 
@@ -42,6 +42,7 @@ New listings: 30, price changes: 238, unchanged: 6328
 - Purity HPT906S @ Al Reyada: 46,075 → 14,390 (-31,685)
 - Beko HIMW95226SXEL @ Wazen: 45,450 → 16,645 (-28,805)
 - Purity HPT907S @ Al Reyada: 42,990 → 14,850 (-28,140)
+- LG GC-X22FFQAB @ B.TECH: 187,999 → 159,990 (-28,009)
 - Fimash D008-BXELIT @ Al Reyada: 30,589 → 5,199 (-25,390)
 - Elba EL10XLBFG @ Al Reyada: 60,585 → 37,069 (-23,516)
 - Ecomatic S997XLC @ Al Reyada: 46,410 → 22,999 (-23,411)
@@ -80,21 +81,20 @@ New listings: 30, price changes: 238, unchanged: 6328
 - Ecomatic P70H20AP-ST(BLACK) @ Al Reyada: 56,499 → 47,999 (-8,500)
 - Purity PURITY101 @ Raneen: 12,545 → 5,096 (-7,449)
 - Fimash D011 @ Al Reyada: 40,850 → 33,820 (-7,030)
+- Zanussi TC2 @ Jumia: 26,719 → 19,994 (-6,725)
 - Purity OPT602GG @ Al Reyada: 38,490 → 31,950 (-6,540)
 - Ecomatic P70H20AP-ST(BLACK) @ Al Reyada: 62,499 → 56,499 (-6,000)
 - Purity  @ Raneen: 10,775 → 4,945 (-5,830)
+- Sharp FJ-EC27(BK) @ B.TECH: 44,500 → 38,859 (-5,641)
+- Toshiba PMN06 @ Wazen: 33,900 → 28,380 (-5,520)
 - Purity HPT915G) @ Al Reyada: 39,299 → 33,899 (-5,400)
 - Purity HPT904S @ Al Reyada: 43,615 → 38,699 (-4,916)
 - Purity OPT602GG @ Al Reyada: 34,650 → 29,990 (-4,660)
 - Purity  @ Raneen: 10,795 → 6,245 (-4,550)
-- Purity  @ Raneen: 7,845 → 4,895 (-2,950)
-- Ocean OOGR95 @ Al Reyada: 37,290 → 34,490 (-2,800)
-- Zanussi TC2ZWF9221SD7 @ B.TECH: 22,485 → 19,999 (-2,486)
-- Tornado TWT-TLN10LWT @ B.TECH: 16,650 → 14,549 (-2,101)
-- Purity  @ Raneen: 7,195 → 5,165 (-2,030)
-- Bosch SMS6EMI62V @ Al Reyada: 47,999 → 45,998 (-2,001)
-- Ariston WFST9GWHR @ B.TECH: 25,999 → 23,999 (-2,000)
-- Purity  @ Raneen: 7,235 → 5,435 (-1,800)
+- LG FWT20DBS @ Wazen: 134,995 → 130,495 (-4,500)
+- LG DFC287HMS @ Wazen: 59,515 → 55,675 (-3,840)
+- LG DFC287HVS @ Wazen: 57,655 → 53,935 (-3,720)
+- Midea MDRT489MTN46D @ Jumia: 21,018 → 17,444 (-3,574)
 
 ## Same model, different shops (biggest gaps)
 
@@ -105,8 +105,9 @@ New listings: 30, price changes: 238, unchanged: 6328
 - **Beko GNE480E20ZXPH** (ثلاجة): cheapest B.TECH 76,278 — Raneen 95,050 (save 18,772)
 - **Beko WTV8612XMCI** (غسالة): cheapest B.TECH 17,999 — Raneen 34,508 (save 16,509)
 - **Bosch WGA244ZREG** (غسالة): cheapest Wazen 24,640 — Raneen 25,544, B.TECH 40,399 (save 15,759)
+- **Passap FG200** (ثلاجة): cheapest B.TECH 9,399 — Jumia 24,000 (save 14,601)
+- **Sharp PV69G** (ثلاجة): cheapest Ehab Center 55,509 — Raneen 69,050 (save 13,541)
 - **LG B257KLJW** (ثلاجة): cheapest Azmy 91,999 — Wazen 99,745, Ehab Center 104,990 (save 12,991)
-- **Passap FG200** (ثلاجة): cheapest B.TECH 11,099 — Jumia 24,000 (save 12,901)
 - **Bosch SMS6EMI62V** (غسالة أطباق): cheapest Azmy 36,399 — B.TECH 36,499, Al Reyada 47,999, Ehab Center 47,999 (save 11,600)
 - **Ariston ARR9GGF33229XNA** (بوتاجاز): cheapest Raneen 24,255 — B.TECH 35,419 (save 11,164)
 - **Bosch KGP86FICE8** (ثلاجة): cheapest Azmy 63,850 — Ehab Center 67,499, Raneen 71,302, B.TECH 71,999, Al Reyada 74,999 (save 11,149)
@@ -119,16 +120,18 @@ New listings: 30, price changes: 238, unchanged: 6328
 - **Ecomatic H9110IMRTX** (شفاط): cheapest B.TECH 19,259 — Al Reyada 28,999 (save 9,740)
 - **Bosch KGN86CI3E8** (ثلاجة): cheapest B.TECH 64,299 — Ehab Center 73,999 (save 9,700)
 - **LG F4R5TYG0W** (غسالة): cheapest Azmy 20,890 — Raneen 30,277 (save 9,387)
+- **LG F4X5RRG23BN** (غسالة): cheapest Wazen 37,405 — Ehab Center 42,990, B.TECH 46,765 (save 9,360)
 - **LG F2T2TYM1S** (غسالة): cheapest Azmy 18,990 — B.TECH 28,205 (save 9,215)
 - **Bosch SMP6EMC00V** (غسالة أطباق): cheapest Azmy 39,799 — Raneen 41,851, Ehab Center 41,999, Al Reyada 48,999, B.TECH 48,999 (save 9,200)
 - **Beko B3WFU501040BCI** (غسالة): cheapest Wazen 22,835 — B.TECH 23,559, Ehab Center 24,799, Azmy 31,999 (save 9,164)
 - **Beko BWD10640MCI** (غسالة): cheapest B.TECH 27,999 — Azmy 36,999 (save 9,000)
-- **Bosch SMS46NB20V** (غسالة أطباق): cheapest Azmy 26,999 — B.TECH 35,999 (save 9,000)
 - **LG DFC287HVS** (غسالة أطباق): cheapest B.TECH 52,999 — Azmy 56,999, Ehab Center 61,990 (save 8,991)
-- **LG F4X5RRG23BN** (غسالة): cheapest Wazen 38,695 — Ehab Center 42,990, B.TECH 46,765 (save 8,070)
+- **LG DFC287HMS** (غسالة أطباق): cheapest Wazen 55,675 — B.TECH 57,680, Azmy 58,999, Ehab Center 63,990 (save 8,315)
 - **Bosch KDN76XI3E9** (ثلاجة): cheapest Azmy 48,999 — Ehab Center 49,999, Al Reyada 56,999 (save 8,000)
+- **Bosch SMS46NB20V** (غسالة أطباق): cheapest Azmy 27,999 — B.TECH 35,999 (save 8,000)
+- **LG F0Z6DRP24** (غسالة): cheapest Wazen 51,325 — B.TECH 56,630, Azmy 57,999, Ehab Center 58,990 (save 7,665)
 - **Bosch KGN56LB3E9** (ثلاجة): cheapest Raneen 50,401 — B.TECH 57,999, Ehab Center 57,999 (save 7,598)
-- **LG DFC513FVE** (غسالة أطباق): cheapest B.TECH 36,459 — Wazen 40,915, Ehab Center 43,990 (save 7,531)
+- **Zanussi ZWF8221SL8** (غسالة): cheapest B.TECH 17,999 — Jumia 25,531 (save 7,532)
 - **White Whale WR4385** (ثلاجة): cheapest Wazen 21,480 — Raneen 28,950 (save 7,470)
 - **Beko GNE134626BH** (ثلاجة): cheapest Wazen 77,125 — B.TECH 84,499 (save 7,374)
 - **Bosch KGN76CI3E8** (ثلاجة): cheapest Azmy 53,799 — B.TECH 53,899, Ehab Center 60,999 (save 7,200)
@@ -143,7 +146,8 @@ New listings: 30, price changes: 238, unchanged: 6328
 - **Midea MDRT645MTE06E** (ثلاجة): cheapest Ehab Center 28,399 — B.TECH 35,000 (save 6,601)
 - **Beko BHCA66741BWHSE** (شفاط): cheapest Ehab Center 7,699 — Wazen 12,800, B.TECH 14,199 (save 6,500)
 - **Hisense RS3N518NMIA1** (ثلاجة): cheapest Ehab Center 64,999 — B.TECH 71,428 (save 6,429)
-- **LG DFC287HMS** (غسالة أطباق): cheapest B.TECH 57,680 — Azmy 58,999, Wazen 59,515, Ehab Center 63,990 (save 6,310)
+- **LG RH10X54V2NP** (مجفف): cheapest Wazen 42,625 — Ehab Center 48,990 (save 6,365)
+- **LG RH10X5TV2NP** (مجفف): cheapest Wazen 41,755 — Ehab Center 47,990 (save 6,235)
 - **Ariston F6593** (ثلاجة): cheapest Wazen 52,170 — Ehab Center 58,399 (save 6,229)
 - **Gorenje WHI944EB** (شفاط): cheapest Al Reyada 16,333 — Ehab Center 16,333, B.TECH 22,499 (save 6,166)
 - **LG GN-H722HFHL** (ثلاجة): cheapest B.TECH 68,860 — Ehab Center 70,990, Raneen 74,987 (save 6,127)
@@ -154,7 +158,3 @@ New listings: 30, price changes: 238, unchanged: 6328
 - **Bosch SMS6ECI83T** (غسالة أطباق): cheapest Ehab Center 47,999 — B.TECH 50,990, Al Reyada 53,999 (save 6,000)
 - **Gorenje BFS6148B** (فرن): cheapest Azmy 54,000 — Al Reyada 59,999 (save 5,999)
 - **Beko XMCI2** (غسالة): cheapest B.TECH 16,999 — Raneen 22,945 (save 5,946)
-- **LG F0Z6DRP24** (غسالة): cheapest Wazen 53,095 — B.TECH 56,630, Azmy 57,999, Ehab Center 58,990 (save 5,895)
-- **Midea MDRT489MTN45** (ثلاجة): cheapest Raneen 20,200 — B.TECH 26,000 (save 5,800)
-- **LG F4Y2TYGYZ** (غسالة): cheapest Jumia 23,899 — Wazen 26,095, Azmy 27,499, Raneen 29,545, B.TECH 29,599 (save 5,700)
-- **Samsung WD90F22BCSAS** (غسالة): cheapest B.TECH 87,999 — Ehab Center 89,999, Raneen 93,644 (save 5,645)
