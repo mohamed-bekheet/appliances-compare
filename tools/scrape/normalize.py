@@ -277,7 +277,7 @@ def specs_from_text(desc, cat=None):
     if m:
         out["energy_class"] = (m.group(1) or m.group(2)).upper()
     if cat in ("غسالة", "مجفف", None):
-        if re.search(r"direct[\s-]?drive|دفع مباشر|DD\s*motor", t, re.I):
+        if re.search(r"direct[\s-]?drive|دفع\s*(?:ال)?مباشر|DD\s*motor", t, re.I):
             out["motor_type"] = "Direct Drive Inverter" if re.search(r"inverter|انفرتر", t, re.I) else "Direct Drive"
             out["motor_class"] = "dd"
         elif re.search(r"inverter[\s-]*(?:motor|drive)|(?:motor|محرك|موتور)[^.;|]{0,15}inverter|انفرتر", t, re.I):
@@ -348,6 +348,8 @@ def build(raw):
     if raw.get("seller"):
         p["seller"] = raw["seller"]
     p.update(capacities(text, cat))
+    if raw.get("desc") is not None:
+        p["spec_seen"] = True        # product page / description already read: not fetched again next run
     sp = specs_from_text(raw.get("desc"), cat)
     for k, v in sp.items():
         if k in ("motor_class", "motor_type") and cat not in ("غسالة", "مجفف"):
@@ -357,6 +359,10 @@ def build(raw):
         mt = re.search(r"loading\s*type\s*[:：-]?\s*(front|top)", raw["desc"], re.I)
         if mt:
             p["loading"] = "أمامي" if mt.group(1).lower() == "front" else "علوي"
+        else:
+            ma = re.search(r"نوع التحميل\s*[:：-]?\s*(?:تحميل\s*)?(أمامي|امامي|أمامى|امامى|علوي|علوى|فوق)", raw["desc"])
+            if ma:
+                p["loading"] = "أمامي" if ma.group(1).startswith(("ام", "أم")) else "علوي"
     if p.get("motor_class"):
         pass   # already read from the description (e.g. direct drive)
     elif "انفرتر" in p["features"]:

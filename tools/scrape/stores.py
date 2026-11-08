@@ -51,6 +51,54 @@ def _ld_blocks(soup):
     return out
 
 
+SPEC_HEADS = re.compile(r"مواصفات|المواصفات|specification|product details|تفاصيل المنتج|description|الوصف", re.I)
+SPEC_SELECTORS = (".additional-attributes", "#product-attribute-specs-table", ".product.attribute.description", "#description",
+                  ".product-description", ".product-detail-modern", ".woocommerce-Tabs-panel", ".tab-content")
+
+
+def page_desc(html_text):
+    """All the spec text of a product page: JSON-LD description, meta description, spec tables/sections.
+    Only the product's own blocks (never 'related products' carousels)."""
+    soup = BeautifulSoup(html_text, "lxml")
+    parts = [str(b.get("description")) for b in _ld_blocks(soup) if b.get("@type") == "Product" and b.get("description")]
+    m = soup.find("meta", attrs={"name": "description"})
+    if m and m.get("content"):
+        parts.append(m["content"])
+    for sel in SPEC_SELECTORS:
+        for e in soup.select(sel)[:2]:
+            parts.append(e.get_text("\n", strip=True))
+    for h in soup.find_all(["h2", "h3"]):
+        if SPEC_HEADS.search(h.get_text(" ", strip=True)):
+            sec = h.find_parent(["section", "article"])
+            if sec:
+                parts.append(sec.get_text("\n", strip=True)[:6000])
+    text = re.sub(r"&nbsp;|\xa0", " ", html.unescape("\n".join(parts)))
+    return text[:12000]
+
+
+SPEC_CAPS = {"raneen": 100}     # product pages fetched per run (Raneen's robots.txt asks for a 10 s delay)
+
+
+def with_pages(name, fn):
+    """Listing-only stores: fetch each product page once for its spec text. Pages already read (spec_seen) are skipped,
+    so a weekly run only reads new listings plus a slice of the backlog."""
+    def run(f, ctx):
+        items = fn(f, ctx)
+        done, budget, n = ctx.get("spec_done", set()), min(ctx.get("spec_cap", 300), SPEC_CAPS.get(name, 10**6)), 0
+        for it in items:
+            if it.get("desc") is not None or not it.get("url") or it["url"] in done:
+                continue
+            if n >= budget:
+                break
+            n += 1
+            h = f.get(it["url"])
+            if h:
+                it["desc"] = page_desc(h)
+        log.info("%s: read %d product pages for specs (%d already known)", name, n, len(done))
+        return items
+    return run
+
+
 # ── B.TECH: category pages (server-rendered, 20 per sort) + product-page JSON-LD ─────────────
 def btech(f, ctx):
     B = "https://btech.com"
@@ -92,7 +140,7 @@ def btech(f, ctx):
         out.append(dict(name=prod.get("name"), price=to_num(off.get("price")), old=0, url=url,
                         in_stock="InStock" in str(off.get("availability", "InStock")),
                         shop="B.TECH", source="btech.com", brand_hint=(prod.get("brand") or {}).get("name"),
-                        cat_hint=cat, model_hint=mm.group(1).strip() if mm else None, extra=None, desc=desc,
+                        cat_hint=cat, model_hint=mm.group(1).strip() if mm else None, extra=None, desc=page_desc(h),
                         image=_ld_image(prod)))
     return out
 
@@ -186,12 +234,13 @@ def zanussi(f, ctx):
     out = []
     for url, d in _cap(list(listing.items()), ctx):
         h = f.get(url)
-        sku = None
+        sku, desc = None, None
         if h:
             s = BeautifulSoup(h, "lxml").select_one('.product.attribute.sku .value, [itemprop="sku"]')
             sku = s.get_text(strip=True) if s else None
+            desc = page_desc(h)
         out.append(dict(d, url=url, shop="Zanussi Official", source="zanussi.com.eg", brand_hint="Zanussi",
-                        model_hint=sku, extra=None))
+                        model_hint=sku, extra=None, desc=desc))
     return out
 
 
@@ -371,6 +420,7 @@ def alreyada(f, ctx):
                             shop="Al Reyada", source="alreyadastore.com", brand_hint=p.get("vendor"),
                             cat_hint=(p.get("product_type") or "") + " " + " ".join(p.get("tags") or []),
                             model_hint=None, extra=None,
+                            desc=BeautifulSoup(p.get("body_html") or "", "lxml").get_text("\n", strip=True),
                             image=((p.get("images") or [{}])[0].get("src") or "").split("?")[0] + "?width=300" if p.get("images") else None))
     log.info("alreyada: %d listings", len(out))
     return _cap(out, ctx)
@@ -418,5 +468,6 @@ def carrefour(f, ctx):
     return _cap(out, ctx)
 
 
-STORES = {"btech": btech, "elaraby": elaraby, "zanussi": zanussi, "jumia": jumia, "ehab": ehab, "wazen": wazen, "berty": berty,
-          "raneen": raneen, "azmy": azmy, "alreyada": alreyada, "carrefour": carrefour}
+STORES = {"btech": btech, "elaraby": elaraby, "zanussi": zanussi, "jumia": with_pages("jumia", jumia), "ehab": ehab,
+          "wazen": wazen, "berty": berty, "raneen": with_pages("raneen", raneen), "azmy": with_pages("azmy", azmy),
+          "alreyada": alreyada, "carrefour": with_pages("carrefour", carrefour)}

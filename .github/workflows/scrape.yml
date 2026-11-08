@@ -45,6 +45,8 @@ jobs:
       - run: pip install -r tools/scrape/requirements.txt
       - name: Scrape ${{ matrix.store }}
         if: ${{ github.event_name == 'schedule' || inputs.stores == 'all' || contains(format(',{0},', inputs.stores), format(',{0},', matrix.store)) }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional: lets the scraper ask an LLM when a description is unclear
         run: |
           python tools/scrape/run.py --stores ${{ matrix.store }} --limit ${{ inputs.limit || 0 }} --dry-run \
             --out scraped/${{ matrix.store }} 2>&1 | tee scraped-${{ matrix.store }}.log

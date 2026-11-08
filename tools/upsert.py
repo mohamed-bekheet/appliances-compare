@@ -19,7 +19,7 @@ from pricebook import product_key, snapshot, load, save
 KEEP = {'id', 'history', 'first_seen'}
 TRACK = ('price', 'price_before', 'in_stock')
 FILL_IF_MISSING = ('url', 'image', 'loading', 'warranty_years', 'motor_warranty_years', 'motor_type', 'motor_class',
-                   'programs', 'dimensions', 'energy_class')
+                   'programs', 'dimensions', 'energy_class', 'spec_seen')
 PRICE_FIELDS = ('price_after', 'price_before', 'discount_pct', 'in_stock', 'seller')
 
 

@@ -132,3 +132,7 @@ Never enter an external seller as its own shop (`B.TECH (بائع خارجي: ..
 
 ## Specs from descriptions
 `specs_from_text()` (tools/scrape/normalize.py) reads warranty, motor/compressor warranty, motor type (direct drive / inverter), programs, dimensions, energy class and "Loading Type" from a store description. B.TECH passes its product-page JSON-LD description, Woo stores (Ehab, Wazen, Berty) pass description + attributes via the raw `desc` key. Nothing is guessed; missing stays empty. Curated listings get these fields only when empty (`FILL_IF_MISSING` in tools/upsert.py). The UI shows a spec known in any shop of the same model on the cheapest card, and names the shop for warranty (it can differ per seller).
+
+### Reading descriptions in every store
+`page_desc()` (stores.py) collects JSON-LD description + meta + spec tables/sections of a product page. B.TECH, Zanussi, Woo stores (Ehab/Wazen/Berty) and Al Reyada (Shopify `body_html`) already have it; Raneen, Azmy, Jumia and Carrefour are wrapped in `with_pages()` which reads product pages once (`spec_seen` flag in data.json) up to `--spec-cap` (default 300; Raneen 100 because of its 10 s crawl-delay) per run, so the backlog shrinks run by run. `--refresh-specs` re-reads everything.
+If the repo secret `ANTHROPIC_API_KEY` exists, `tools/scrape/llm_specs.py` asks an LLM for fields only when the regex found fewer than 3 specs in a fresh description; the answer is validated and never overrides the regex. Without the secret this step is skipped.

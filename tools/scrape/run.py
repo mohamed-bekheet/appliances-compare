@@ -13,6 +13,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.dirname(HERE))
 from common import Fetcher                      # noqa: E402
+import llm_specs                                  # noqa: E402
 from normalize import build                      # noqa: E402
 from stores import STORES                        # noqa: E402
 from pricebook import load, save                 # noqa: E402
@@ -49,6 +50,20 @@ def cheapest_table(products, date):
     return rows
 
 
+SPEC_KEYS = ("warranty_years", "motor_warranty_years", "motor_type", "programs", "dimensions", "energy_class")
+
+
+def _llm_fill(p, raw, spec_done):
+    """Ask the LLM only when the regex found little in a fresh description. Regex results are never overwritten."""
+    if not raw.get("desc") or p.get("url") in spec_done or sum(1 for k in SPEC_KEYS if p.get(k)) >= 3:
+        return
+    if not llm_specs.enabled():
+        return
+    for k, v in llm_specs.ask(p["name"], p["category"], raw["desc"]).items():
+        if not p.get(k) or p.get(k) == "unknown":
+            p[k] = v
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--stores", default="all")
@@ -58,12 +73,16 @@ def main():
     ap.add_argument("--limit", type=int, default=0, help="max listings per store (testing)")
     ap.add_argument("--delay", type=float, default=2.0, help="seconds between requests to the same site")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--spec-cap", type=int, default=300, help="product pages read per store per run for specs")
+    ap.add_argument("--refresh-specs", action="store_true", help="re-read pages even if already read before")
     a = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
     names = list(STORES) if a.stores == "all" else [s.strip() for s in a.stores.split(",")]
     d = load(a.data)
-    ctx = {"known_urls": [p["url"] for p in d["products"] if p.get("url")], "limit": a.limit}
+    spec_done = set() if a.refresh_specs else {p["url"] for p in d["products"] if p.get("spec_seen") and p.get("url")}
+    ctx = {"known_urls": [p["url"] for p in d["products"] if p.get("url")], "limit": a.limit,
+           "spec_done": spec_done, "spec_cap": a.spec_cap}
     f = Fetcher(delay=a.delay)
     os.makedirs(a.out, exist_ok=True)
     summary, all_items = {}, []
@@ -79,6 +98,7 @@ def main():
         for r in raws:
             p = build(r)
             if p:
+                _llm_fill(p, r, spec_done)
                 built.append(p)
             else:
                 skips[r.get("_skip", "?")] += 1
