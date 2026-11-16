@@ -1,6 +1,6 @@
 {
   "meta": {
-    "last_updated": "2026-11-13",
+    "last_updated": "2026-11-16",
     "currency": "EGP",
     "note": "Prices from B.TECH (Facebook), Cairo Sales, Nomor, Carrefour, Zanussi Showroom, zanussi.com.eg, Dream 2000, Jumia; bulk import 2026-11-05: B.TECH (washers+fridges category pages) and Carrefour (first page of washers/fridges). B.TECH is a marketplace: price depends on the seller."
   },
@@ -282383,6 +282383,42 @@
       ],
       "first_seen": "2026-11-13",
       "last_seen": "2026-11-13"
+    },
+    {
+      "id": 8157,
+      "name": "LG 8 Kg Front Load Automatic Washing Machine – black – F4Y2TYG6X- Wifi",
+      "brand": "LG",
+      "category": "غسالة",
+      "model": "F4Y2TYG6X",
+      "price_after": 21199,
+      "price_before": 23349,
+      "discount_pct": 9,
+      "shop": "Shaheen",
+      "source": "shaheeneg.com",
+      "url": "https://shaheeneg.com/store/washing-drying/washing-machines/front-loading-washers/lg-8kg-front-load-washer-black/",
+      "image": "https://shaheeneg.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-01-at-12.00.45-PM.jpeg",
+      "in_stock": true,
+      "capacity_kg": 8,
+      "loading": "أمامي",
+      "motor_type": "Direct Drive Inverter",
+      "motor_class": "dd",
+      "warranty_years": 5,
+      "features": [
+        "Front Load",
+        "انفرتر",
+        "Wi-Fi مدمج"
+      ],
+      "history": [
+        {
+          "date": "2026-11-16",
+          "price": 21199,
+          "price_before": 23349,
+          "in_stock": true
+        }
+      ],
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "product_key": "LG:F4Y2TYG6X"
     }
   ]
 }
