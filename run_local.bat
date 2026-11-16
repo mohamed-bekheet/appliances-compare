@@ -5,7 +5,14 @@ REM Scrapes the stores that block cloud servers (Berty Center, El Araby) from th
 REM then pushes ONLY the results; GitHub Actions merges them into data.json automatically.
 REM First time:  git clone https://github.com/mohamed-bekheet/appliances-compare.git E:\Personal\compare_appliances
 REM Needs Git + Python 3 on PATH. Takes ~1 hour (polite: one request every 2 seconds per site).
-cd /d "%~dp0"
+REM git pull rewrites this very file while cmd is still reading it, which breaks the script half-way.
+REM So the real work runs from a temporary copy.
+if "%~1"=="" (
+  copy /y "%~f0" "%TEMP%\appliances_run_local.bat" >nul
+  call "%TEMP%\appliances_run_local.bat" run "%~dp0"
+  exit /b
+)
+cd /d "%~2"
 echo ==== [1/5] Folder: %CD%
 where git >nul 2>nul || (echo Git is not installed or not on PATH & goto :err)
 set "PY=python"
