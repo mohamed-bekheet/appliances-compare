@@ -280,6 +280,26 @@ tbody tr.best-deal td:first-child { border-right: 3px solid #ffc107; }
   main { padding: 10px 10px 90px; }
   .rec-panel { margin: 10px 10px 0; padding: 10px; }
   .cards { grid-template-columns: 1fr; gap: 10px; }
+  /* card: photo on the side, text beside it (instead of a full-width photo that pushes the price off-screen) */
+  .card { padding: 10px; }
+  .card > div[onclick^="zoomImg"] { float: right; margin-left: 10px; }
+  .card > .card-specs, .card > .card-tech { clear: both; }
+  .card::after { content: ""; display: block; clear: both; }
+  .card .thumb-l { width: 92px; height: 92px; margin: 0; } .card .thumb-l::before { font-size: 2rem; }
+  .card-top { margin-bottom: 2px; }
+  .card-name { font-size: .88rem; line-height: 1.45; margin: 2px 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-price-after { font-size: 1.2rem; }
+  .card-top label { padding: 6px 4px; font-size: .78rem !important; }
+  .card-top input[type=checkbox] { width: 20px; height: 20px; vertical-align: middle; }
+  /* recommendations: one swipeable row instead of a 1400px-tall stack */
+  .rec-panel .rec-grid { display: flex; overflow-x: auto; gap: 10px; scroll-snap-type: x mandatory; padding-bottom: 6px; -webkit-overflow-scrolling: touch; }
+  .rec-panel .rec-card { flex: 0 0 84%; scroll-snap-align: start; }
+  .rec-head h3 { font-size: .9rem; }
+  .rec-panel .rec-why { max-height: 7.2em; overflow: hidden; }
+  /* floating back-to-top */
+  #toTop { position: fixed; left: 14px; bottom: 74px; z-index: 60; width: 44px; height: 44px; border-radius: 50%; border: 0;
+    background: var(--orange); color: #fff; font-size: 1.2rem; box-shadow: 0 3px 10px rgba(0,0,0,.3); display: none; }
+  #toTop.show { display: block; }
   .more-wrap button { width: 100%; }
   .compare-bar { padding: 8px 12px; }
 }
@@ -1487,5 +1507,7 @@ const debounced = () => { clearTimeout(_deb); _deb = setTimeout(applyFilters, 22
 ['sortBy','mergeToggle','stockOnly'].forEach(id => document.getElementById(id).addEventListener('input', applyFilters));
 document.getElementById('searchInput').addEventListener('keydown', e => { if (e.key === 'Enter') { clearTimeout(_deb); applyFilters(); } });
 </script>
+<button type="button" id="toTop" aria-label="للأعلى" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</button>
+<script>addEventListener('scroll', () => document.getElementById('toTop').classList.toggle('show', scrollY > 900), { passive: true });</script>
 </body>
 </html>
