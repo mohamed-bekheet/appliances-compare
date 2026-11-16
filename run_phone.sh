@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 termux-wake-lock 2>/dev/null || true          # keep the phone awake while scraping
 echo "==== [1/4] git pull";                      git pull --rebase
 echo "==== [2/4] python packages";               python -m pip install -q -r tools/scrape/requirements.txt
-echo "==== [3/4] scraping (about 1 hour)";       python -u tools/scrape/run.py --stores carrefour,berty,jumia,elaraby --dry-run --out scraped/local
+echo "==== [3/4] scraping (about 40 minutes)";       python -u tools/scrape/run.py --stores berty,elaraby --dry-run --out scraped/local
 echo "==== [4/4] pushing";                        git add scraped/local
 git commit -m "Phone scrape $(date +%F)" || echo "nothing new to commit"
 git pull --rebase && git push

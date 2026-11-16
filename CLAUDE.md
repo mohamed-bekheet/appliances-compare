@@ -136,3 +136,6 @@ Never enter an external seller as its own shop (`B.TECH (بائع خارجي: ..
 ### Reading descriptions in every store
 `page_desc()` (stores.py) collects JSON-LD description + meta + spec tables/sections of a product page. B.TECH, Zanussi, Woo stores (Ehab/Wazen/Berty) and Al Reyada (Shopify `body_html`) already have it; Raneen, Azmy, Jumia and Carrefour are wrapped in `with_pages()` which reads product pages once (`spec_seen` flag in data.json) up to `--spec-cap` (default 300; Raneen 100 because of its 10 s crawl-delay) per run, so the backlog shrinks run by run. `--refresh-specs` re-reads everything.
 If the repo secret `ANTHROPIC_API_KEY` exists, `tools/scrape/llm_specs.py` asks an LLM for fields only when the regex found fewer than 3 specs in a fresh description; the answer is validated and never overrides the regex. Without the secret this step is skipped.
+
+## Local run results (2026-11-16, from a home connection)
+Berty Center works (670 listings) and El Araby works (sitemap; many sitemap URLs now 404, normal). Carrefour only times out for the bot even from home (40 s read timeouts) and Jumia answers a Cloudflare "Just a moment" challenge: do not try to get around either. Jumia is scraped fine from GitHub Actions; Carrefour data stays hand-entered/photo-based. So `run_local.bat` / `run_phone.sh` now run only `berty,elaraby`.

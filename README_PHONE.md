@@ -1,6 +1,6 @@
 # Running the local scrape from an Android phone (Termux)
 
-Carrefour, Berty Center and El Araby refuse GitHub's servers, so they are scraped from a home/mobile connection.
+Berty Center and El Araby refuse GitHub's servers, so they are scraped from a home/mobile connection.
 
 1. Install **Termux from F-Droid** (the Play Store build is outdated). Allow it to run in the background (battery: unrestricted).
 2. In Termux:
