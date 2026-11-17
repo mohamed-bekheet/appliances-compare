@@ -191,6 +191,17 @@ tbody tr.best-deal td:first-child { border-right: 3px solid #ffc107; }
 .compare-chip button { background: none; border: none; color: #fff; cursor: pointer; font-size: .9rem; line-height: 1; }
 
 /* ── Compare table modal ── */
+.fsheet-head, .ms-done { display: none; }
+.cmp-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+.cmp-head h2 { margin: 0; flex: 1; }
+.cmp-diff { font-size: .8rem; display: flex; align-items: center; gap: 5px; cursor: pointer; }
+.cmp-head .modal-close { float: none; }
+.cmp-ph { display: flex; flex-direction: column; align-items: center; gap: 3px; min-width: 110px; }
+.cmp-ph .thumb { width: 56px; height: 56px; }
+.cmp-nm { font-weight: 400; font-size: .68rem; line-height: 1.3; max-height: 3.9em; overflow: hidden; white-space: normal; }
+.cmp-sh { font-weight: 400; font-size: .68rem; opacity: .85; white-space: normal; }
+.diff-only tr[data-same] { display: none; }
+
 .modal-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,.6);
   z-index: 200; display: flex; align-items: center; justify-content: center;
@@ -301,6 +312,42 @@ tbody tr.best-deal td:first-child { border-right: 3px solid #ffc107; }
     background: var(--orange); color: #fff; font-size: 1.2rem; box-shadow: 0 3px 10px rgba(0,0,0,.3); display: none; }
   #toTop.show { display: block; }
   .more-wrap button { width: 100%; }
+  /* filters: full-screen sheet */
+  .controls.open { position: fixed; inset: 0; z-index: 350; overflow-y: auto; background: #fff; padding: 0 14px 14px; align-content: start; -webkit-overflow-scrolling: touch; }
+  .controls.open .fsheet-head { display: flex; grid-column: 1 / -1; order: 0; position: sticky; top: 0; z-index: 5; background: #fff; align-items: center; gap: 8px;
+    padding: 12px 14px; margin: 0 -14px 6px; border-bottom: 1px solid var(--border); }
+  .fsheet-head strong { flex: 1; font-size: 1rem; }
+  .fh-reset, .fh-close { border: 0; background: #f1f1f1; border-radius: 10px; min-height: 42px; padding: 0 14px; font: inherit; cursor: pointer; }
+  .fh-close { width: 42px; padding: 0; font-size: 1.1rem; }
+  .controls.open .ftoggle { display: none; }
+  body:has(.controls.open) { overflow: hidden; }
+  .ms-done { display: block; width: 100%; margin-top: 8px; padding: 12px; border: 0; border-radius: 10px; background: var(--orange); color: #fff; font: inherit; font-weight: 700; }
+  .ms-panel .ms-opt { padding: 11px 8px; font-size: .95rem; } .ms-opt input { width: 20px; height: 20px; }
+  .ms-panel .ms-list { max-height: 45vh; }
+  .presets { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; } .presets button { flex: 0 0 auto; padding: 7px 12px; font-size: .78rem; }
+  .btn { min-height: 42px; }
+  /* compare bar + sheet */
+  .compare-bar { gap: 8px; flex-wrap: nowrap; padding: 8px 10px calc(8px + env(safe-area-inset-bottom)); }
+  .compare-bar strong { display: none; }
+  .compare-items { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .compare-chip { flex: 0 0 auto; } .compare-chip button { padding: 4px 6px; font-size: 1rem; }
+  .compare-bar .btn { white-space: nowrap; }
+  .compare-bar.visible ~ #toTop { bottom: 84px; }
+  .modal-overlay { align-items: stretch; }
+  .modal-overlay .modal { max-width: 100vw; width: 100%; max-height: 100%; height: 100%; border-radius: 0; padding: 10px 0 0; min-width: 0; }
+  .cmp-modal { display: flex; flex-direction: column; }
+  .cmp-head { padding: 0 12px 8px; margin: 0; border-bottom: 1px solid var(--border); }
+  .cmp-head h2 { font-size: .95rem; }
+  .modal-close { min-height: 40px; padding: 0 12px; }
+  #compareTableWrap { flex: 1; min-height: 0; display: flex; }
+  .cmp-scroll { flex: 1; overflow: auto; -webkit-overflow-scrolling: touch; }
+  .cmp-table { width: max-content; min-width: 100%; }
+  .cmp-table th { position: sticky; top: 0; z-index: 3; padding: 8px 6px; min-width: 120px; }
+  .cmp-table td { padding: 9px 8px; font-size: .82rem; min-width: 120px; vertical-align: top; }
+  .cmp-table th:first-child, .cmp-table td:first-child { position: sticky; right: 0; z-index: 4; min-width: 86px; max-width: 92px; white-space: normal; background: #fff; box-shadow: -2px 0 4px rgba(0,0,0,.08); }
+  .cmp-table th:first-child { background: var(--dark); z-index: 5; }
+  .cmp-table tr:nth-child(even) td:first-child { background: #fafafa; }
+
   .compare-bar { padding: 8px 12px; }
 }
 /* ── Value recommendation ── */
@@ -379,6 +426,9 @@ tr.best-value td { background: #e8f5e9 !important; }
 </div>
 
 <div class="controls">
+  <div class="fsheet-head"><strong>🎛️ الفلاتر</strong>
+    <button type="button" class="fh-reset" onclick="resetFilters()">مسح الكل</button>
+    <button type="button" class="fh-close" onclick="toggleFilters()" aria-label="إغلاق">✕</button></div>
   <button type="button" class="ftoggle" id="fToggle" onclick="toggleFilters()">🎛️ فلاتر <span id="fCount"></span> <span class="car">▾</span></button>
   <div class="ctrl ctrl-search" style="min-width:260px;flex:2">
     <label>🔍 بحث ذكي</label>
@@ -471,9 +521,10 @@ tr.best-value td { background: #e8f5e9 !important; }
 
 <!-- Compare modal -->
 <div class="modal-overlay" id="compareModal" onclick="if(event.target===this)closeCompareModal()">
-  <div class="modal">
-    <button class="modal-close" onclick="closeCompareModal()">✕ إغلاق</button>
-    <h2>⚖️ مقارنة تفصيلية</h2>
+  <div class="modal cmp-modal">
+    <div class="cmp-head"><h2>⚖️ مقارنة تفصيلية</h2>
+      <label class="cmp-diff"><input type="checkbox" id="cmpDiff" onchange="document.getElementById('compareTableWrap').classList.toggle('diff-only', this.checked)"> الفروق بس</label>
+      <button class="modal-close" onclick="closeCompareModal()">✕ إغلاق</button></div>
     <div id="compareTableWrap"></div>
   </div>
 </div>
@@ -976,12 +1027,14 @@ function buildMS() {
     box.innerHTML = `<button type="button" class="ms-btn" aria-haspopup="listbox" aria-expanded="false"></button>
       <div class="ms-panel"><input type="search" placeholder="بحث...">
         <div class="ms-acts"><a data-act="clear">مسح</a><span class="ms-mode">${FACETS[k].and ? 'لازم كلهم' : 'أي واحد منهم'}</span><a data-act="only">المعروض بس</a></div>
-        <div class="ms-list" role="listbox" aria-multiselectable="true"></div></div>`;
+        <div class="ms-list" role="listbox" aria-multiselectable="true"></div>
+        <button type="button" class="ms-done">تم ✓</button></div>`;
     const btn = box.querySelector('.ms-btn'), srch = box.querySelector('input[type=search]');
     btn.onclick = e => { e.stopPropagation(); const open = !box.classList.contains('open');
       closeAllMS(); if (open) { box.classList.add('open'); btn.setAttribute('aria-expanded','true'); renderMSList(k);
         const pn = box.querySelector('.ms-panel'); pn.classList.remove('flip'); if (pn.getBoundingClientRect().left < 8) pn.classList.add('flip'); srch.focus(); } };
     box.querySelector('.ms-panel').onclick = e => e.stopPropagation();
+    box.querySelector('.ms-done').onclick = e => { e.stopPropagation(); closeAllMS(); };
     srch.oninput = () => renderMSList(k);
     box.querySelector('[data-act=clear]').onclick = () => { SEL[k].clear(); applyFilters(); };
     box.querySelector('[data-act=only]').onclick = () => {
@@ -1221,7 +1274,7 @@ function updateStats() {
 
 // ─── Render ──────────────────────────────────────────────
 function render() {
-  updateFilterCount();
+  updateFilterCount(); requestAnimationFrame(updateFilterCount);
   const area = document.getElementById('mainArea');
   renderRec();
   if (!filtered.length) {
@@ -1388,6 +1441,7 @@ function updateFilterCount() {
   const n = Object.values(SEL).reduce((a, x) => a + x.size, 0) + ['priceMin','priceMax','capMin','capMax','discMin','discMax'].filter(i => document.getElementById(i).value).length
     + (document.getElementById('stockOnly').checked ? 1 : 0);
   document.getElementById('fCount').textContent = n ? '(' + n + ')' : '';
+  const tot = document.getElementById('sTotal'); if (tot) document.querySelector('.fshow').textContent = '✅ اعرض ' + tot.textContent + ' نتيجة';
 }
 function setView(v) {
   view = v;
@@ -1477,11 +1531,12 @@ function openCompareModal() {
   const bestPrice = Math.min(...items.filter(d=>d.price_after>0).map(d=>d.price_after));
   const bestDisc  = Math.max(...items.map(d=>d.discount_pct));
 
-  const thead = `<tr><th>البيان</th>${items.map(d=>`<th>${d.brand}<br><span style="font-weight:400;font-size:.7rem">${d.name.slice(0,30)}...</span></th>`).join('')}</tr>`;
+  const thead = `<tr><th>البيان</th>${items.map(d=>`<th><div class="cmp-ph">${thumb(d,'s')}<b>${d.brand}</b><span class="cmp-nm">${esc(d.name)}</span><span class="cmp-sh">${esc(d.shop)}${d.price_after>0 ? ' · ' + d.price_after.toLocaleString() + ' ج' : ''}</span></div></th>`).join('')}</tr>`;
   const tbody = rows.map(([label, fn]) => {
     const vals = items.map(fn);
     if (vals.every(v => v==='-' || v==='لا يوجد' || v==='' || v==null)) return '';
-    return `<tr><td style="font-weight:600;color:var(--dark)">${label}</td>${items.map((d,i) => {
+    const same = vals.every(v => v === vals[0]);
+    return `<tr${same ? ' data-same="1"' : ''}><td style="font-weight:600;color:var(--dark)">${label}</td>${items.map((d,i) => {
       const v = vals[i];
       const best = (label==='السعر بعد الخصم' && d.price_after===bestPrice && d.price_after>0)
                 || (label==='الخصم' && d.discount_pct===bestDisc)
@@ -1492,7 +1547,8 @@ function openCompareModal() {
   }).join('');
 
   document.getElementById('compareTableWrap').innerHTML =
-    `<div style="overflow-x:auto"><table class="cmp-table"><thead>${thead}</thead><tbody>${tbody}</tbody></table></div>`;
+    `<div class="cmp-scroll"><table class="cmp-table"><thead>${thead}</thead><tbody>${tbody}</tbody></table></div>`;
+  document.getElementById('compareTableWrap').classList.toggle('diff-only', document.getElementById('cmpDiff').checked);
   document.getElementById('compareModal').classList.add('open');
 }
 
