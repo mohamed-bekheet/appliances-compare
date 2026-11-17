@@ -17,7 +17,7 @@ import llm_specs                                  # noqa: E402
 from normalize import build                      # noqa: E402
 from stores import STORES                        # noqa: E402
 from pricebook import load, save                 # noqa: E402
-from upsert import upsert_items                  # noqa: E402
+from upsert import upsert_items, mark_missing   # noqa: E402
 import match, analysis, health                   # noqa: E402
 
 log = logging.getLogger("scrape")
@@ -86,7 +86,7 @@ def main():
            "spec_done": spec_done, "spec_cap": a.spec_cap}
     f = Fetcher(delay=a.delay)
     os.makedirs(a.out, exist_ok=True)
-    summary, all_items = {}, []
+    summary, all_items, store_shops = {}, [], {}
     for name in names:
         t0 = time.time()
         try:
@@ -104,6 +104,7 @@ def main():
             else:
                 skips[r.get("_skip", "?")] += 1
         built = dedupe(built)
+        store_shops[name] = {p["shop"] for p in built}
         json.dump(built, open(os.path.join(a.out, f"{name}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         cats = collections.Counter(p["category"] for p in built)
         summary[name] = {"raw": len(raws), "kept": len(built), "skipped": dict(skips),
@@ -119,6 +120,10 @@ def main():
         print(json.dumps(summary, ensure_ascii=False, indent=1))
         return
     stats = upsert_items(d, all_items, a.date, verbose=False)
+    if not a.limit:                                    # only complete runs may declare listings missing
+        ok = health.healthy(summary, os.path.join(a.out, "health.json"))
+        shops = set().union(*(store_shops.get(n, set()) for n in ok)) if ok else set()
+        stats["missing"] = mark_missing(d, shops, a.date)
     enrich(d)
     save(d, a.data)
     write_report(d, summary, stats, names, a.date, a.out)
@@ -140,7 +145,8 @@ def write_report(d, summary, stats, names, date, out):
         s = summary.get(n, {})
         L.append(f"| {n} | {s.get('raw','-')} | {s.get('kept','-')} | {s.get('with_model','-')} | {s.get('minutes','-')} | "
                  f"{s.get('error','')} |")
-    L += ["", f"New listings: {stats['new']}, price changes: {stats['changed']}, unchanged: {stats['same']}", "",
+    L += ["", f"New listings: {stats['new']}, price changes: {stats['changed']}, unchanged: {stats['same']}, "
+          f"held for confirmation (price moved >50%): {stats.get('held', 0)}, marked out of stock (missing): {stats.get('missing', 0)}", "",
           "## Price changes", ""]
     for i, b, m, shop, old, new in sorted([c for c in stats["changes"] if c[4] != c[5]], key=lambda c: c[5] - c[4])[:80]:
         L.append(f"- {b} {m or ''} @ {shop}: {old:,} → {new:,} ({new - old:+,})")

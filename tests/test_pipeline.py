@@ -90,3 +90,52 @@ class Health(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Upsert(unittest.TestCase):
+    def setUp(self):
+        import upsert
+        self.u = upsert
+
+    def _d(self, **kw):
+        p = prod(1, "A", "LG:GNB422", 10000, url="http://a/1", scraped=True, **kw)
+        return {"meta": {"last_updated": "2026-11-05"}, "products": [p]}
+
+    def _item(self, price):
+        return {"name": "x", "brand": "Lg", "category": "ثلاجة", "shop": "A", "url": "http://a/1", "product_key": "LG:GNB422",
+                "price_after": price, "in_stock": True, "scraped": True}
+
+    def test_big_jump_held_then_confirmed(self):
+        d = self._d()
+        st = self.u.upsert_items(d, [self._item(4000)], "2026-11-12", verbose=False)
+        self.assertEqual((st["held"], d["products"][0]["price_after"]), (1, 10000))
+        st = self.u.upsert_items(d, [self._item(4000)], "2026-11-19", verbose=False)
+        self.assertEqual((st["held"], d["products"][0]["price_after"]), (0, 4000))
+        self.assertNotIn("pending_price", d["products"][0])
+
+    def test_small_move_accepted_at_once(self):
+        d = self._d()
+        self.u.upsert_items(d, [self._item(9000)], "2026-11-12", verbose=False)
+        self.assertEqual(d["products"][0]["price_after"], 9000)
+
+    def test_missing_becomes_out_of_stock_after_two_runs(self):
+        d = self._d()
+        self.assertEqual(self.u.mark_missing(d, {"A"}, "2026-11-25"), 0)
+        self.assertEqual(self.u.mark_missing(d, {"A"}, "2026-12-02"), 1)
+        self.assertFalse(d["products"][0]["in_stock"])
+        self.assertFalse(d["products"][0]["history"][-1]["in_stock"])
+
+    def test_missing_ignores_unhealthy_shop_and_handentered(self):
+        d = self._d()
+        self.u.mark_missing(d, set(), "2026-11-25"); self.u.mark_missing(d, set(), "2026-12-02")
+        self.assertTrue(d["products"][0]["in_stock"])
+        d = self._d(); d["products"][0].pop("scraped")
+        self.u.mark_missing(d, {"A"}, "2026-11-25"); self.u.mark_missing(d, {"A"}, "2026-12-02")
+        self.assertTrue(d["products"][0]["in_stock"])
+
+    def test_same_run_counted_once(self):
+        d = self._d()
+        for _ in range(3):
+            self.u.mark_missing(d, {"A": "2026-11-25"}, "2026-12-30")
+        self.assertEqual(d["products"][0]["missed_runs"], 1)
+        self.assertTrue(d["products"][0]["in_stock"])

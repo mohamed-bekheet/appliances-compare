@@ -149,3 +149,5 @@ Berty Center works (670 listings) and El Araby works (sitemap; many sitemap URLs
 - Tests: `python -m unittest discover -s tests` (also run by `.github/workflows/tests.yml`).
 - LLM provider for spec fallback: `ANTHROPIC_API_KEY` (Haiku) or, if absent, `MOONSHOT_API_KEY` (Kimi, OpenAI-compatible, model `KIMI_MODEL`, default kimi-k2.6, thinking disabled).
 - Free option: `OPENROUTER_API_KEY` (model `openrouter/free`; 20 req/min, 50/day until $10 credits bought -> capped at 45 calls/run, stops on 429/402). Priority: Anthropic > Kimi > OpenRouter.
+- Two-strike price guard (`upsert._suspicious`): a price move >50% vs the last known price is held in `pending_price` and only accepted when the next run sees the same price (protects against installment/variant glitches). Counted as "held" in report.md.
+- Missing listings (`upsert.mark_missing`): scraped listings of a healthy, fully-scraped shop (no `--limit`, kept >= 70% of recent median) that were not seen for 2 consecutive runs become `in_stock: false` with a history point. Hand-entered listings are never touched.

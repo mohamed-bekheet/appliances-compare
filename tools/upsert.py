@@ -21,6 +21,8 @@ TRACK = ('price', 'price_before', 'in_stock')
 FILL_IF_MISSING = ('url', 'image', 'loading', 'warranty_years', 'motor_warranty_years', 'motor_type', 'motor_class',
                    'programs', 'dimensions', 'energy_class', 'spec_seen')
 PRICE_FIELDS = ('price_after', 'price_before', 'discount_pct', 'in_stock', 'seller')
+SUSPECT = 0.5          # a price move bigger than this needs a second sighting (two-strike) before it is believed
+MISSED_LIMIT = 2       # consecutive healthy runs without seeing a listing before it is marked out of stock
 
 
 def find(products, item, key, by_url=None):
@@ -39,11 +41,40 @@ def find(products, item, key, by_url=None):
     return None
 
 
+def _suspicious(old, last, it):
+    """True when the new price jumps by more than SUSPECT vs the last known one and this is the first time we see it.
+    Guards against scraping glitches (installment price, wrong variant). A second run with the same price confirms it."""
+    a, b = last.get('price') or 0, it.get('price_after') or 0
+    if not a or not b or abs(b - a) / a <= SUSPECT:
+        return False
+    return old.get('pending_price') != b
+
+
+def mark_missing(d, shops, date):
+    """Listings of fully-scraped, healthy shops that were not seen in that shop's latest run: after MISSED_LIMIT
+    consecutive runs they become out of stock (history point added) instead of staying as a stale 'cheapest'.
+    `shops` is a set of shop names (run date = `date`) or {shop: run date}; one run is counted once (missed_on)."""
+    ref = shops if isinstance(shops, dict) else {s: date for s in shops}
+    n = 0
+    for p in d['products']:
+        when = ref.get(p['shop'])
+        if not when or not p.get('scraped') or p.get('last_seen', when) >= when or p.get('missed_on') == when:
+            continue
+        p['missed_on'] = when
+        p['missed_runs'] = p.get('missed_runs', 0) + 1
+        if p['missed_runs'] >= MISSED_LIMIT and p.get('in_stock') is not False:
+            p['in_stock'] = False
+            last = p['history'][-1]
+            p['history'].append({'date': when, 'price': last['price'], 'price_before': last.get('price_before', 0), 'in_stock': False})
+            n += 1
+    return n
+
+
 def upsert_items(d, items, date, verbose=True):
     P = d['products']
     nid = max((p['id'] for p in P), default=0)
     by_url = {(p['shop'], p['url']): p for p in P if p.get('url')}
-    stats = {'new': 0, 'changed': 0, 'same': 0, 'changes': []}
+    stats = {'new': 0, 'changed': 0, 'same': 0, 'held': 0, 'changes': []}
     for it in items:
         it.setdefault('price_before', 0); it.setdefault('discount_pct', 0)
         key = product_key(it)
@@ -51,6 +82,13 @@ def upsert_items(d, items, date, verbose=True):
         snap = snapshot(it, date)
         if old:
             last = old['history'][-1]
+            if _suspicious(old, last, it):
+                old['pending_price'] = it['price_after']
+                old['last_seen'] = date
+                old['missed_runs'] = 0
+                stats['held'] += 1
+                continue
+            old.pop('pending_price', None)
             changed = any(last.get(f) != snap.get(f) for f in TRACK if f in snap or f in last)
             curated = it.get('scraped') and not old.get('scraped')
             for k, v in it.items():
@@ -71,6 +109,7 @@ def upsert_items(d, items, date, verbose=True):
             else:
                 stats['same'] += 1
             old['last_seen'] = date
+            old['missed_runs'] = 0
         else:
             nid += 1
             target = {'id': nid, **it, 'history': [snap], 'first_seen': date, 'last_seen': date}

@@ -35,3 +35,16 @@ def check(summary, path, date):
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     json.dump(hist, open(path, "w", encoding="utf-8"), indent=1)
     return alerts
+
+
+def healthy(summary, path):
+    """Stores whose latest run looks complete: no error, listings > 0 and >= 70% of the recent median. Read-only."""
+    hist = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {}
+    ok = set()
+    for store, s in summary.items():
+        if store.startswith("_") or "error" in s or not s.get("kept"):
+            continue
+        prev = [x["kept"] for x in hist.get(store, []) if not x.get("error") and x["kept"] > 0][-4:]
+        if not prev or s["kept"] >= DROP * statistics.median(prev):
+            ok.add(store)
+    return ok
