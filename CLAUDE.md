@@ -147,3 +147,4 @@ Berty Center works (670 listings) and El Araby works (sitemap; many sitemap URLs
 - `tools/scrape/health.py`: each run compares per-store counts with the last 4 runs (`scraped/health.json`); a drop below 70% or an error prints a `::warning::` and appears in `scraped/report.md` under Alerts.
 - Value/quality scores exist for washers and fridges (per-category normalisation in `valueScores`).
 - Tests: `python -m unittest discover -s tests` (also run by `.github/workflows/tests.yml`).
+- LLM provider for spec fallback: `ANTHROPIC_API_KEY` (Haiku) or, if absent, `MOONSHOT_API_KEY` (Kimi, OpenAI-compatible, model `KIMI_MODEL`, default kimi-k2.6, thinking disabled).
