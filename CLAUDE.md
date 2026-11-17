@@ -148,3 +148,4 @@ Berty Center works (670 listings) and El Araby works (sitemap; many sitemap URLs
 - Value/quality scores exist for washers and fridges (per-category normalisation in `valueScores`).
 - Tests: `python -m unittest discover -s tests` (also run by `.github/workflows/tests.yml`).
 - LLM provider for spec fallback: `ANTHROPIC_API_KEY` (Haiku) or, if absent, `MOONSHOT_API_KEY` (Kimi, OpenAI-compatible, model `KIMI_MODEL`, default kimi-k2.6, thinking disabled).
+- Free option: `OPENROUTER_API_KEY` (model `openrouter/free`; 20 req/min, 50/day until $10 credits bought -> capped at 45 calls/run, stops on 429/402). Priority: Anthropic > Kimi > OpenRouter.

@@ -48,6 +48,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional: lets the scraper ask an LLM when a description is unclear
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}     # optional alternative: Kimi (used only when no Anthropic key)
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }} # optional: free models via OpenRouter (used only when neither key above exists)
         run: |
           python tools/scrape/run.py --stores ${{ matrix.store }} --limit ${{ inputs.limit || 0 }} --dry-run \
             --out scraped/${{ matrix.store }} 2>&1 | tee scraped-${{ matrix.store }}.log

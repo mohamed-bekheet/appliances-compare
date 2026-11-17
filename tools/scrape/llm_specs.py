@@ -1,14 +1,18 @@
 """Optional LLM fallback for spec extraction. Used only when ANTHROPIC_API_KEY or MOONSHOT_API_KEY (Kimi) is set
-(GitHub secret) and the
+(GitHub secret; or OPENROUTER_API_KEY for free models) and the
 regex extractor (normalize.specs_from_text) found little in a description. The model may only copy facts that the text
 states; every value is validated here, and regex results always win."""
-import json, logging, os, re, urllib.error, urllib.request
+import json, logging, os, re, time, urllib.error, urllib.request
 
 log = logging.getLogger("scrape")
 MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-haiku-5-5")
 KIMI_MODEL = os.environ.get("KIMI_MODEL", "kimi-k2.6")
 KIMI_URL = os.environ.get("KIMI_BASE_URL", "https://api.moonshot.ai/v1").rstrip("/") + "/chat/completions"
-MAX_CALLS = int(os.environ.get("LLM_MAX_CALLS", "300"))
+OR_MODEL = os.environ.get("OPENROUTER_MODEL", "openrouter/free")      # free-models router
+OR_URL = "https://openrouter.ai/api/v1/chat/completions"
+FREE_ONLY = not (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("MOONSHOT_API_KEY")) and bool(os.environ.get("OPENROUTER_API_KEY"))
+# free OpenRouter models: 20 requests/minute and 50/day (1000/day after buying $10 of credits) -> stay under 45 per run
+MAX_CALLS = int(os.environ.get("LLM_MAX_CALLS", "45" if FREE_ONLY else "300"))
 _calls = 0
 
 PROMPT = """You extract appliance specs from an Egyptian store product description (Arabic and/or English).
@@ -30,7 +34,7 @@ Description:
 
 
 def enabled():
-    return bool(os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("MOONSHOT_API_KEY")) and _calls < MAX_CALLS
+    return bool(os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("MOONSHOT_API_KEY") or os.environ.get("OPENROUTER_API_KEY")) and _calls < MAX_CALLS
 
 
 def _post(url, body, headers):
@@ -45,6 +49,12 @@ def _complete(prompt):
                   {"model": MODEL, "max_tokens": 400, "messages": [{"role": "user", "content": prompt}]},
                   {"x-api-key": os.environ["ANTHROPIC_API_KEY"], "anthropic-version": "2023-06-01"})
         return r["content"][0]["text"]
+    if not os.environ.get("MOONSHOT_API_KEY"):      # OpenRouter (free router by default)
+        time.sleep(3.2)                              # 20 requests/minute
+        r = _post(OR_URL, {"model": OR_MODEL, "max_tokens": 600, "messages": [{"role": "user", "content": prompt}]},
+                  {"Authorization": "Bearer " + os.environ["OPENROUTER_API_KEY"],
+                   "X-Title": "appliances-compare", "HTTP-Referer": "https://github.com/mohamed-bekheet/appliances-compare"})
+        return r["choices"][0]["message"]["content"]
     body = {"model": KIMI_MODEL, "max_tokens": 600, "messages": [{"role": "user", "content": prompt}]}
     h = {"Authorization": "Bearer " + os.environ["MOONSHOT_API_KEY"]}
     try:                                            # thinking off = faster and cheaper; retry plain if the model rejects it
@@ -95,6 +105,12 @@ def ask(name, cat, desc):
         txt = _complete(PROMPT.format(cat=cat, name=name, desc=desc[:6000]))
         m = re.search(r"\{.*\}", txt, re.S)
         return _clean(json.loads(m.group(0)), cat) if m else {}
+    except urllib.error.HTTPError as e:
+        if e.code in (402, 429):                     # daily/minute cap or no credit: stop asking for this run
+            global MAX_CALLS
+            MAX_CALLS = 0
+        log.warning("llm specs failed: HTTP %s", e.code)
+        return {}
     except Exception as e:     # a failed call just means "no extra info"
         log.warning("llm specs failed: %s", repr(e)[:150])
         return {}
