@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="description" content="مقارنة أسعار الأجهزة الكهربائية في مصر بين المحلات: غسالات، بوتاجازات، تلاجات وأكتر">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مقارنة الأجهزة الكهربائية</title>
 <style>
@@ -407,13 +409,138 @@ tr.best-value td { background: #e8f5e9 !important; }
 .fshow { color: #fff !important; }
 #sTotal { color: #b33a00; }
 .disc-badge { background: #c2410c !important; }
+/* ═══ Design layer v2 — ink/teal price-tag identity ═══ */
+:root {
+  --ink: #14213d; --ink-2: #26365c; --paper: #f4f5f8; --line: #e3e6ed;
+  --brand: #0b6b63; --brand-2: #0f8a7e; --brand-soft: #e3f3f0;
+  --sticker: #ffc233; --hot: #c2410c;
+  --orange: #0b6b63; --orange-light: #e3f3f0; --dark: #14213d; --gray: #f4f5f8; --border: #e3e6ed; --text: #1c2433; --muted: #596275;
+  --r-s: 8px; --r-m: 12px; --r-l: 18px;
+  --sh-1: 0 1px 2px rgba(20,33,61,.06), 0 1px 3px rgba(20,33,61,.05);
+  --sh-2: 0 8px 24px -8px rgba(20,33,61,.22);
+}
+body { font-family: 'IBM Plex Sans Arabic','Segoe UI',Tahoma,Arial,sans-serif; background: var(--paper); font-size: 14px; line-height: 1.55; font-variant-numeric: tabular-nums; }
+button, input, select { font-family: inherit; }
+
+/* header: slim, white, with brand mark */
+header { background: #fff; color: var(--ink); padding: 14px 24px; border-bottom: 1px solid var(--line); gap: 14px; }
+header h1 { font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+header h1::before { content: ''; width: 10px; height: 26px; border-radius: 3px; background: linear-gradient(var(--brand) 0 66%, var(--sticker) 66%); }
+header p { opacity: 1; color: var(--muted); font-size: .76rem; margin-top: 3px; }
+.header-badges { display: none; }
+
+/* tabs: pill navigation */
+.tabs { background: #fff; padding: 10px 24px; gap: 6px; border-bottom: 1px solid var(--line); scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { color: var(--ink-2); padding: 8px 14px; border: 1px solid transparent; border-radius: 999px; font-size: .84rem; font-weight: 500; }
+.tab:hover { background: var(--paper); color: var(--ink); }
+.tab.active { background: var(--ink); color: #fff; border-color: var(--ink); font-weight: 600; }
+
+/* controls */
+.controls { background: #fff; box-shadow: none; border-bottom: 1px solid var(--line); padding: 14px 24px; gap: 12px 14px; }
+.ctrl label { font-size: .74rem; color: var(--ink-2); font-weight: 600; }
+.ctrl select, .ctrl input, .ms-btn { border: 1px solid #cfd5e1; background: #fff; border-radius: var(--r-s); min-height: 40px; font-size: .86rem; }
+.ctrl select:hover, .ctrl input:hover, .ms-btn:hover { border-color: #9aa5bd; }
+.ctrl select:focus, .ctrl input:focus { border-color: var(--brand); }
+.ms-btn.on { border-color: var(--brand); background: var(--brand-soft); color: var(--brand); }
+.ms-panel { border-radius: var(--r-m); box-shadow: var(--sh-2); border-color: var(--line); }
+.ms-acts a, .qhint a { color: var(--brand); }
+.ms-opt:hover { background: var(--paper); }
+.presets button { border-radius: 999px; padding: 4px 10px; font-size: .72rem; border-color: #cfd5e1; color: var(--ink-2); }
+.presets button.on { background: var(--brand); border-color: var(--brand); }
+.btn { border-radius: var(--r-s); min-height: 38px; padding: 8px 16px; font-size: .82rem; }
+.btn-orange { background: var(--brand); color: #fff; }
+.btn-orange:hover { background: var(--brand-2); }
+.btn-gray { background: var(--paper); color: var(--ink); border: 1px solid var(--line); }
+.vbtn { border-radius: var(--r-s); border-color: #cfd5e1; padding: 6px 12px; }
+.vbtn.active { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+/* stats strip: quiet, one line */
+.stats { background: transparent; border: 0; padding: 14px 24px 0; gap: 8px 22px; font-size: .8rem; }
+.stat-lbl { color: var(--muted); }
+#statsBar .stat-val, #sTotal { color: var(--ink) !important; font-weight: 700; font-size: .95rem; }
+#sTotalSaving { color: var(--brand) !important; }
+
+/* recommendations */
+.rec-panel { margin: 14px 24px 0; border: 1px solid var(--line); border-radius: var(--r-l); box-shadow: var(--sh-1); padding: 18px; }
+.rec-head h3 { font-size: 1.05rem; color: var(--ink); }
+.rec-card { background: #fff; border: 1px solid var(--line); border-radius: var(--r-m); padding: 14px; transition: box-shadow .2s, border-color .2s; }
+.rec-card:hover { box-shadow: var(--sh-2); border-color: #b9c2d4; }
+.rec-card.top { background: #fff; border: 2px solid var(--sticker); position: relative; box-shadow: 0 0 0 4px rgba(255,194,51,.18); }
+.rec-label, #statsBar .rec-label, .rec-label { color: var(--ink) !important; font-size: .78rem; font-weight: 700; }
+.rec-card.top .rec-label { background: var(--sticker); display: inline-block; padding: 2px 10px; border-radius: 999px; }
+.rec-price { font-size: 1.25rem; font-weight: 800; color: var(--ink); }
+.fchip { background: var(--brand-soft); border: 0; border-radius: 999px; padding: 3px 11px; }
+.fchip, .rec-label, .controls .ftoggle { color: var(--brand) !important; }
+.rec-card.top .rec-label { color: var(--ink) !important; }
+.rec-method summary { color: var(--brand); }
+
+/* cards */
+.cards { gap: 14px; }
+.card { border: 1px solid var(--line); border-radius: var(--r-l); box-shadow: var(--sh-1); padding: 16px; }
+.card:hover { border-color: #b9c2d4; box-shadow: var(--sh-2); transform: none; }
+.card-price-after { font-size: 1.45rem; font-weight: 800; color: var(--ink); letter-spacing: -.01em; }
+.card-price-before { color: var(--muted); }
+.card-name { color: var(--text); font-weight: 500; }
+.card-tech { border-top: 1px dashed var(--line); }
+.card.best-value { outline: 0; border: 2px solid var(--brand); }
+.best-corner { background: var(--sticker); color: var(--ink); border-radius: 999px; padding: 3px 9px; }
+.price-after { color: var(--ink); }
+.disc-badge { background: var(--hot) !important; border-radius: 6px; padding: 2px 8px; }
+.brand-badge { border-radius: 6px; padding: 2px 8px; }
+.tag { border-radius: 6px; background: var(--paper); color: var(--ink-2); border: 1px solid var(--line); }
+.tag.green { background: var(--brand-soft); color: var(--brand); border-color: transparent; }
+.tag.orange { background: #fff4d6; color: #7a4e00; border-color: transparent; }
+.tag.purple { background: #eef0fb; color: #3b3f8f; border-color: transparent; }
+.vs-hi { background: var(--brand); }
+
+/* table */
+.table-wrap { border: 1px solid var(--line); border-radius: var(--r-l); box-shadow: var(--sh-1); }
+thead { background: var(--ink); }
+thead th:hover { background: var(--ink-2); }
+tbody tr:hover { background: #f1f8f7; }
+tbody tr.best-deal td:first-child { border-right: 3px solid var(--sticker); }
+tr.best-value td { background: #e8f5f2 !important; }
+
+/* compare + modal */
+.compare-bar { background: var(--ink); }
+.compare-chip { border-radius: 999px; }
+.modal { border-radius: var(--r-l); }
+.cmp-table th { background: var(--ink); }
+.cmp-winner { background: #fff4d6 !important; }
+.modal-close { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-s); }
+
+@media (min-width: 701px) {
+  .controls { position: static; }
+  .controls { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); align-items: start; }
+  .controls .ctrl { min-width: 0 !important; max-width: none !important; }
+  .controls .ctrl-search { grid-column: span 2; }
+  .controls .ctrl:has(#priceMin) { grid-column: span 2; }
+  .controls .ctrl:has(#mergeToggle) { grid-column: span 2; }
+  .controls .ctrl:has(#mergeToggle) .ctrl-row { flex-wrap: wrap; gap: 10px 14px; align-items: center; }
+  .controls .ctrl:has(#mergeToggle) > label:first-child { display: none; }
+  #toTop { position: fixed; left: 20px; bottom: 24px; z-index: 60; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--ink); color: #fff; font-size: 1.1rem; cursor: pointer; box-shadow: var(--sh-2); display: none; }
+  #toTop.show { display: block; }
+  .stats { padding-top: 16px; }
+}
+@media (max-width: 700px) {
+  header { padding: 12px 14px; }
+  header h1 { font-size: 1.05rem; }
+  .tabs { padding: 8px 12px; }
+  .stats { padding: 10px 14px 0; }
+  .ftoggle { background: var(--ink) !important; color: #fff !important; border-color: var(--ink) !important; border-radius: var(--r-m) !important; }
+  .controls .ftoggle { color: #fff !important; }
+  .fshow { background: var(--brand) !important; }
+  .rec-panel { margin: 12px 12px 0; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 </head>
 <body>
 
 <header>
   <div>
-    <h1>🏠 مقارنة الأجهزة الكهربائية</h1>
+    <h1>مقارنة الأجهزة الكهربائية</h1>
     <p id="headerMeta">جاري التحميل...</p>
   </div>
   <div class="header-badges" id="headerBadges"></div>
@@ -561,7 +688,8 @@ fetch('data.json')
     LATEST = ALL.reduce((m,d)=> (d.last_seen||'') > m ? d.last_seen : m, '');
     buildGroups();
     document.getElementById('headerMeta').textContent =
-      `${json.meta.last_updated} · ${json.meta.note}`;
+      `آخر تحديث للأسعار: ${json.meta.last_updated}`;
+    document.getElementById('headerMeta').title = json.meta.note || '';
     buildSmartIndex();
     populateFilters();
     loadHash();
