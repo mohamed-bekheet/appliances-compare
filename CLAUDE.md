@@ -139,3 +139,11 @@ If the repo secret `ANTHROPIC_API_KEY` exists, `tools/scrape/llm_specs.py` asks 
 
 ## Local run results (2026-11-16, from a home connection)
 Berty Center works (670 listings) and El Araby works (sitemap; many sitemap URLs now 404, normal). Carrefour only times out for the bot even from home (40 s read timeouts) and Jumia answers a Cloudflare "Just a moment" challenge: do not try to get around either. Jumia is scraped fine from GitHub Actions; Carrefour data stays hand-entered/photo-based. So `run_local.bat` / `run_phone.sh` now run only `berty,elaraby`.
+
+## Matching, signals, health (added 2026-11-18)
+- `pricebook.REGION_TAILS`: market-code suffixes (Samsung MR/AS, Beko EGB, Toshiba EGMK) are stripped from the model key. Colour letters (S/W/B/BK) are never stripped automatically; `scraped/match_suggestions.md` lists them for review.
+- `tools/match.py` `link_unkeyed`: a title containing exactly one known model of the same brand+category gets that `product_key` (`key_src: "name"`).
+- `tools/analysis.py` writes compact `signals` into data.json (`low`, `vs`, `med`, `inf`) and `scraped/quality.json` (shown on `quality.html`). Never invents data: signals need >=3 history dates or >=2 other shops.
+- `tools/scrape/health.py`: each run compares per-store counts with the last 4 runs (`scraped/health.json`); a drop below 70% or an error prints a `::warning::` and appears in `scraped/report.md` under Alerts.
+- Value/quality scores exist for washers and fridges (per-category normalisation in `valueScores`).
+- Tests: `python -m unittest discover -s tests` (also run by `.github/workflows/tests.yml`).

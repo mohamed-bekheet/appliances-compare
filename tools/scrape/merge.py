@@ -8,7 +8,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE); sys.path.insert(0, os.path.dirname(HERE))
 from pricebook import load, save          # noqa: E402
 from upsert import upsert_items           # noqa: E402
-from run import write_report              # noqa: E402
+from run import write_report, enrich      # noqa: E402
 
 ap = argparse.ArgumentParser()
 ap.add_argument("dirs", nargs="+"); ap.add_argument("--max-age-days", type=int, default=8); ap.add_argument("--data", default="data.json")
@@ -42,6 +42,7 @@ for when in sorted(by_date):            # each result is stamped with the day it
         stats[k] += st[k]
 print({k: v for k, v in stats.items() if k != "changes"})
 if not a.dry_run:
+    enrich(d)
     save(d, a.data)
     os.makedirs("scraped", exist_ok=True)
     write_report(d, summary, stats, names, a.date, "scraped")

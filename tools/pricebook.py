@@ -3,6 +3,11 @@ import re, json
 
 REAL_MODEL = re.compile(r'^[A-Z0-9][A-Z0-9\-/(). ]*$')
 
+# Market/region suffixes that do not change the product itself (the same fridge sold as RS70F65QAT and
+# RS70F65QATMR). Colour letters (S/W/B/BK...) are NOT here: those are different SKUs, only suggested in match.py.
+REGION_TAILS = {'SAMSUNG': ('MR', 'AS'), 'BEKO': ('EGB',), 'TOSHIBA': ('EGMK',)}
+
+
 def model_key(brand, model):
     """Same key = same product in any shop. Drops colour codes in brackets and EGY/ELA/EG region tails."""
     if not brand or not model:
@@ -11,6 +16,10 @@ def model_key(brand, model):
     m = re.sub(r"\([^)]*\)\s*$", "", m)
     m = re.sub(r"[\s\-]*(EGY|ELA|EG)$", "", m) if len(m) > 8 else m
     m = re.sub(r"[^A-Z0-9]", "", m)
+    for t in REGION_TAILS.get((brand or '').upper().replace(' ', ''), ()):
+        if m.endswith(t) and len(m) - len(t) >= 6:
+            m = m[:-len(t)]
+            break
     if len(m) < 4 or not re.search(r"\d", m) or not re.search(r"[A-Z]", m):
         return None
     return brand.upper().replace(" ", "") + ":" + m

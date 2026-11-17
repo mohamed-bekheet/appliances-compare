@@ -1,0 +1,96 @@
+{
+ "date": "2026-11-16",
+ "total": 8103,
+ "per_shop": {
+  "Al Reyada": {
+   "listings": 1350,
+   "no_model": 405,
+   "no_specs": 580
+  },
+  "Azmy": {
+   "listings": 380,
+   "no_specs": 249,
+   "no_model": 22
+  },
+  "B.TECH": {
+   "listings": 1190,
+   "no_image": 72,
+   "no_url": 56,
+   "no_specs": 393,
+   "no_model": 215
+  },
+  "Cairo Sales": {
+   "listings": 15,
+   "no_image": 15,
+   "no_specs": 14,
+   "no_url": 1
+  },
+  "Carrefour": {
+   "listings": 69,
+   "no_image": 69,
+   "no_specs": 64
+  },
+  "Carrefour (Electro Zone)": {
+   "listings": 1,
+   "no_image": 1
+  },
+  "Dream 2000": {
+   "listings": 1,
+   "no_image": 1
+  },
+  "Ehab Center": {
+   "listings": 684,
+   "no_specs": 468,
+   "no_model": 95,
+   "no_image": 14
+  },
+  "Jumia": {
+   "listings": 1253,
+   "no_specs": 1150,
+   "no_model": 614,
+   "no_image": 17,
+   "price_outlier": 1
+  },
+  "Nomor": {
+   "listings": 1,
+   "no_image": 1,
+   "no_url": 1
+  },
+  "Raneen": {
+   "listings": 1624,
+   "no_image": 39,
+   "no_specs": 1483,
+   "no_model": 208
+  },
+  "Shaheen": {
+   "listings": 1
+  },
+  "Wazen": {
+   "listings": 1437,
+   "no_specs": 464,
+   "no_model": 185
+  },
+  "Zanussi Official": {
+   "listings": 84,
+   "no_image": 22,
+   "no_model": 26,
+   "no_specs": 42
+  },
+  "Zanussi Showroom": {
+   "listings": 13,
+   "no_image": 13,
+   "no_url": 13,
+   "no_specs": 5,
+   "no_model": 5
+  }
+ },
+ "outliers": [
+  {
+   "id": 3540,
+   "shop": "Jumia",
+   "name": "Passap ثلاجة بار صغيرة باساب FG200 فضية",
+   "price": 24000,
+   "median": 9399
+  }
+ ]
+}

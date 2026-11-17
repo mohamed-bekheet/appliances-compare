@@ -534,6 +534,9 @@ tr.best-value td { background: #e8f5f2 !important; }
   .rec-panel { margin: 12px 12px 0; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+.sigs { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.sig { font-size: .68rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.sig-good { background: #e3f3f0; color: #0b5a53; } .sig-bad { background: #fde8e0; color: #9a3412; }
 </style>
 </head>
 <body>
@@ -707,7 +710,31 @@ const BRAND_TIER = { LG:10, Samsung:9, Gorenje:8, Zanussi:8, Toshiba:7, Beko:7, 
 const MOTOR_LABEL = { dd:'دفع مباشر (DD)', inverter:'انفرتر', universal:'عادي', unknown:'غير محدد' };
 const has = (d, re) => re.test((d.features||[]).join(' ') + ' ' + d.name);
 
+const BRAND_TIER_FR = { Samsung:10, LG:10, Bosch:10, Toshiba:8, Sharp:8, Hitachi:8, Beko:7, Zanussi:7, Ariston:7, Haier:6,
+                        Midea:6, Hisense:6, Tornado:6, Unionaire:6, Fresh:5, Alaska:4, 'White Whale':4 };
+function qualityBreakdownFridge(d) {
+  const parts = [];
+  const add = (pts, label) => { parts.push([pts, label]); return pts; };
+  let q = 0;
+  const L = d.capacity_liters || 0;
+  q += add(Math.min(L / 20, 25), `سعة ${L} لتر`);
+  q += add(has(d,/نوفروست|no.?frost/i) ? 15 : has(d,/ديفروست/) ? 5 : 8, has(d,/نوفروست|no.?frost/i) ? 'نوفروست' : has(d,/ديفروست/) ? 'ديفروست' : 'نظام التبريد غير معروف');
+  if (has(d,/انفرتر|inverter/i)) q += add(15, 'كباس انفرتر');
+  if (has(d,/سايد باي سايد|side.?by.?side|فرنش/i)) q += add(8, 'سايد باي سايد / فرنش دور');
+  else if (has(d,/فريزر سفلي/)) q += add(4, 'فريزر سفلي');
+  if (has(d,/wi-?fi|thinq|واي/i)) q += add(3, 'Wi-Fi');
+  if (has(d,/ديجيتال|digital|شاشة/i)) q += add(2, 'شاشة ديجيتال');
+  if ((d.warranty_years || 0) >= 5) q += add(4, `ضمان ${d.warranty_years} سنين`);
+  q += add(BRAND_TIER_FR[d.brand] ?? 5, `سمعة وصيانة ${d.brand} (تقديري)`);
+  if (d.rating) {
+    let w = (d.reviews_count||0) >= 3 ? 1 : 0.5;
+    if (d.rating_self_hosted) w *= 0.5;
+    q += add(Math.round((d.rating-4)*8*w*10)/10, `تقييم ${d.rating}★`);
+  }
+  return { score: Math.round(q*10)/10, parts };
+}
 function qualityBreakdown(d) {
+  if (d.category === 'ثلاجة') return qualityBreakdownFridge(d);
   if (d.category !== 'غسالة') return null;
   const parts = [];
   const add = (pts, label) => { parts.push([pts, label]); return pts; };
@@ -735,18 +762,32 @@ function qualityBreakdown(d) {
 const QMAX = 25+10+26+5+3+6+5+8+10+8;
 function quality(d) { const b = qualityBreakdown(d); return b ? b.score : null; }
 function valueIdx(d) { const q = quality(d); return (q && d.price_after>0) ? q / (d.price_after/1000) : null; }
-function qualityPct(d) { const q = quality(d); return q==null ? null : Math.round(q/QMAX*100); }
+const QMAX_FR = 25+15+15+8+3+2+4+10+8;
+function qualityPct(d) { const q = quality(d); return q==null ? null : Math.round(q/(d.category==='ثلاجة' ? QMAX_FR : QMAX)*100); }
 
 // value relative to the best item in the current filter (best = 100)
 function valueScores(list) {
   list = list.filter(d => d.in_stock!==false);
-  const vals = list.map(valueIdx).filter(v => v!=null);
-  const max = vals.length ? Math.max(...vals) : 0;
-  const map = new Map();
-  list.forEach(d => { const v = valueIdx(d); if (v!=null && max) map.set(d.id, Math.round(v/max*100)); });
+  const map = new Map(), cats = new Set(list.map(d => d.category));
+  for (const c of cats) {                          // each category is scored against its own best (washers and fridges use different scales)
+    const L = list.filter(d => d.category === c);
+    const vals = L.map(valueIdx).filter(v => v!=null);
+    const max = vals.length ? Math.max(...vals) : 0;
+    L.forEach(d => { const v = valueIdx(d); if (v!=null && max) map.set(d.id, Math.round(v/max*100)); });
+  }
   return map;
 }
 let VS = new Map();
+// price signals computed by tools/analysis.py from our history and the other shops' prices
+function sigBadges(d) {
+  const g = d.signals; if (!g) return '';
+  const b = [];
+  if (g.low) b.push('<span class="sig sig-good" title="أقل سعر وصل له المنتج ده في المحل عندنا">📉 أقل سعر مسجّل</span>');
+  if (g.vs != null && g.vs <= -8) b.push(`<span class="sig sig-good" title="متوسط سعره في المحلات التانية ${g.med.toLocaleString('en-US')} ج">أرخص من السوق ${Math.abs(Math.round(g.vs))}%</span>`);
+  else if (g.vs != null && g.vs >= 15) b.push(`<span class="sig sig-bad" title="متوسط سعره في المحلات التانية ${g.med.toLocaleString('en-US')} ج">أغلى من السوق ${Math.round(g.vs)}%</span>`);
+  if (g.inf) b.push('<span class="sig sig-bad" title="السعر قبل الخصم أعلى بكتير من سعر نفس الموديل في المحلات التانية">⚠️ الخصم مبالغ فيه</span>');
+  return b.length ? `<div class="sigs">${b.join('')}</div>` : '';
+}
 function vsBadge(d) {
   const v = VS.get(d.id);
   if (v==null) return '-';
@@ -801,8 +842,7 @@ function renderRec() {
   const outN = filtered.filter(d => d.in_stock===false).length;
   if (!A.length) { area.innerHTML = filtered.length ? `<div class="rec-panel"><div class="rec-head"><h3>🤖 ترشيحات الفلتر الحالي</h3><div class="fchips">${filterSummary()}</div></div><div class="rec-note">مفيش منتج متاح بسعر في الفلتر ده${outN?` (${outN} نفذت)`:''}. وسّع الفلتر.</div></div>` : ''; return; }
   const W = A.filter(d => d.category==='غسالة');
-  const washersOnly = W.length === A.length;
-
+  
   const why = d => {
     const qb = qualityBreakdown(d);
     if (!qb) return '';
@@ -824,7 +864,8 @@ function renderRec() {
   const push = (label, d, extra='', cls='') => { if (d && !used.has(d.id)) { used.add(d.id); cards.push({label, d, extra, cls}); } };
 
   // the scored pool: washers when the filter has washers, so value/quality are comparable
-  const S = W;
+  const FR = A.filter(d => d.category==='ثلاجة');
+  const S = W.length >= FR.length ? W : FR;       // the bigger scored category in the filter
   let best = null;
   if (S.length) {
     const byValue   = [...S].sort((a,b) => valueIdx(b)-valueIdx(a));
@@ -855,7 +896,7 @@ function renderRec() {
   if (A.length === 1) cards[0].label = '✅ الاختيار الوحيد المتاح في الفلتر';
   const stockNote = outN ? `<div class="rec-note">${outN} منتج نفذ من المخزن ومش داخل في الترشيح.</div>` : '';
   const noRatings = !rated.length ? '<div class="rec-note">مفيش تقييمات عملاء لأي منتج في الفلتر ده لسه.</div>' : '';
-  const scoredNote = (S.length && !washersOnly) ? `<div class="rec-note">الجودة والقيمة محسوبين للغسالات بس (${W.length} غسالة في الفلتر).</div>` : '';
+  const scoredNote = (S.length && S.length !== A.length) ? `<div class="rec-note">الجودة والقيمة محسوبين ${S===W?'للغسالات':'للثلاجات'} بس (${S.length} ${S===W?'غسالة':'ثلاجة'} في الفلتر).</div>` : '';
 
   area.innerHTML = `<div class="rec-panel">
     <div class="rec-head"><h3>🤖 ترشيحات الفلتر الحالي · ${A.length} منتج متاح</h3>
@@ -1521,7 +1562,7 @@ function renderTable() {
       <td style="font-size:.72rem;color:#555;max-width:240px">${techSummary(d)}${techLine2(d)}</td>
       <td style="max-width:180px">${featureTags(d.features)}</td>
       <td>${d.price_before>0?`<span class="price-before">${d.price_before.toLocaleString('en-US')}</span>`:'-'}</td>
-      <td><span class="price-after">${d.price_after>0?d.price_after.toLocaleString('en-US')+' ج':'-'}</span>${priceChange(d)}</td>
+      <td><span class="price-after">${d.price_after>0?d.price_after.toLocaleString('en-US')+' ج':'-'}</span>${priceChange(d)}${sigBadges(d)}</td>
       <td>${d.discount_pct>0?`<span class="disc-badge">${d.discount_pct}%</span>`:'-'}</td>
       <td style="color:#2e7d32;font-weight:600">${saving(d)}</td>
       <td>${d.shop}${shopsLine(d)}</td>
@@ -1560,6 +1601,7 @@ function renderCards() {
         <span class="card-price-after">${d.price_after>0?d.price_after.toLocaleString('en-US')+' ج':'-'}</span>${priceChange(d)}
         ${d.price_before>0?`<span class="card-price-before">${d.price_before.toLocaleString('en-US')}</span>`:''}
       </div>
+      ${sigBadges(d)}
       <div class="card-specs">${featureTags(d.features)}</div>
       <div class="card-tech">${techSummary(d)}${techLine2(d)}</div>
       ${VS.has(d.id) ? `<div style="font-size:.74rem;margin-top:6px">جودة <b>${qualityPct(d)}/100</b> · قيمة ${vsBadge(d)} · ${d.shop}</div>` : `<div style="font-size:.72rem;color:#888;margin-top:6px">${d.shop}</div>`}

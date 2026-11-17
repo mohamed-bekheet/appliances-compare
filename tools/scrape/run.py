@@ -18,6 +18,7 @@ from normalize import build                      # noqa: E402
 from stores import STORES                        # noqa: E402
 from pricebook import load, save                 # noqa: E402
 from upsert import upsert_items                  # noqa: E402
+import match, analysis, health                   # noqa: E402
 
 log = logging.getLogger("scrape")
 
@@ -118,8 +119,16 @@ def main():
         print(json.dumps(summary, ensure_ascii=False, indent=1))
         return
     stats = upsert_items(d, all_items, a.date, verbose=False)
+    enrich(d)
     save(d, a.data)
     write_report(d, summary, stats, names, a.date, a.out)
+
+
+def enrich(d):
+    """Name-based model linking and derived price signals; runs before data.json is saved."""
+    n = match.link_unkeyed(d)
+    m = analysis.compute_signals(d["products"])
+    log.info("linked by name: %s, products with signals: %s", n, m)
 
 
 def write_report(d, summary, stats, names, date, out):
@@ -140,6 +149,15 @@ def write_report(d, summary, stats, names, date, out):
         L.append(f"- **{g[0]['brand']} {g[0].get('model','')}** ({g[0]['category']}): cheapest {g[0]['shop']} "
                  f"{g[0]['price_after']:,} — " + ", ".join(f"{x['shop']} {x['price_after']:,}" for x in g[1:]) +
                  f" (save {gap:,})")
+    alerts = health.check(summary, os.path.join(out, "health.json"), date)
+    q = analysis.quality_report(d["products"])
+    json.dump(q, open(os.path.join(out, "quality.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    sug = match.write_suggestions(d, os.path.join(out, "match_suggestions.md"))
+    if alerts:
+        L[2:2] = ["", "## ⚠️ Alerts", ""] + [f"- {a}" for a in alerts]
+        for a in alerts:
+            print(f"::warning::{a}")
+    L += ["", f"Match suggestions to review: {sug} (see match_suggestions.md)"]
     open(os.path.join(out, "report.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
     print("\n".join(L[:20]))
 

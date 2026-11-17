@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>صحة البيانات</title>
+<style>
+body{font-family:'IBM Plex Sans Arabic','Segoe UI',Tahoma,sans-serif;background:#f4f5f8;color:#1c2433;margin:0;padding:20px;line-height:1.6}
+h1{font-size:1.2rem;margin:0 0 4px} p{color:#596275;margin:0 0 16px;font-size:.85rem}
+.wrap{max-width:1000px;margin:auto} .card{background:#fff;border:1px solid #e3e6ed;border-radius:14px;padding:16px;margin-bottom:16px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.85rem} th,td{padding:8px 10px;border-bottom:1px solid #eef0f4;text-align:right;white-space:nowrap}
+th{background:#14213d;color:#fff;font-weight:600} .bad{color:#9a3412;font-weight:700} a{color:#0b6b63}
+</style></head><body><div class="wrap">
+<h1>صحة البيانات</h1><p id="meta">جاري التحميل…</p><p><a href="index.html">← رجوع للمقارنة</a></p>
+<div class="card"><h2 style="font-size:1rem;margin-top:0">كل محل: إيه الناقص؟</h2><table id="shops"></table></div>
+<div class="card"><h2 style="font-size:1rem;margin-top:0">أسعار شاذة (أقل من 40% أو أكتر من 2.5 ضعف وسيط نفس الموديل)</h2><table id="out"></table></div>
+</div>
+<script>
+fetch('scraped/quality.json').then(r=>r.json()).then(q=>{
+  document.getElementById('meta').textContent=`آخر تحديث: ${q.date} · ${q.total.toLocaleString('en-US')} منتج`;
+  const cols=[['listings','المنتجات'],['no_image','بدون صورة'],['no_url','بدون رابط'],['no_specs','بدون مواصفات'],['no_model','بدون موديل'],['stale_14d','قديم +14 يوم'],['price_outlier','سعر شاذ']];
+  let h='<tr><th>المحل</th>'+cols.map(c=>`<th>${c[1]}</th>`).join('')+'</tr>';
+  for(const [s,v] of Object.entries(q.per_shop)){
+    h+=`<tr><td>${s}</td>`+cols.map(([k])=>{const n=v[k]||0,pct=k==='listings'?0:n/v.listings;return `<td class="${pct>.3?'bad':''}">${n.toLocaleString('en-US')}${k!=='listings'&&n?` (${Math.round(pct*100)}%)`:''}</td>`}).join('')+'</tr>';}
+  document.getElementById('shops').innerHTML=h;
+  document.getElementById('out').innerHTML='<tr><th>المحل</th><th>المنتج</th><th>السعر</th><th>الوسيط</th></tr>'+q.outliers.map(o=>`<tr><td>${o.shop}</td><td>${o.name.replace(/</g,'&lt;')}</td><td>${o.price.toLocaleString('en-US')}</td><td>${o.median.toLocaleString('en-US')}</td></tr>`).join('');
+}).catch(()=>{document.getElementById('meta').textContent='التقرير لسه ما اتولدش — يتولد بعد أول تشغيلة scrape.'});
+</script></body></html>
