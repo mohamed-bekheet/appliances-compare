@@ -59,10 +59,14 @@ def quality_report(products, today=None):
     for k, v in g.items():
         if len(v) >= 3:
             med[k] = statistics.median(v)
+    img = {(p["product_key"], p["category"]) for p in products if p.get("image") and p.get("product_key")}
     for p in products:
         c = per[p["shop"]]
         c["listings"] += 1
-        if not p.get("image"): c["no_image"] += 1
+        if not p.get("image"):
+            c["no_image"] += 1
+            if (p.get("product_key"), p["category"]) not in img:
+                c["no_image_anywhere"] += 1       # nobody has a photo of this model: the site shows only a category icon
         if not p.get("url"): c["no_url"] += 1
         if not (p.get("warranty_years") or p.get("energy_class") or p.get("dimensions")): c["no_specs"] += 1
         if not p.get("product_key"): c["no_model"] += 1

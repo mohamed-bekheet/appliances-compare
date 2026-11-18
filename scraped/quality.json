@@ -15,6 +15,7 @@
   "B.TECH": {
    "listings": 1190,
    "no_image": 72,
+   "no_image_anywhere": 65,
    "no_url": 56,
    "no_specs": 393,
    "no_model": 215
@@ -22,13 +23,15 @@
   "Cairo Sales": {
    "listings": 15,
    "no_image": 15,
+   "no_image_anywhere": 4,
    "no_specs": 14,
    "no_url": 1
   },
   "Carrefour": {
    "listings": 69,
    "no_image": 69,
-   "no_specs": 64
+   "no_specs": 64,
+   "no_image_anywhere": 15
   },
   "Carrefour (Electro Zone)": {
    "listings": 1,
@@ -42,13 +45,15 @@
    "listings": 684,
    "no_specs": 468,
    "no_model": 95,
-   "no_image": 14
+   "no_image": 14,
+   "no_image_anywhere": 6
   },
   "Jumia": {
    "listings": 1253,
    "no_specs": 1150,
    "no_model": 614,
    "no_image": 17,
+   "no_image_anywhere": 14,
    "price_outlier": 1
   },
   "Nomor": {
@@ -59,6 +64,7 @@
   "Raneen": {
    "listings": 1624,
    "no_image": 39,
+   "no_image_anywhere": 30,
    "no_specs": 1483,
    "no_model": 208
   },
@@ -73,12 +79,14 @@
   "Zanussi Official": {
    "listings": 84,
    "no_image": 22,
+   "no_image_anywhere": 21,
    "no_model": 26,
    "no_specs": 42
   },
   "Zanussi Showroom": {
    "listings": 13,
    "no_image": 13,
+   "no_image_anywhere": 13,
    "no_url": 13,
    "no_specs": 5,
    "no_model": 5

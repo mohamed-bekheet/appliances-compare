@@ -76,6 +76,21 @@ def page_desc(html_text):
     return text[:12000]
 
 
+def page_image(html_text):
+    """Product photo URL of a product page: JSON-LD Product.image, else og:image. Returns "" when none."""
+    soup = BeautifulSoup(html_text, "lxml")
+    for b in _ld_blocks(soup):
+        if b.get("@type") == "Product" and b.get("image"):
+            im = b["image"]
+            im = im[0] if isinstance(im, list) and im else im
+            im = im.get("url") if isinstance(im, dict) else im
+            if isinstance(im, str) and im.startswith("http"):
+                return im
+    m = soup.find("meta", attrs={"property": "og:image"})
+    u = (m.get("content") or "").strip() if m else ""
+    return u if u.startswith("http") else ""
+
+
 SPEC_CAPS = {"raneen": 100}     # product pages fetched per run (Raneen's robots.txt asks for a 10 s delay)
 
 
@@ -86,14 +101,19 @@ def with_pages(name, fn):
         items = fn(f, ctx)
         done, budget, n = ctx.get("spec_done", set()), min(ctx.get("spec_cap", 300), SPEC_CAPS.get(name, 10**6)), 0
         for it in items:
-            if it.get("desc") is not None or not it.get("url") or it["url"] in done:
+            need_img = not it.get("image")
+            need_desc = it.get("desc") is None and it["url"] not in done if it.get("url") else False
+            if not it.get("url") or not (need_desc or need_img):
                 continue
             if n >= budget:
                 break
             n += 1
             h = f.get(it["url"])
             if h:
-                it["desc"] = page_desc(h)
+                if need_desc:
+                    it["desc"] = page_desc(h)
+                if need_img:                      # listing had no photo: take the one from the product page
+                    it["image"] = page_image(h) or it.get("image")
         log.info("%s: read %d product pages for specs (%d already known)", name, n, len(done))
         return items
     return run

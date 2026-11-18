@@ -15,7 +15,7 @@ th{background:#14213d;color:#fff;font-weight:600} .bad{color:#9a3412;font-weight
 <script>
 fetch('scraped/quality.json').then(r=>r.json()).then(q=>{
   document.getElementById('meta').textContent=`آخر تحديث: ${q.date} · ${q.total.toLocaleString('en-US')} منتج`;
-  const cols=[['listings','المنتجات'],['no_image','بدون صورة'],['no_url','بدون رابط'],['no_specs','بدون مواصفات'],['no_model','بدون موديل'],['stale_14d','قديم +14 يوم'],['price_outlier','سعر شاذ']];
+  const cols=[['listings','المنتجات'],['no_image','بدون صورة'],['no_image_anywhere','بدون صورة (ولا في محل تاني)'],['no_url','بدون رابط'],['no_specs','بدون مواصفات'],['no_model','بدون موديل'],['stale_14d','قديم +14 يوم'],['price_outlier','سعر شاذ']];
   let h='<tr><th>المحل</th>'+cols.map(c=>`<th>${c[1]}</th>`).join('')+'</tr>';
   for(const [s,v] of Object.entries(q.per_shop)){
     h+=`<tr><td>${s}</td>`+cols.map(([k])=>{const n=v[k]||0,pct=k==='listings'?0:n/v.listings;return `<td class="${pct>.3?'bad':''}">${n.toLocaleString('en-US')}${k!=='listings'&&n?` (${Math.round(pct*100)}%)`:''}</td>`}).join('')+'</tr>';}

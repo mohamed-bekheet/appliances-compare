@@ -139,3 +139,23 @@ class Upsert(unittest.TestCase):
             self.u.mark_missing(d, {"A": "2026-11-25"}, "2026-12-30")
         self.assertEqual(d["products"][0]["missed_runs"], 1)
         self.assertTrue(d["products"][0]["in_stock"])
+
+
+class PageImage(unittest.TestCase):
+    def test_jsonld_then_og(self):
+        import stores
+        h1 = '<html><script type="application/ld+json">{"@type":"Product","image":["https://c/x.jpg"]}</script></html>'
+        h2 = '<html><head><meta property="og:image" content="https://c/y.jpg"></head></html>'
+        self.assertEqual(stores.page_image(h1), "https://c/x.jpg")
+        self.assertEqual(stores.page_image(h2), "https://c/y.jpg")
+        self.assertEqual(stores.page_image("<html></html>"), "")
+
+    def test_with_pages_reads_page_for_missing_image_even_when_specs_known(self):
+        import stores
+        class F:
+            def get(self, u): return '<meta property="og:image" content="https://c/z.jpg">'
+        items = [{"url": "http://s/1", "image": ""}, {"url": "http://s/2", "image": "http://c/has.jpg"}]
+        out = stores.with_pages("t", lambda f, c: items)(F(), {"spec_done": {"http://s/1", "http://s/2"}, "spec_cap": 5})
+        self.assertEqual(out[0]["image"], "https://c/z.jpg")
+        self.assertEqual(out[1]["image"], "http://c/has.jpg")
+        self.assertNotIn("desc", out[0])

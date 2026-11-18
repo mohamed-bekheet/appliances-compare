@@ -78,11 +78,34 @@ def colour_suggestions(d, max_diff=2):
     return out
 
 
+COLOURS = {"silver": "فضي", "white": "ابيض", "black": "اسود", "inox": "انوكس", "grey": "رمادي", "gray": "رمادي", "steel": "ستانلس",
+           "titanium": "تيتانيوم", "beige": "بيج", "red": "احمر", "blue": "ازرق", "gold": "ذهبي", "فضي": "فضي", "فضى": "فضي",
+           "ابيض": "ابيض", "أبيض": "ابيض", "اسود": "اسود", "أسود": "اسود", "انوكس": "انوكس", "رمادي": "رمادي", "ستانلس": "ستانلس",
+           "بيج": "بيج", "احمر": "احمر", "أحمر": "احمر", "ازرق": "ازرق", "ذهبي": "ذهبي", "تيتانيوم": "تيتانيوم"}
+
+
+def _colours(names):
+    out = set()
+    for n in names:
+        for w in re.findall(r"[A-Za-z\u0600-\u06FF]+", n.lower()):
+            if w in COLOURS:
+                out.add(COLOURS[w])
+    return out
+
+
 def write_suggestions(d, path):
+    names = collections.defaultdict(list)
+    for p in d["products"]:
+        if p.get("product_key"):
+            names[p["product_key"]].append(p["name"])
     S = [s for s in colour_suggestions(d) if s["cross_shop_if_merged"]]
+    for s in S:
+        ca, cb = _colours(names[f"{s['brand']}:{s['a']}"]), _colours(names[f"{s['brand']}:{s['b']}"])
+        s["evidence"] = "colour differs: " + "/".join(sorted(ca)) + " vs " + "/".join(sorted(cb)) if ca and cb and ca != cb else \
+            "same colour words - possibly the same product" if ca and ca == cb else "no colour words in titles"
     L = ["# Possible same-product pairs (colour/finish suffix) - review, not merged", "",
          "Add a rule to REGION_TAILS in tools/pricebook.py only when the suffix is a market code, not a colour.", ""]
     for s in S[:300]:
-        L.append(f"- {s['brand']} ({s['category']}): `{s['a']}` [{', '.join(s['shops_a'])}] ~ `{s['b']}` [{', '.join(s['shops_b'])}]")
+        L.append(f"- {s['brand']} ({s['category']}): `{s['a']}` [{', '.join(s['shops_a'])}] ~ `{s['b']}` [{', '.join(s['shops_b'])}] - {s['evidence']}")
     open(path, "w", encoding="utf-8").write("\n".join(L) + "\n")
     return len(S)
