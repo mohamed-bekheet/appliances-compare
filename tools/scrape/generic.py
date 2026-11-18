@@ -12,7 +12,7 @@ from common import to_num
 
 log = logging.getLogger("scrape")
 HERE = os.path.dirname(os.path.abspath(__file__))
-WANT_URL = re.compile(r"wash|laundry|refrig|fridge|freez|cook|oven|microw|hood|hob|dish|heater|dryer|built-in|range|stove|"
+WANT_URL = re.compile(r"wash|laundry|refrig|fridge|freez|cook|oven|microw|hood|hob|dish|heater|dryer|built-in|range(?!-?ext)|stove|"
                       r"غسال|ثلاج|بوتاجاز|فرن|مايكروويف|شفاط|سخان|فريزر|ديب", re.I)
 
 
@@ -115,6 +115,8 @@ def shopify_adapter(f, ctx, cfg):
         if not j or not j.get("products"):
             break
         for p in j["products"]:
+            if not WANT_URL.search(" ".join([p.get("title") or "", p.get("product_type") or "", p.get("handle") or "", " ".join(p.get("tags") or [])])):
+                continue
             v = (p.get("variants") or [{}])[0]
             out.append(dict(name=p.get("title"), price=to_num(v.get("price")), old=to_num(v.get("compare_at_price")),
                             url=f"{cfg['base']}/products/{p.get('handle')}", in_stock=bool(v.get("available")), shop=cfg["shop"],

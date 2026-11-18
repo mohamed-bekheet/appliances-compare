@@ -5,11 +5,12 @@
   "base": "https://2b.com.eg",
   "platform": "jsonld",
   "include": "^https://2b\\.com\\.eg/en/[^/]+\\.html$",
-  "enabled": false,
-  "status": "candidate: product pages show price + specs (seen via search); sitemap and robots.txt not yet checked",
+  "enabled": true,
+  "status": "probe 2026-11-18 OK",
   "bases": [
    "https://2b.com.eg"
-  ]
+  ],
+  "max_pages": 900
  },
  {
   "key": "sharaf",
@@ -18,7 +19,7 @@
   "platform": "jsonld",
   "include": "^https://egypt\\.sharafdg\\.com/(p|product)/",
   "enabled": false,
-  "status": "candidate: URL pattern unverified",
+  "status": "403 from cloud IP - probe from laptop",
   "bases": [
    "https://egypt.sharafdg.com"
   ]
@@ -30,7 +31,7 @@
   "platform": "jsonld",
   "include": "",
   "enabled": false,
-  "status": "candidate: URL pattern unverified",
+  "status": "reachable, but category pages carry no Product JSON-LD: needs custom adapter (inspect a product page)",
   "bases": [
    "https://rayashop.com"
   ]
@@ -41,10 +42,12 @@
   "bases": [
    "https://shaheeneg.com"
   ],
-  "platform": "auto",
+  "platform": "woo_all",
   "include": "",
-  "enabled": false,
-  "status": "site seen earlier (WordPress-style /store/ URLs)"
+  "enabled": true,
+  "status": "probe 2026-11-18 OK",
+  "max_pages": 60,
+  "base": "https://shaheeneg.com"
  },
  {
   "key": "abdulaziz",
@@ -57,7 +60,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "no response from cloud; domain guess may be wrong - probe from laptop"
  },
  {
   "key": "almorshedy",
@@ -70,7 +73,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "no response from cloud; domain unverified"
  },
  {
   "key": "awadserag",
@@ -82,7 +85,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "Odoo; prices are microdata on category pages: needs custom adapter"
  },
  {
   "key": "boschhome",
@@ -94,7 +97,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "brand store; prices are Bosch's own"
+  "status": "no response; domain unverified"
  },
  {
   "key": "cairocart",
@@ -106,7 +109,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "runs on Odoo (per its customer page)"
+  "status": "reachable (Odoo-like), no JSON-LD: needs custom adapter"
  },
  {
   "key": "elbadr",
@@ -118,7 +121,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "no response; domain unverified"
  },
  {
   "key": "elghazawy",
@@ -130,7 +133,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "JSON-LD works but ~7.5k English product URLs (mostly phones/TVs): capped runs would flap missing-detection; needs category listing adapter"
  },
  {
   "key": "elmasreyeen",
@@ -142,7 +145,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "no response; domain unverified"
  },
  {
   "key": "gaballah",
@@ -152,10 +155,11 @@
    "https://gaballahstore.com",
    "https://gaballah.com.eg"
   ],
-  "platform": "auto",
+  "platform": "shopify",
   "include": "",
-  "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "enabled": true,
+  "status": "probe 2026-11-18 OK",
+  "base": "https://gaballah.com"
  },
  {
   "key": "martegypt",
@@ -167,7 +171,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "Shopify works but catalogue is personal care (hair dryers/shavers), not major appliances"
  },
  {
   "key": "radiotalaat",
@@ -179,7 +183,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "also sells through Jumia and Carrefour marketplaces (already covered there)"
+  "status": "reachable, no JSON-LD: needs custom adapter"
  },
  {
   "key": "rafegypt",
@@ -191,7 +195,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "no response; domain unverified"
  },
  {
   "key": "rizkalla",
@@ -203,7 +207,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "reachable but no sitemap: needs custom adapter"
  },
  {
   "key": "hyperone",
@@ -214,7 +218,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "supermarket chain; appliances section may be small"
+  "status": "no response; domain unverified"
  },
  {
   "key": "kimo",
@@ -226,7 +230,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "kimostore.com is 'Domain for sale' - wrong domain, need the real one"
  },
  {
   "key": "kenzz",
@@ -238,7 +242,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "Next.js (__NEXT_DATA__), marketplace: needs custom adapter"
  },
  {
   "key": "tabseeta",
@@ -247,10 +251,11 @@
    "https://tabseeta.com",
    "https://tabseeta.com.eg"
   ],
-  "platform": "auto",
+  "platform": "shopify",
   "include": "",
-  "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "enabled": true,
+  "status": "probe 2026-11-18 OK",
+  "base": "https://tabseeta.com"
  },
  {
   "key": "ovanza",
@@ -262,7 +267,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "reachable but no sitemap: needs custom adapter"
  },
  {
   "key": "hypertechno",
@@ -274,7 +279,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "home page 403 from cloud IP - probe from laptop"
  },
  {
   "key": "switchplus",
@@ -286,7 +291,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "domain guessed - probe checks the home-page title"
+  "status": "403 from cloud IP - probe from laptop"
  },
  {
   "key": "fresh",
@@ -297,7 +302,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "brand; check if it has an online shop"
+  "status": "brand site, no Product JSON-LD: needs custom adapter"
  },
  {
   "key": "unionaire",
@@ -308,7 +313,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "brand site; probably no shop"
+  "status": "brand site; Woo API open but no prices on product pages - not a price source"
  },
  {
   "key": "lgeg",
@@ -319,7 +324,7 @@
   "platform": "auto",
   "include": "",
   "enabled": false,
-  "status": "LG online shop availability unknown"
+  "status": "brand site, no Product JSON-LD seen"
  },
  {
   "key": "amazoneg",

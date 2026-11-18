@@ -197,7 +197,8 @@ class Generic(unittest.TestCase):
         import generic
         reg = {}
         generic.register(reg)
-        self.assertEqual(reg, {})
+        self.assertEqual(set(reg), {c["key"] for c in generic.load_config() if c.get("enabled")})
+        self.assertNotIn("sharaf", reg)
 
 
 class WooAll(unittest.TestCase):
@@ -216,4 +217,20 @@ class WooAll(unittest.TestCase):
         import generic
         keys = {c["key"] for c in generic.load_config()}
         self.assertIn("twob", keys); self.assertNotIn("amazoneg", keys)
-        self.assertTrue(all(not c.get("enabled") for c in generic.load_config()))
+        self.assertEqual({c["key"] for c in generic.load_config() if c.get("enabled")}, {"twob", "shaheen", "gaballah", "tabseeta"})
+
+
+class GenericEnabled(unittest.TestCase):
+    def test_registered_and_shopify_filter(self):
+        import generic, stores
+        for k in ("twob", "shaheen", "gaballah", "tabseeta"):
+            self.assertIn(k, stores.STORES)
+        self.assertNotIn("sharaf", stores.STORES)
+        self.assertFalse(generic.WANT_URL.search("tp-link-range-extender"))
+        self.assertTrue(generic.WANT_URL.search("electric-range-cooker"))
+        prods = [{"title": "Bosch Refrigerator KDN43", "handle": "bosch-ref", "variants": [{"price": "24699", "available": True}], "images": []},
+                 {"title": "Phone case", "handle": "case", "variants": [{"price": "99"}], "images": []}]
+        class F:
+            def get(self, u, as_json=False): return {"products": prods} if "page=1" in u else None
+        out = generic.shopify_adapter(F(), {}, {"shop": "G", "base": "https://g.com"})
+        self.assertEqual([o["name"] for o in out], ["Bosch Refrigerator KDN43"])
