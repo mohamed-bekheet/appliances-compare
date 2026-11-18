@@ -6,7 +6,7 @@ platforms
 Only stores with "enabled": true are registered in STORES. A store becomes enabled after tools/scrape/probe.py shows that
 robots.txt allows the paths and the pages carry usable data. Everything goes through the polite Fetcher (robots.txt, delay).
 """
-import json, logging, os, re
+import html, json, logging, os, re
 from bs4 import BeautifulSoup
 from common import to_num
 
@@ -16,8 +16,16 @@ WANT_URL = re.compile(r"wash|laundry|refrig|fridge|freez|cook|oven|microw|hood|h
                       r"غسال|ثلاج|بوتاجاز|فرن|مايكروويف|شفاط|سخان|فريزر|ديب", re.I)
 
 
-def load_config(path=None):
-    return json.load(open(path or os.path.join(HERE, "generic_stores.json"), encoding="utf-8"))
+def load_config(path=None, include_skipped=False):
+    cfg = json.load(open(path or os.path.join(HERE, "generic_stores.json"), encoding="utf-8"))
+    out = []
+    for c in cfg:
+        if c.get("skip") and not include_skipped:
+            continue
+        if "base" not in c and c.get("bases"):
+            c = {**c, "base": c["bases"][0]}
+        out.append(c)
+    return out
 
 
 def sitemap_urls(f, base, limit_maps=30):
@@ -119,7 +127,34 @@ def shopify_adapter(f, ctx, cfg):
     return out[: ctx["limit"]] if ctx.get("limit") else out
 
 
-ADAPTERS = {"jsonld": jsonld_adapter, "shopify": shopify_adapter}
+def woo_all_adapter(f, ctx, cfg):
+    """WooCommerce Store API without category ids: walk every page, keep appliance-looking products (name or category)."""
+    out, seen = [], set()
+    for page in range(1, cfg.get("max_pages", 150)):
+        j = f.get(f"{cfg['base']}/wp-json/wc/store/v1/products?per_page=100&page={page}", as_json=True)
+        if not j:
+            break
+        for x in j:
+            cats = " ".join(k.get("slug", "").replace("-", " ") + " " + k.get("name", "") for k in x.get("categories", []))
+            name = html.unescape(x.get("name") or "")
+            if x["id"] in seen or not WANT_URL.search(name + " " + cats):
+                continue
+            seen.add(x["id"])
+            pr = x.get("prices") or {}
+            div = 10 ** int(pr.get("currency_minor_unit") or 0)
+            ims = x.get("images") or [{}]
+            out.append(dict(name=name, price=to_num(pr.get("price")) // div, old=to_num(pr.get("regular_price")) // div,
+                            url=x.get("permalink"), in_stock=bool(x.get("is_in_stock")), shop=cfg["shop"], source=cfg["base"].split("//")[1],
+                            brand_hint=(x.get("brands") or [{}])[0].get("name"), cat_hint=cats, model_hint=None,
+                            extra=html.unescape(x.get("slug") or "").replace("-", " "),
+                            desc=html.unescape(" ".join([x.get("short_description") or "", x.get("description") or ""])),
+                            image=ims[0].get("thumbnail") or ims[0].get("src")))
+        if len(j) < 100 or (ctx.get("limit") and len(out) >= ctx["limit"]):
+            break
+    return out[: ctx["limit"]] if ctx.get("limit") else out
+
+
+ADAPTERS = {"jsonld": jsonld_adapter, "shopify": shopify_adapter, "woo_all": woo_all_adapter}
 
 
 def register(stores):

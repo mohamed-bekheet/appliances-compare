@@ -1,8 +1,389 @@
 [
-  {"key": "twob", "shop": "2B", "base": "https://2b.com.eg", "platform": "jsonld", "include": "^https://2b\\.com\\.eg/en/[^/]+\\.html$",
-   "enabled": false, "status": "candidate: product pages show price + specs (seen via search); sitemap and robots.txt not yet checked"},
-  {"key": "sharaf", "shop": "Sharaf DG", "base": "https://egypt.sharafdg.com", "platform": "jsonld", "include": "^https://egypt\\.sharafdg\\.com/(p|product)/",
-   "enabled": false, "status": "candidate: URL pattern unverified"},
-  {"key": "rayashop", "shop": "Raya Shop", "base": "https://rayashop.com", "platform": "jsonld", "include": "",
-   "enabled": false, "status": "candidate: URL pattern unverified"}
+ {
+  "key": "twob",
+  "shop": "2B",
+  "base": "https://2b.com.eg",
+  "platform": "jsonld",
+  "include": "^https://2b\\.com\\.eg/en/[^/]+\\.html$",
+  "enabled": false,
+  "status": "candidate: product pages show price + specs (seen via search); sitemap and robots.txt not yet checked",
+  "bases": [
+   "https://2b.com.eg"
+  ]
+ },
+ {
+  "key": "sharaf",
+  "shop": "Sharaf DG",
+  "base": "https://egypt.sharafdg.com",
+  "platform": "jsonld",
+  "include": "^https://egypt\\.sharafdg\\.com/(p|product)/",
+  "enabled": false,
+  "status": "candidate: URL pattern unverified",
+  "bases": [
+   "https://egypt.sharafdg.com"
+  ]
+ },
+ {
+  "key": "rayashop",
+  "shop": "Raya Shop",
+  "base": "https://rayashop.com",
+  "platform": "jsonld",
+  "include": "",
+  "enabled": false,
+  "status": "candidate: URL pattern unverified",
+  "bases": [
+   "https://rayashop.com"
+  ]
+ },
+ {
+  "key": "shaheen",
+  "shop": "Shaheen EG",
+  "bases": [
+   "https://shaheeneg.com"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "site seen earlier (WordPress-style /store/ URLs)"
+ },
+ {
+  "key": "abdulaziz",
+  "shop": "Abdulaziz Stores",
+  "bases": [
+   "https://abdulaziz.com.eg",
+   "https://abdulazizstores.com",
+   "https://www.abdelaziz-stores.com"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "almorshedy",
+  "shop": "Almorshedy Marts",
+  "bases": [
+   "https://almorshedymarts.com",
+   "https://almorshedy.com",
+   "https://almorshedymarts.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "awadserag",
+  "shop": "Awad Serag",
+  "bases": [
+   "https://awadserag.com",
+   "https://awadserag.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "boschhome",
+  "shop": "Bosch Home Egypt",
+  "bases": [
+   "https://www.bosch-home.com.eg",
+   "https://bosch-home.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "brand store; prices are Bosch's own"
+ },
+ {
+  "key": "cairocart",
+  "shop": "CairoCart",
+  "bases": [
+   "https://cairocart.com",
+   "https://www.cairocart.com"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "runs on Odoo (per its customer page)"
+ },
+ {
+  "key": "elbadr",
+  "shop": "El Badr Group",
+  "bases": [
+   "https://elbadrgroup.com",
+   "https://elbadr.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "elghazawy",
+  "shop": "El Ghazawy",
+  "bases": [
+   "https://elghazawy.com",
+   "https://elghazawystores.com"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "elmasreyeen",
+  "shop": "El Masreyeen",
+  "bases": [
+   "https://elmasreyeen.com",
+   "https://elmasreyeen.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "gaballah",
+  "shop": "Gaballah",
+  "bases": [
+   "https://gaballah.com",
+   "https://gaballahstore.com",
+   "https://gaballah.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "martegypt",
+  "shop": "Mart Egypt",
+  "bases": [
+   "https://martegypt.com",
+   "https://mart-egypt.com"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "radiotalaat",
+  "shop": "Radio Talaat",
+  "bases": [
+   "https://radiotalaat.com",
+   "https://radiotalaat.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "also sells through Jumia and Carrefour marketplaces (already covered there)"
+ },
+ {
+  "key": "rafegypt",
+  "shop": "RAF Egypt",
+  "bases": [
+   "https://rafegypt.com",
+   "https://raf-egypt.com"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "rizkalla",
+  "shop": "Rizkalla",
+  "bases": [
+   "https://rizkalla.com",
+   "https://rizkalla.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "hyperone",
+  "shop": "HyperOne",
+  "bases": [
+   "https://hyperone.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "supermarket chain; appliances section may be small"
+ },
+ {
+  "key": "kimo",
+  "shop": "Kimo Store",
+  "bases": [
+   "https://kimostore.com",
+   "https://kimostore.net"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "kenzz",
+  "shop": "Kenzz",
+  "bases": [
+   "https://kenzz.com",
+   "https://kenzz.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "tabseeta",
+  "shop": "Tabseeta",
+  "bases": [
+   "https://tabseeta.com",
+   "https://tabseeta.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "ovanza",
+  "shop": "Ovanza",
+  "bases": [
+   "https://ovanza.com",
+   "https://ovanza.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "hypertechno",
+  "shop": "Hyper Techno",
+  "bases": [
+   "https://hypertechno.com.eg",
+   "https://hypertechno.com"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "switchplus",
+  "shop": "Switch Plus",
+  "bases": [
+   "https://switchplus.com.eg",
+   "https://switchplus.net"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "domain guessed - probe checks the home-page title"
+ },
+ {
+  "key": "fresh",
+  "shop": "Fresh Electric",
+  "bases": [
+   "https://fresh.com.eg"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "brand; check if it has an online shop"
+ },
+ {
+  "key": "unionaire",
+  "shop": "Unionaire",
+  "bases": [
+   "https://unionaire.com"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "brand site; probably no shop"
+ },
+ {
+  "key": "lgeg",
+  "shop": "LG Egypt",
+  "bases": [
+   "https://www.lg.com/eg_en"
+  ],
+  "platform": "auto",
+  "include": "",
+  "enabled": false,
+  "status": "LG online shop availability unknown"
+ },
+ {
+  "key": "amazoneg",
+  "shop": "Amazon.eg",
+  "skip": "Amazon's terms and robots.txt forbid automated price collection"
+ },
+ {
+  "key": "dubaiphone",
+  "shop": "Dubai Phone",
+  "skip": "phones/electronics, no large appliances"
+ },
+ {
+  "key": "eand",
+  "shop": "e& eShop",
+  "skip": "telecom eShop"
+ },
+ {
+  "key": "vodafone",
+  "shop": "Vodafone eShop",
+  "skip": "telecom eShop"
+ },
+ {
+  "key": "orange",
+  "shop": "Orange E-Shop",
+  "skip": "telecom eShop"
+ },
+ {
+  "key": "mobilaty",
+  "shop": "Mobilaty",
+  "skip": "phones"
+ },
+ {
+  "key": "myxprs",
+  "shop": "myXPRS",
+  "skip": "electronics"
+ },
+ {
+  "key": "imedia",
+  "shop": "iMedia Stores",
+  "skip": "Apple reseller"
+ },
+ {
+  "key": "egyptlaptop",
+  "shop": "Egypt Laptop",
+  "skip": "laptops"
+ },
+ {
+  "key": "compumarts",
+  "shop": "Compumarts",
+  "skip": "computers"
+ },
+ {
+  "key": "sigma",
+  "shop": "Sigma Computer",
+  "skip": "computers"
+ },
+ {
+  "key": "etisal",
+  "shop": "Etisal Store",
+  "skip": "telecom"
+ },
+ {
+  "key": "tradeline",
+  "shop": "Tradeline",
+  "skip": "Apple reseller"
+ }
 ]

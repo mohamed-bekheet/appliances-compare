@@ -28,13 +28,19 @@ def structured_types(h):
 
 
 def probe(f, cfg):
-    r = {"key": cfg["key"], "base": cfg["base"]}
-    robots = f.get(cfg["base"] + "/robots.txt")
+    bases = cfg.get("bases") or [cfg["base"]]
+    for b in bases:                                    # first domain that answers
+        cfg = {**cfg, "base": b}
+        robots = f.get(b + "/robots.txt")
+        if robots is not None:
+            break
+    r = {"key": cfg["key"], "base": cfg["base"], "tried": bases}
     r["robots"] = "reachable" if robots is not None else f"unreachable (HTTP {f.last_status or 'no response'})"
     r["shopify"] = bool(f.get(cfg["base"] + "/products.json?limit=1", as_json=True))
     r["woo"] = bool(f.get(cfg["base"] + "/wp-json/wc/store/v1/products?per_page=1", as_json=True))
     home = f.get(cfg["base"] + "/")
     r["home_status"] = f.last_status
+    r["home_title"] = (BeautifulSoup(home, "lxml").title.string or "").strip()[:100] if home and BeautifulSoup(home, "lxml").title else ""
     inc = re.compile(cfg.get("include") or ".")
     urls = generic.sitemap_urls(f, cfg["base"]) if robots is not None else []
     prod = [u for u in urls if inc.search(u) and generic.WANT_URL.search(u)]
@@ -54,8 +60,8 @@ def probe(f, cfg):
             if raw and not r["sample"]:
                 r["sample"] = {k: raw[k] for k in ("name", "price", "in_stock", "url")}; r["jsonld"] = True
         r["pages"].append(entry)
-    r["verdict"] = ("shopify: use platform=shopify" if r["shopify"] else "woo: use the existing woo adapter" if r["woo"] else
-                    "jsonld OK: set enabled=true" if r["jsonld"] else
+    r["verdict"] = ("shopify: set platform=shopify" if r["shopify"] else "woo: set platform=woo_all" if r["woo"] else
+                    "jsonld OK: set platform=jsonld, enabled=true" if r["jsonld"] else
                     "blocked for this server (cloud IP) - try from the laptop (probe_local.bat), do not bypass" if r["robots"].startswith("unreachable") else
                     "reachable but no Product JSON-LD on the sampled pages - see page types below; a custom adapter may be possible")
     return r
@@ -65,14 +71,16 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("--out", default="scraped/probe.md"); a = ap.parse_args()
     f = Fetcher(delay=2.0)
     res = [probe(f, c) for c in generic.load_config()]
+    skipped = [c for c in generic.load_config(include_skipped=True) if c.get("skip")]
     L = ["# Store probe", ""]
     for r in res:
-        L += [f"## {r['key']} ({r['base']})", f"- robots.txt: {r['robots']}", f"- Shopify products.json: {r['shopify']} | WooCommerce API: {r['woo']}",
+        L += [f"## {r['key']} ({r['base']})", f"- domains tried: {r['tried']} -> using {r['base']}", f"- home title: {r.get('home_title') or '-'} (check it is the right shop)", f"- robots.txt: {r['robots']}", f"- Shopify products.json: {r['shopify']} | WooCommerce API: {r['woo']}",
               f"- home page HTTP: {r['home_status']}",
               f"- sitemap URLs: {r['sitemap_urls']} (appliance-looking product URLs: {r['appliance_product_urls']})",
               f"- URL prefixes in sitemap: {r['path_prefixes']}", f"- sample URLs: {r['sample_urls']}",
               *[f"- page {p['url']} -> HTTP {p['status']} {json.dumps({k: v for k, v in p.items() if k not in ('url','status')}, ensure_ascii=False)}" for p in r['pages']],
               f"- JSON-LD sample: {json.dumps(r['sample'], ensure_ascii=False) if r['sample'] else 'none'}", f"- **{r['verdict']}**", ""]
+    L += ["## Skipped on purpose", ""] + [f"- {c['shop']}: {c['skip']}" for c in skipped]
     os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
     open(a.out, "w", encoding="utf-8").write("\n".join(L))
     print("\n".join(L))

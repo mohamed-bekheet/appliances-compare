@@ -198,3 +198,22 @@ class Generic(unittest.TestCase):
         reg = {}
         generic.register(reg)
         self.assertEqual(reg, {})
+
+
+class WooAll(unittest.TestCase):
+    def test_filters_and_prices(self):
+        import generic
+        page = [{"id": 1, "name": "Fresh Washing Machine 9kg", "permalink": "https://s/p1", "is_in_stock": True, "slug": "w",
+                 "prices": {"price": "1149900", "regular_price": "1299900", "currency_minor_unit": 2},
+                 "categories": [{"slug": "washing-machines", "name": "Washing Machines"}], "images": [{"src": "https://c/a.jpg"}]},
+                {"id": 2, "name": "Phone case", "permalink": "https://s/p2", "prices": {"price": "100"}, "categories": [{"slug": "cases", "name": "Cases"}]}]
+        class F:
+            def get(self, u, as_json=False): return page if "page=1" in u else None
+        out = generic.woo_all_adapter(F(), {}, {"shop": "S", "base": "https://s"})
+        self.assertEqual([(o["name"], o["price"], o["old"]) for o in out], [("Fresh Washing Machine 9kg", 11499, 12999)])
+
+    def test_config_loads_and_skips(self):
+        import generic
+        keys = {c["key"] for c in generic.load_config()}
+        self.assertIn("twob", keys); self.assertNotIn("amazoneg", keys)
+        self.assertTrue(all(not c.get("enabled") for c in generic.load_config()))
