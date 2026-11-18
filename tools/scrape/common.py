@@ -64,6 +64,7 @@ class Fetcher:
         self.delay, self.timeout = delay, timeout
         self.robots, self.last = {}, {}
         self.stats = {"ok": 0, "blocked_robots": 0, "http_error": 0}
+        self.last_status = None                   # HTTP status of the latest request (None = no response / blocked by robots)
 
     def _robots(self, host_url):
         if host_url not in self.robots:
@@ -81,6 +82,7 @@ class Fetcher:
         return self._robots(f"{u.scheme}://{u.netloc}").allowed(path)
 
     def get(self, url, as_json=False, **kw):
+        self.last_status = None
         if not self.allowed(url):
             self.stats["blocked_robots"] += 1
             log.info("robots.txt disallows %s", url)
@@ -95,6 +97,7 @@ class Fetcher:
             try:
                 r = self.s.get(url, timeout=self.timeout, **kw)
                 self.last[host] = time.time()
+                self.last_status = r.status_code
                 if r.status_code == 200:
                     self.stats["ok"] += 1
                     return r.json() if as_json else r.text
