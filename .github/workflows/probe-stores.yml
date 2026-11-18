@@ -1,0 +1,23 @@
+name: Probe candidate stores
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r tools/scrape/requirements.txt
+      - run: python tools/scrape/probe.py
+      - name: Commit result
+        run: |
+          git config user.name "appliances-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add scraped/probe.md
+          git diff --cached --quiet && exit 0
+          git commit -m "Store probe $(date +%F)"
+          git pull --rebase -q && git push

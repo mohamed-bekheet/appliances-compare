@@ -491,3 +491,7 @@ def carrefour(f, ctx):
 STORES = {"btech": btech, "elaraby": elaraby, "zanussi": zanussi, "jumia": with_pages("jumia", jumia), "ehab": ehab,
           "wazen": wazen, "berty": berty, "raneen": with_pages("raneen", raneen), "azmy": with_pages("azmy", azmy),
           "alreyada": alreyada, "carrefour": with_pages("carrefour", carrefour)}
+
+
+import generic as _generic            # noqa: E402  (config-driven stores from generic_stores.json)
+_generic.register(STORES)

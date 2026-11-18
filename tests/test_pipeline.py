@@ -159,3 +159,42 @@ class PageImage(unittest.TestCase):
         self.assertEqual(out[0]["image"], "https://c/z.jpg")
         self.assertEqual(out[1]["image"], "http://c/has.jpg")
         self.assertNotIn("desc", out[0])
+
+
+class Generic(unittest.TestCase):
+    CFG = {"key": "t", "shop": "T", "base": "https://t.example", "platform": "jsonld", "include": "/en/"}
+    PAGE = ('<html><script type="application/ld+json">{"@type":"Product","name":"Fresh Washing Machine 9kg","mpn":"FWM9",'
+            '"brand":{"name":"Fresh"},"image":["https://c/i.jpg"],"description":"5 years warranty",'
+            '"offers":{"@type":"Offer","price":"11,499","availability":"https://schema.org/InStock"}}</script></html>')
+
+    def test_jsonld_to_raw(self):
+        import generic
+        r = generic.raw_from_jsonld(self.PAGE, "https://t.example/en/x.html", self.CFG)
+        self.assertEqual((r["price"], r["in_stock"], r["brand_hint"], r["model_hint"]), (11499, True, "Fresh", "FWM9"))
+
+    def test_no_price_no_listing(self):
+        import generic
+        h = '<script type="application/ld+json">{"@type":"Product","name":"x","offers":{"price":"0"}}</script>'
+        self.assertIsNone(generic.raw_from_jsonld(h, "u", self.CFG))
+
+    def test_sitemap_index_followed_and_filtered(self):
+        import generic
+        class F:
+            def get(self, u, as_json=False):
+                return {"https://t.example/robots.txt": "Sitemap: https://t.example/sm.xml",
+                        "https://t.example/sm.xml": "<sitemapindex><loc>https://t.example/sm1.xml</loc></sitemapindex>",
+                        "https://t.example/sm1.xml": "<urlset><loc>https://t.example/en/fresh-washing-machine.html</loc>"
+                                                      "<loc>https://t.example/en/phone.html</loc></urlset>"}.get(u)
+        class FP(F):
+            def get(self, u, as_json=False):
+                return self.PAGE if u.endswith("machine.html") else F.get(self, u)
+        urls = generic.sitemap_urls(F(), "https://t.example")
+        self.assertEqual(len(urls), 2)
+        out = generic.jsonld_adapter(type("X", (F,), {"PAGE": self.PAGE, "get": lambda s, u, as_json=False: self.PAGE if u.endswith("machine.html") else F.get(s, u)})(), {}, self.CFG)
+        self.assertEqual(len(out), 1)
+
+    def test_disabled_stores_not_registered(self):
+        import generic
+        reg = {}
+        generic.register(reg)
+        self.assertEqual(reg, {})

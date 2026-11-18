@@ -151,3 +151,7 @@ Berty Center works (670 listings) and El Araby works (sitemap; many sitemap URLs
 - Free option: `OPENROUTER_API_KEY` (model `openrouter/free`; 20 req/min, 50/day until $10 credits bought -> capped at 45 calls/run, stops on 429/402). Priority: Anthropic > Kimi > OpenRouter.
 - Two-strike price guard (`upsert._suspicious`): a price move >50% vs the last known price is held in `pending_price` and only accepted when the next run sees the same price (protects against installment/variant glitches). Counted as "held" in report.md.
 - Missing listings (`upsert.mark_missing`): scraped listings of a healthy, fully-scraped shop (no `--limit`, kept >= 70% of recent median) that were not seen for 2 consecutive runs become `in_stock: false` with a history point. Hand-entered listings are never touched.
+
+## Adding stores with config (generic adapters)
+`tools/scrape/generic_stores.json`: one entry per candidate store (`platform`: `shopify` or `jsonld` = sitemap -> product page JSON-LD). Entries start with `"enabled": false`.
+Run the Actions workflow "Probe candidate stores" (it reaches the sites; the dev sandbox cannot): it writes `scraped/probe.md` with robots.txt verdict, sitemap size, JSON-LD sample and a verdict. Only after a store passes, set `"enabled": true` (then add its key to the `matrix.store` list in `scrape.yml`). WooCommerce stores use the existing `woo()` adapter in stores.py; stores with no usable data need a custom adapter or are skipped. Never enable a store whose robots.txt disallows the product paths.

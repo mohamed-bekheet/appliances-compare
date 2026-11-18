@@ -1,0 +1,8 @@
+[
+  {"key": "twob", "shop": "2B", "base": "https://2b.com.eg", "platform": "jsonld", "include": "^https://2b\\.com\\.eg/en/[^/]+\\.html$",
+   "enabled": false, "status": "candidate: product pages show price + specs (seen via search); sitemap and robots.txt not yet checked"},
+  {"key": "sharaf", "shop": "Sharaf DG", "base": "https://egypt.sharafdg.com", "platform": "jsonld", "include": "^https://egypt\\.sharafdg\\.com/(p|product)/",
+   "enabled": false, "status": "candidate: URL pattern unverified"},
+  {"key": "rayashop", "shop": "Raya Shop", "base": "https://rayashop.com", "platform": "jsonld", "include": "",
+   "enabled": false, "status": "candidate: URL pattern unverified"}
+]
