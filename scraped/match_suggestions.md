@@ -3,12 +3,12 @@
 Add a rule to REGION_TAILS in tools/pricebook.py only when the suffix is a market code, not a colour.
 
 - LG (غسالة): `F4R5TGG2T` [Wazen] ~ `F4R5TGG2T79` [Azmy] - no colour words in titles
-- LG (غسالة): `F4R5VYG2E` [B.TECH, Jumia] ~ `F4R5VYG2E78` [Azmy] - same colour words - possibly the same product
+- LG (غسالة): `F4R5VYG2E` [B.TECH, Jumia, Shaheen EG, Tabseeta] ~ `F4R5VYG2E78` [Azmy] - colour differs: اسود/ستانلس vs اسود
 - LG (غسالة): `F4V5RYP2T` [Raneen] ~ `F4V5RYP2T75` [Azmy] - no colour words in titles
 - TOSHIBA (غسالة): `E1050SUP` [Wazen] ~ `E1050SUPSS` [Raneen] - colour differs: ابيض vs فضي
 - FRESH (غسالة): `FWS800` [Raneen] ~ `FWS800NB` [Jumia] - no colour words in titles
 - FRESH (غسالة): `FWT500` [Ehab Center] ~ `FWT500NA` [Jumia] - no colour words in titles
-- FRESH (غسالة): `SWM400` [B.TECH] ~ `SWM400NA` [Jumia, Raneen] - same colour words - possibly the same product
+- FRESH (غسالة): `SWM400` [B.TECH] ~ `SWM400NA` [Jumia, Raneen, Shaheen EG] - same colour words - possibly the same product
 - FRESH (غسالة): `W7DD1255PC` [Wazen] ~ `W7DD1255PCCG` [B.TECH, Carrefour] - colour differs: ازرق/فضي vs رمادي/فضي
 - FRESH (غسالة): `W7DD1255PC` [Wazen] ~ `W7DD1255PCDS` [B.TECH] - colour differs: ازرق/فضي vs رمادي
 - FRESH (غسالة): `W7DD1255PC` [Wazen] ~ `W7DD1255PCS` [B.TECH, Raneen] - colour differs: ازرق/فضي vs فضي
@@ -18,97 +18,122 @@ Add a rule to REGION_TAILS in tools/pricebook.py only when the suffix is a marke
 - MIDEA (غسالة): `MA102W90P` [Ehab Center, Raneen, Wazen] ~ `MA102W90PGK` [B.TECH, Jumia] - colour differs: رمادي/فضي vs فضي
 - MIDEA (غسالة): `MF100W70B` [Wazen] ~ `MF100W70BTT` [B.TECH] - same colour words - possibly the same product
 - MIDEA (غسالة): `MF110W80B` [B.TECH, Wazen] ~ `MF110W80BTT` [Carrefour, Jumia] - colour differs: تيتانيوم/فضي vs تيتانيوم/رمادي
-- MIDEA (غسالة): `MFN09W70B` [Wazen] ~ `MFN09W70BS` [B.TECH, Jumia] - colour differs: فضي vs رمادي
+- MIDEA (غسالة): `MFN09W70B` [Ehab Center, Wazen] ~ `MFN09W70BS` [B.TECH, Jumia] - colour differs: فضي vs رمادي
 - MIDEA (غسالة): `MTE02W120` [Raneen, Wazen] ~ `MTE02W120W` [B.TECH, Jumia] - same colour words - possibly the same product
-- MIDEA (غسالة): `MTE02W140` [Raneen] ~ `MTE02W140W` [B.TECH] - same colour words - possibly the same product
-- HAIER (غسالة): `BP14929AS6` [Ehab Center, Wazen] ~ `BP14929AS6B` [Raneen] - same colour words - possibly the same product
-- HAIER (غسالة): `HW100B14979S8` [B.TECH, Wazen] ~ `HW100B14979S8U1` [Carrefour] - same colour words - possibly the same product
+- MIDEA (غسالة): `MTE02W140` [Raneen] ~ `MTE02W140W` [B.TECH, Jumia] - same colour words - possibly the same product
 - ZANUSSI (بوتاجاز): `ZCG94396X` [B.TECH, Jumia] ~ `ZCG94396XA` [Jumia, Wazen] - same colour words - possibly the same product
 - ZANUSSI (ثلاجة): `ZRM3201A` [Ehab Center] ~ `ZRM3201AA` [Jumia, Zanussi Official] - same colour words - possibly the same product
 - ZANUSSI (ثلاجة): `ZRM3201A` [Ehab Center] ~ `ZRM3201AB` [Zanussi Official] - colour differs: فضي vs اسود
+- HAIER (غسالة): `BP14929AS6` [Ehab Center, Wazen] ~ `BP14929AS6B` [Raneen] - same colour words - possibly the same product
+- HAIER (غسالة): `HW100B14979S8` [B.TECH, Wazen] ~ `HW100B14979S8U1` [Carrefour] - same colour words - possibly the same product
 - BOSCH (غسالة): `WLZ2421S` [B.TECH] ~ `WLZ2421SE` [Jumia] - colour differs: انوكس/فضي vs فضي
 - CANDY (غسالة): `GVS107DC3` [Raneen] ~ `GVS107DC3R` [B.TECH] - colour differs: ابيض vs فضي
+- SHARP (غسالة أطباق): `QWV815A` [B.TECH] ~ `QWV815ABK` [Jumia] - colour differs: فضي vs اسود
+- SHARP (غسالة أطباق): `QWV815A` [B.TECH] ~ `QWV815ASS` [Jumia] - no colour words in titles
 - CASTLE (غسالة): `CWM1450` [B.TECH, Jumia] ~ `CWM1450G` [Carrefour] - same colour words - possibly the same product
+- ARISTON (ثلاجة): `ENTM18020` [Gaballah, Tabseeta] ~ `ENTM18020F` [Raneen] - no colour words in titles
+- ARISTON (ثلاجة): `ENXTY19222XFW` [Wazen] ~ `ENXTY19222XFWMA` [Gaballah] - no colour words in titles
 - TOSHIBA (ثلاجة): `GRRT558WEPMN` [Jumia] ~ `GRRT558WEPMN5` [B.TECH] - same colour words - possibly the same product
-- TOSHIBA (ثلاجة): `GRRT624WEPGN` [Jumia] ~ `GRRT624WEPGN22` [B.TECH] - same colour words - possibly the same product
-- TOSHIBA (ثلاجة): `GRRT624WEPGN` [Jumia] ~ `GRRT624WEPGN7` [B.TECH] - colour differs: اسود vs فضي
+- TOSHIBA (ثلاجة): `GRRT559WEDMN` [Jumia] ~ `GRRT559WEDMN49` [B.TECH] - no colour words in titles
+- TOSHIBA (ثلاجة): `GRRT624WEPGN` [Jumia] ~ `GRRT624WEPGN22` [B.TECH] - colour differs: فضي vs اسود
+- TOSHIBA (ثلاجة): `GRRT624WEPGN` [Jumia] ~ `GRRT624WEPGN7` [B.TECH] - same colour words - possibly the same product
 - TOSHIBA (ثلاجة): `GRRT702WEPMN` [B.TECH, Jumia] ~ `GRRT702WEPMN02` [Wazen] - no colour words in titles
 - TOSHIBA (ثلاجة): `GRRT702WEPMN` [B.TECH, Jumia] ~ `GRRT702WEPMN06` [Wazen] - same colour words - possibly the same product
 - BEKO (ثلاجة): `GNE134626` [B.TECH] ~ `GNE134626ZX` [Jumia] - no colour words in titles
-- BEKO (ثلاجة): `GNE134626ZX` [Jumia] ~ `GNE134626ZXH` [Ehab Center, Wazen] - no colour words in titles
 - BEKO (ثلاجة): `RCNE590E35ZXP` [Azmy] ~ `RCNE590E35ZXP1` [Wazen] - no colour words in titles
-- BEKO (ثلاجة): `RCNE590E35ZXP` [Azmy] ~ `RCNE590E35ZXP2` [Ehab Center, Wazen] - no colour words in titles
+- BEKO (ثلاجة): `RCNE590E35ZXP` [Azmy] ~ `RCNE590E35ZXP2` [Ehab Center, Jumia, Wazen] - no colour words in titles
 - BEKO (ثلاجة): `RCNE590E35ZXP` [Azmy] ~ `RCNE590E35ZXP3` [Wazen] - no colour words in titles
-- BEKO (ثلاجة): `RDNE420KD` [B.TECH, Jumia, Wazen] ~ `RDNE420KDB` [B.TECH, Ehab Center, Wazen] - colour differs: فضي vs اسود/فضي
+- BEKO (ثلاجة): `RDNE420KD` [B.TECH, Ehab Center, Gaballah, Jumia, Wazen] ~ `RDNE420KDB` [B.TECH, Ehab Center, Raneen, Wazen] - colour differs: فضي vs اسود/فضي
 - BEKO (ثلاجة): `RDNE455M20X` [B.TECH] ~ `RDNE455M20XBI` [Raneen, Wazen] - same colour words - possibly the same product
-- BEKO (ثلاجة): `RDNE455M20XBI` [Raneen, Wazen] ~ `RDNE455M20XBID` [B.TECH, Ehab Center, Wazen] - colour differs: فضي vs اسود/ستانلس/فضي
-- BEKO (ثلاجة): `RDNE455M20XBI` [Raneen, Wazen] ~ `RDNE455M20XBIDB` [B.TECH, Ehab Center, Wazen] - colour differs: فضي vs اسود
-- BEKO (ثلاجة): `TSE12340` [B.TECH, Raneen, Wazen] ~ `TSE12340S` [Ehab Center, Jumia, Raneen] - same colour words - possibly the same product
-- FRESH (ثلاجة): `FDDB315` [Jumia] ~ `FDDB315BS` [Raneen, Wazen] - no colour words in titles
+- BEKO (ثلاجة): `RDNE455M20XBI` [Raneen, Wazen] ~ `RDNE455M20XBID` [B.TECH, Ehab Center, Gaballah, Jumia, Wazen] - colour differs: فضي vs اسود/ستانلس/فضي
+- BEKO (ثلاجة): `RDNE455M20XBI` [Raneen, Wazen] ~ `RDNE455M20XBIDB` [B.TECH, Ehab Center, Gaballah, Wazen] - colour differs: فضي vs اسود
 - FRESH (ثلاجة): `FDDB315` [Jumia] ~ `FDDB315S` [B.TECH] - no colour words in titles
-- FRESH (ثلاجة): `FMB140` [B.TECH, Jumia, Raneen] ~ `FMB140S` [Ehab Center, Raneen, Wazen] - colour differs: اسود/فضي vs فضي
+- FRESH (ثلاجة): `FMB140` [B.TECH, Jumia, Raneen, Shaheen EG] ~ `FMB140B` [Ehab Center, Jumia, Raneen, Wazen] - colour differs: اسود/فضي vs اسود
+- FRESH (ثلاجة): `FMB140` [B.TECH, Jumia, Raneen, Shaheen EG] ~ `FMB140S` [Ehab Center, Raneen, Wazen] - colour differs: اسود/فضي vs فضي
+- FRESH (ثلاجة): `FNTB400` [Jumia] ~ `FNTB400BB` [B.TECH] - same colour words - possibly the same product
+- FRESH (ثلاجة): `FNTBR370` [Jumia] ~ `FNTBR370BB` [B.TECH] - same colour words - possibly the same product
+- FRESH (ثلاجة): `FNTBR400` [Jumia] ~ `FNTBR400BB` [B.TECH] - colour differs: ستانلس vs اسود
 - FRESH (ثلاجة): `FNTBS400` [B.TECH, Jumia, Raneen] ~ `FNTBS400BB` [Wazen] - same colour words - possibly the same product
+- FRESH (ثلاجة): `FNTBS470` [Jumia] ~ `FNTBS470BB` [B.TECH] - same colour words - possibly the same product
+- FRESH (ثلاجة): `FNTBS470` [Jumia] ~ `FNTBS470KT` [B.TECH] - colour differs: اسود vs ستانلس
 - FRESH (ثلاجة): `FNTD540` [Jumia] ~ `FNTD540YT` [B.TECH] - no colour words in titles
+- FRESH (ثلاجة): `FNTM540` [Shaheen EG] ~ `FNTM540YT` [B.TECH] - same colour words - possibly the same product
 - FRESH (ثلاجة): `FNTMS470` [Jumia] ~ `FNTMS470Y` [B.TECH] - no colour words in titles
-- FRESH (ثلاجة): `FNTMS470Y` [B.TECH] ~ `FNTMS470YIT` [Jumia] - colour differs: ستانلس vs فضي
+- FRESH (ثلاجة): `FNTMS470Y` [B.TECH] ~ `FNTMS470YIT` [Jumia, Shaheen EG] - colour differs: ستانلس vs فضي
+- FRESH (ثلاجة): `FNTMS470Y` [B.TECH] ~ `FNTMS470YT` [Jumia] - no colour words in titles
 - FRESH (ثلاجة): `MR470YGQ` [Raneen] ~ `MR470YGQB` [Wazen] - colour differs: احمر/اسود vs اسود
 - UNIONAIRE (ثلاجة): `URN500CLBLG` [B.TECH] ~ `URN500CLBLG1A` [Jumia] - no colour words in titles
 - UNIONAIRE (ثلاجة): `URN500CLBLG1ADTXH` [Jumia] ~ `URN500CLBLG1ADTXHS` [B.TECH] - same colour words - possibly the same product
 - UNIONAIRE (ثلاجة): `URN500LBLBADTS` [B.TECH] ~ `URN500LBLBADTSR` [Raneen] - same colour words - possibly the same product
-- MIDEA (ثلاجة): `MDRT489MTN45` [B.TECH, Raneen, Wazen] ~ `MDRT489MTN45D` [Ehab Center, Wazen] - same colour words - possibly the same product
-- MIDEA (ثلاجة): `MDRT580MTN46` [Raneen, Wazen] ~ `MDRT580MTN46D` [B.TECH, Ehab Center, Wazen] - same colour words - possibly the same product
-- WHITEWHALE (ثلاجة): `WR4385` [Raneen, Wazen] ~ `WR4385HB` [Jumia] - same colour words - possibly the same product
+- UNIONAIRE (ثلاجة): `URN600LBG1ADTHR` [Jumia] ~ `URN600LBG1ADTHRI` [Wazen] - same colour words - possibly the same product
+- MIDEA (ثلاجة): `MDRT489MTN45` [B.TECH, Raneen, Wazen] ~ `MDRT489MTN45D` [Ehab Center, Jumia, Wazen] - same colour words - possibly the same product
+- MIDEA (ثلاجة): `MDRT580MTN46` [Jumia, Raneen, Wazen] ~ `MDRT580MTN46D` [B.TECH, Ehab Center, Jumia, Wazen] - same colour words - possibly the same product
 - WHITEWHALE (ثلاجة): `WR4385HB` [Jumia] ~ `WR4385HBX` [B.TECH] - same colour words - possibly the same product
-- WHITEWHALE (ثلاجة): `WR4385HSS` [B.TECH, Jumia] ~ `WR4385HSSX` [B.TECH, Raneen] - colour differs: ابيض/ستانلس vs ابيض/ستانلس/فضي
+- SILTAL (ثلاجة): `SFB15S` [Jumia] ~ `SFB15SG` [B.TECH] - same colour words - possibly the same product
 - WHITEPOINT (ثلاجة): `WPR463VB` [Wazen] ~ `WPR463VBD` [B.TECH] - colour differs: ابيض/اسود vs ابيض/رمادي
 - KIRIAZI (ثلاجة): `E470NV` [Raneen] ~ `E470NV2` [B.TECH] - same colour words - possibly the same product
-- KIRIAZI (ثلاجة): `E520NV` [Raneen] ~ `E520NV2` [B.TECH] - colour differs: اسود vs فضي
-- KIRIAZI (ثلاجة): `E520NV` [Raneen] ~ `E520NV2B` [B.TECH] - same colour words - possibly the same product
+- KIRIAZI (ثلاجة): `E520NV` [Jumia, Raneen] ~ `E520NV2` [B.TECH] - colour differs: اسود vs فضي
+- KIRIAZI (ثلاجة): `E520NV` [Jumia, Raneen] ~ `E520NV2B` [B.TECH] - same colour words - possibly the same product
+- KIRIAZI (ثلاجة): `ER370N` [Raneen] ~ `ER370N2` [Jumia] - same colour words - possibly the same product
 - KIRIAZI (ثلاجة): `KH350LD` [Jumia, Raneen] ~ `KH350LD1` [B.TECH] - colour differs: فضي vs ذهبي/فضي
 - KIRIAZI (ثلاجة): `KH371NV` [Raneen] ~ `KH371NV2` [B.TECH] - same colour words - possibly the same product
-- ARISTON (بوتاجاز): `ARR9GGF33229X` [B.TECH, Ehab Center] ~ `ARR9GGF33229XNA` [B.TECH, Raneen, Wazen] - colour differs: فضي vs ستانلس/فضي
+- ARISTON (بوتاجاز): `ARR9GGF33229X` [B.TECH, Ehab Center] ~ `ARR9GGF33229XNA` [B.TECH, Raneen, Shaheen EG, Wazen] - colour differs: فضي vs ستانلس/فضي
 - BOSCH (فرن): `HBF011BA1` [Al Reyada, Wazen] ~ `HBF011BA1T` [Al Reyada, Azmy, Ehab Center] - same colour words - possibly the same product
-- ECOMATIC (شفاط): `H66NFF` [Al Reyada, Raneen] ~ `H66NFFBK` [Al Reyada, B.TECH] - colour differs: ستانلس/فضي vs اسود
-- PURITY (بوتاجاز): `FRGG9050` [Al Reyada, B.TECH] ~ `FRGG9050BL` [Raneen] - colour differs: اسود/فضي vs اسود
-- PURITY (بوتاجاز): `FRGG9060` [Raneen] ~ `FRGG9060B` [B.TECH] - same colour words - possibly the same product
-- PURITY (بوتاجاز): `FRGG9060` [Raneen] ~ `FRGG9060X` [B.TECH] - colour differs: اسود vs اسود/فضي
-- PURITY (بوتاجاز): `HPT622` [Raneen] ~ `HPT622GX` [Al Reyada] - colour differs: اسود/فضي vs اسود
+- ECOMATIC (شفاط): `H6310TT` [Al Reyada, B.TECH, Jumia] ~ `H6310TTBK` [Al Reyada, Jumia, Raneen] - colour differs: اسود/ستانلس vs اسود
+- PURITY (بوتاجاز): `FRGG9050` [Al Reyada, B.TECH, Gaballah, Shaheen EG] ~ `FRGG9050BL` [Raneen] - colour differs: اسود/فضي vs اسود
+- PURITY (بوتاجاز): `FRGG9060` [Raneen] ~ `FRGG9060B` [B.TECH] - colour differs: فضي vs اسود
+- PURITY (بوتاجاز): `FRGG9060` [Raneen] ~ `FRGG9060X` [B.TECH] - colour differs: فضي vs اسود/فضي
+- PURITY (مسطح غاز): `HPT911` [Al Reyada, Jumia, Raneen] ~ `HPT911G` [Al Reyada, Gaballah, Raneen, Shaheen EG] - same colour words - possibly the same product
+- PURITY (مسطح غاز): `OPT601GG` [Al Reyada, Raneen, Shaheen EG] ~ `OPT601GGD` [Al Reyada, Gaballah, Shaheen EG] - colour differs: ستانلس/فضي vs ستانلس
+- ARISTON (مسطح غاز): `PHN961TS` [Wazen] ~ `PHN961TSIX` [B.TECH] - same colour words - possibly the same product
+- PURITY (باكدج): `KPT908GGD` [Al Reyada, Raneen, Shaheen EG] ~ `KPT908GGDX` [Gaballah] - no colour words in titles
 - PURITY (فرن): `OPREE10` [Raneen] ~ `OPREE10BL` [Al Reyada] - no colour words in titles
 - KITCHENLINE (مسطح غاز): `ZPVTN05` [B.TECH] ~ `ZPVTN05N` [Al Reyada] - no colour words in titles
+- GORENJE (مايكروويف): `BMI251SG3BG` [Al Reyada] ~ `BMI251SG3BG2` [Ehab Center] - same colour words - possibly the same product
+- ELBA (مسطح غاز): `EN95545` [Azmy, Gaballah] ~ `EN95545XD` [Al Reyada, B.TECH] - colour differs: اسود vs فضي
+- ELBA (مسطح غاز): `ENF60444` [B.TECH] ~ `ENF60444XD` [Al Reyada, Gaballah] - no colour words in titles
+- ELBA (باكدج): `140G94` [Gaballah] ~ `140G94F` [Al Reyada, Ehab Center, Shaheen EG] - no colour words in titles
 - TOSHIBA (بوتاجاز): `90MG5GE` [Azmy, Raneen] ~ `90MG5GEGR` [Wazen] - colour differs: اسود vs رمادي
 - TOSHIBA (بوتاجاز): `90MG5GE` [Azmy, Raneen] ~ `90MG5GEMG` [Wazen] - colour differs: اسود vs رمادي
 - TOSHIBA (مايكروويف): `EG25PEI` [Raneen] ~ `EG25PEIBK` [Ehab Center, Wazen] - same colour words - possibly the same product
 - TOSHIBA (مايكروويف): `EM25PEI` [Raneen] ~ `EM25PEIBK` [Ehab Center, Wazen] - same colour words - possibly the same product
 - TOSHIBA (مايكروويف): `EM36PFI` [Raneen] ~ `EM36PFIMB` [Wazen] - colour differs: اسود/فضي vs فضي
 - TOSHIBA (مايكروويف): `EM45PFI` [Azmy, Raneen] ~ `EM45PFIMB` [Ehab Center, Wazen] - colour differs: اسود vs فضي
+- MIDEA (غسالة أطباق): `MDWEF1433D` [Jumia] ~ `MDWEF1433DB` [Ehab Center, Wazen] - colour differs: فضي vs اسود
+- MIDEA (غسالة أطباق): `MDWEF1433D` [Jumia] ~ `MDWEF1433DSS` [Ehab Center, Raneen, Wazen] - colour differs: فضي vs ستانلس/فضي
 - MIDEA (غسالة أطباق): `MDWEF1433DB` [Ehab Center, Wazen] ~ `MDWEF1433DBWI` [Jumia] - same colour words - possibly the same product
-- MIDEA (غسالة أطباق): `MDWEF1433DSS` [Ehab Center, Raneen, Wazen] ~ `MDWEF1433DSSWI` [B.TECH] - colour differs: ستانلس/فضي vs ستانلس
+- MIDEA (غسالة أطباق): `MDWEF1433DSS` [Ehab Center, Raneen, Wazen] ~ `MDWEF1433DSSWI` [B.TECH, Jumia] - same colour words - possibly the same product
 - MIDEA (غسالة أطباق): `MDWEF1533GURBS` [Ehab Center, Wazen] ~ `MDWEF1533GURBSWU` [B.TECH, Jumia] - same colour words - possibly the same product
 - MIDEA (غسالة أطباق): `MDWPF1333CS` [Ehab Center, Wazen] ~ `MDWPF1333CSW` [B.TECH, Jumia] - same colour words - possibly the same product
 - MIDEA (غسالة أطباق): `MDWPF1433CS` [Ehab Center, Wazen] ~ `MDWPF1433CSW` [B.TECH, Jumia] - same colour words - possibly the same product
+- ALASKA (ديب فريزر): `CH140ST` [Jumia] ~ `CH140STS` [B.TECH] - colour differs: ابيض vs فضي
 - FRESH (ديب فريزر): `FDF190` [Jumia, Wazen] ~ `FDF190F` [B.TECH] - same colour words - possibly the same product
 - FRESH (ديب فريزر): `FDF190` [Jumia, Wazen] ~ `FDF190S` [Ehab Center] - same colour words - possibly the same product
+- FRESH (ديب فريزر): `FNUMT270B` [B.TECH] ~ `FNUMT270BND` [Shaheen EG] - same colour words - possibly the same product
 - FRESH (ديب فريزر): `FNUMT301` [B.TECH] ~ `FNUMT301SB` [Jumia] - colour differs: ستانلس vs اسود
-- FRESH (ديب فريزر): `FNUMT301` [B.TECH] ~ `FNUMT301T` [Jumia] - no colour words in titles
+- FRESH (ديب فريزر): `FNUMT301` [B.TECH] ~ `FNUMT301T` [Jumia, Shaheen EG] - colour differs: ستانلس vs ستانلس/فضي
+- WHITEPOINT (غسالة أطباق): `WPD105` [B.TECH, Jumia, Wazen] ~ `WPD105DS` [Raneen] - colour differs: ابيض/فضي vs فضي
 - HAMBURG (ديب فريزر): `VF2025` [Wazen] ~ `VF2025S` [Jumia] - same colour words - possibly the same product
 - FRESH (شفاط): `HB0103` [Jumia] ~ `HB0103RT` [Raneen] - no colour words in titles
+- FRANKE (شفاط): `FJO624` [Jumia, Shaheen EG] ~ `FJO624XS` [B.TECH] - colour differs: ستانلس vs فضي
 - UNIONAIRE (ديب فريزر): `UFN355LBLBHADXSM` [B.TECH] ~ `UFN355LBLBHADXSMI` [Jumia] - same colour words - possibly the same product
-- KIRIAZI (ديب فريزر): `E230N5` [Raneen] ~ `E230N53` [Jumia] - no colour words in titles
-- SHARP (غسالة أطباق): `QWV815A` [B.TECH] ~ `QWV815ASS` [Jumia] - no colour words in titles
+- KIRIAZI (ديب فريزر): `E230N5` [Raneen, Shaheen EG] ~ `E230N53` [Jumia] - no colour words in titles
+- SHARP (ديب فريزر): `FJEC23` [Jumia, Raneen, Wazen] ~ `FJEC23BK` [Gaballah] - no colour words in titles
 - TOSHIBA (غسالة أطباق): `13F8AF` [Raneen] ~ `13F8AFSS` [Wazen] - same colour words - possibly the same product
 - TOSHIBA (غسالة أطباق): `15F6AF` [Raneen] ~ `15F6AFG` [Wazen] - colour differs: اسود vs رمادي
-- WHITEPOINT (غسالة أطباق): `WPD105` [B.TECH, Jumia, Wazen] ~ `WPD105DS` [Raneen] - colour differs: ابيض/فضي vs فضي
 - MIDEA (بوتاجاز): `MG24TE` [Raneen] ~ `MG24TESS` [Ehab Center, Wazen] - colour differs: اسود/فضي vs ستانلس/فضي
 - MIDEA (بوتاجاز): `MG36LE` [Raneen] ~ `MG36LEBK` [Wazen] - same colour words - possibly the same product
-- FRESH (مسطح غاز): `HAFR90CMB` [Jumia] ~ `HAFR90CMBC1` [Ehab Center, Raneen] - no colour words in titles
 - MIDEA (مايكروويف): `EG0P042MX` [Ehab Center, Wazen] ~ `EG0P042MXS` [Jumia] - same colour words - possibly the same product
-- MIDEA (مايكروويف): `EM9P022MX` [Ehab Center, Wazen] ~ `EM9P022MXB` [Jumia] - same colour words - possibly the same product
+- MIDEA (مايكروويف): `EG9P022MX` [Ehab Center, Wazen] ~ `EG9P022MXB` [Jumia] - same colour words - possibly the same product
+- MIDEA (مايكروويف): `EM0P042MX` [Ehab Center, Wazen] ~ `EM0P042MXS` [Jumia] - no colour words in titles
 - FRESH (مايكروويف): `FMW20MC` [Wazen] ~ `FMW20MCBM` [Jumia] - same colour words - possibly the same product
 - FRESH (مايكروويف): `FMW20MCS` [Jumia, Wazen] ~ `FMW20MCSM` [Ehab Center, Wazen] - same colour words - possibly the same product
-- FRESH (مايكروويف): `FMW25KCB` [Wazen] ~ `FMW25KCBW` [Jumia] - same colour words - possibly the same product
-- FRESH (مايكروويف): `FMW25KCS` [Raneen, Wazen] ~ `FMW25KCSW` [Jumia] - same colour words - possibly the same product
-- FRESH (مايكروويف): `FMW25MCB` [Wazen] ~ `FMW25MCBW` [Jumia, Raneen] - same colour words - possibly the same product
+- FRESH (مايكروويف): `FMW25MCB` [Wazen] ~ `FMW25MCBW` [Jumia, Raneen] - colour differs: اسود vs اسود/فضي
+- FRESH (مايكروويف): `FMW36KC` [Jumia] ~ `FMW36KCS` [Wazen] - colour differs: اسود vs فضي
+- HELLER (مايكروويف): `HMBN34GCSL` [Ehab Center] ~ `HMBN34GCSL0` [Gaballah] - no colour words in titles
+- MIDEA (سخان): `12MZNEG` [Raneen, Wazen] ~ `12MZNEGS` [Ehab Center] - colour differs: رمادي vs فضي
 - MIDEA (سخان): `20MDNEG` [Raneen] ~ `20MDNEGS` [Ehab Center] - colour differs: رمادي vs فضي
+- PURITY (شفاط): `CAPPEINOX90` [Shaheen EG] ~ `CAPPEINOX90CM` [Jumia, Raneen] - colour differs: انوكس vs فضي
 - ZANUSSI (سخان): `ZYG06313` [Jumia] ~ `ZYG06313SL` [Raneen] - no colour words in titles
 - ZANUSSI (سخان): `ZYG06313` [Jumia] ~ `ZYG06313WL` [Wazen] - no colour words in titles
 - ZANUSSI (سخان): `ZYG06313WL` [Wazen] ~ `ZYG06313WL2` [Zanussi Official] - same colour words - possibly the same product

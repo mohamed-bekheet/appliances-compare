@@ -1,28 +1,30 @@
 {
- "date": "2026-11-16",
- "total": 8103,
+ "date": "2026-11-20",
+ "total": 10312,
  "per_shop": {
   "Al Reyada": {
-   "listings": 1350,
-   "no_model": 405,
-   "no_specs": 580
+   "listings": 1366,
+   "no_model": 409,
+   "no_specs": 591
   },
   "Azmy": {
-   "listings": 380,
-   "no_specs": 249,
-   "no_model": 22
+   "listings": 383,
+   "no_specs": 252,
+   "no_model": 21
   },
   "B.TECH": {
-   "listings": 1190,
-   "no_image": 72,
-   "no_image_anywhere": 65,
+   "listings": 1221,
+   "no_image": 69,
+   "no_image_anywhere": 63,
    "no_url": 56,
-   "no_specs": 393,
-   "no_model": 215
+   "no_specs": 399,
+   "no_model": 222,
+   "stale_14d": 69
   },
   "Cairo Sales": {
    "listings": 15,
    "no_image": 15,
+   "stale_14d": 15,
    "no_image_anywhere": 4,
    "no_specs": 14,
    "no_url": 1
@@ -30,75 +32,98 @@
   "Carrefour": {
    "listings": 69,
    "no_image": 69,
+   "stale_14d": 69,
    "no_specs": 64,
-   "no_image_anywhere": 15
+   "no_image_anywhere": 14
   },
   "Carrefour (Electro Zone)": {
    "listings": 1,
-   "no_image": 1
+   "no_image": 1,
+   "stale_14d": 1
   },
   "Dream 2000": {
    "listings": 1,
-   "no_image": 1
+   "no_image": 1,
+   "stale_14d": 1
   },
   "Ehab Center": {
-   "listings": 684,
-   "no_specs": 468,
-   "no_model": 95,
-   "no_image": 14,
-   "no_image_anywhere": 6
+   "listings": 717,
+   "no_specs": 489,
+   "no_model": 100,
+   "no_image": 13,
+   "no_image_anywhere": 4
+  },
+  "Gaballah": {
+   "listings": 579,
+   "no_specs": 324,
+   "no_model": 145
   },
   "Jumia": {
-   "listings": 1253,
-   "no_specs": 1150,
-   "no_model": 614,
-   "no_image": 17,
-   "no_image_anywhere": 14,
+   "listings": 2359,
+   "no_specs": 2201,
+   "no_model": 1235,
+   "no_image": 7,
+   "no_image_anywhere": 5,
+   "stale_14d": 2,
    "price_outlier": 1
   },
   "Nomor": {
    "listings": 1,
    "no_image": 1,
-   "no_url": 1
+   "no_url": 1,
+   "stale_14d": 1
   },
   "Raneen": {
-   "listings": 1624,
-   "no_image": 39,
-   "no_image_anywhere": 30,
-   "no_specs": 1483,
-   "no_model": 208
+   "listings": 1730,
+   "no_image": 33,
+   "no_image_anywhere": 27,
+   "no_specs": 1520,
+   "stale_14d": 18,
+   "no_model": 227
   },
   "Shaheen": {
    "listings": 1
   },
+  "Shaheen EG": {
+   "listings": 288,
+   "no_specs": 187,
+   "no_model": 59
+  },
+  "Tabseeta": {
+   "listings": 43,
+   "no_specs": 28,
+   "no_model": 3
+  },
   "Wazen": {
-   "listings": 1437,
-   "no_specs": 464,
+   "listings": 1441,
+   "no_specs": 465,
    "no_model": 185
   },
   "Zanussi Official": {
    "listings": 84,
-   "no_image": 22,
-   "no_image_anywhere": 21,
+   "no_image": 21,
+   "stale_14d": 17,
+   "no_image_anywhere": 19,
    "no_model": 26,
-   "no_specs": 42
+   "no_specs": 41
   },
   "Zanussi Showroom": {
    "listings": 13,
    "no_image": 13,
    "no_image_anywhere": 13,
    "no_url": 13,
+   "stale_14d": 13,
    "no_specs": 5,
    "no_model": 5
   }
  },
  "outliers": [
   {
-   "id": 3540,
+   "id": 9341,
    "shop": "Jumia",
-   "name": "Passap ثلاجة بار صغيرة باساب FG200 فضية",
-   "price": 24000,
-   "median": 9399
+   "name": "Bosch شفاط بوش DWP64CC60Z مزود بإضاءة LED، 60 سم - أسود",
+   "price": 39999,
+   "median": 14444
   }
  ]
 }
